@@ -435,5 +435,29 @@
   "caseAuthenticityType": "anonymized_local_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "case_vinicius_websites_b2b",
+  "title": "Vinícius, sites pra comércio e o medo de bater na porta",
+  "region": "Brasil, Recife (PE)",
+  "sector": "servicos",
+  "archetypes": ["potencial_b2b_local"],
+  "readingTime": "4 min",
+  "dilemma": "Sabe fazer site, faz entrega de comida pra pagar a faculdade, mas não consegue chegar à primeira venda paga porque acha que não conhece nenhum dono de empresa.",
+  "situation": "Vinícius tem 22 anos, mora em Recife, está no segundo ano de Análise e Desenvolvimento de Sistemas em faculdade noturna. De dia faz entrega no iFood: 3 a 4 corridas por hora, R$ 80 a R$ 130 por dia. Sabe fazer site simples (HTML, CSS, WordPress, Wix). Já fez 2 sites de graça pra família. O preço que ele acha justo é R$ 600 por site simples de 1 página, R$ 1.500 por site com 5 páginas e formulário. Posta no LinkedIn 'estou aceitando projetos' e ninguém responde. Tem vergonha de chegar em comércio dizendo 'oi, faço site'. Acha que vai parecer inseguro.",
+  "options": [
+    "Continuar postando em LinkedIn e Instagram esperando alguém aparecer.",
+    "Pagar tráfego pago no Google Ads em 'site barato Recife'.",
+    "Listar 20 comerciantes que ele já encontra pessoalmente toda semana (lanchonetes onde retira pedido, padaria do bairro, mercadinho perto da faculdade) e abordar com proposta concreta. Site grátis pros 2 primeiros em troca de portfólio e indicação, pago pros próximos."
+  ],
+  "tradeoffs": "Esperar alguém aparecer no LinkedIn rende 0 venda em 6 meses pra quem ainda não tem reputação. Tráfego pago queima dinheiro porque cliente B2B local não busca site no Google. Listar gente que ele já cruza no dia a dia ativa a única vantagem que ele tem agora: presença física e confiança gerada pela rotina.",
+  "lessonLearned": "Pra B2B local, a primeira venda quase nunca vem de campanha. Vem de relação que já existe. Tarefa antes do portfólio: mapear a rede que você já conhece, mesmo que pareça pequena.",
+  "tropicalizedLesson": "Quem trabalha com serviço digital no Brasil costuma copiar o roteiro do mercado de capital (LinkedIn, networking de tech, evento). Esse roteiro não vende em Recife pra padaria de bairro. O que vende é o entregador que toda semana passa na lanchonete e nota que o site dela é uma página do Facebook desatualizada. Ele oferece refazer por R$ 400 e o dono fecha porque já confia na cara dele. A faculdade noturna, o trampo de entrega e os colegas com pais empresários não são obstáculo, são porta. Cada uma é uma rede pronta que outro freelancer não tem.",
+  "practicalTask": "task_listar_compradores_locais",
+  "relatedResources": ["res_proposta_b2b"],
+  "helpTrigger": "Se você passou 30 dias mandando proposta pelo LinkedIn ou Instagram sem nenhuma resposta paga, peça ajuda. Costuma ser canal errado pro tipo de cliente que você quer alcançar.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

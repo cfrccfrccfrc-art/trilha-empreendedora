@@ -186,7 +186,7 @@
       { "week": 3, "title": "Perfil em uma rede social",   "tasks": ["task_perfil_redes_basico"] },
       { "week": 4, "title": "Primeiro post pedindo apoio", "tasks": ["task_primeiro_post_pedido"] }
     ],
-    "recommendedResources": ["res_whatsapp_business_basico"],
+    "recommendedResources": ["res_whatsapp_business_basico", "res_feira_bazar_basico"],
     "recommendedCases": ["case_marina_doceira_comunidade"],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
@@ -214,7 +214,7 @@
       { "week": 3, "title": "Listar 20 clientes possíveis", "tasks": ["task_listar_20_clientes"] },
       { "week": 4, "title": "Separar contas",               "tasks": ["task_separar_contas"] }
     ],
-    "recommendedResources": ["res_caixa_basico"],
+    "recommendedResources": ["res_caixa_basico", "res_feira_bazar_basico"],
     "recommendedCases": [],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
@@ -242,7 +242,7 @@
       { "week": 3, "title": "Listar 20 clientes possíveis",   "tasks": ["task_listar_20_clientes"] },
       { "week": 4, "title": "Separar contas",                 "tasks": ["task_separar_contas"] }
     ],
-    "recommendedResources": ["res_precificacao_simples"],
+    "recommendedResources": ["res_precificacao_simples", "res_feira_bazar_basico"],
     "recommendedCases": [],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
@@ -270,7 +270,7 @@
       { "week": 3, "title": "Conversar com 10 clientes",   "tasks": ["task_falar_com_10_clientes"] },
       { "week": 4, "title": "Definir oferta, preço, entrega","tasks": ["task_definir_oferta_preco_entrega"] }
     ],
-    "recommendedResources": ["res_precificacao_simples"],
+    "recommendedResources": ["res_precificacao_simples", "res_feira_bazar_basico"],
     "recommendedCases": [],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
@@ -299,7 +299,7 @@
       { "week": 4, "title": "Conversar com os primeiros",    "tasks": ["task_falar_com_10_clientes"] }
     ],
     "recommendedResources": ["res_proposta_b2b"],
-    "recommendedCases": ["case_juliana_geleias_b2b"],
+    "recommendedCases": ["case_juliana_geleias_b2b", "case_vinicius_websites_b2b"],
     "recommendedOpportunities": [],
     "supervisionLevel": "elevated",
     "warningFlags": [],

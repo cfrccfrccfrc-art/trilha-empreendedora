@@ -775,5 +775,39 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+
+{
+  "id": "companion_listar_compradores_locais_vinicius",
+  "taskTemplateId": "task_listar_compradores_locais",
+  "archetypeId": "potencial_b2b_local",
+  "personaName": "Vinícius",
+  "region": "Brasil, Recife (PE)",
+  "personaContext": "Estudante de tecnologia, 22 anos, faz entrega no iFood durante o dia. Nas horas livres faz site simples (WordPress, Wix). Quer começar a cobrar pelos sites mas trava na prospecção: acha que não conhece dono de empresa, posta vaga em rede social e ninguém responde. Decidiu listar 20 lugares onde ele entrega ou passa toda semana, e ver quais teriam site fraco ou nenhum.",
+  "stumbles": [
+    {
+      "moment": "Pessoas 1 a 5",
+      "whatHappened": "Listou 5 lanchonetes onde entrega regularmente. Pesquisou no Google: 4 não tinham site, 1 tinha página de Facebook abandonada desde 2022. Animou. Mas na hora de pensar em abordar, travou. 'O dono mal me cumprimenta, vou chegar oferecendo site?'",
+      "whatHelped": "Anotou ao lado de cada nome: 'última conversa que tive com essa pessoa'. Em 4 dos 5, ele já tinha trocado mais que 'oi'. O dono da lanchonete da rua de cima até pediu uma vez indicação de um eletricista. Não era 'desconhecido', era 'conhecido por outro motivo'. Mudou a percepção."
+    },
+    {
+      "moment": "Pessoas 8 e 9",
+      "whatHappened": "Quis incluir 'pais de colega da faculdade'. Lembrou de 2 amigos cujos pais têm comércio (oficina mecânica e papelaria). Ficou inseguro: 'tô usando os caras pra abordar pai deles?'.",
+      "whatHelped": "Conversou direto com os 2 colegas. Falou 'tô listando empresa pra oferecer site, achei que o do seu pai cabia, posso te perguntar antes de abordar?'. Os 2 acharam normal. Um disse 'meu pai tá querendo isso há tempo, te apresento'. O outro: 'fala com ele direto, ele topa'. A indicação cruzada entrou na lista como acesso, não como chantagem."
+    },
+    {
+      "moment": "Pessoa 14",
+      "whatHappened": "Listou um mercadinho que ele frequenta perto da faculdade. Passou semana inteira matutando se devia ou não abordar. 'Eles devem ter alguém que cuida disso já'. Perdeu uma oportunidade enquanto debatia consigo mesmo.",
+      "whatHelped": "Adotou regra: incluir todo lugar onde ele frequenta presencialmente sem decidir antecipadamente se 'cabe'. Quem decide é o dono do lugar, depois da conversa. Reduzir a auto-eliminação foi a maior mudança. A lista passou de 12 nomes 'óbvios' pra 22 nomes 'possíveis'."
+    }
+  ],
+  "breakthrough": "Dos 22 nomes, ele cruzou com 3 filtros: (1) tem relação humana mínima (ele cumprimenta o dono ou já trocou conversa), (2) tem site ruim ou nenhum, (3) é negócio que faria sentido ter site (loja informal sem CNPJ não cabe). Sobraram 9. Esses 9 eram a primeira lista real de prospect, não uma fantasia tirada do LinkedIn.",
+  "outcome": "Vinícius abordou 5 dos 9 nas duas semanas seguintes. Ofereceu pros 2 primeiros (lanchonete + papelaria) site simples grátis em troca de poder usar como portfólio + indicação ativa. Os dois aceitaram. Pros próximos 3 (oficina, mercadinho, café), apresentou portfólio dos 2 anteriores e cobrou R$ 500 a R$ 800. 1 fechou na hora, 1 pediu pra pensar, 1 não respondeu. Em 5 semanas, ele tinha 3 clientes pagos. A entrega no iFood continuou (paga conta), mas o tempo livre virou trabalho de site, não rolagem de feed.",
+  "whenToAskForHelp": "Se você tem habilidade técnica e tá batendo em silêncio digital há 30 dias, peça ajuda. Provavelmente o canal de prospecção tá errado pro cliente que você quer alcançar. Quem vende serviço B2B local quase nunca cresce em LinkedIn.",
+  "relatedCases": ["case_vinicius_websites_b2b"],
+  "relatedResources": ["res_proposta_b2b", "res_whatsapp_business_basico"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

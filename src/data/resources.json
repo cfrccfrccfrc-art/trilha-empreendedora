@@ -588,5 +588,41 @@
     "sourceStatus": "active",
     "status": "active",
     "version": "1.0"
+  },
+  {
+    "id": "res_feira_bazar_basico",
+    "title": "Feira e bazar: como começar a vender em evento de bairro",
+    "description": "Guia geral pra quem nunca participou de feira ou bazar e quer testar como canal de venda. Cobre escolha do evento, custo real, montagem da barraca, o que levar, como capturar contato dos visitantes, e em que setores feira costuma valer mais.",
+    "type": "guide",
+    "source": "Trilha Empreendedora",
+    "sourceLink": "/conteudos/feira-bazar-basico",
+    "topic": "vendas",
+    "sector": "geral",
+    "recommendedArchetypes": ["vende_comunidade_nao_online", "renda_complementar", "talento_sem_postura_comercial", "bico_pode_virar"],
+    "level": "iniciante",
+    "free": true,
+    "onlineOffline": "offline",
+    "estimatedTime": "8 min",
+    "practicalUseCase": "Pra quem vende alimentação, beleza, moda revenda ou artesanato e quer testar canal presencial sem assumir custo fixo.",
+    "qualityScore": 4,
+    "lastReviewed": "2026-05-09",
+    "nextReview": "2026-11-09",
+    "sourceStatus": "active",
+    "status": "active",
+    "version": "1.0",
+    "body": [
+      "Feira e bazar são canais que muita gente esquece de testar. Custa pouco (R$ 0 a R$ 100 de inscrição na maioria das feiras públicas), te coloca cara a cara com cliente, e ensina rápido o que vende e o que não. Não funciona pra todo mundo, mas pra alimentação, beleza, moda revenda e artesanato costuma virar virada de chave.",
+      "**Como achar feira na sua cidade.** Procure no Google 'feira de empreendedores [sua cidade]', 'bazar comunitário', 'feira da economia solidária'. Sebrae regional, prefeitura (secretaria de desenvolvimento), CDL local, igreja de bairro, associação de moradores. Grupo de WhatsApp da comunidade costuma ter calendário rolando. Anote pelo menos 4 datas no celular antes de escolher uma.",
+      "**Como escolher a primeira.** Feira pequena de bairro pra estrear (50 a 200 visitantes), não evento gigante onde você se perde. Feira gratuita ou com taxa abaixo de R$ 50. Pelo menos 6h de evento (3h é pouco pra recuperar tempo de montagem). Pergunta antes 'qual é o público típico que vai?' Se for público que não compra o que você vende, não vale o sábado.",
+      "**Custo real além da inscrição.** Mesa, toalha, caixinha de som se for usar (empréstimo resolve), troco em dinheiro pra dar (pelo menos R$ 100 em moeda e nota baixa), maquininha de cartão (Stone, PagSeguro, InfinitePay têm modelo a partir de R$ 70 com taxa razoável), embalagem extra, deslocamento. Soma uns R$ 50 a R$ 150 a mais.",
+      "**O que levar de produto.** Variedade pesa mais que quantidade no início. Se você faz bolo, leva 3 sabores em vez de 30 unidades de 1 sabor. Se você revende roupa, leva tamanho variado dos 3 modelos que mais saem. Cliente quer escolher. Estoque que sobrar volta com você e vende na próxima.",
+      "**Preço de feira pode ser diferente.** Feira tem fricção menor de venda. Cliente decide na hora. Pode cobrar 10 a 20% mais caro que no zap se o produto justifica (acabamento, embalagem, diferenciação). Não baixa preço só porque é feira. Vira concorrência burra com vizinho de barraca.",
+      "**Capture contato de quem visita, mesmo quem não comprar.** Caderninho na barraca: 'Deixa seu zap pra avisar quando eu tiver promoção ou novidade.' Tem que oferecer benefício: 5% off na próxima compra, brinde pequeno, primeiro a saber. Em uma feira de 50 visitantes, dá pra capturar 15 contatos. Esses contatos viram venda nas semanas seguintes.",
+      "**Pós-feira é onde a feira vira renda.** Domingo de noite ou segunda de manhã, manda mensagem pra quem deixou contato: 'oi, foi bom te conhecer no sábado, qualquer dúvida tô aqui'. 30 a 50% das vendas reais aparecem nessa semana, não na feira. Se você só anota e não escreve depois, perdeu o ganho principal.",
+      "**Em que setores feira costuma valer mais.** Alimentação (comida pronta, doce, salgado, geleia, marmita). Beleza (sobrancelha, design, manicure express, depilação rápida em feira de moda ou festa de bairro). Moda revenda (bazar de roupa, brechó, peça nova com desconto). Artesanato (peça acima de R$ 60, produto único, peça com história). Esses 4 são onde feira costuma virar canal recorrente.",
+      "**Em que setores feira costuma não compensar.** Serviço técnico (web, design gráfico, contabilidade), cliente desse tipo não decide em feira. Produto que precisa de explicação longa (serviço financeiro, plano), barulho da feira atrapalha. Produto de revenda muito popular (refrigerante, biscoito de marca grande), preço de mercado é apertado e feira não justifica esforço.",
+      "**Repita 3 vezes antes de decidir se vale.** Primeira feira é teste de logística (você esquece troco, montagem demora, estoque erra). Segunda é teste de público (você ajusta preço e mix). Terceira é onde a venda real começa a aparecer. Se em 3 feiras você não vendeu nada, troca o tipo de feira ou aceita que o canal não combina com o seu produto.",
+      "Se você gostou da feira mas o transporte ou montagem te esgota, peça ajuda. Tem como dividir barraca com outra empreendedora, alugar em coletivo, ou trocar pra feira menor com menos esforço logístico."
+    ]
   }
 ]
