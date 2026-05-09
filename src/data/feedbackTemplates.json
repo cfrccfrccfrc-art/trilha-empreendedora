@@ -1,0 +1,160 @@
+[
+  {
+    "id": "fb_anotar_aprovado",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_anotar_7_dias",
+    "decision": "aprovada",
+    "recognition": "Você fez a parte mais difícil: tirou o dinheiro da invisibilidade.",
+    "learning": "Anotar 7 dias mostra o que a memória esconde. A diferença entre vender e lucrar virou número agora.",
+    "adjustment": "",
+    "nextStep": "Próxima missão: calcular o custo real de 3 produtos que você mais vende."
+  },
+  {
+    "id": "fb_anotar_ajuste",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_anotar_7_dias",
+    "decision": "precisa_ajustar",
+    "recognition": "Bom esforço — você começou e isso já é mais do que muita gente faz.",
+    "learning": "Anotar funciona quando inclui os pequenos: embalagem, transporte, taxa de cartão. Quase todo mundo esquece.",
+    "adjustment": "Refaça mais 3 dias incluindo TODO gasto pequeno. Mesmo de R$ 2 conta.",
+    "nextStep": "Quando os 3 dias estiverem completos, me reporte de novo."
+  },
+  {
+    "id": "fb_anotar_travada",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_anotar_7_dias",
+    "decision": "travada",
+    "recognition": "Você tentou e travou — isso é informação, não fracasso.",
+    "learning": "Quando anotar trava, geralmente é porque o método não cabe na sua rotina.",
+    "adjustment": "Vamos simplificar: durante 3 dias, anote SÓ no caderno duas coisas (entrou X, saiu Y). Sem categoria.",
+    "nextStep": "Volta aqui depois dos 3 dias, mesmo que incompleto."
+  },
+
+  {
+    "id": "fb_custos_aprovado",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_custo_3_produtos",
+    "decision": "aprovada",
+    "recognition": "Você passou da intuição pro número. Esse é o virador de chave.",
+    "learning": "Custo real é maior do que parece. Esse é o motivo de muito negócio bom não dar lucro.",
+    "adjustment": "",
+    "nextStep": "Próxima: revisar o preço dos mesmos 3 produtos com base no custo real."
+  },
+  {
+    "id": "fb_custos_ajuste",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_custo_3_produtos",
+    "decision": "precisa_ajustar",
+    "recognition": "Bom começo de cálculo.",
+    "learning": "Custo de produto inclui também: a sua mão de obra (mesmo que pequena) e a parte dos gastos fixos (luz, gás, internet) que cabe naquele item.",
+    "adjustment": "Refaça incluindo seu tempo de trabalho (estime quantos minutos cada item leva e use um valor por hora).",
+    "nextStep": "Reporta de novo quando incluir."
+  },
+
+  {
+    "id": "fb_precos_aprovado",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_revisar_precos",
+    "decision": "aprovada",
+    "recognition": "Bom trabalho — você está cobrando agora pelo que entrega.",
+    "learning": "Preço justo cobre custo, paga seu trabalho e ainda deixa lucro. Você acabou de fazer essa conta acontecer.",
+    "adjustment": "",
+    "nextStep": "Próxima: separar contas pessoais e do negócio."
+  },
+  {
+    "id": "fb_precos_ajuste",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_revisar_precos",
+    "decision": "precisa_ajustar",
+    "recognition": "Você revisou — isso é mais do que muita gente faz.",
+    "learning": "Mudar preço de tudo de uma vez assusta cliente. Mudar 1 ou 2 itens por mês não.",
+    "adjustment": "Escolha 1 item pra ajustar agora. Anota a reação dos clientes nos próximos 7 dias.",
+    "nextStep": "Reporta o que aconteceu com a venda desse item."
+  },
+
+  {
+    "id": "fb_separar_aprovado",
+    "archetypeId": "vende_sem_lucro",
+    "taskTemplateId": "task_separar_contas",
+    "decision": "aprovada",
+    "recognition": "Você separou — agora dá pra ver o negócio de verdade.",
+    "learning": "Quando dinheiro pessoal e do negócio se misturam, lucro vira ilusão.",
+    "adjustment": "",
+    "nextStep": "Continue por 30 dias. Vamos rever depois pra ver se o método está sustentável."
+  },
+
+  {
+    "id": "fb_falar_clientes_aprovado",
+    "archetypeId": "ainda_e_ideia",
+    "taskTemplateId": "task_falar_com_10_clientes",
+    "decision": "aprovada",
+    "recognition": "Você fez a coisa mais importante: ouviu cliente real.",
+    "learning": "O que você ouviu vale mais que qualquer pesquisa de internet.",
+    "adjustment": "",
+    "nextStep": "Agora vamos transformar o que você ouviu em uma oferta clara."
+  },
+  {
+    "id": "fb_falar_clientes_ajuste",
+    "archetypeId": "ainda_e_ideia",
+    "taskTemplateId": "task_falar_com_10_clientes",
+    "decision": "precisa_ajustar",
+    "recognition": "Você começou — bom passo.",
+    "learning": "Conversa com família e amigo próximo é viesada (eles te apoiam). Cliente real diz coisa que dói ouvir mas é a mais útil.",
+    "adjustment": "Conversa com mais 5 pessoas que NÃO são família próxima. Pode ser vizinho, conhecido de trabalho, gente da igreja.",
+    "nextStep": "Reporta o que muda quando você ouve gente fora do círculo próximo."
+  },
+
+  {
+    "id": "fb_capital_aprovado",
+    "archetypeId": "precisa_capital",
+    "taskTemplateId": "task_capital_o_que_comprar",
+    "decision": "aprovada",
+    "recognition": "Excelente — você passou de 'preciso de dinheiro' pra 'preciso de R$ X pra Y, que rende Z'.",
+    "learning": "Essa é a diferença entre capital virar investimento ou virar dívida.",
+    "adjustment": "",
+    "nextStep": "Próxima: calcular o custo dos produtos que esse capital vai gerar."
+  },
+  {
+    "id": "fb_capital_encaminhada",
+    "archetypeId": "precisa_capital",
+    "taskTemplateId": "task_capital_o_que_comprar",
+    "decision": "encaminhada",
+    "recognition": "Você está pensando bem — buscar opinião antes de assinar é decisão madura.",
+    "learning": "Decisão de capital tem detalhes técnicos (taxa, prazo, garantia, fluxo de caixa) que vale a pena olhar com alguém de fora.",
+    "adjustment": "",
+    "nextStep": "Vamos te conectar com um voluntário que pode revisar a proposta com você antes de qualquer assinatura."
+  },
+
+  {
+    "id": "fb_fluxo_aprovado",
+    "archetypeId": "operacao_travada",
+    "taskTemplateId": "task_mapear_fluxo_pedido",
+    "decision": "aprovada",
+    "recognition": "Bom mapeamento — agora dá pra ver onde o problema está.",
+    "learning": "Mapear o fluxo é o que separa 'estou perdida' de 'sei o que ajustar'.",
+    "adjustment": "",
+    "nextStep": "Próxima: criar uma planilha simples baseada no que você mapeou."
+  },
+
+  {
+    "id": "fb_listar_tarefas_aprovado",
+    "archetypeId": "empreendedora_sobrecarregada",
+    "taskTemplateId": "task_listar_tarefas_so_eu",
+    "decision": "aprovada",
+    "recognition": "Você listou — isso já tira peso.",
+    "learning": "Boa parte do que pesa é tarefa que dá pra delegar, automatizar ou parar de fazer.",
+    "adjustment": "",
+    "nextStep": "Próxima: definir 2 dias fixos da semana pra cuidar do negócio."
+  },
+
+  {
+    "id": "fb_geral_travada",
+    "archetypeId": null,
+    "taskTemplateId": null,
+    "decision": "travada",
+    "recognition": "Você tentou e travou — isso é informação, não fracasso.",
+    "learning": "Toda tarefa que trava tem uma causa específica. Vamos descobrir qual.",
+    "adjustment": "Me conta em uma frase o que mais atrapalhou: foi tempo, dúvida sobre o que fazer, ou outra coisa?",
+    "nextStep": "Vamos ajustar a tarefa pra caber no que você consegue agora."
+  }
+]

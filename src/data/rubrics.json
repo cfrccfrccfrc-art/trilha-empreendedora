@@ -1,0 +1,89 @@
+[
+  {
+    "id": "rubric_cash_flow",
+    "name": "Controle de caixa básico",
+    "appliesTo": "task_anotar_7_dias",
+    "criteria": [
+      {
+        "id": "all_days_filled",
+        "label": "Anotou todos os 7 dias (sem furo)",
+        "weight": 2
+      },
+      {
+        "id": "small_costs_included",
+        "label": "Incluiu gastos pequenos (embalagem, transporte, taxa de cartão)",
+        "weight": 3
+      },
+      {
+        "id": "personal_separated",
+        "label": "Separou gastos pessoais dos do negócio",
+        "weight": 2
+      },
+      {
+        "id": "weekly_total",
+        "label": "Calculou o total da semana (entrou - saiu)",
+        "weight": 1
+      }
+    ],
+    "passThreshold": 5,
+    "notes": "Aprovar se somar 5+ pontos. Pedir ajuste se somar 3-4. Marcar como travada se 0-2 pontos."
+  },
+  {
+    "id": "rubric_pricing",
+    "name": "Precificação prática",
+    "appliesTo": "task_revisar_precos",
+    "criteria": [
+      {
+        "id": "cost_calculated",
+        "label": "Calculou o custo real do produto antes do preço",
+        "weight": 3
+      },
+      {
+        "id": "labor_included",
+        "label": "Incluiu o próprio trabalho no custo",
+        "weight": 2
+      },
+      {
+        "id": "margin_defined",
+        "label": "Definiu uma margem clara (% ou valor)",
+        "weight": 2
+      },
+      {
+        "id": "comparison_with_current",
+        "label": "Comparou com o preço atual e justificou o ajuste",
+        "weight": 1
+      }
+    ],
+    "passThreshold": 5,
+    "notes": "Atenção: se o preço novo está abaixo do custo, NÃO aprovar — pedir ajuste."
+  },
+  {
+    "id": "rubric_capital_initial",
+    "name": "Capital inicial inteligente",
+    "appliesTo": "task_capital_o_que_comprar",
+    "criteria": [
+      {
+        "id": "items_detailed",
+        "label": "Listou os itens com preço pesquisado em pelo menos 3 lugares",
+        "weight": 2
+      },
+      {
+        "id": "expected_return",
+        "label": "Estimou retorno mensal esperado de cada item",
+        "weight": 3
+      },
+      {
+        "id": "payback_calculated",
+        "label": "Calculou em quantos meses o investimento se paga",
+        "weight": 3
+      },
+      {
+        "id": "phased_plan",
+        "label": "Considerou fazer em etapas em vez de tudo de uma vez",
+        "weight": 2
+      }
+    ],
+    "passThreshold": 7,
+    "notes": "Tarefa de revisão obrigatória (review_level: elevated). Não aprovar se não houver retorno calculado — capital sem retorno claro = risco alto."
+  }
+]

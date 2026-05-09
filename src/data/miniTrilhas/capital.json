@@ -1,0 +1,128 @@
+{
+  "slug": "capital",
+  "accent": "Mini-trilha rápida",
+  "title": "É hora de pegar empréstimo?",
+  "subtitle": "Cinco perguntas pra ver se o negócio está pronto pra capital — antes de assinar.",
+  "introBody": "Em mais ou menos 2 minutos. Sem cadastro.",
+  "warning": {
+    "title": "Importante",
+    "body": "A Trilha não vende crédito nem indica banco. Damos um norte pra você não pegar empréstimo na hora errada."
+  },
+  "tieBreakOrder": ["ja_pode", "quase", "ainda_nao"],
+  "tabLabels": {
+    "ainda_nao": "Ainda não",
+    "quase": "Quase pronta(o)",
+    "ja_pode": "Pronta(o), com critério"
+  },
+  "questions": [
+    {
+      "id": "q1", "order": 1,
+      "text": "Você sabe o lucro mensal médio do negócio?",
+      "helpText": "Lucro = o que sobra depois de TODOS os custos, incluindo seu trabalho.",
+      "options": [
+        { "id": "nao",   "label": "Não",                "score": { "ainda_nao": 3, "quase": 0, "ja_pode": 0 } },
+        { "id": "aprox", "label": "Aproximado",         "score": { "ainda_nao": 1, "quase": 2, "ja_pode": 0 } },
+        { "id": "sim",   "label": "Sim, com clareza",   "score": { "ainda_nao": 0, "quase": 1, "ja_pode": 3 } }
+      ]
+    },
+    {
+      "id": "q2", "order": 2,
+      "text": "Você tem reserva de pelo menos 3 meses de operação guardada?",
+      "options": [
+        { "id": "nao",   "label": "Não tenho reserva",   "score": { "ainda_nao": 3, "quase": 0, "ja_pode": 0 } },
+        { "id": "pouco", "label": "Tenho pouco",         "score": { "ainda_nao": 1, "quase": 2, "ja_pode": 0 } },
+        { "id": "sim",   "label": "Sim, 3 meses ou mais","score": { "ainda_nao": 0, "quase": 1, "ja_pode": 3 } }
+      ]
+    },
+    {
+      "id": "q3", "order": 3,
+      "text": "Pra que exatamente você vai usar o capital?",
+      "options": [
+        { "id": "vago",        "label": "Pra crescer / pra ter capital",                       "score": { "ainda_nao": 3, "quase": 0, "ja_pode": 0 } },
+        { "id": "equipamento", "label": "Equipamento ou estoque específico",                    "score": { "ainda_nao": 0, "quase": 2, "ja_pode": 1 } },
+        { "id": "plano",       "label": "Plano detalhado, com retorno mensal estimado",         "score": { "ainda_nao": 0, "quase": 1, "ja_pode": 3 } }
+      ]
+    },
+    {
+      "id": "q4", "order": 4,
+      "text": "Você sabe quanto a parcela vai pesar no caixa do negócio?",
+      "options": [
+        { "id": "nao",   "label": "Não",                                "score": { "ainda_nao": 3, "quase": 0, "ja_pode": 0 } },
+        { "id": "aprox", "label": "Mais ou menos",                       "score": { "ainda_nao": 1, "quase": 2, "ja_pode": 0 } },
+        { "id": "sim",   "label": "Sim, calculei e cabe",                "score": { "ainda_nao": 0, "quase": 1, "ja_pode": 3 } }
+      ]
+    },
+    {
+      "id": "q5", "order": 5,
+      "text": "Você comparou pelo menos 3 propostas de crédito?",
+      "options": [
+        { "id": "nenhuma", "label": "Nenhuma proposta ainda",            "score": { "ainda_nao": 2, "quase": 0, "ja_pode": 0 } },
+        { "id": "uma",     "label": "1 ou 2 propostas",                  "score": { "ainda_nao": 0, "quase": 2, "ja_pode": 1 } },
+        { "id": "tres",    "label": "Sim, 3 ou mais",                    "score": { "ainda_nao": 0, "quase": 1, "ja_pode": 3 } }
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "id": "ainda_nao",
+      "name": "Ainda não é hora",
+      "shortDescription": "Pegar capital agora amplia mais o problema do que resolve.",
+      "whatItIs": "Sinal de que faltam bases — você não tem clareza de lucro, ou de pra quê seria o dinheiro, ou da parcela que cabe. Sem isso, qualquer empréstimo vira dívida que aperta.",
+      "whenItMakesSense": [
+        "Continuar como está e fortalecer a base primeiro"
+      ],
+      "whenItDoesnt": [
+        "Pegar microcrédito por urgência",
+        "Pegar empréstimo pessoal pra capital de giro",
+        "Aceitar oferta de banco sem ter calculado parcela"
+      ],
+      "whatChanges": "Empréstimo agora vira ciclo: vende pra pagar parcela, sem sobrar pra crescer. Custo financeiro come a margem.",
+      "nextStep": "Antes de buscar capital, complete a trilha de finanças: anote entrada/saída 7 dias, calcule custo de 3 produtos, separe contas. Quando voltar a fazer este quiz e cair em 'quase', aí sim faz sentido olhar opções.",
+      "relatedSources": [
+        { "label": "Capital inteligente (Trilha)",     "url": "/conteudos/res_capital_inteligente" },
+        { "label": "Microcrédito: o que conferir antes","url": "/conteudos/res_microcredito_orientacao" }
+      ]
+    },
+    {
+      "id": "quase",
+      "name": "Quase pronta(o)",
+      "shortDescription": "Você tem alguns sinais bons. Falta um ou dois passos antes de assinar.",
+      "whatItIs": "Vê parte do quadro mas ainda tem dúvida em pelo menos um ponto crítico (lucro, reserva, plano de uso, parcela ou comparação de propostas). Empréstimo aqui pode dar certo, mas com risco maior.",
+      "whenItMakesSense": [
+        "Fechar a lacuna (1-2 perguntas onde você marcou 'aproximado' ou 'não')",
+        "Pesquisar pelo menos 3 fontes de crédito (microcrédito, banco, cooperativa)"
+      ],
+      "whenItDoesnt": [
+        "Aceitar primeira proposta sem comparar",
+        "Pegar valor maior do que o que você precisa de fato"
+      ],
+      "whatChanges": "Resolver os 1-2 pontos abertos diminui muito o risco de virar dívida ruim.",
+      "nextStep": "Faça a tarefa de 'listar exatamente o que comprar' (task_capital_o_que_comprar). Quando ela estiver completa com retorno calculado, você cai em 'pronta(o), com critério' nesse quiz.",
+      "relatedSources": [
+        { "label": "Capital inteligente (Trilha)",     "url": "/conteudos/res_capital_inteligente" },
+        { "label": "Microcrédito: o que conferir antes","url": "/conteudos/res_microcredito_orientacao" },
+        { "label": "Sebrae: capital de giro",          "url": "https://sebrae.com.br/" }
+      ]
+    },
+    {
+      "id": "ja_pode",
+      "name": "Pronta(o), com critério",
+      "shortDescription": "Tem base. Empréstimo pode acelerar — desde que com cabeça fria.",
+      "whatItIs": "Você sabe seu lucro, sabe pra que vai usar, sabe a parcela e comparou opções. Capital aqui vira investimento.",
+      "whenItMakesSense": [
+        "Comprar equipamento ou estoque que aumenta capacidade comprovada",
+        "Pegar microcrédito de instituição com taxa transparente"
+      ],
+      "whenItDoesnt": [
+        "Quitar outras dívidas com juros piores — fazer o oposto",
+        "Pegar valor extra 'só por garantia' — acaba virando custo"
+      ],
+      "whatChanges": "Você assina sabendo o que vem depois. Sem surpresa de parcela, sem ciclo dívida-aperto.",
+      "nextStep": "Antes de assinar, peça revisão de proposta com um voluntário da rede (categoria 'crédito consciente'). Mesmo quem está pronta(o) ganha em ouvir um olhar de fora antes de assinar.",
+      "relatedSources": [
+        { "label": "Capital inteligente (Trilha)",            "url": "/conteudos/res_capital_inteligente" },
+        { "label": "Banco Central: Cidadania Financeira",     "url": "https://www.bcb.gov.br/cidadaniafinanceira" }
+      ]
+    }
+  ]
+}

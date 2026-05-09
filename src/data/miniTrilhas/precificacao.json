@@ -1,0 +1,125 @@
+{
+  "slug": "precificacao",
+  "accent": "Mini-trilha rápida",
+  "title": "Como você está cobrando hoje?",
+  "subtitle": "Cinco perguntas pra ver onde você está em precificação.",
+  "introBody": "Em mais ou menos 2 minutos. Sem cadastro.",
+  "warning": {
+    "title": "Sobre o resultado",
+    "body": "É um norte, não cálculo definitivo. Preço depende do seu setor, da sua região e do tipo de cliente."
+  },
+  "tieBreakOrder": ["margem_clara", "cobertura_basica", "chute"],
+  "tabLabels": {
+    "chute": "No chute",
+    "cobertura_basica": "Cobertura básica",
+    "margem_clara": "Margem clara"
+  },
+  "questions": [
+    {
+      "id": "q1", "order": 1,
+      "text": "Como você define o preço hoje?",
+      "options": [
+        { "id": "olho",     "label": "No olho, sensibilidade",                "score": { "chute": 3, "cobertura_basica": 0, "margem_clara": 0 } },
+        { "id": "concorr",  "label": "Olhando o que o concorrente cobra",    "score": { "chute": 1, "cobertura_basica": 2, "margem_clara": 0 } },
+        { "id": "custo",    "label": "Calculo custo + margem",                "score": { "chute": 0, "cobertura_basica": 1, "margem_clara": 3 } },
+        { "id": "dontknow", "label": "Não sei explicar",                      "score": { "chute": 2, "cobertura_basica": 0, "margem_clara": 0 } }
+      ]
+    },
+    {
+      "id": "q2", "order": 2,
+      "text": "Você sabe o custo unitário do que vende?",
+      "options": [
+        { "id": "nao",   "label": "Não",            "score": { "chute": 3, "cobertura_basica": 0, "margem_clara": 0 } },
+        { "id": "aprox", "label": "Mais ou menos",   "score": { "chute": 1, "cobertura_basica": 2, "margem_clara": 0 } },
+        { "id": "sim",   "label": "Sim, por item",   "score": { "chute": 0, "cobertura_basica": 1, "margem_clara": 3 } }
+      ]
+    },
+    {
+      "id": "q3", "order": 3,
+      "text": "Você inclui seu trabalho (suas horas) no preço?",
+      "options": [
+        { "id": "nao",      "label": "Não, só o material",       "score": { "chute": 3, "cobertura_basica": 0, "margem_clara": 0 } },
+        { "id": "as_vezes", "label": "Às vezes",                 "score": { "chute": 1, "cobertura_basica": 2, "margem_clara": 0 } },
+        { "id": "sempre",   "label": "Sim, sempre",              "score": { "chute": 0, "cobertura_basica": 1, "margem_clara": 3 } }
+      ]
+    },
+    {
+      "id": "q4", "order": 4,
+      "text": "Quando você dá desconto, sabe se ainda lucra?",
+      "options": [
+        { "id": "nao",   "label": "Não",                          "score": { "chute": 3, "cobertura_basica": 0, "margem_clara": 0 } },
+        { "id": "aprox", "label": "Mais ou menos",                "score": { "chute": 0, "cobertura_basica": 3, "margem_clara": 0 } },
+        { "id": "sim",   "label": "Sim, sei até onde dá",         "score": { "chute": 0, "cobertura_basica": 1, "margem_clara": 3 } }
+      ]
+    },
+    {
+      "id": "q5", "order": 5,
+      "text": "Quando foi seu último ajuste de preço?",
+      "options": [
+        { "id": "nunca",      "label": "Nunca ajustei",                  "score": { "chute": 2, "cobertura_basica": 0, "margem_clara": 0 } },
+        { "id": "mais_ano",   "label": "Mais de 1 ano atrás",            "score": { "chute": 1, "cobertura_basica": 1, "margem_clara": 0 } },
+        { "id": "ultimos_12", "label": "Nos últimos 12 meses",           "score": { "chute": 0, "cobertura_basica": 1, "margem_clara": 2 } }
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "id": "chute",
+      "name": "Preço no chute",
+      "shortDescription": "Você ainda cobra no instinto. Funciona até cliente novo ou custo subindo te pegar.",
+      "whatItIs": "Preço definido por sensibilidade ou pelo que o vizinho cobra. Comum em quem tá começando ou nunca parou pra fazer a conta — não é falha, é fase. Mas fica vulnerável a qualquer mudança.",
+      "whenItMakesSense": [
+        "Você está validando a ideia e tem menos de 5 vendas reais",
+        "Volume é muito baixo (1-2 vendas/mês esporádicas)"
+      ],
+      "whenItDoesnt": [
+        "Você já vende toda semana",
+        "Você dá desconto sem saber se sobra",
+        "Tem custo subindo (matéria-prima, fornecedor)"
+      ],
+      "whatChanges": "Hoje qualquer aumento de custo te pega de surpresa. Você pode estar trabalhando muito e ganhando pouco sem ver.",
+      "nextStep": "Próximas missões: anotar entrada e saída por 7 dias, calcular custo de 3 produtos, revisar preço com base no número real. Trilha do arquétipo 'Vende mas não sabe se lucra' faz exatamente isso.",
+      "relatedSources": [
+        { "label": "Caixa básico (Trilha)",       "url": "/conteudos/res_caixa_basico" },
+        { "label": "Precificação simples (Trilha)","url": "/conteudos/res_precificacao_simples" }
+      ]
+    },
+    {
+      "id": "cobertura_basica",
+      "name": "Cobertura básica",
+      "shortDescription": "Seu preço cobre o custo direto, mas a margem ainda é difusa.",
+      "whatItIs": "Você sabe que não vende abaixo do custo, mas não tem clareza de quanto sobra. É a fase do meio — segura, mas insuficiente pra crescer com critério.",
+      "whenItMakesSense": [
+        "Você vende regularmente há alguns meses sem prejuízo aparente",
+        "Está concentrada em fazer o negócio rodar antes de otimizar"
+      ],
+      "whenItDoesnt": [
+        "Está pensando em pegar crédito",
+        "Tem dúvida frequente sobre dar ou não desconto",
+        "Quer contratar ajuda paga"
+      ],
+      "whatChanges": "Margem clara muda decisão: você consegue dizer 'esse desconto cabe', 'esse fornecedor é caro', 'esse produto vale empenho'. Sem isso, cada decisão é palpite informado.",
+      "nextStep": "Calcule margem real (preço − custo total, incluindo seu trabalho) de 3 produtos que mais vende. Se margem ficar abaixo de 20%, ajuste preço pra cima ou negocie custo. Se acima de 40%, considere baixar levemente pra fechar mais venda.",
+      "relatedSources": [
+        { "label": "Precificação simples (Trilha)","url": "/conteudos/res_precificacao_simples" },
+        { "label": "Sebrae: aprenda a formar preço","url": "https://sebrae.com.br/" }
+      ]
+    },
+    {
+      "id": "margem_clara",
+      "name": "Margem clara",
+      "shortDescription": "Você sabe sua margem. Hora de manter e ajustar fino.",
+      "whatItIs": "Preço calculado com método: custo direto + indireto + seu trabalho + margem-alvo. Você decide com base em conta, não em palpite.",
+      "whenItMakesSense": [
+        "Em qualquer fase do negócio — esse é o estado bom de manter",
+        "Especialmente antes de crescer (pegar crédito, contratar, abrir canal novo)"
+      ],
+      "whenItDoesnt": [],
+      "whatChanges": "Seu superpoder agora é decidir rápido: aceitar ou recusar pedido grande, dar desconto sem culpa, planejar reajuste no momento certo.",
+      "nextStep": "Revise margem trimestralmente. Insumos sobem, gás muda, frete reajusta. Se passar 6 meses sem revisar, sua margem encolhe sem você notar. Marque na agenda: 1 hora a cada 3 meses pra rever os 3 produtos principais.",
+      "relatedSources": [
+        { "label": "Precificação simples (Trilha)","url": "/conteudos/res_precificacao_simples" }
+      ]
+    }
+  ]
+}

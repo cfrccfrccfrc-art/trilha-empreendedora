@@ -1,0 +1,132 @@
+{
+  "slug": "canais",
+  "accent": "Mini-trilha rápida",
+  "title": "Vale a pena vender online agora?",
+  "subtitle": "Cinco perguntas pra ver onde investir tempo: presencial, online ou os dois.",
+  "introBody": "Em mais ou menos 2 minutos. Sem cadastro.",
+  "warning": {
+    "title": "Sobre o resultado",
+    "body": "Não tem caminho 'certo' — tem caminho mais provável de funcionar pra onde você está agora."
+  },
+  "tieBreakOrder": ["online_pronto", "hibrido", "foco_presencial"],
+  "tabLabels": {
+    "foco_presencial": "Foco presencial",
+    "hibrido": "Híbrido pequeno",
+    "online_pronto": "Pronta(o) pra crescer online"
+  },
+  "questions": [
+    {
+      "id": "q1", "order": 1,
+      "text": "Você já vende com regularidade?",
+      "options": [
+        { "id": "nao",        "label": "Não vendo regularmente",     "score": { "foco_presencial": 3, "hibrido": 0, "online_pronto": 0 } },
+        { "id": "as_vezes",   "label": "Às vezes, esporádico",        "score": { "foco_presencial": 2, "hibrido": 2, "online_pronto": 0 } },
+        { "id": "sim",        "label": "Sim, toda semana",            "score": { "foco_presencial": 0, "hibrido": 1, "online_pronto": 3 } }
+      ]
+    },
+    {
+      "id": "q2", "order": 2,
+      "text": "Você tem foto boa de pelo menos 3 produtos?",
+      "options": [
+        { "id": "nao",        "label": "Não",                         "score": { "foco_presencial": 2, "hibrido": 1, "online_pronto": 0 } },
+        { "id": "melhorar",   "label": "Tenho, mas dá pra melhorar",  "score": { "foco_presencial": 0, "hibrido": 3, "online_pronto": 0 } },
+        { "id": "sim",        "label": "Sim, com luz e fundo limpo",  "score": { "foco_presencial": 0, "hibrido": 1, "online_pronto": 3 } }
+      ]
+    },
+    {
+      "id": "q3", "order": 3,
+      "text": "Custo do produto e preço pensando em frete: estão calculados?",
+      "options": [
+        { "id": "nao",     "label": "Não calculei",                    "score": { "foco_presencial": 3, "hibrido": 0, "online_pronto": 0 } },
+        { "id": "alguns",  "label": "Pra alguns produtos",             "score": { "foco_presencial": 1, "hibrido": 2, "online_pronto": 0 } },
+        { "id": "todos",   "label": "Pra todos",                       "score": { "foco_presencial": 0, "hibrido": 1, "online_pronto": 3 } }
+      ]
+    },
+    {
+      "id": "q4", "order": 4,
+      "text": "Se vier pedido extra de online, você dá conta?",
+      "options": [
+        { "id": "nao",     "label": "Não, já tô no limite",            "score": { "foco_presencial": 3, "hibrido": 0, "online_pronto": 0 } },
+        { "id": "talvez",  "label": "Talvez, depende do volume",       "score": { "foco_presencial": 1, "hibrido": 2, "online_pronto": 0 } },
+        { "id": "sim",     "label": "Sim, tenho folga",                "score": { "foco_presencial": 0, "hibrido": 1, "online_pronto": 3 } }
+      ]
+    },
+    {
+      "id": "q5", "order": 5,
+      "text": "Sua base local (vizinhança, lista de zap) está organizada?",
+      "options": [
+        { "id": "nao",      "label": "Não tenho base organizada",     "score": { "foco_presencial": 2, "hibrido": 1, "online_pronto": 0 } },
+        { "id": "parcial",  "label": "Tenho contatos mas dispersos",   "score": { "foco_presencial": 1, "hibrido": 2, "online_pronto": 1 } },
+        { "id": "sim",      "label": "Sim, lista de transmissão ativa","score": { "foco_presencial": 0, "hibrido": 1, "online_pronto": 2 } }
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "id": "foco_presencial",
+      "name": "Foco no presencial por enquanto",
+      "shortDescription": "Online amplifica o que já funciona. Sua base ainda precisa de base.",
+      "whatItIs": "Você ainda não tem regularidade, custo calculado, ou capacidade de atender pedido extra. Investir em online agora amplia o problema antes de gerar venda.",
+      "whenItMakesSense": [
+        "Validar produto/serviço com a comunidade local primeiro",
+        "Atender feira, vizinho, indicação — onde dá pra ajustar rápido"
+      ],
+      "whenItDoesnt": [
+        "Pagar anúncios pagos",
+        "Abrir loja em marketplace",
+        "Contratar gestor de redes sociais"
+      ],
+      "whatChanges": "Em 2-3 meses fortalecendo o presencial (com regularidade e custos calculados), você naturalmente sobe pra 'híbrido pequeno' nesse quiz.",
+      "nextStep": "Comece pela base: anotar 7 dias, calcular custo de 3 produtos. Depois fortaleça vínculos locais (lista de zap, indicação ativa). Online vem depois.",
+      "relatedSources": [
+        { "label": "Caixa básico (Trilha)",     "url": "/conteudos/res_caixa_basico" },
+        { "label": "WhatsApp Business básico",   "url": "/conteudos/res_whatsapp_business_basico" }
+      ]
+    },
+    {
+      "id": "hibrido",
+      "name": "Híbrido pequeno",
+      "shortDescription": "Vale começar online em escala pequena e controlada — sem largar o presencial.",
+      "whatItIs": "Você já vende com alguma regularidade e tem alguns dos elementos no lugar (foto, custo, capacidade). Online aqui complementa o presencial, não substitui.",
+      "whenItMakesSense": [
+        "Lista de transmissão no zap pra clientes que já compraram (até 50 contatos)",
+        "Catálogo simples no WhatsApp Business",
+        "Perfil em uma rede social (Instagram OU Facebook, não as duas) com 2 posts por semana"
+      ],
+      "whenItDoesnt": [
+        "Pagar anúncios antes de ter foto e perfil decentes",
+        "Abrir 3 redes sociais ao mesmo tempo",
+        "Gastar com agência ou gestor pago"
+      ],
+      "whatChanges": "Você testa online sem largar o ganha-pão presencial. Aprende o canal sem risco grande.",
+      "nextStep": "Comece pela lista de zap (até 50 contatos avisados). Depois fotos boas de 3 produtos. Só então perfil em rede social. Cada passo precisa funcionar antes do próximo.",
+      "relatedSources": [
+        { "label": "WhatsApp Business básico (Trilha)", "url": "/conteudos/res_whatsapp_business_basico" },
+        { "label": "Fotos boas só com o celular",       "url": "/conteudos/res_fotos_celular" }
+      ]
+    },
+    {
+      "id": "online_pronto",
+      "name": "Pronta(o) pra crescer online",
+      "shortDescription": "Você tem base — dá pra investir online com critério.",
+      "whatItIs": "Vendendo regularmente, com fotos, custo calculado, capacidade pra atender mais e base local organizada. Online aqui vira alavanca, não risco.",
+      "whenItMakesSense": [
+        "Investir em vitrine forte (perfil cuidado, catálogo organizado)",
+        "Pequena verba de anúncios pagos (R$ 100-300/mês) testando público",
+        "Considerar marketplace pra ampliar alcance",
+        "Pensar em vender pra outros comércios (B2B local)"
+      ],
+      "whenItDoesnt": [
+        "Largar o presencial achando que online substitui — ele complementa",
+        "Gastar grande em tráfego sem testar pequeno antes"
+      ],
+      "whatChanges": "Online passa a render — porque a base sustenta. Cliente que vier pelo digital vai ter experiência consistente com quem comprou pessoalmente.",
+      "nextStep": "Antes de investir alto: faça um teste de R$ 100 em anúncios por 1 semana e meça quantas vendas vieram dele. Se pagar com sobra, escale aos poucos. Se não, ajusta o anúncio antes de gastar mais.",
+      "relatedSources": [
+        { "label": "Fotos boas só com o celular (Trilha)",  "url": "/conteudos/res_fotos_celular" },
+        { "label": "Canais para artesanato (Trilha)",       "url": "/conteudos/res_artesanato_canais" },
+        { "label": "Sebrae: cursos de marketing digital",    "url": "https://sebrae.com.br/" }
+      ]
+    }
+  ]
+}

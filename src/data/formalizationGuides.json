@@ -1,0 +1,92 @@
+[
+  {
+    "id": "pf",
+    "name": "Pessoa Física (sem CNPJ)",
+    "shortDescription": "Você vende sem ter empresa registrada. Faz parte do começo de muita gente.",
+    "whatItIs": "Você vende como cidadão comum, com seu CPF. Nenhum cadastro de empresa. Comum em quem está começando, vende esporadicamente ou ainda está testando.",
+    "whenItMakesSense": [
+      "Você está testando a ideia e ainda não tem clientes recorrentes",
+      "Vende esporadicamente, valores pequenos por venda",
+      "Seu cliente é só pessoa física e não pede nota fiscal",
+      "Faturamento bem abaixo de R$ 81 mil por ano"
+    ],
+    "whenItDoesnt": [
+      "Cliente começa a pedir nota fiscal",
+      "Você quer vender pra empresa (a empresa precisa de NF pra deduzir)",
+      "Faturamento está crescendo e passando de uns R$ 5 mil/mês",
+      "Você quer começar a contribuir pra aposentadoria pelo negócio"
+    ],
+    "whatChanges": "Não muda nada — você continua como sempre. Mas tem limites: não emite nota, não tem CNPJ, e qualquer ganho declarado pode entrar no IR de pessoa física se passar do limite anual de isenção.",
+    "howToFormalize": "Pra sair de PF e virar MEI, é gratuito e online. Próximo passo: leia o guia de MEI abaixo.",
+    "relatedSources": [
+      { "label": "Receita Federal: regras de IR pessoa física",       "url": "https://www.gov.br/receitafederal/" },
+      { "label": "Sebrae: quando vale a pena formalizar o negócio",   "url": "https://sebrae.com.br/" }
+    ],
+    "lastReviewed": "2026-05-01",
+    "nextReview": "2026-11-01",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "id": "mei",
+    "name": "MEI (Microempreendedor Individual)",
+    "shortDescription": "CNPJ simplificado. Imposto fixo mensal pequeno. É o caminho mais comum pra quem começa a profissionalizar.",
+    "whatItIs": "MEI é uma categoria criada pra formalizar pequenos negócios sem burocracia de empresa tradicional. Você vira CNPJ, paga um imposto único mensal (DAS-MEI) que já inclui INSS, ICMS ou ISS dependendo da atividade.",
+    "whenItMakesSense": [
+      "Vende com regularidade (todo mês)",
+      "Faturamento até R$ 81 mil por ano (≈ R$ 6.750/mês)",
+      "Sua atividade está na lista de MEI permitidas",
+      "Tem ou pretende ter no máximo 1 funcionário (com salário mínimo ou piso da categoria)",
+      "Quer emitir nota fiscal e poder vender pra empresa",
+      "Quer contribuir pro INSS de forma simples (incluso no DAS)"
+    ],
+    "whenItDoesnt": [
+      "Faturamento já passa de R$ 81 mil por ano (em 2026 — confirmar valor atual)",
+      "Atividade não é permitida pra MEI (médico, advogado, contador, engenheiro, etc.)",
+      "Vai ter sócio (MEI é individual)",
+      "Vai ter mais de 1 funcionário",
+      "Quer aproveitar regimes tributários mais sofisticados"
+    ],
+    "whatChanges": "Você passa a ter CNPJ. Paga um valor fixo mensal (em 2026, em torno de R$ 75 — R$ 81 dependendo da atividade — confirmar valor atual). Pode emitir nota fiscal eletrônica. Faz declaração anual simples de faturamento. Conta com cobertura do INSS (aposentadoria por idade, auxílio-doença, salário-maternidade).",
+    "howToFormalize": "É gratuito e online no Portal do Empreendedor (gov.br/empresas-e-negocios). Precisa: CPF, título de eleitor (ou recibo de IR), endereço residencial e da atividade, e escolher CNAEs (códigos de atividade). Em geral fica pronto na hora.",
+    "relatedSources": [
+      { "label": "Portal do Empreendedor (cadastro MEI)",                  "url": "https://www.gov.br/empresas-e-negocios/pt-br" },
+      { "label": "Sebrae: tudo sobre o MEI",                                "url": "https://sebrae.com.br/" },
+      { "label": "Receita Federal: regras e atividades permitidas (MEI)",  "url": "https://www.gov.br/receitafederal/" }
+    ],
+    "lastReviewed": "2026-05-01",
+    "nextReview": "2026-08-01",
+    "version": "1.0",
+    "status": "active"
+  },
+  {
+    "id": "cnpj_outros",
+    "name": "Outros CNPJs (ME, EPP, SLU, LTDA)",
+    "shortDescription": "Quando o MEI não cabe mais. Exige contador e tem mais regras, mas abre caminhos que o MEI não permite.",
+    "whatItIs": "Categorias de empresa formal além do MEI. Os tipos mais comuns pra quem está saindo do MEI:\n\n• Empresário Individual (EI) ou SLU (Sociedade Limitada Unipessoal): empresa sem sócio. SLU protege patrimônio pessoal — recomendada.\n• LTDA: empresa com sócios. Cada um define a participação em quotas.\n\nDentro disso, você escolhe um regime tributário: Simples Nacional (mais simples), Lucro Presumido ou Lucro Real (pra empresas maiores).",
+    "whenItMakesSense": [
+      "Faturamento passou (ou vai passar em breve) de R$ 81 mil/ano",
+      "Vai ter sócio",
+      "Vai contratar 2 ou mais funcionários",
+      "Atividade não é permitida pra MEI",
+      "Cliente exige NF de empresa (não de MEI)",
+      "Pretende crescer e captar investimento"
+    ],
+    "whenItDoesnt": [
+      "Você ainda fatura pouco — o custo fixo (contador + impostos) come o lucro",
+      "Não tem clareza ainda do tamanho do negócio — começa pelo MEI primeiro",
+      "Tem dúvida sobre regime tributário — sem contador a escolha errada custa caro"
+    ],
+    "whatChanges": "Você passa a precisar de contador (em geral R$ 200–500/mês). Os impostos variam por regime e faturamento — no Simples, começam em torno de 4–6% do faturamento e sobem por faixa. Tem mais obrigações: declarações periódicas, escrituração contábil, eventual obrigação trabalhista se contratar.",
+    "howToFormalize": "Esse processo SEMPRE começa com um contador. Ele orienta sobre tipo de empresa, regime tributário, abertura na Junta Comercial, alvarás municipais. Custo de abertura geralmente fica entre R$ 500 e R$ 1.500 (taxas + honorários). Demora 5–20 dias úteis.",
+    "relatedSources": [
+      { "label": "Sebrae: quando deixar de ser MEI",                        "url": "https://sebrae.com.br/" },
+      { "label": "Receita Federal: Simples Nacional",                       "url": "https://www.gov.br/receitafederal/" },
+      { "label": "gov.br: como abrir uma empresa",                          "url": "https://www.gov.br/empresas-e-negocios/pt-br" }
+    ],
+    "lastReviewed": "2026-05-01",
+    "nextReview": "2026-08-01",
+    "version": "1.0",
+    "status": "active"
+  }
+]

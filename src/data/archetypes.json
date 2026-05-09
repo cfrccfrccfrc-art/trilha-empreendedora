@@ -1,0 +1,337 @@
+[
+  {
+    "id": "vende_sem_lucro",
+    "name": "Vende, mas não sabe se lucra",
+    "shortDescription": "Você já vende, mas ainda não tem clareza se está sobrando dinheiro depois dos custos.",
+    "commonPain": "Confunde faturamento com lucro. Vende bem em alguns dias e mesmo assim não sobra dinheiro no fim do mês.",
+    "typicalMistakes": [
+      "Olhar só o que entrou no caixa, sem somar custos pequenos",
+      "Misturar dinheiro pessoal com dinheiro do negócio",
+      "Não considerar embalagem, transporte, taxa de cartão e reposição"
+    ],
+    "firstTaskId": "task_anotar_7_dias",
+    "avoidNow": "Evite tomar crédito, comprar estoque grande ou contratar gente antes de saber se o negócio dá lucro.",
+    "expectedLearning": "Vender não é o mesmo que ganhar dinheiro. O que importa é o que sobra depois de todos os custos.",
+    "roadmap30d": [
+      { "week": 1, "title": "Tornar o dinheiro visível", "tasks": ["task_anotar_7_dias"] },
+      { "week": 2, "title": "Calcular custos reais",     "tasks": ["task_custo_3_produtos"] },
+      { "week": 3, "title": "Revisar preços",            "tasks": ["task_revisar_precos"] },
+      { "week": 4, "title": "Separar pessoal e negócio", "tasks": ["task_separar_contas"] }
+    ],
+    "recommendedResources": ["res_caixa_basico", "res_precificacao_simples"],
+    "recommendedCases": ["case_dona_marlene_quitanda"],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": ["finance_blind"],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "ainda_e_ideia",
+    "name": "Ainda é ideia",
+    "shortDescription": "Você tem uma ideia, mas ainda não testou se alguém compraria de verdade.",
+    "commonPain": "Fica meses ajustando o produto, o nome, a logo — sem ouvir o cliente que vai pagar por isso.",
+    "typicalMistakes": [
+      "Tentar deixar tudo perfeito antes de mostrar pra alguém",
+      "Não decidir um preço básico antes de oferecer",
+      "Achar que precisa investir muito antes da primeira venda"
+    ],
+    "firstTaskId": "task_falar_com_10_clientes",
+    "avoidNow": "Evite gastar com loja, marca registrada, estoque ou equipamento antes de provar que tem alguém disposto a pagar.",
+    "expectedLearning": "A primeira venda real ensina mais do que três meses de planejamento. O cliente decide se a ideia é boa.",
+    "roadmap30d": [
+      { "week": 1, "title": "Conversar com clientes possíveis", "tasks": ["task_falar_com_10_clientes"] },
+      { "week": 2, "title": "Definir oferta, preço e entrega",  "tasks": ["task_definir_oferta_preco_entrega"] },
+      { "week": 3, "title": "Montar um catálogo simples",       "tasks": ["task_catalogo_simples"] },
+      { "week": 4, "title": "Buscar a primeira venda",          "tasks": ["task_mvp_primeira_venda"] }
+    ],
+    "recommendedResources": ["res_validar_ideia", "res_precificacao_simples"],
+    "recommendedCases": ["case_amina_costureira_validacao"],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": ["unvalidated_idea"],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "precisa_capital",
+    "name": "Precisa de capital inicial",
+    "shortDescription": "Você sente que só vai crescer com mais dinheiro pra investir — equipamento, estoque ou material.",
+    "commonPain": "Acha que o problema é só falta de capital, mas ainda não sabe quanto custa o que precisa nem o que esse dinheiro vai gerar.",
+    "typicalMistakes": [
+      "Pegar empréstimo antes de calcular se o negócio paga",
+      "Comprar tudo de uma vez em vez de ir por etapas",
+      "Não comparar pelo menos 3 fornecedores"
+    ],
+    "firstTaskId": "task_capital_o_que_comprar",
+    "avoidNow": "Evite assinar contrato de empréstimo, parcelar no cartão ou comprar à vista grande sem antes saber custo, retorno e prazo.",
+    "expectedLearning": "Capital sem clareza vira dívida. Antes de buscar dinheiro, defina exatamente o que vai comprar, quanto vai gerar e em quanto tempo se paga.",
+    "roadmap30d": [
+      { "week": 1, "title": "Listar exatamente o que precisa", "tasks": ["task_capital_o_que_comprar"] },
+      { "week": 2, "title": "Calcular custo e retorno",        "tasks": ["task_custo_3_produtos"] },
+      { "week": 3, "title": "Plano de compra em etapas",       "tasks": ["task_plano_compra_etapas"] },
+      { "week": 4, "title": "Separar contas antes de captar",  "tasks": ["task_separar_contas"] }
+    ],
+    "recommendedResources": ["res_capital_inteligente", "res_microcredito_orientacao"],
+    "recommendedCases": ["case_jose_padaria_equipamento"],
+    "recommendedOpportunities": ["opp_microcredito_orientacao"],
+    "supervisionLevel": "elevated",
+    "warningFlags": ["capital_pressure"],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "operacao_travada",
+    "name": "Operação travada",
+    "shortDescription": "Você vende, mas o pedido demora, atrasa ou se perde — e isso já está custando cliente.",
+    "commonPain": "O dia parece curto, sempre tem um pedido atrasado ou uma promessa que não foi cumprida.",
+    "typicalMistakes": [
+      "Aceitar todo pedido sem olhar capacidade real",
+      "Não ter um lugar único pra anotar pedido, prazo e pagamento",
+      "Resolver tudo na cabeça e esquecer detalhes"
+    ],
+    "firstTaskId": "task_mapear_fluxo_pedido",
+    "avoidNow": "Evite contratar gente, abrir um segundo canal de venda ou aceitar pedido grande antes de organizar o fluxo atual.",
+    "expectedLearning": "Quando o pedido tem um caminho claro do começo ao fim, o atraso some — e o cliente volta.",
+    "roadmap30d": [
+      { "week": 1, "title": "Mapear como o pedido anda hoje", "tasks": ["task_mapear_fluxo_pedido"] },
+      { "week": 2, "title": "Planilha simples de pedidos",    "tasks": ["task_planilha_pedidos_basica"] },
+      { "week": 3, "title": "Ajustar capacidade e prazos",    "tasks": ["task_ajustar_capacidade"] },
+      { "week": 4, "title": "Dois dias fixos pra organizar",  "tasks": ["task_dois_dias_fixos"] }
+    ],
+    "recommendedResources": ["res_organizacao_pedidos"],
+    "recommendedCases": ["case_keisha_lanches_atraso"],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": ["delivery_delays"],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "empreendedora_sobrecarregada",
+    "name": "Empreendedora sobrecarregada",
+    "shortDescription": "Você cuida do negócio, da casa e das pessoas — e está fazendo tudo sozinha.",
+    "commonPain": "O dia acaba e você fez muito, mas não conseguiu o que mais importava. O cansaço virou rotina.",
+    "typicalMistakes": [
+      "Achar que pedir ajuda é fraqueza",
+      "Não bloquear horário pro negócio na agenda",
+      "Responder cliente em qualquer hora do dia"
+    ],
+    "firstTaskId": "task_listar_tarefas_so_eu",
+    "avoidNow": "Evite assumir mais um canal de venda, mais um cliente grande ou mais uma responsabilidade nova nesta semana.",
+    "expectedLearning": "Não é falta de tempo — é falta de critério. Quando você decide o que NÃO vai fazer, sobra tempo pro que importa.",
+    "roadmap30d": [
+      { "week": 1, "title": "Listar o que só você faz",        "tasks": ["task_listar_tarefas_so_eu"] },
+      { "week": 2, "title": "Dois dias fixos pra negócio",     "tasks": ["task_dois_dias_fixos"] },
+      { "week": 3, "title": "Mensagens automáticas que cuidam","tasks": ["task_automatizar_resposta_padrao"] },
+      { "week": 4, "title": "Marcar uma pausa por semana",     "tasks": ["task_marcar_pausa_semanal"] }
+    ],
+    "recommendedResources": ["res_pescadoras_rede"],
+    "recommendedCases": ["case_dona_lucia_sobrecarga"],
+    "recommendedOpportunities": ["opp_rede_pescadoras"],
+    "supervisionLevel": "elevated",
+    "warningFlags": ["overload_burnout_risk"],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "produto_bom_vitrine_fraca",
+    "name": "Produto bom, vitrine fraca",
+    "shortDescription": "Quem prova ou vê de perto adora o que você faz, mas pouca gente chega até você.",
+    "commonPain": "Você sabe que o produto é bom — só não sabe como mostrar isso pra mais gente.",
+    "typicalMistakes": [
+      "Tirar foto na pressa, com fundo bagunçado",
+      "Não ter perfil ou catálogo onde mandar quem pergunta",
+      "Postar uma vez e desistir quando ninguém curte"
+    ],
+    "firstTaskId": "task_fotos_3_produtos",
+    "avoidNow": "Evite pagar anúncios, contratar agência ou mandar fazer logo cara antes de ter foto e catálogo decentes.",
+    "expectedLearning": "Foto boa, perfil organizado e regularidade ganham de qualquer truque de divulgação.",
+    "roadmap30d": [
+      { "week": 1, "title": "Fotos boas de 3 produtos",   "tasks": ["task_fotos_3_produtos"] },
+      { "week": 2, "title": "Perfil/catálogo organizado", "tasks": ["task_perfil_redes_basico", "task_catalogo_simples"] },
+      { "week": 3, "title": "Postar 7 dias seguidos",     "tasks": ["task_post_diario_7_dias"] },
+      { "week": 4, "title": "Pedir indicação ativamente", "tasks": ["task_listar_20_clientes"] }
+    ],
+    "recommendedResources": ["res_fotos_celular"],
+    "recommendedCases": ["case_priya_acessorios_vitrine"],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": [],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "vende_comunidade_nao_online",
+    "name": "Vende na comunidade, mas não online",
+    "shortDescription": "Sua vizinhança conhece e compra, mas você ainda não conseguiu sair pra fora dela.",
+    "commonPain": "Quase toda venda vem de boca a boca local. Quando o vizinho viaja ou muda, a venda some.",
+    "typicalMistakes": [
+      "Achar que precisa virar 'influencer' pra vender online",
+      "Não pedir contato (zap) de quem já comprou",
+      "Não ter uma lista simples pra mandar promoção"
+    ],
+    "firstTaskId": "task_lista_zap_50_pessoas",
+    "avoidNow": "Evite anúncios pagos antes de organizar a base de clientes que você já tem na comunidade.",
+    "expectedLearning": "Sua comunidade já é seu canal — só falta organizar o contato e mostrar o produto pra outras comunidades parecidas.",
+    "roadmap30d": [
+      { "week": 1, "title": "Lista de zap de 50 clientes", "tasks": ["task_lista_zap_50_pessoas"] },
+      { "week": 2, "title": "Catálogo simples no zap",     "tasks": ["task_catalogo_simples"] },
+      { "week": 3, "title": "Perfil em uma rede social",   "tasks": ["task_perfil_redes_basico"] },
+      { "week": 4, "title": "Primeiro post pedindo apoio", "tasks": ["task_primeiro_post_pedido"] }
+    ],
+    "recommendedResources": ["res_whatsapp_business_basico"],
+    "recommendedCases": ["case_marina_doceira_comunidade"],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": [],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "renda_complementar",
+    "name": "Renda complementar",
+    "shortDescription": "Você trabalha em outra coisa e o negócio é renda extra. O tempo é curto e precisa render.",
+    "commonPain": "Como o negócio é 'um a mais', acaba ficando bagunçado e nunca dá um próximo passo.",
+    "typicalMistakes": [
+      "Não separar dinheiro do salário e do negócio",
+      "Aceitar pedido em qualquer hora porque é 'só um pouquinho'",
+      "Não tratar o negócio como negócio, mesmo sendo pequeno"
+    ],
+    "firstTaskId": "task_dois_dias_fixos",
+    "avoidNow": "Evite largar o trabalho fixo antes de ter pelo menos 3 meses de lucro consistente do negócio.",
+    "expectedLearning": "Renda complementar funciona quando tem horário, preço e processo — não quando é improviso.",
+    "roadmap30d": [
+      { "week": 1, "title": "Dois dias fixos pra negócio",  "tasks": ["task_dois_dias_fixos"] },
+      { "week": 2, "title": "Lista de serviços e preços",   "tasks": ["task_lista_servicos_precos"] },
+      { "week": 3, "title": "Listar 20 clientes possíveis", "tasks": ["task_listar_20_clientes"] },
+      { "week": 4, "title": "Separar contas",               "tasks": ["task_separar_contas"] }
+    ],
+    "recommendedResources": ["res_caixa_basico"],
+    "recommendedCases": [],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": [],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "bico_pode_virar",
+    "name": "Bico que pode virar negócio",
+    "shortDescription": "Você faz bicos pra clientes que voltam e indicam — pode virar negócio se você decidir.",
+    "commonPain": "A demanda existe, mas você ainda não cobra direito, não tem horário e perde pedido por falta de organização.",
+    "typicalMistakes": [
+      "Fazer preço por simpatia, não por conta",
+      "Aceitar tudo que chega, mesmo o que dá prejuízo",
+      "Não dizer pra ninguém que está virando negócio"
+    ],
+    "firstTaskId": "task_lista_servicos_precos",
+    "avoidNow": "Evite anunciar grande, alugar ponto ou comprar equipamento caro antes de bater 3 meses cobrando preço de negócio.",
+    "expectedLearning": "Bico vira negócio quando você passa a cobrar pelo seu trabalho, não pelo favor.",
+    "roadmap30d": [
+      { "week": 1, "title": "Lista de serviços e preços",     "tasks": ["task_lista_servicos_precos"] },
+      { "week": 2, "title": "Catálogo simples pra mandar",    "tasks": ["task_catalogo_simples"] },
+      { "week": 3, "title": "Listar 20 clientes possíveis",   "tasks": ["task_listar_20_clientes"] },
+      { "week": 4, "title": "Separar contas",                 "tasks": ["task_separar_contas"] }
+    ],
+    "recommendedResources": ["res_precificacao_simples"],
+    "recommendedCases": [],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": [],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "talento_sem_postura_comercial",
+    "name": "Talento técnico sem postura comercial",
+    "shortDescription": "Você manja muito do que faz, mas trava na hora de cobrar, vender ou cobrar atraso.",
+    "commonPain": "Faz produto/serviço excelente, mas perde venda no preço, no fechamento ou na cobrança.",
+    "typicalMistakes": [
+      "Não passar preço claro quando perguntam",
+      "Aceitar negociação sem critério",
+      "Não cobrar atraso por vergonha"
+    ],
+    "firstTaskId": "task_lista_servicos_precos",
+    "avoidNow": "Evite reduzir preço pra fechar venda essa semana — aprenda a sustentar o preço primeiro.",
+    "expectedLearning": "Cobrar bem é parte do trabalho. Quem entrega valor precisa pedir o valor.",
+    "roadmap30d": [
+      { "week": 1, "title": "Lista de serviços e preços",  "tasks": ["task_lista_servicos_precos"] },
+      { "week": 2, "title": "Listar 20 clientes possíveis","tasks": ["task_listar_20_clientes"] },
+      { "week": 3, "title": "Conversar com 10 clientes",   "tasks": ["task_falar_com_10_clientes"] },
+      { "week": 4, "title": "Definir oferta, preço, entrega","tasks": ["task_definir_oferta_preco_entrega"] }
+    ],
+    "recommendedResources": ["res_precificacao_simples"],
+    "recommendedCases": [],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "light",
+    "warningFlags": [],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "potencial_b2b_local",
+    "name": "Pode vender pra outros comércios",
+    "shortDescription": "Seu produto/serviço cabe em outros comércios da região — mas você ainda só vende pra pessoa física.",
+    "commonPain": "Vender de um em um cansa. Vender pra um comércio que revende é volume, mas exige outra postura.",
+    "typicalMistakes": [
+      "Oferecer o mesmo preço de varejo pro comércio",
+      "Não ter proposta por escrito",
+      "Não conhecer pessoalmente os comércios da região"
+    ],
+    "firstTaskId": "task_mapear_10_lugares",
+    "avoidNow": "Evite oferecer condições especiais sem antes calcular margem para volume — pode virar prejuízo.",
+    "expectedLearning": "Vender pra comércio é negócio diferente: precisa de margem, prazo e proposta clara.",
+    "roadmap30d": [
+      { "week": 1, "title": "Mapear 10 lugares possíveis",   "tasks": ["task_mapear_10_lugares"] },
+      { "week": 2, "title": "Listar compradores locais",     "tasks": ["task_listar_compradores_locais"] },
+      { "week": 3, "title": "Proposta simples pra comércios", "tasks": ["task_proposta_b2b_simples"] },
+      { "week": 4, "title": "Conversar com os primeiros",    "tasks": ["task_falar_com_10_clientes"] }
+    ],
+    "recommendedResources": ["res_proposta_b2b"],
+    "recommendedCases": ["case_juliana_geleias_b2b"],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "elevated",
+    "warningFlags": [],
+    "contentVersion": "1.0",
+    "status": "active"
+  },
+
+  {
+    "id": "digital_antes_da_base",
+    "name": "Digital antes da base",
+    "shortDescription": "Você está investindo em redes sociais, anúncio ou loja online antes de ter custo, preço e operação no lugar.",
+    "commonPain": "Faz post bonito, mas não sabe se a venda dá lucro, nem se aguenta a demanda se aparecer.",
+    "typicalMistakes": [
+      "Pagar tráfego antes de saber margem",
+      "Abrir loja online sem ter logística pronta",
+      "Copiar estratégia de quem tem outro porte"
+    ],
+    "firstTaskId": "task_anotar_7_dias",
+    "avoidNow": "Evite pagar anúncios, contratar gestor de tráfego ou abrir e-commerce nesse momento. Volte às bases primeiro.",
+    "expectedLearning": "Digital amplifica o que já funciona. Se a base não está em pé, ele só amplifica o problema.",
+    "roadmap30d": [
+      { "week": 1, "title": "Tornar o dinheiro visível",  "tasks": ["task_anotar_7_dias"] },
+      { "week": 2, "title": "Calcular custos reais",      "tasks": ["task_custo_3_produtos"] },
+      { "week": 3, "title": "Revisar preços",             "tasks": ["task_revisar_precos"] },
+      { "week": 4, "title": "Fotos boas de 3 produtos",   "tasks": ["task_fotos_3_produtos"] }
+    ],
+    "recommendedResources": ["res_caixa_basico", "res_precificacao_simples"],
+    "recommendedCases": ["case_digital_antes_da_base"],
+    "recommendedOpportunities": [],
+    "supervisionLevel": "elevated",
+    "warningFlags": ["digital_overinvestment"],
+    "contentVersion": "1.0",
+    "status": "active"
+  }
+]

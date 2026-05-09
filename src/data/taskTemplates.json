@@ -1,0 +1,550 @@
+[
+  {
+    "id": "task_anotar_7_dias",
+    "title": "Anotar entradas e saídas por 7 dias",
+    "week": 1,
+    "archetypeId": "vende_sem_lucro",
+    "action": "Durante os próximos 7 dias, anote tudo que entrar e tudo que sair do negócio.",
+    "purpose": "Tornar visível o dinheiro que circula no seu negócio.",
+    "expectedLearning": "Vender não é o mesmo que lucrar. O que importa é o que sobra depois dos custos.",
+    "reflectionQuestions": [
+      "Você incluiu gastos pequenos como embalagem, transporte e taxa de cartão?",
+      "Você separou dinheiro pessoal e dinheiro do negócio?",
+      "Quanto sobrou no fim dos 7 dias?"
+    ],
+    "commonMistakes": ["Esquecer gastos pequenos", "Não anotar todos os dias", "Misturar gastos pessoais"],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_custo_3_produtos",
+    "title": "Calcular o custo real de 3 produtos",
+    "week": 2,
+    "archetypeId": "vende_sem_lucro",
+    "action": "Escolha 3 produtos (ou serviços) que você mais vende. Para cada um, some todos os custos: matéria-prima, embalagem, transporte, taxa de cartão e qualquer gasto que entra naquela venda.",
+    "purpose": "Saber quanto cada coisa que você vende realmente custa para você.",
+    "expectedLearning": "O custo real é maior que parece. Sem esse número, qualquer preço vira chute.",
+    "reflectionQuestions": [
+      "Algum produto custa mais do que você imaginava?",
+      "Você está cobrando o suficiente para pagar esse custo e ainda sobrar algo?",
+      "Tem custo escondido que você esqueceu antes?"
+    ],
+    "commonMistakes": ["Esquecer da própria mão de obra", "Não dividir gastos fixos pelos produtos", "Não somar embalagem ou frete"],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_revisar_precos",
+    "title": "Revisar o preço de 3 produtos",
+    "week": 3,
+    "archetypeId": "vende_sem_lucro",
+    "action": "Pegue os 3 produtos da semana passada e calcule um novo preço: custo + a margem que você quer ganhar. Compare com o preço atual e decida o que ajustar.",
+    "purpose": "Transformar o custo real em um preço que cubra os gastos e ainda deixe lucro.",
+    "expectedLearning": "Preço justo não é o mais barato. É o que paga o custo, o seu trabalho e ainda sobra.",
+    "reflectionQuestions": [
+      "Algum preço atual está abaixo do custo?",
+      "Quanto você quer ganhar por hora ou por venda?",
+      "Quais ajustes você consegue fazer essa semana sem perder cliente?"
+    ],
+    "commonMistakes": ["Comparar só com o concorrente, sem olhar o próprio custo", "Não incluir o seu trabalho no preço", "Mudar tudo de uma vez e assustar o cliente"],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_separar_contas",
+    "title": "Separar dinheiro pessoal e do negócio",
+    "week": 4,
+    "archetypeId": "vende_sem_lucro",
+    "action": "Crie uma forma simples de separar: pode ser uma conta bancária só do negócio, um envelope, um caderno separado ou um pix de uma chave só pra vendas. Combine com você mesma de não misturar mais.",
+    "purpose": "Conseguir enxergar com clareza quanto o negócio gera, sem confundir com o orçamento da casa.",
+    "expectedLearning": "Quando o dinheiro do negócio fica junto com o pessoal, você nunca sabe se está tendo lucro de verdade.",
+    "reflectionQuestions": [
+      "Qual forma de separar combina com a sua rotina?",
+      "Você consegue se pagar um valor fixo por mês (pró-labore)?",
+      "O que muda quando você vê só o dinheiro do negócio?"
+    ],
+    "commonMistakes": ["Usar o caixa do negócio para gasto pessoal sem registrar", "Não se pagar nada e achar que isso é lucro", "Voltar a misturar depois de uma semana"],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_falar_com_10_clientes",
+    "title": "Conversar com 10 clientes possíveis",
+    "week": 1,
+    "archetypeId": "ainda_e_ideia",
+    "action": "Liste 10 pessoas que poderiam comprar o que você quer vender. Converse com cada uma, presencial ou no zap, e pergunte: você compraria? por quanto? em qual situação?",
+    "purpose": "Validar se a ideia tem demanda real antes de investir tempo e dinheiro.",
+    "expectedLearning": "Cliente real diz coisas que pesquisa de internet não diz. A primeira venda começa numa conversa.",
+    "reflectionQuestions": [
+      "Quantas pessoas demonstraram interesse de verdade (não só cordialidade)?",
+      "Por qual preço elas pagariam?",
+      "O que você ouviu que não tinha pensado antes?"
+    ],
+    "commonMistakes": ["Perguntar só pra família e amigos próximos", "Aceitar 'que legal' como sinal de venda", "Não anotar o que ouviu"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_definir_oferta_preco_entrega",
+    "title": "Definir oferta, preço e entrega",
+    "week": 2,
+    "archetypeId": "ainda_e_ideia",
+    "action": "Escreva em uma frase: o que você vende, por quanto, como entrega e qual o prazo. Tem que caber em uma mensagem de zap.",
+    "purpose": "Sair da ideia genérica para uma oferta clara que dá pra mandar pra alguém agora.",
+    "expectedLearning": "Quem não consegue resumir a oferta em uma mensagem ainda não tem oferta — tem ideia.",
+    "reflectionQuestions": [
+      "A oferta cabe em 3 linhas?",
+      "O preço cobre seu custo + algum lucro?",
+      "Você consegue cumprir o prazo que prometeu?"
+    ],
+    "commonMistakes": ["Listar 10 produtos diferentes na primeira oferta", "Esquecer de dizer prazo", "Esquecer de dizer forma de pagamento"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_catalogo_simples",
+    "title": "Montar um catálogo simples",
+    "week": 3,
+    "archetypeId": "ainda_e_ideia",
+    "action": "Faça um catálogo simples com nome, foto, descrição curta e preço de cada item. Pode ser um PDF, um documento no zap ou um catálogo do WhatsApp Business. Tem que dar pra mandar em uma mensagem.",
+    "purpose": "Ter algo concreto pra mostrar quando alguém pergunta o que você vende.",
+    "expectedLearning": "Catálogo organizado vende sozinho. Sem catálogo, cada cliente exige uma conversa do zero.",
+    "reflectionQuestions": [
+      "Tem foto em todos os itens?",
+      "O preço está visível?",
+      "Dá pra mandar fácil pelo zap?"
+    ],
+    "commonMistakes": ["Catálogo de 50 itens (ninguém olha)", "Foto ruim ou genérica", "Esquecer do preço"],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_mvp_primeira_venda",
+    "title": "Buscar a primeira venda",
+    "week": 4,
+    "archetypeId": "ainda_e_ideia",
+    "action": "Mande sua oferta + catálogo pras 10 pessoas com quem você já conversou. Anote quem topou, quem disse 'depois' e quem recusou.",
+    "purpose": "Sair do plano e ter a primeira venda real (mesmo pequena) com cliente que paga.",
+    "expectedLearning": "A primeira venda real ensina mais que três meses planejando. Mesmo um 'não' ajuda a ajustar.",
+    "reflectionQuestions": [
+      "Quantos toparam? Quantos pediram pra esperar?",
+      "Por que os 'nãos' disseram não?",
+      "Que ajuste você faria na oferta agora?"
+    ],
+    "commonMistakes": ["Mandar pra muita gente de uma vez", "Não dar prazo na oferta", "Desanimar com o primeiro 'não'"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_capital_o_que_comprar",
+    "title": "Listar exatamente o que você precisa comprar",
+    "week": 1,
+    "archetypeId": "precisa_capital",
+    "action": "Liste, item por item: o que você precisa comprar, quanto custa cada um, em qual fornecedor, e quanto isso vai aumentar a sua produção/venda por mês.",
+    "purpose": "Sair de 'preciso de dinheiro' pra 'preciso de R$ X pra comprar Y, que vai gerar R$ Z por mês'.",
+    "expectedLearning": "Capital sem destino vira dívida. Capital com destino claro vira investimento.",
+    "reflectionQuestions": [
+      "Cada item tem preço pesquisado em pelo menos 3 lugares?",
+      "Você sabe em quantos meses esse investimento se paga?",
+      "Tem item da lista que dá pra adiar ou comprar usado?"
+    ],
+    "commonMistakes": ["Pedir empréstimo redondo sem detalhar", "Não pesquisar fornecedor", "Misturar o que é essencial com o que é desejo"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_plano_compra_etapas",
+    "title": "Plano de compra em etapas",
+    "week": 3,
+    "archetypeId": "precisa_capital",
+    "action": "Divida sua lista em 3 etapas: o que comprar agora (mais urgente), o que comprar em 30 dias, o que pode esperar 90 dias. Justifique a ordem.",
+    "purpose": "Comprar por etapas reduz risco — você testa o retorno antes de arriscar tudo.",
+    "expectedLearning": "Comprar tudo de uma vez é a forma mais cara de aprender que algo não era necessário.",
+    "reflectionQuestions": [
+      "A etapa 1 já começa a pagar antes da etapa 2?",
+      "O que a etapa 1 ensina antes de gastar nas próximas?",
+      "Que sinal de mercado vai te dizer que a etapa 2 vale a pena?"
+    ],
+    "commonMistakes": ["Tentar fazer tudo na primeira etapa", "Não ter critério de 'só passo de etapa se X acontecer'", "Esquecer custos de manutenção"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_mapear_fluxo_pedido",
+    "title": "Mapear o caminho do pedido",
+    "week": 1,
+    "archetypeId": "operacao_travada",
+    "action": "Desenhe (em papel mesmo, ou foto) o caminho de um pedido típico: do momento que o cliente fala até a entrega. Marque onde demora, onde se perde informação, onde você esquece.",
+    "purpose": "Ver onde o problema está antes de tentar resolver.",
+    "expectedLearning": "A maioria dos atrasos não é falta de tempo — é falta de organização em um ponto específico.",
+    "reflectionQuestions": [
+      "Em qual etapa o pedido mais atrasa?",
+      "Você anota em algum lugar fixo ou só na cabeça?",
+      "Onde a informação se perde?"
+    ],
+    "commonMistakes": ["Tentar resolver tudo de uma vez", "Não envolver quem ajuda no processo", "Achar que o problema é a quantidade de pedidos"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_planilha_pedidos_basica",
+    "title": "Planilha simples de pedidos",
+    "week": 2,
+    "archetypeId": "operacao_travada",
+    "action": "Crie uma planilha (ou caderno) com: cliente, produto, prazo, pago/não pago, entregue/não entregue. Use durante a semana inteira.",
+    "purpose": "Ter um lugar único onde tudo do pedido vive.",
+    "expectedLearning": "Memória falha. Anotação salva.",
+    "reflectionQuestions": [
+      "Você conseguiu usar todo dia?",
+      "Algum pedido apareceu que tinha esquecido?",
+      "O que precisa simplificar pra continuar usando?"
+    ],
+    "commonMistakes": ["Planilha grande demais", "Esquecer de marcar quando entrega", "Ter duas planilhas em vez de uma"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_ajustar_capacidade",
+    "title": "Ajustar capacidade e prazos",
+    "week": 3,
+    "archetypeId": "operacao_travada",
+    "action": "Conte quantos pedidos você consegue entregar bem em uma semana. Compare com quantos você está aceitando. Ajuste o prazo prometido pra refletir o real.",
+    "purpose": "Parar de prometer o que não dá pra entregar.",
+    "expectedLearning": "Prazo realista perde 1 cliente impaciente, mas mantém os outros 9. Prazo otimista perde os 10 quando atrasa.",
+    "reflectionQuestions": [
+      "Quantos pedidos por semana é seu limite real?",
+      "O que você muda quando atinge esse limite?",
+      "Algum cliente atual exige prazo que você não consegue?"
+    ],
+    "commonMistakes": ["Confundir capacidade com vontade", "Não considerar tempo de imprevisto", "Aceitar todo pedido por medo de perder"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_dois_dias_fixos",
+    "title": "Dois dias fixos pra cuidar do negócio",
+    "week": 4,
+    "archetypeId": "operacao_travada",
+    "action": "Escolha 2 dias e horários fixos por semana pra fazer SÓ tarefa de negócio (organizar, postar, anotar finanças, falar com cliente). Avise quem mora com você.",
+    "purpose": "Sair do 'quando der' pro 'agora é a hora'.",
+    "expectedLearning": "Sem horário marcado, urgência sempre vence o importante.",
+    "reflectionQuestions": [
+      "Quais 2 horários funcionam dentro da sua semana?",
+      "O que precisa acontecer pra você proteger esse horário?",
+      "Quem precisa saber pra te ajudar a respeitar?"
+    ],
+    "commonMistakes": ["Marcar horário quando já está cansada", "Não avisar família", "Aceitar interrupção como 'só dessa vez'"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_listar_tarefas_so_eu",
+    "title": "Listar tarefas que só você faz",
+    "week": 1,
+    "archetypeId": "empreendedora_sobrecarregada",
+    "action": "Liste tudo que você faz no negócio em uma semana. Marque ao lado: SÓ EU consigo / alguém poderia / poderia ser automatizado / poderia parar de fazer.",
+    "purpose": "Ver o que sobrecarrega e separar o que é realmente seu do que pode sair de você.",
+    "expectedLearning": "Boa parte do peso é tarefa que dá pra delegar, automatizar ou simplesmente parar de fazer.",
+    "reflectionQuestions": [
+      "Quantas tarefas SÓ você consegue fazer mesmo?",
+      "Tem alguma que você faz por costume e não por necessidade?",
+      "Qual é a primeira que você consegue tirar do seu prato esta semana?"
+    ],
+    "commonMistakes": ["Marcar tudo como 'só eu'", "Não pedir ajuda por achar que ninguém faz como você", "Continuar fazendo por culpa"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_automatizar_resposta_padrao",
+    "title": "Mensagens automáticas que cuidam de você",
+    "week": 3,
+    "archetypeId": "empreendedora_sobrecarregada",
+    "action": "Configure no zap: mensagem de saudação, horário de atendimento e respostas rápidas para as 5 perguntas mais comuns (preço, prazo, pagamento, retirada, garantia).",
+    "purpose": "Parar de responder a mesma coisa 20 vezes por dia e proteger seu tempo fora do horário.",
+    "expectedLearning": "Quem cuida de você primeiro consegue cuidar dos outros depois.",
+    "reflectionQuestions": [
+      "Quais perguntas se repetem mais?",
+      "Você consegue marcar um horário que não responde?",
+      "Algum cliente reclamou da resposta automática?"
+    ],
+    "commonMistakes": ["Responder fora do horário 'só essa vez'", "Mensagem fria demais", "Não mencionar quando vai responder"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_marcar_pausa_semanal",
+    "title": "Marcar uma pausa por semana",
+    "week": 4,
+    "archetypeId": "empreendedora_sobrecarregada",
+    "action": "Escolha um período fixo por semana (meio dia que seja) onde você não responde negócio nenhum. Marque na agenda como compromisso.",
+    "purpose": "Tirar a culpa de descansar.",
+    "expectedLearning": "Negócio que só funciona quando você está esgotada não é negócio — é segunda jornada.",
+    "reflectionQuestions": [
+      "Que horário consegue proteger?",
+      "O que você faz nesse tempo?",
+      "Que aviso você deixa pros clientes?"
+    ],
+    "commonMistakes": ["Escolher horário que ninguém respeita", "Olhar zap 'só rapidinho'", "Não considerar isso trabalho legítimo"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_fotos_3_produtos",
+    "title": "Fotos boas de 3 produtos",
+    "week": 1,
+    "archetypeId": "produto_bom_vitrine_fraca",
+    "action": "Tire 3 fotos de cada um dos seus 3 produtos mais vendidos: produto sozinho em fundo limpo, produto em uso/contexto, e detalhe. Use luz natural perto da janela.",
+    "purpose": "Ter material decente pra qualquer canal sem depender de fotógrafo.",
+    "expectedLearning": "Foto boa não exige câmera cara. Exige luz, fundo limpo e cuidado.",
+    "reflectionQuestions": [
+      "A foto mostra o produto com clareza?",
+      "Tem alguma foto que mostra o produto sendo usado?",
+      "O fundo está limpo ou bagunçado?"
+    ],
+    "commonMistakes": ["Usar luz amarela de lâmpada", "Fundo com louça/roupa atrás", "Foto inclinada ou cortada"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_perfil_redes_basico",
+    "title": "Perfil organizado em uma rede",
+    "week": 2,
+    "archetypeId": "produto_bom_vitrine_fraca",
+    "action": "Escolha UMA rede (Instagram, Facebook ou WhatsApp Business). Atualize: foto de perfil, bio com o que faz e onde, link/contato pra fechar venda, 3 posts fixos com produto + preço.",
+    "purpose": "Ter um lugar pra mandar quem pergunta 'tem instagram?'.",
+    "expectedLearning": "Estar bem em uma rede vence estar mal em três.",
+    "reflectionQuestions": [
+      "A bio diz o que você vende e onde?",
+      "Tem como fechar venda direto pelo perfil?",
+      "Quem entra no perfil entende o que você faz em 10 segundos?"
+    ],
+    "commonMistakes": ["Bio genérica ('amante de café')", "Sem contato visível", "Posts antigos misturados sem ordem"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_post_diario_7_dias",
+    "title": "Postar 7 dias seguidos",
+    "week": 3,
+    "archetypeId": "produto_bom_vitrine_fraca",
+    "action": "Poste algo na rede que você escolheu por 7 dias seguidos. Pode ser: produto, processo, cliente feliz, antes/depois, dúvida comum. O que importa é a regularidade.",
+    "purpose": "Ganhar tração com regularidade, não com viralização.",
+    "expectedLearning": "O algoritmo premia quem aparece. Quem aparece todo dia entra no fluxo.",
+    "reflectionQuestions": [
+      "Você conseguiu postar todos os 7?",
+      "Algum tipo de post deu mais retorno?",
+      "O que mudaria pra próxima semana?"
+    ],
+    "commonMistakes": ["Querer post perfeito (e não postar)", "Só postar produto e nada de bastidor", "Sumir depois do dia 3"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_lista_zap_50_pessoas",
+    "title": "Lista de zap de 50 pessoas",
+    "week": 1,
+    "archetypeId": "vende_comunidade_nao_online",
+    "action": "Faça uma lista no zap (lista de transmissão, não grupo) com 50 contatos: clientes, vizinhos, conhecidos que poderiam virar cliente. Avise primeiro que vai mandar uma novidade.",
+    "purpose": "Ter um canal direto pra falar com sua base sem depender de algoritmo.",
+    "expectedLearning": "Sua lista vale mais que seu seguidor — porque você fala direto, sem filtro.",
+    "reflectionQuestions": [
+      "Você avisou antes de incluir?",
+      "Quantos responderam que querem receber?",
+      "Como vai cuidar pra não virar spam?"
+    ],
+    "commonMistakes": ["Criar grupo em vez de lista de transmissão", "Não pedir consentimento", "Mandar todo dia e cansar a lista"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_primeiro_post_pedido",
+    "title": "Primeiro post pedindo apoio",
+    "week": 4,
+    "archetypeId": "vende_comunidade_nao_online",
+    "action": "Faça UM post (ou status no zap) contando que você está começando a vender online também e pedindo pra quem já comprou indicar pra um conhecido. Conte uma história curta.",
+    "purpose": "Usar a credibilidade que você já tem na comunidade pra alcançar novas pessoas.",
+    "expectedLearning": "Ninguém indica o que não sabe que existe. Pedir indicação é convite, não fraqueza.",
+    "reflectionQuestions": [
+      "Quantas indicações chegaram?",
+      "O que mais funcionou: a história, o produto ou o pedido?",
+      "Alguém compartilhou sem você pedir?"
+    ],
+    "commonMistakes": ["Post genérico tipo 'compartilhem'", "Não dar incentivo nenhum", "Sumir depois do post"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_lista_servicos_precos",
+    "title": "Lista de serviços e preços",
+    "week": 1,
+    "archetypeId": "talento_sem_postura_comercial",
+    "action": "Escreva, item por item: cada serviço (ou pacote) que você oferece, o preço, o que está incluso, o que NÃO está incluso, e o prazo de entrega.",
+    "purpose": "Não titubear quando alguém pergunta 'quanto custa?'.",
+    "expectedLearning": "Preço escrito antecipadamente é mais firme que preço falado na hora.",
+    "reflectionQuestions": [
+      "Você consegue mandar essa lista por zap se alguém pedir agora?",
+      "Algum preço você ainda inventa na hora?",
+      "O que está incluso protege você de retrabalho?"
+    ],
+    "commonMistakes": ["Não escrever o que NÃO está incluso", "Preço só na cabeça", "Cobrar diferente do mesmo serviço por cliente"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_listar_20_clientes",
+    "title": "Listar 20 clientes possíveis",
+    "week": 3,
+    "archetypeId": "renda_complementar",
+    "action": "Faça uma lista de 20 pessoas/lugares que poderiam virar cliente nos próximos 90 dias. Para cada um, anote como você chegaria até ela.",
+    "purpose": "Sair do 'esperar cliente chegar' pro 'sei quem é meu próximo cliente'.",
+    "expectedLearning": "Lista de clientes possíveis tira a venda da sorte e coloca no plano.",
+    "reflectionQuestions": [
+      "Quantos da lista você nunca abordou?",
+      "Quem é o mais fácil de começar?",
+      "O que falta pra fazer o primeiro contato esta semana?"
+    ],
+    "commonMistakes": ["Listar só conhecidos", "Não anotar como chegar até cada um", "Nunca dar o primeiro passo"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_mapear_10_lugares",
+    "title": "Mapear 10 lugares pra vender",
+    "week": 1,
+    "archetypeId": "potencial_b2b_local",
+    "action": "Liste 10 comércios da sua região onde seu produto/serviço caberia: cafeteria, mercadinho, papelaria, salão, escola, igreja, lanchonete. Visite ou passe perto de cada um.",
+    "purpose": "Sair do mapa abstrato e ter alvos concretos perto de você.",
+    "expectedLearning": "Vender pra comércio começa por estar fisicamente perto e conhecer o dono pessoalmente.",
+    "reflectionQuestions": [
+      "Quantos lugares você nunca tinha pensado antes?",
+      "Em qual deles seu produto encaixa melhor?",
+      "Em qual você consegue marcar uma conversa essa semana?"
+    ],
+    "commonMistakes": ["Listar só os famosos", "Não passar fisicamente nos lugares", "Não anotar nome do dono"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_listar_compradores_locais",
+    "title": "Listar compradores locais",
+    "week": 2,
+    "archetypeId": "potencial_b2b_local",
+    "action": "Para cada um dos 10 lugares, descubra: quem compra (dono? gerente? funcionário?) e qual o melhor horário pra falar com ele. Pergunte pra quem trabalha no local se precisar.",
+    "purpose": "Falar com quem decide, não com quem só atende.",
+    "expectedLearning": "Falar com quem não decide é gastar tempo. Descobrir o decisor é metade do trabalho.",
+    "reflectionQuestions": [
+      "Quantos decisores você descobriu?",
+      "Algum lugar não tem decisor claro (e por isso é mais difícil)?",
+      "Em qual horário a abordagem incomoda menos?"
+    ],
+    "commonMistakes": ["Falar com qualquer funcionário e achar que vai virar venda", "Ir em hora de movimento", "Não ter cartão ou contato pra deixar"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_proposta_b2b_simples",
+    "title": "Proposta simples pra comércios",
+    "week": 3,
+    "archetypeId": "potencial_b2b_local",
+    "action": "Monte uma proposta de uma página com: o que você oferece, preço de revenda (com margem pro comércio), quantidades mínimas, prazo de entrega, condição de pagamento. Imprima ou deixe pronta no zap.",
+    "purpose": "Chegar no comércio com algo concreto, não com 'a gente vê depois'.",
+    "expectedLearning": "Proposta escrita acelera decisão. Conversa solta pede 'volta a outra hora'.",
+    "reflectionQuestions": [
+      "Cabe em uma página/tela?",
+      "Tem margem pro comércio ganhar também?",
+      "Qual a quantidade mínima que faz sentido pra você?"
+    ],
+    "commonMistakes": ["Mesmo preço de varejo (sem margem pro comércio)", "Esquecer de prazo de pagamento", "Proposta de 4 páginas que ninguém lê"],
+    "evidenceType": "optional_image",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  }
+]

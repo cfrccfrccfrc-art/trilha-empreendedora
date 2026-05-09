@@ -1,0 +1,59 @@
+[
+  {
+    "id": "fq_faturamento",
+    "order": 1,
+    "text": "Quanto você fatura por mês com o negócio (em média, no último ano)?",
+    "helpText": "Se varia muito, considere a média.",
+    "options": [
+      { "id": "lt_1k",   "label": "Menos de R$ 1.000",                "score": { "pf": 2, "mei": 0, "cnpj_outros": 0 } },
+      { "id": "1k_3k",   "label": "Entre R$ 1.000 e R$ 3.000",        "score": { "pf": 1, "mei": 2, "cnpj_outros": 0 } },
+      { "id": "3k_6k",   "label": "Entre R$ 3.000 e R$ 6.000",        "score": { "pf": 0, "mei": 3, "cnpj_outros": 0 } },
+      { "id": "6k_8k",   "label": "Entre R$ 6.000 e R$ 8.000",        "score": { "pf": 0, "mei": 2, "cnpj_outros": 1 } },
+      { "id": "gt_8k",   "label": "Mais de R$ 8.000 (passa do limite MEI)", "score": { "pf": 0, "mei": 0, "cnpj_outros": 3 } },
+      { "id": "dontknow","label": "Ainda não sei",                    "score": { "pf": 1, "mei": 1, "cnpj_outros": 0 } }
+    ]
+  },
+  {
+    "id": "fq_clients",
+    "order": 2,
+    "text": "Seus clientes pedem nota fiscal?",
+    "options": [
+      { "id": "never",     "label": "Nunca, são todos pessoa física",       "score": { "pf": 2, "mei": 0, "cnpj_outros": 0 } },
+      { "id": "sometimes", "label": "Às vezes alguém pede",                  "score": { "pf": 0, "mei": 2, "cnpj_outros": 1 } },
+      { "id": "often",     "label": "Sim, principalmente quando vendo pra empresa", "score": { "pf": 0, "mei": 1, "cnpj_outros": 2 } }
+    ]
+  },
+  {
+    "id": "fq_employees",
+    "order": 3,
+    "text": "Você tem ou pretende ter funcionário?",
+    "options": [
+      { "id": "no",       "label": "Não, faço sozinho(a) ou com ajuda informal da família", "score": { "pf": 1, "mei": 2, "cnpj_outros": 0 } },
+      { "id": "one",      "label": "Tenho ou quero contratar 1 pessoa formalmente",         "score": { "pf": 0, "mei": 2, "cnpj_outros": 0 } },
+      { "id": "multiple", "label": "Vou ter 2 ou mais funcionários",                        "score": { "pf": 0, "mei": 0, "cnpj_outros": 3 } }
+    ]
+  },
+  {
+    "id": "fq_atividade",
+    "order": 4,
+    "text": "O que você vende?",
+    "helpText": "Algumas atividades não são permitidas pra MEI.",
+    "options": [
+      { "id": "comum",      "label": "Comida, bebida, beleza, roupa, artesanato, serviços de manutenção/limpeza", "score": { "pf": 0, "mei": 2, "cnpj_outros": 0 } },
+      { "id": "regulamentada", "label": "Saúde, advocacia, contabilidade, engenharia, psicologia",               "score": { "pf": 0, "mei": 0, "cnpj_outros": 3 } },
+      { "id": "outra",      "label": "Outra (consultoria, criativa, digital, eventos)",                          "score": { "pf": 0, "mei": 1, "cnpj_outros": 1 } },
+      { "id": "dontknow",   "label": "Não sei se é permitida pra MEI",                                          "score": { "pf": 0, "mei": 1, "cnpj_outros": 0 } }
+    ]
+  },
+  {
+    "id": "fq_aposentadoria",
+    "order": 5,
+    "text": "Você quer começar a contribuir pro INSS pelo negócio?",
+    "helpText": "INSS dá direito a aposentadoria por idade, auxílio-doença e salário-maternidade.",
+    "options": [
+      { "id": "yes",      "label": "Sim, isso me importa",          "score": { "pf": 0, "mei": 2, "cnpj_outros": 1 } },
+      { "id": "no",       "label": "Não me preocupo agora",         "score": { "pf": 1, "mei": 0, "cnpj_outros": 0 } },
+      { "id": "dontknow", "label": "Não sei",                       "score": { "pf": 0, "mei": 1, "cnpj_outros": 0 } }
+    ]
+  }
+]

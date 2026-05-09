@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "tieBreakOrder": [
+    "vende_sem_lucro",
+    "operacao_travada",
+    "produto_bom_vitrine_fraca",
+    "precisa_capital",
+    "talento_sem_postura_comercial",
+    "potencial_b2b_local",
+    "vende_comunidade_nao_online",
+    "digital_antes_da_base",
+    "bico_pode_virar",
+    "renda_complementar",
+    "empreendedora_sobrecarregada",
+    "ainda_e_ideia"
+  ],
+  "minScoreForArchetype": 3,
+  "fallbackArchetype": "ainda_e_ideia",
+  "painThreshold": 2
+}
