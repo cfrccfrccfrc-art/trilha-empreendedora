@@ -50,7 +50,7 @@
     "text": "Há quanto tempo você vende ou tenta vender?",
     "options": [
       { "id": "lt_3m", "label": "Menos de 3 meses", "scoring": { "archetypes": { "ainda_e_ideia": 1 }, "pains": {}, "flags": [] } },
-      { "id": "3m_1y", "label": "Entre 3 meses e 1 ano", "scoring": { "archetypes": { "bico_pode_virar": 1 }, "pains": {}, "flags": [] } },
+      { "id": "3m_1y", "label": "Entre 3 meses e 1 ano", "scoring": { "archetypes": { "bico_pode_virar": 2 }, "pains": {}, "flags": [] } },
       { "id": "gt_1y", "label": "Mais de 1 ano", "scoring": { "archetypes": { "vende_sem_lucro": 1, "operacao_travada": 1 }, "pains": {}, "flags": [] } },
       { "id": "never_sold", "label": "Ainda não vendi nada", "scoring": { "archetypes": { "ainda_e_ideia": 2 }, "pains": {}, "flags": [] } }
     ]
@@ -91,8 +91,8 @@
     "type": "single_choice",
     "text": "Quanto tempo por semana você consegue dedicar ao negócio?",
     "options": [
-      { "id": "lt_5h", "label": "Menos de 5 horas", "scoring": { "archetypes": { "empreendedora_sobrecarregada": 1 }, "pains": { "tempo": 1 }, "flags": [] } },
-      { "id": "5_15h", "label": "Entre 5 e 15 horas", "scoring": { "archetypes": { "bico_pode_virar": 1 }, "pains": {}, "flags": [] } },
+      { "id": "lt_5h", "label": "Menos de 5 horas", "scoring": { "archetypes": { "empreendedora_sobrecarregada": 1, "renda_complementar": 1 }, "pains": { "tempo": 1 }, "flags": [] } },
+      { "id": "5_15h", "label": "Entre 5 e 15 horas", "scoring": { "archetypes": { "bico_pode_virar": 2 }, "pains": {}, "flags": [] } },
       { "id": "15_30h", "label": "Entre 15 e 30 horas", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "gt_30h", "label": "Mais de 30 horas", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } }
     ]
@@ -104,7 +104,7 @@
     "type": "single_choice",
     "text": "Você tem outro trabalho ou responsabilidade que ocupa boa parte do dia?",
     "options": [
-      { "id": "fixed_job", "label": "Sim, trabalho fixo", "scoring": { "archetypes": { "renda_complementar": 2, "empreendedora_sobrecarregada": 1 }, "pains": { "tempo": 1 }, "flags": [] } },
+      { "id": "fixed_job", "label": "Sim, trabalho fixo", "scoring": { "archetypes": { "renda_complementar": 3, "empreendedora_sobrecarregada": 1 }, "pains": { "tempo": 1 }, "flags": [] } },
       { "id": "family", "label": "Sim, cuido da família e da casa", "scoring": { "archetypes": { "empreendedora_sobrecarregada": 2 }, "pains": { "tempo": 2 }, "flags": [] } },
       { "id": "study", "label": "Sim, estudo", "scoring": { "archetypes": { "renda_complementar": 1 }, "pains": { "tempo": 1 }, "flags": [] } },
       { "id": "full_focus", "label": "Não, foco só no negócio", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } }
@@ -133,7 +133,7 @@
     "type": "single_choice",
     "text": "Você divulga seu negócio na internet?",
     "options": [
-      { "id": "frequent", "label": "Sim, com frequência", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
+      { "id": "frequent", "label": "Sim, com frequência", "scoring": { "archetypes": { "digital_antes_da_base": 2 }, "pains": {}, "flags": [] } },
       { "id": "sometimes", "label": "Sim, de vez em quando", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "rare", "label": "Quase nunca", "scoring": { "archetypes": { "produto_bom_vitrine_fraca": 2, "vende_comunidade_nao_online": 1 }, "pains": { "divulgacao": 1 }, "flags": [] } },
       { "id": "no", "label": "Não", "scoring": { "archetypes": { "vende_comunidade_nao_online": 2, "produto_bom_vitrine_fraca": 1 }, "pains": { "divulgacao": 2 }, "flags": [] } },
@@ -163,8 +163,8 @@
     "options": [
       { "id": "yes_detailed", "label": "Sim, com detalhes", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "yes_rough", "label": "Sim, mais ou menos", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "financas": 1 }, "flags": [] } },
-      { "id": "no", "label": "Não", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "financas": 3 }, "flags": ["finance_blind"] } },
-      { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "financas": 2 }, "flags": [] } }
+      { "id": "no", "label": "Não", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "financas": 3 }, "flags": ["finance_blind"] } },
+      { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "financas": 2 }, "flags": [] } }
     ]
   },
   {
@@ -177,7 +177,7 @@
     "options": [
       { "id": "yes_monthly", "label": "Sim, calculo todo mês", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "yes_rough", "label": "Mais ou menos", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "financas": 1 }, "flags": [] } },
-      { "id": "never_calculated", "label": "Não, nunca calculei", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "financas": 3 }, "flags": ["finance_blind"] } },
+      { "id": "never_calculated", "label": "Não, nunca calculei", "scoring": { "archetypes": { "vende_sem_lucro": 2, "digital_antes_da_base": 1 }, "pains": { "financas": 3 }, "flags": ["finance_blind"] } },
       { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "financas": 2 }, "flags": [] } }
     ]
   },
@@ -190,7 +190,7 @@
     "options": [
       { "id": "separated", "label": "Tenho contas separadas", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "try_separate", "label": "Tento separar, mas misturo às vezes", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "financas": 1 }, "flags": [] } },
-      { "id": "all_together", "label": "Sim, está tudo junto", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "financas": 2 }, "flags": ["finance_blind"] } },
+      { "id": "all_together", "label": "Sim, está tudo junto", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "financas": 2 }, "flags": ["finance_blind"] } },
       { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "financas": 1 }, "flags": [] } }
     ]
   },
@@ -203,7 +203,7 @@
     "options": [
       { "id": "yes_per_item", "label": "Sim, sei o custo de cada item", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "yes_rough", "label": "Sei mais ou menos", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "preco": 1 }, "flags": [] } },
-      { "id": "never_calculated", "label": "Não, nunca calculei", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "preco": 2 }, "flags": [] } },
+      { "id": "never_calculated", "label": "Não, nunca calculei", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "preco": 2 }, "flags": [] } },
       { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "preco": 1 }, "flags": [] } }
     ]
   },
@@ -216,7 +216,7 @@
     "options": [
       { "id": "cost_plus_margin", "label": "Calculo custo + margem", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "competitor", "label": "Olho o que os outros cobram", "scoring": { "archetypes": {}, "pains": { "preco": 1 }, "flags": [] } },
-      { "id": "fair", "label": "Cobro o que acho justo", "scoring": { "archetypes": { "vende_sem_lucro": 1 }, "pains": { "preco": 2 }, "flags": [] } },
+      { "id": "fair", "label": "Cobro o que acho justo", "scoring": { "archetypes": { "vende_sem_lucro": 1, "talento_sem_postura_comercial": 2 }, "pains": { "preco": 2 }, "flags": [] } },
       { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": { "vende_sem_lucro": 2 }, "pains": { "preco": 2 }, "flags": [] } }
     ]
   },
@@ -294,7 +294,7 @@
     "options": [
       { "id": "usually", "label": "Sim, geralmente sim", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "somewhat", "label": "Mais ou menos", "scoring": { "archetypes": {}, "pains": { "clientes": 1 }, "flags": [] } },
-      { "id": "usually_not", "label": "Quase sempre não", "scoring": { "archetypes": { "talento_sem_postura_comercial": 2 }, "pains": { "clientes": 2 }, "flags": [] } },
+      { "id": "usually_not", "label": "Quase sempre não", "scoring": { "archetypes": { "talento_sem_postura_comercial": 3 }, "pains": { "clientes": 2 }, "flags": [] } },
       { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": { "talento_sem_postura_comercial": 1 }, "pains": {}, "flags": [] } }
     ]
   },
@@ -332,7 +332,7 @@
     "text": "Você já pegou ou pensou em pegar empréstimo para o negócio?",
     "options": [
       { "id": "have_loan", "label": "Já peguei e estou pagando", "scoring": { "archetypes": {}, "pains": { "capital": 1 }, "flags": [] } },
-      { "id": "considering", "label": "Estou pensando em pegar", "scoring": { "archetypes": { "precisa_capital": 1 }, "pains": { "capital": 1 }, "flags": [] } },
+      { "id": "considering", "label": "Estou pensando em pegar", "scoring": { "archetypes": { "precisa_capital": 1, "digital_antes_da_base": 1 }, "pains": { "capital": 1 }, "flags": [] } },
       { "id": "avoid", "label": "Não, evito empréstimo", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } },
       { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } }
     ]
@@ -415,7 +415,7 @@
       { "id": "sell_more", "label": "Vender mais", "scoring": { "archetypes": {}, "pains": { "clientes": 1 }, "flags": [] } },
       { "id": "organize", "label": "Organizar o que já tenho", "scoring": { "archetypes": { "operacao_travada": 1 }, "pains": { "operacao": 1 }, "flags": [] } },
       { "id": "more_money", "label": "Ter mais dinheiro pra investir", "scoring": { "archetypes": { "precisa_capital": 1 }, "pains": { "capital": 1 }, "flags": [] } },
-      { "id": "divulgation", "label": "Aparecer mais (divulgação)", "scoring": { "archetypes": { "produto_bom_vitrine_fraca": 1 }, "pains": { "divulgacao": 1 }, "flags": [] } },
+      { "id": "divulgation", "label": "Aparecer mais (divulgação)", "scoring": { "archetypes": { "produto_bom_vitrine_fraca": 1, "digital_antes_da_base": 1 }, "pains": { "divulgacao": 1 }, "flags": [] } },
       { "id": "dontknow", "label": "Não sei", "scoring": { "archetypes": {}, "pains": {}, "flags": [] } }
     ]
   },
