@@ -17,15 +17,6 @@ import {
   DocumentStamp,
 } from '../components/Sketches';
 
-const ARCHETYPE_PEEK_IDS = [
-  'vende_sem_lucro',
-  'ainda_e_ideia',
-  'operacao_travada',
-  'empreendedora_sobrecarregada',
-  'precisa_capital',
-  'potencial_b2b_local',
-];
-
 const STEPS = [
   {
     title: 'Você responde 35 perguntas curtas',
@@ -96,9 +87,7 @@ function MiniTrilhaCard({ sketch, title, body, onClick }) {
 export default function Home() {
   const navigate = useNavigate();
 
-  const peeks = ARCHETYPE_PEEK_IDS
-    .map((id) => archetypesData.find((a) => a.id === id))
-    .filter((a) => a && a.status === 'active');
+  const peeks = archetypesData.filter((a) => a.status === 'active');
 
   return (
     <div className="space-y-10">
@@ -162,71 +151,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRA QUEM É */}
-      <section>
-        <p className="font-hand text-secondary text-lg leading-tight mb-1">
-          Pra quem é
-        </p>
-        <h2 className="font-sans font-bold text-2xl text-ink leading-tight mb-2">
-          Encontra-se em alguma dessas situações?
-        </h2>
-        <p className="text-secondary text-sm leading-relaxed mb-4">
-          O diagnóstico identifica seu perfil entre 12 caminhos possíveis. Aqui
-          alguns dos mais comuns.
-        </p>
-        <div className="grid grid-cols-1 gap-3">
-          {peeks.map((a) => (
-            <button
-              key={a.id}
-              type="button"
-              onClick={() => navigate('/diagnostico')}
-              className="text-left bg-paper border border-line rounded-2xl p-4 hover:bg-beige transition-colors"
-            >
-              <p className="font-semibold text-ink leading-snug mb-1">
-                {a.name}
-              </p>
-              <p className="text-secondary text-sm leading-snug">
-                {a.commonPain}
-              </p>
-            </button>
-          ))}
-        </div>
-        <Button
-          variant="ghost"
-          onClick={() => navigate('/diagnostico')}
-          className="w-full mt-3"
-        >
-          Descobrir meu perfil →
-        </Button>
-      </section>
-
-      {/* O QUE VOCÊ TEM */}
-      <section>
-        <p className="font-hand text-secondary text-lg leading-tight mb-1">
-          O que você tem aqui
-        </p>
-        <h2 className="font-sans font-bold text-2xl text-ink leading-tight mb-4">
-          Tudo gratuito, num só lugar
-        </h2>
-        <div className="grid grid-cols-1 gap-3">
-          {FEATURES.map((f, idx) => (
-            <Card key={idx} className="flex gap-4 items-start">
-              <div className="shrink-0">
-                <f.Icon className="w-9 h-9" />
-              </div>
-              <div>
-                <p className="font-bold text-ink leading-snug mb-1">
-                  {f.title}
-                </p>
-                <p className="text-secondary text-sm leading-relaxed">
-                  {f.body}
-                </p>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </section>
-
       {/* MINI-TRILHAS RÁPIDAS */}
       <section>
         <p className="font-hand text-secondary text-lg leading-tight mb-1">
@@ -268,6 +192,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRA QUEM É */}
+      <section>
+        <p className="font-hand text-secondary text-lg leading-tight mb-1">
+          Pra quem é
+        </p>
+        <h2 className="font-sans font-bold text-2xl text-ink leading-tight mb-2">
+          Encontra-se em alguma dessas situações?
+        </h2>
+        <p className="text-secondary text-sm leading-relaxed mb-4">
+          O diagnóstico identifica seu perfil entre os 12 caminhos abaixo.
+          Reconheceu algum?
+        </p>
+        <div className="grid grid-cols-2 gap-2">
+          {peeks.map((a) => (
+            <button
+              key={a.id}
+              type="button"
+              onClick={() => navigate('/diagnostico')}
+              className="text-left bg-paper border border-line rounded-2xl p-3 hover:bg-beige transition-colors"
+            >
+              <p className="font-semibold text-ink text-sm leading-snug mb-1">
+                {a.name}
+              </p>
+              <p className="text-secondary text-xs leading-snug line-clamp-2">
+                {a.commonPain}
+              </p>
+            </button>
+          ))}
+        </div>
+        <Button
+          variant="ghost"
+          onClick={() => navigate('/diagnostico')}
+          className="w-full mt-3"
+        >
+          Descobrir meu perfil →
+        </Button>
+      </section>
+
+      {/* O QUE VOCÊ TEM */}
+      <section>
+        <p className="font-hand text-secondary text-lg leading-tight mb-1">
+          O que você tem aqui
+        </p>
+        <h2 className="font-sans font-bold text-2xl text-ink leading-tight mb-4">
+          Tudo gratuito, num só lugar
+        </h2>
+        <div className="grid grid-cols-1 gap-3">
+          {FEATURES.map((f, idx) => (
+            <Card key={idx} className="flex gap-4 items-start">
+              <div className="shrink-0">
+                <f.Icon className="w-9 h-9" />
+              </div>
+              <div>
+                <p className="font-bold text-ink leading-snug mb-1">
+                  {f.title}
+                </p>
+                <p className="text-secondary text-sm leading-relaxed">
+                  {f.body}
+                </p>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </section>
+
       {/* METODOLOGIA */}
       <section>
         <Card className="bg-beige border-line">
@@ -278,12 +267,15 @@ export default function Home() {
                 De onde vem
               </p>
               <h3 className="font-bold text-ink leading-snug mb-2">
-                Inspirado na metodologia do Projeto Pescadores
+                Adaptação livre, sem intenção de lucro
               </h3>
               <p className="text-secondary text-sm leading-relaxed">
-                Começar pequeno. Validar com cliente real. Separar finanças
-                desde o dia 1. Pedir ajuda quando precisar. Os princípios são
-                antigos — a Trilha só organiza eles em passos práticos.
+                A Trilha é uma adaptação livre de conteúdo disponível na
+                internet sobre empreendedorismo de baixa renda e de casos
+                reais anonimizados. Construída sem intenção de lucro,
+                inspirada indiretamente no propósito da Khan Academy:
+                educação prática, gratuita, no ritmo de quem precisa. O
+                conteúdo é atualizado de tempos em tempos.
               </p>
             </div>
           </div>
@@ -330,7 +322,8 @@ export default function Home() {
       </section>
 
       <p className="text-xs text-secondary text-center pt-4 pb-2">
-        Inspirado na metodologia do Projeto Pescadores.
+        Adaptação livre, sem fins lucrativos. Inspirada no propósito da Khan
+        Academy.
       </p>
     </div>
   );

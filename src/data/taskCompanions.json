@@ -139,8 +139,8 @@
     "id": "companion_falar_com_10_clientes_amina",
     "taskTemplateId": "task_falar_com_10_clientes",
     "archetypeId": "ainda_e_ideia",
-    "personaName": "Amina",
-    "region": "Inspirado em situações reais (Brasil)",
+    "personaName": "Aline",
+    "region": "Brasil, Teresina (PI)",
     "personaContext": "Costureira há muito tempo, ainda nunca cobrou pelo trabalho. Quer abrir um ateliê de ajustes e peças sob medida. Antes de comprar máquina e fazer logo, decidiu conversar com 10 pessoas que poderiam virar cliente.",
     "stumbles": [
       {
@@ -151,20 +151,20 @@
       {
         "moment": "Pessoa 4",
         "whatHappened": "Abordou uma vizinha que ela mal conhecia. Perguntou 'você compraria uma peça sob medida?'. A vizinha disse não. Ficou desanimada e quase parou.",
-        "whatHelped": "No fim do dia, releu o que tinha anotado. A vizinha disse que NÃO ia comprar peça sob medida porque já tinha tudo. Mas comentou de passagem: 'eu acabei de pôr 4 calças pra ajustar na costureira do mercado, paguei caro'. Amina percebeu que o serviço de ajuste tinha demanda — só não era o que ela tinha perguntado."
+        "whatHelped": "No fim do dia, releu o que tinha anotado. A vizinha disse que NÃO ia comprar peça sob medida porque já tinha tudo. Mas comentou de passagem: 'eu acabei de pôr 4 calças pra ajustar na costureira do mercado, paguei caro'. Aline percebeu que o serviço de ajuste tinha demanda — só não era o que ela tinha perguntado."
       },
       {
         "moment": "Pessoa 7",
-        "whatHappened": "Uma mãe da escola do filho perguntou direto: 'quanto você cobra pra ajustar uniforme?'. Amina não soube responder. Disse 'depois eu te falo'. A pessoa mostrou interesse e ela perdeu a chance.",
+        "whatHappened": "Uma mãe da escola do filho perguntou direto: 'quanto você cobra pra ajustar uniforme?'. Aline não soube responder. Disse 'depois eu te falo'. A pessoa mostrou interesse e ela perdeu a chance.",
         "whatHelped": "Decidiu uma regra: antes da próxima conversa, ter um preço básico na ponta da língua, mesmo que fosse 'R$ 25 a peça simples, R$ 40 a peça mais complexa'. Preço escrito, decorado."
       }
     ],
-    "breakthrough": "Das 10 pessoas, só 1 falou que compraria peça sob medida. Mas 6 perguntaram sobre ajuste. Amina percebeu que tinha começado pelo serviço errado. Ajuste é o que paga o equipamento. Sob medida vem depois, quando a base já tiver clientela.",
+    "breakthrough": "Das 10 pessoas, só 1 falou que compraria peça sob medida. Mas 6 perguntaram sobre ajuste. Aline percebeu que tinha começado pelo serviço errado. Ajuste é o que paga o equipamento. Sob medida vem depois, quando a base já tiver clientela.",
     "outcome": "Mudou a oferta. Postou no zap dos contatos da escola: 'faço ajuste de uniforme, R$ 25 simples, R$ 40 complexo, retirada em 3 dias'. Recebeu 4 pedidos na primeira semana. Sem comprar máquina nova nenhuma.",
     "whenToAskForHelp": "Se das 10 conversas todo mundo disse 'que legal' mas ninguém perguntou preço ou prazo, peça ajuda. Pode ser que a oferta ainda não esteja clara ou que você esteja conversando com o público errado.",
     "relatedCases": ["case_amina_costureira_validacao"],
     "relatedResources": ["res_validar_ideia"],
-    "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+    "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
   },
@@ -207,8 +207,8 @@
     "id": "companion_mapear_fluxo_pedido_keisha",
     "taskTemplateId": "task_mapear_fluxo_pedido",
     "archetypeId": "operacao_travada",
-    "personaName": "Keisha",
-    "region": "Inspirado em situações reais (adaptado para Brasil)",
+    "personaName": "Joana",
+    "region": "Brasil, Aracaju (SE)",
     "personaContext": "Tem uma lanchonete pequena que vende lanches via WhatsApp pra retirada. Estava perdendo pedidos por desorganização. Decidiu desenhar o caminho do pedido antes de mudar qualquer outra coisa.",
     "stumbles": [
       {
@@ -227,12 +227,12 @@
         "whatHelped": "Os dois decidiram: todo pedido confirmado é escrito numa folha colada na parede da cozinha. Quem confirma escreve. Quem prepara risca. Sem zap aberto na cozinha, sem confiar na cabeça."
       }
     ],
-    "breakthrough": "Keisha percebeu que NÃO precisava de planilha sofisticada nem de funcionário novo. Precisava de uma folha na parede e uma regra: pedido só existe quando está escrito ali. Tudo que não tá escrito não foi confirmado.",
+    "breakthrough": "Joana percebeu que NÃO precisava de planilha sofisticada nem de funcionário novo. Precisava de uma folha na parede e uma regra: pedido só existe quando está escrito ali. Tudo que não tá escrito não foi confirmado.",
     "outcome": "Implementou na semana seguinte. Em 2 semanas, zero pedido perdido. Manteve o caderno mesmo nos dias parados — vira um hábito.",
     "whenToAskForHelp": "Se você desenhou o fluxo e ainda não consegue identificar onde o pedido se perde, peça ajuda. Às vezes precisa de um olhar de fora pra ver o gargalo.",
     "relatedCases": ["case_keisha_lanches_atraso"],
     "relatedResources": ["res_organizacao_pedidos"],
-    "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+    "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
   },
@@ -275,8 +275,8 @@
     "id": "companion_fotos_3_produtos_priya",
     "taskTemplateId": "task_fotos_3_produtos",
     "archetypeId": "produto_bom_vitrine_fraca",
-    "personaName": "Priya",
-    "region": "Inspirado em situações reais (adaptado para Brasil)",
+    "personaName": "Patrícia",
+    "region": "Brasil, Florianópolis (SC)",
     "personaContext": "Faz brincos artesanais. Vende muito em feira porque cliente vê de perto. No Instagram, posta foto na mesa da cozinha com luz amarela e fundo bagunçado — 200 seguidores, zero venda online em 6 meses.",
     "stumbles": [
       {
@@ -295,12 +295,12 @@
         "whatHelped": "Tirou uma segunda foto: brinco na orelha dela mesma, no espelho. Tamanho ficou óbvio. As perguntas de tamanho desapareceram, as vendas começaram."
       }
     ],
-    "breakthrough": "Priya entendeu que cada produto precisava de 3 tipos de foto: produto sozinho (catálogo), produto sendo usado (escala e contexto), detalhe (textura). Sempre com luz natural, fundo limpo, edição mínima. Sem app pago, sem fotógrafo.",
+    "breakthrough": "Patrícia entendeu que cada produto precisava de 3 tipos de foto: produto sozinho (catálogo), produto sendo usado (escala e contexto), detalhe (textura). Sempre com luz natural, fundo limpo, edição mínima. Sem app pago, sem fotógrafo.",
     "outcome": "Em 2 semanas, refez fotos dos 3 produtos mais vendidos. As primeiras 5 vendas online vieram no mês seguinte. Continuou postando os outros produtos no mesmo padrão.",
     "whenToAskForHelp": "Se você tirou as fotos com luz natural, fundo limpo e ainda assim não está satisfeita, peça ajuda. Tem voluntário fotógrafo na rede que olha suas fotos e sugere ajustes específicos sem custo.",
     "relatedCases": ["case_priya_acessorios_vitrine"],
     "relatedResources": ["res_fotos_celular"],
-    "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+    "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
   },
@@ -443,8 +443,8 @@
     "id": "companion_definir_oferta_amina",
     "taskTemplateId": "task_definir_oferta_preco_entrega",
     "archetypeId": "ainda_e_ideia",
-    "personaName": "Amina",
-    "region": "Inspirado em situações reais (Brasil)",
+    "personaName": "Aline",
+    "region": "Brasil, Teresina (PI)",
     "personaContext": "Já conversou com 10 pessoas e descobriu que demanda real era ajuste de roupa, não peça sob medida. Agora vai escrever a oferta clara que cabe num zap.",
     "stumbles": [
       {
@@ -454,7 +454,7 @@
       },
       {
         "moment": "Oferta com preço, sem prazo",
-        "whatHappened": "Segunda versão: 'ajuste simples R$ 25, ajuste complexo R$ 40'. Mandou. Cliente respondeu pedindo orçamento e perguntou 'fica pronto quando?'. Amina não tinha pensado em prazo.",
+        "whatHappened": "Segunda versão: 'ajuste simples R$ 25, ajuste complexo R$ 40'. Mandou. Cliente respondeu pedindo orçamento e perguntou 'fica pronto quando?'. Aline não tinha pensado em prazo.",
         "whatHelped": "Adicionou prazo: 'retirada em 3 dias úteis a partir da entrega da peça'. E pra urgência: 'em 24h, +R$ 15'. Resolveu duas perguntas de uma vez."
       },
       {
@@ -468,7 +468,7 @@
     "whenToAskForHelp": "Se cliente faz mais de 2 perguntas pra entender sua oferta, peça ajuda. Provavelmente está vaga demais ou tem categoria escondida que você não nomeou.",
     "relatedCases": ["case_amina_costureira_validacao"],
     "relatedResources": ["res_precificacao_simples"],
-    "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+    "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
   },
@@ -477,8 +477,8 @@
     "id": "companion_catalogo_simples_amina",
     "taskTemplateId": "task_catalogo_simples",
     "archetypeId": "ainda_e_ideia",
-    "personaName": "Amina",
-    "region": "Inspirado em situações reais (Brasil)",
+    "personaName": "Aline",
+    "region": "Brasil, Teresina (PI)",
     "personaContext": "Oferta clara funcionando. Agora precisa de algo visual pra mandar quando alguém pergunta 'tem foto?'.",
     "stumbles": [
       {
@@ -502,7 +502,7 @@
     "whenToAskForHelp": "Se você fez 3 versões do catálogo e cada cliente que recebe ainda pergunta o preço, peça ajuda — algo não está claro visualmente.",
     "relatedCases": ["case_amina_costureira_validacao"],
     "relatedResources": ["res_fotos_celular"],
-    "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+    "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
   },
@@ -511,8 +511,8 @@
     "id": "companion_mvp_primeira_venda_amina",
     "taskTemplateId": "task_mvp_primeira_venda",
     "archetypeId": "ainda_e_ideia",
-    "personaName": "Amina",
-    "region": "Inspirado em situações reais (Brasil)",
+    "personaName": "Aline",
+    "region": "Brasil, Teresina (PI)",
     "personaContext": "Oferta clara, catálogo pronto. Última missão: sair do plano e fechar a primeira venda real, mesmo que pequena.",
     "stumbles": [
       {
@@ -527,16 +527,16 @@
       },
       {
         "moment": "Primeira venda mas com prejuízo",
-        "whatHappened": "A primeira cliente pediu 3 ajustes. Amina, animada, deu 'desconto de boas-vindas' pra fechar. Trabalhou 4 horas. Calculou no fim: ganhou R$ 9 por hora — abaixo do que ganha como babá ocasional.",
+        "whatHappened": "A primeira cliente pediu 3 ajustes. Aline, animada, deu 'desconto de boas-vindas' pra fechar. Trabalhou 4 horas. Calculou no fim: ganhou R$ 9 por hora — abaixo do que ganha como babá ocasional.",
         "whatHelped": "Aceitou que a primeira venda é validação de mercado, não maximização de lucro. Mas anotou: nada de desconto na próxima. Preço da oferta é o preço."
       }
     ],
-    "breakthrough": "Primeira venda real ensina mais que três meses planejando. Mesmo com 'desconto bobo de boas-vindas', Amina aprendeu: que tem mercado, que cliente paga, que prazo de 3 dias é viável, e que o preço cheio é o que tem que ser cobrado da segunda em diante.",
+    "breakthrough": "Primeira venda real ensina mais que três meses planejando. Mesmo com 'desconto bobo de boas-vindas', Aline aprendeu: que tem mercado, que cliente paga, que prazo de 3 dias é viável, e que o preço cheio é o que tem que ser cobrado da segunda em diante.",
     "outcome": "Em 30 dias, fechou 9 ajustes. Faturou R$ 320 — pequeno, mas real. Tomou decisão informada: vai investir nos primeiros R$ 200 numa máquina de costura básica usada (R$ 180 numa OLX) em vez de máquina nova de R$ 2.200.",
     "whenToAskForHelp": "Se você fez 5 abordagens personalizadas e ninguém respondeu nem com 'não', peça ajuda. Pode ser canal errado (zap vs presencial vs Instagram) ou público errado.",
     "relatedCases": ["case_amina_costureira_validacao"],
     "relatedResources": ["res_validar_ideia"],
-    "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+    "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
   },
@@ -545,8 +545,8 @@
     "id": "companion_planilha_pedidos_keisha",
     "taskTemplateId": "task_planilha_pedidos_basica",
     "archetypeId": "operacao_travada",
-    "personaName": "Keisha",
-    "region": "Inspirado em situações reais (adaptado para Brasil)",
+    "personaName": "Joana",
+    "region": "Brasil, Aracaju (SE)",
     "personaContext": "Já mapeou o fluxo do pedido e identificou o gargalo. Agora vai criar a planilha simples que substitui a folha colada na parede.",
     "stumbles": [
       {
@@ -561,7 +561,7 @@
       },
       {
         "moment": "Filho ajuda mas com formato diferente",
-        "whatHappened": "Quando o filho atende o zap, ele anota com letra cursiva apertada. Keisha não conseguia ler na hora e errou pedido por causa disso.",
+        "whatHappened": "Quando o filho atende o zap, ele anota com letra cursiva apertada. Joana não conseguia ler na hora e errou pedido por causa disso.",
         "whatHelped": "Combinou regra: nome em LETRA DE FORMA, pedido em letra de forma, prazo em número (HH:MM). Sem cursiva. Pequeno acordo, fim das confusões."
       }
     ],
@@ -570,7 +570,7 @@
     "whenToAskForHelp": "Se você criou a planilha e em 2 semanas ainda perde pedido, peça ajuda. O problema pode não ser registro — pode ser fluxo entre quem registra e quem prepara.",
     "relatedCases": ["case_keisha_lanches_atraso"],
     "relatedResources": ["res_organizacao_pedidos"],
-    "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+    "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
   },
@@ -646,8 +646,8 @@
   "id": "companion_perfil_redes_priya",
   "taskTemplateId": "task_perfil_redes_basico",
   "archetypeId": "produto_bom_vitrine_fraca",
-  "personaName": "Priya",
-  "region": "Inspirado em situações reais (adaptado para Brasil)",
+  "personaName": "Patrícia",
+  "region": "Brasil, Florianópolis (SC)",
   "personaContext": "Já refez as fotos dos 3 produtos mais vendidos. Agora vai organizar o perfil do Instagram pra ter um lugar decente onde mandar quem pergunta 'tem instagram?'.",
   "stumbles": [
     {
@@ -657,7 +657,7 @@
     },
     {
       "moment": "Link pro nada",
-      "whatHappened": "Colocou o link do Instagram apontando pra própria página do Instagram. Quem clicava ficava num loop. Cliente perguntou no comentário: 'como faço pra comprar?'. Priya respondeu nos comentários por 3 dias até entender o problema.",
+      "whatHappened": "Colocou o link do Instagram apontando pra própria página do Instagram. Quem clicava ficava num loop. Cliente perguntou no comentário: 'como faço pra comprar?'. Patrícia respondeu nos comentários por 3 dias até entender o problema.",
       "whatHelped": "Trocou o link pelo número do zap dela formatado direto: 'https://wa.me/55319XXXXXXXX'. Quem clicava abria conversa com ela na hora. Conversões dispararam."
     },
     {
@@ -667,11 +667,11 @@
     }
   ],
   "breakthrough": "Perfil organizado não é perfil bonito. É perfil onde, em 10 segundos, qualquer pessoa entende: o que você vende, onde você está, e como comprar. Sem isso, foto boa não vira venda.",
-  "outcome": "Em 1 semana com perfil reorganizado e link do zap funcionando, Priya recebeu 8 mensagens de novo cliente — mais que nos 6 meses anteriores juntos. Nenhuma delas precisou perguntar 'como compro?'.",
+  "outcome": "Em 1 semana com perfil reorganizado e link do zap funcionando, Patrícia recebeu 8 mensagens de novo cliente — mais que nos 6 meses anteriores juntos. Nenhuma delas precisou perguntar 'como compro?'.",
   "whenToAskForHelp": "Se você organizou o perfil e ainda assim ninguém clica nem manda mensagem, peça ajuda. Pode ser que o problema esteja no link, no contato visível ou no que aparece nos primeiros segundos — e tem voluntário da rede que olha o perfil em 10 minutos e aponta o que travar.",
   "relatedCases": ["case_priya_acessorios_vitrine"],
   "relatedResources": ["res_fotos_celular", "res_whatsapp_business_basico"],
-  "caseAuthenticityType": "teaching_scenario_inspired_by_multiple_sources",
+  "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
 },

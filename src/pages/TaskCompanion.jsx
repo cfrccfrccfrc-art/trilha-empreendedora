@@ -4,6 +4,7 @@ import companionsData from '../data/taskCompanions.json';
 import taskTemplates from '../data/taskTemplates.json';
 import casesData from '../data/cases.json';
 import resourcesData from '../data/resources.json';
+import archetypesData from '../data/archetypes.json';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
@@ -79,6 +80,17 @@ export default function TaskCompanion() {
     .map((cid) => casesData.find((c) => c.id === cid && c.status === 'active'))
     .filter(Boolean);
 
+  const archetype = archetypesData.find((a) => a.id === companion.archetypeId);
+  const fallbackCase =
+    relatedCases.length === 0 && archetype
+      ? (archetype.recommendedCases || [])
+          .map((cid) =>
+            casesData.find((c) => c.id === cid && c.status === 'active')
+          )
+          .find(Boolean)
+      : null;
+  const displayCase = relatedCases[0] || fallbackCase || null;
+
   const relatedResources = (companion.relatedResources || [])
     .map((rid) => resourcesData.find((r) => r.id === rid))
     .filter(Boolean);
@@ -122,6 +134,32 @@ export default function TaskCompanion() {
           {companion.personaContext}
         </p>
       </Card>
+
+      {displayCase && (
+        <Card>
+          <p className="font-hand text-secondary text-base leading-tight mb-1">
+            Como {companion.personaName} chegou até aqui
+          </p>
+          <h3 className="font-bold text-ink leading-snug mb-3">
+            {displayCase.title}
+          </h3>
+          <p className="text-ink text-sm leading-relaxed mb-2">
+            <strong>O dilema.</strong> {displayCase.dilemma}
+          </p>
+          {displayCase.tropicalizedLesson && (
+            <p className="text-secondary text-sm leading-relaxed mb-4">
+              {displayCase.tropicalizedLesson}
+            </p>
+          )}
+          <button
+            type="button"
+            onClick={() => navigate(`/casos/${displayCase.id}`)}
+            className="text-primary text-sm font-semibold"
+          >
+            Ler caso completo →
+          </button>
+        </Card>
+      )}
 
       <div className="space-y-3">
         <p className="font-hand text-secondary text-lg leading-tight px-1">
@@ -205,30 +243,6 @@ export default function TaskCompanion() {
                 >
                   {c._taskWeek ? `Semana ${c._taskWeek}: ` : ''}
                   {c._taskTitle || c.taskTemplateId} →
-                </button>
-              </li>
-            ))}
-          </ul>
-        </Card>
-      )}
-
-      {relatedCases.length > 0 && (
-        <Card>
-          <h3 className="font-bold text-ink mb-1">
-            Antes desse trabalho, a decisão
-          </h3>
-          <p className="text-xs text-secondary mb-3">
-            O caso que conta como {companion.personaName} chegou até aqui.
-          </p>
-          <ul className="space-y-2">
-            {relatedCases.map((c) => (
-              <li key={c.id}>
-                <button
-                  type="button"
-                  onClick={() => navigate(`/casos/${c.id}`)}
-                  className="text-primary text-sm font-semibold text-left"
-                >
-                  {c.title} →
                 </button>
               </li>
             ))}
