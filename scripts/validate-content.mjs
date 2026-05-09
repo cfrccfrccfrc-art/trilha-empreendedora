@@ -360,6 +360,18 @@ function validateResources() {
     for (const aid of r.recommendedArchetypes || []) {
       if (!archIds.has(aid)) E(file, ctx, `recommendedArchetypes → "${aid}" not found`);
     }
+
+    if (r.body !== undefined) {
+      if (!Array.isArray(r.body)) {
+        E(file, ctx, 'body must be an array of paragraph strings if present');
+      } else {
+        r.body.forEach((p, idx) => {
+          if (typeof p !== 'string' || !p.trim()) {
+            E(file, ctx, `body[${idx}] must be a non-empty string`);
+          }
+        });
+      }
+    }
   }
 }
 

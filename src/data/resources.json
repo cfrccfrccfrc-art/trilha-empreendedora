@@ -1,6 +1,16 @@
 [
   {
     "id": "res_caixa_basico",
+    "body": [
+      "Controlar o caixa parece chato, mas em 1 semana já mostra coisa que você não enxergava. O passo aqui é simples: anotar tudo que entra e tudo que sai, todo dia, por 7 dias seguidos.",
+      "**Onde anotar.** Caderno comum serve, planilha no celular também. O que importa é ter um lugar só, perto de onde você vende. Se anotar em pedaço de papel, vai perder. Se deixar pra fazer no fim do dia, esquece o valor exato.",
+      "**O que conta como entrada.** Tudo que entra de cliente: dinheiro, Pix, débito, crédito. Anota o valor cheio mesmo nas vendas com cartão. A taxa entra como saída depois.",
+      "**O que conta como saída.** Tudo que sai do bolso pelo negócio: matéria-prima, embalagem, gás, gasolina pra entregar, taxa de maquininha, sacolinha, qualquer coisa. Mesmo que seja R$ 2,50, anota.",
+      "**Não misture com o pessoal.** Se comprou açaí pra você, não anota. Se pegou R$ 50 do caixa pra fazer compra de casa, anota como retirada pessoal. É a única forma de saber se sobra dinheiro de verdade.",
+      "**No domingo, soma tudo.** Pega o caderno e faz a conta: total de entradas, total de saídas. A diferença é o que sobrou na semana. Se for menos do que você imaginava, é hora de olhar onde está vazando.",
+      "**Repita por mais 1 semana antes de mudar nada.** Uma semana só pode ser atípica. Duas semanas seguidas mostram um padrão. Aí sim você decide o que ajustar: preço, custo, mix de produto.",
+      "Se depois de 2 semanas a sobra continuar baixa demais ou negativa, peça ajuda. O problema raramente é só vender mais, costuma ser preço ou custo escondido."
+    ],
     "title": "Como começar a controlar o caixa do negócio",
     "description": "Guia rápido em texto: como anotar entrada e saída por 7 dias, com exemplos de planilha em papel e apps gratuitos.",
     "type": "guide",
@@ -13,7 +23,7 @@
     "free": true,
     "onlineOffline": "online",
     "estimatedTime": "5 min",
-    "practicalUseCase": "Use junto com a tarefa task_anotar_7_dias.",
+    "practicalUseCase": "Use junto com a tarefa 'Anotar entradas e saídas por 7 dias'.",
     "qualityScore": 4,
     "lastReviewed": "2026-04-01",
     "nextReview": "2026-10-01",
@@ -23,6 +33,16 @@
   },
   {
     "id": "res_precificacao_simples",
+    "body": [
+      "Cobrar barato demais é o erro mais comum. Cobrar caro sem saber por quê assusta cliente. Uma fórmula simples resolve: custo + margem clara. Funciona pra produto e pra serviço.",
+      "**Passo 1: somar o custo direto.** Tudo que você gasta pra fazer 1 unidade. Pra um bolo de pote: ovos, farinha, manteiga, açúcar, recheio, embalagem, gás. Anota cada item. Pra serviço de cabeleireira, conta o produto usado e o tempo gasto.",
+      "**Passo 2: somar custo indireto rateado.** Aluguel da sala, conta de luz, internet, taxa do MEI, dividido por quantos produtos você vende no mês. Se vende 100 bolos por mês e o aluguel é R$ 800, são R$ 8 de aluguel por bolo. Esse é o custo indireto unitário.",
+      "**Passo 3: somar a sua hora.** Quanto sua hora valeria se você fosse contratada num lugar parecido? R$ 20? R$ 30? Multiplica pelas horas que cada bolo (ou serviço) leva. Se gasta 1h30, é o equivalente desse valor por unidade.",
+      "**Passo 4: aplicar margem.** Custo direto + custo indireto + sua hora = ponto de equilíbrio (você não perde mas não ganha). Pra ter lucro, soma uma margem em cima. Pra começar: 30% pra produto físico, 50% pra serviço com seu tempo, 20% pra revenda. Esse é o preço de venda.",
+      "**Compare com o mercado e ajuste.** Se ficou muito mais caro que a concorrência, olha onde dá pra cortar custo (não a margem). Se ficou bem mais barato, sobe pra próxima referência. Cliente desconfia de coisa muito barata sem motivo.",
+      "**Revise a cada 3 meses.** Custo de matéria sobe, taxa muda, sua hora vale mais com experiência. Preço congelado é prejuízo lento.",
+      "Se você anotou os números e fechar o cálculo deu prejuízo claro, peça ajuda antes de subir preço de uma vez. Pode ter um custo escondido pesando demais."
+    ],
     "title": "Precificação prática: custo + margem em 4 passos",
     "description": "Fórmula simples para colocar preço em produto físico ou serviço, com exemplos brasileiros e tabela de margem por setor.",
     "type": "guide",
@@ -35,7 +55,7 @@
     "free": true,
     "onlineOffline": "online",
     "estimatedTime": "8 min",
-    "practicalUseCase": "Use antes da tarefa task_revisar_precos.",
+    "practicalUseCase": "Use antes da tarefa 'Revisar o preço de 3 produtos'.",
     "qualityScore": 4,
     "lastReviewed": "2026-04-01",
     "nextReview": "2026-10-01",
@@ -45,6 +65,16 @@
   },
   {
     "id": "res_validar_ideia",
+    "body": [
+      "A pior forma de testar uma ideia é gastar dinheiro nela primeiro. A melhor é conversar com 10 pessoas que poderiam ser cliente, anotar respostas, e só depois decidir se vale começar.",
+      "**Quem entra na lista de 10.** Pessoas que se encaixam no público que você imagina. Pra peça de costura: vizinha, mãe de colega da escola, gente do trabalho. Família próxima e amiga muito chegada não conta. Elas falam 'que ideia ótima' por carinho, não por demanda real.",
+      "**Como abordar sem assustar.** Você não tá vendendo nada ainda. Você tá perguntando. 'Oi, tô pensando em começar a fazer X. Posso te fazer 3 perguntas rápidas pra entender se faz sentido pra você?' Quase ninguém recusa.",
+      "**As 3 perguntas que valem.** (1) Você já comprou ou pagou por algo parecido? Quanto? (2) Em que situação você precisaria desse produto ou serviço? (3) Quanto você acha que pagaria? Anota a resposta exata, não o que você ouviu por trás.",
+      "**O que conta como sinal real.** Se a pessoa disser 'eu compraria' mas nunca tiver pagado por nada parecido, é só vontade educada. Se ela falar 'paguei R$ 80 mês passado em fulana', é demanda comprovada.",
+      "**Cuidado com o entusiasmo geral.** Se 9 das 10 disseram 'que legal', mas só 2 perguntaram preço ou prazo, você não tem demanda. Tem aprovação social. Isso não paga conta.",
+      "**O resultado decide o próximo passo.** Se 3 ou mais perguntaram preço de verdade, vale começar pequeno (sem comprar equipamento novo). Se ninguém perguntou, ou ajusta a oferta, ou troca o público, ou abandona a ideia.",
+      "Se você terminar as 10 conversas e não souber dizer se tem demanda ou não, peça ajuda. Provavelmente o tipo de pergunta que você fez não revelou o que importava."
+    ],
     "title": "Como validar uma ideia de negócio antes de investir",
     "description": "Passo a passo para conversar com 10 clientes possíveis, anotar respostas e decidir se vale começar.",
     "type": "guide",
@@ -57,7 +87,7 @@
     "free": true,
     "onlineOffline": "online",
     "estimatedTime": "6 min",
-    "practicalUseCase": "Use antes da tarefa task_falar_com_10_clientes.",
+    "practicalUseCase": "Use antes da tarefa 'Conversar com 10 clientes possíveis'.",
     "qualityScore": 4,
     "lastReviewed": "2026-04-01",
     "nextReview": "2026-10-01",
@@ -67,6 +97,16 @@
   },
   {
     "id": "res_capital_inteligente",
+    "body": [
+      "Empréstimo amplia o que já existe. Não conserta o que não funciona. Antes de pegar capital, dá pra responder com clareza essas 5 perguntas? Se não, espera mais um tempo.",
+      "**1. O negócio já gera lucro hoje?** Não faturamento, lucro. Sobra dinheiro depois de pagar tudo? Se a resposta é 'mais ou menos' ou 'não sei', empréstimo só vai adiantar o problema. Anote 30 dias de caixa primeiro pra ter certeza.",
+      "**2. Você sabe exatamente em que vai gastar?** 'Pra crescer o negócio' é vago demais. Resposta boa: 'comprar 1 freezer de R$ 1.200, fazer 200 panfletos por R$ 80, e ter R$ 800 de capital de giro pras próximas 4 compras de matéria-prima'. Total claro, item por item.",
+      "**3. O retorno desse gasto é mensurável?** O freezer aumenta a venda em quanto? O panfleto traz quantos clientes novos? Se você não consegue estimar, é apostar, não investir. Investimento sem cálculo é o caminho mais curto pra dívida.",
+      "**4. A parcela cabe no caixa atual?** Pegue a sobra média mensal dos últimos 3 meses. A parcela do empréstimo deve consumir no máximo 1/3 dessa sobra. Mais que isso aperta tudo no primeiro mês ruim.",
+      "**5. Você tem plano se algo der errado?** Fornecedor atrasar, estação cair em vendas, cliente grande sumir. Tem reserva pra 2 parcelas? Se não, qualquer trombada vira atraso, juros, dor de cabeça.",
+      "**Se respondeu sim pras 5, vale buscar microcrédito.** Comece por banco do trabalhador da sua cidade, BNDES Microcrédito, ou cooperativa local. Taxa razoável é até 3% ao mês. Acima disso, pesquise mais.",
+      "Se respondeu sim pra 3 e não pra 2, espera. Espera não é fracasso, é maturidade. Negócio que pega empréstimo na hora errada quebra mais do que o que espera 6 meses."
+    ],
     "title": "Capital inteligente: quando faz sentido pegar empréstimo",
     "description": "Critérios para avaliar se vale buscar capital agora, com lista do que conferir e prazo de pagamento.",
     "type": "guide",
@@ -89,6 +129,16 @@
   },
   {
     "id": "res_organizacao_pedidos",
+    "body": [
+      "Pedido perdido é venda perdida e cliente que não volta. Uma planilha simples (no celular ou no caderno) resolve a maioria dos erros. Funciona pra delivery de comida, costura, manicure, qualquer negócio com fila de pedido.",
+      "**As 6 colunas que importam.** (1) Data do pedido, (2) Cliente, (3) O que pediu, (4) Prazo prometido, (5) Pago (sim/não), (6) Entregue (sim/não). Se você atende sob medida, adiciona uma coluna 'observação' (ex: sem cebola, tamanho M, cor azul).",
+      "**Preencha na hora do pedido, sem exceção.** Regra de ouro: nunca confiar na memória. Cliente fala pelo zap, você anota antes de responder. Se preencher só depois, perde detalhe e gera retrabalho ou erro.",
+      "**Marque pago e entregue na cor.** Verde quando recebe pagamento, azul quando entrega. Visualmente fica óbvio o que tá em aberto. Não precisa ser bonito, precisa ser visível.",
+      "**Reveja todo dia de manhã.** 5 minutos olhando a lista. Quem prometi entregar hoje? Tem alguém atrasado pra cobrar pagamento? Esse hábito sozinho evita 80% dos problemas operacionais.",
+      "**Versão papel funciona.** Se você não usa muito celular, faz num caderno A5 dividido em colunas com régua. O importante é ser simples e estar sempre na mesma posição (ao lado da maquininha, no balcão, na bolsa).",
+      "**Versão Google Sheets é gratuita e roda no celular.** Cria uma aba por mês. Filtro pra ver só os abertos. Se você atende mais de 30 pedidos por mês, vale o esforço de aprender.",
+      "Se você está perdendo mais de 1 a cada 10 pedidos, ou cliente reclamou de erro nos últimos 7 dias, peça ajuda pra olhar onde tá vazando. Costuma ser uma etapa específica que dá pra arrumar."
+    ],
     "title": "Planilha simples de pedidos para baixar",
     "description": "Modelo em Google Sheets com colunas pré-formatadas: cliente, produto, prazo, pago, entregue. Versão pra imprimir incluída.",
     "type": "template",
@@ -101,7 +151,7 @@
     "free": true,
     "onlineOffline": "online",
     "estimatedTime": "3 min",
-    "practicalUseCase": "Use durante a tarefa task_planilha_pedidos_basica.",
+    "practicalUseCase": "Use durante a tarefa 'Planilha simples de pedidos'.",
     "qualityScore": 4,
     "lastReviewed": "2026-04-01",
     "nextReview": "2026-10-01",
@@ -111,6 +161,16 @@
   },
   {
     "id": "res_fotos_celular",
+    "body": [
+      "Foto boa não é foto cara. É foto com luz certa, fundo limpo e detalhe que mostra o produto. Em 4 ajustes simples, sua vitrine no Instagram passa a impressão certa.",
+      "**Luz primeiro, sempre.** Luz natural perto da janela é a melhor. Posicione o produto a 30 ou 50 cm da janela, no horário do meio do dia. Evite sol direto (faz sombra dura). Em dia nublado fica perfeito, a luz é bem distribuída.",
+      "**Fundo limpo, mesmo improvisado.** Tecido branco esticado numa cadeira, parede neutra da casa, pano colorido único (sem estampa). Foge de mesa bagunçada, foto com criança ao fundo, parede com decoração competindo. O olho do cliente tem que ir direto pro produto.",
+      "**Ângulo que mostra o que o cliente quer ver.** Roupa: peça pendurada num cabide ou vestida em manequim improvisado. Comida: foto de cima ou em ângulo de 45 graus. Brinco e acessório: aproxime pra ver textura. Faça 3 ângulos do mesmo produto.",
+      "**Edição simples no próprio celular.** Use o aplicativo padrão (Galeria, Fotos). Aumente a luz (brilho), reduza a sombra. Não exagera no filtro, tira a credibilidade. Recorte pra deixar o produto centralizado. Levou 2 minutos, ficou outra coisa.",
+      "**Foto de detalhe vende mais que foto geral.** Pra brinco: close na pedra. Pra bolo: corte mostrando o recheio. Pra costura: aproximação no acabamento. Esses detalhes são o que feira mostra ao vivo, e foto consegue replicar.",
+      "**Faça 3 fotos por produto antes de postar.** Geral, lateral, detalhe. Você escolhe a melhor depois. É 100% mais barato repetir foto que comprar câmera nova.",
+      "Se depois de refazer foto e postar 7 dias seguidos as vendas não mexerem, o problema talvez não seja foto. Pode ser perfil sem informação clara, preço fora do mercado, ou público errado. Aí vale revisar a vitrine inteira."
+    ],
     "title": "Como tirar boas fotos do produto só com o celular",
     "description": "Guia ilustrado com posição de luz, escolha de fundo, ângulos básicos e edição gratuita no próprio celular.",
     "type": "guide",
@@ -123,7 +183,7 @@
     "free": true,
     "onlineOffline": "online",
     "estimatedTime": "7 min",
-    "practicalUseCase": "Use antes da tarefa task_fotos_3_produtos.",
+    "practicalUseCase": "Use antes da tarefa 'Fotos boas de 3 produtos'.",
     "qualityScore": 4,
     "lastReviewed": "2026-04-01",
     "nextReview": "2026-10-01",
@@ -133,6 +193,16 @@
   },
   {
     "id": "res_whatsapp_business_basico",
+    "body": [
+      "WhatsApp comum funciona, mas o Business é gratuito, organiza melhor o atendimento e passa cara mais profissional. Vale o tempo de configurar (30 min uma vez) pelo retorno que dá.",
+      "**Baixe e use o número do negócio.** WhatsApp Business é app separado do comum. Pode ter os dois no mesmo celular se você tiver chip duplo, ou usar um número novo (chip pré-pago resolve). Não use o seu número pessoal pra cliente.",
+      "**Configure o perfil do negócio.** Coloque foto (logo, fachada, ou produto principal), endereço se atende presencial, horário de funcionamento, descrição curta (1 frase do que você vende), categoria. Cliente confia mais em quem tem esses campos preenchidos.",
+      "**Crie mensagem de saudação e ausência.** Saudação aparece quando alguém escreve pela primeira vez ('Oi! Obrigada por entrar em contato. Vou responder em até 1 hora no horário comercial'). Ausência aparece fora do horário ('Recebi sua mensagem. Respondo amanhã a partir das 9h'). Cliente não fica no escuro.",
+      "**Use etiquetas pra organizar.** Etiqueta colorida em cada conversa: novo cliente, pedido pago, pedido em produção, entregue. Visualmente rápido. Quem usa o WhatsApp comum se perde quando passa de 20 conversas em aberto.",
+      "**Catálogo é vitrine grátis.** Adicione seus produtos com foto, nome, preço, descrição curta. Cliente entra no seu perfil e vê tudo sem você ter que mandar foto toda vez. Vale principalmente pra quem vende mais de 5 itens diferentes.",
+      "**Link direto pra cliente clicar.** Configure o wa.me/55SEUNUMERO (sem hífen, sem parênteses). Cole esse link no Instagram, no Google Meu Negócio, em panfleto. Cliente clica e cai na conversa sem precisar adicionar você na agenda.",
+      "Se você está respondendo cliente fora de horário toda hora ou perdendo conversa importante, peça ajuda pra montar um fluxo. Costuma ter 2 ou 3 ajustes que economizam horas por semana."
+    ],
     "title": "WhatsApp Business para microempreendedor: o essencial",
     "description": "O que vale a pena configurar no WhatsApp Business: catálogo, mensagens automáticas, etiquetas e horário de atendimento.",
     "type": "guide",
@@ -155,6 +225,17 @@
   },
   {
     "id": "res_proposta_b2b",
+    "body": [
+      "Vender pra comércio não é vender pra cliente final. Quem compra pra revender quer saber lucro, prazo, exclusividade. Uma proposta de 1 página, clara, mostra que você é sério e vale conversar.",
+      "**Cabeçalho simples.** Seu nome ou nome do negócio, logo (mesmo que seja só o nome em fonte bonita), telefone com WhatsApp, e-mail se tiver, redes sociais. Se você é MEI, coloca o número. Passa credibilidade.",
+      "**O que você oferece em 2 frases.** 'Bolo caseiro de pote, 4 sabores, peso 250g cada.' Não enche linguiça. Quem recebe a proposta tem 30 segundos pra decidir se continua lendo.",
+      "**Quantidade mínima e prazo de entrega.** 'Pedido mínimo: 20 potes. Entrega em até 48h após confirmação do pedido.' Se você não definir, vai aparecer pedido de 3 unidades que não compensa.",
+      "**Preço claro pra revenda.** Mostre 2 colunas: preço unitário sugerido pro consumidor final e preço pro estabelecimento parceiro. A margem do parceiro deve ser 30 a 40% mínimo. Se você cobrar muito alto, ele não tem incentivo. Se cobrar muito baixo, você é que perde.",
+      "**Forma de pagamento e condição.** 'Pagamento em até 7 dias após entrega, via Pix ou depósito bancário.' Se for primeira venda, cobre na entrega. Crédito vem depois que confiança aparecer.",
+      "**O que diferencia.** 1 ou 2 frases sobre por que você. Higiene em dia? Produção familiar? Receita exclusiva? Foto do produto (1 foto boa, não 4 ruins). Diferencia em 1 detalhe.",
+      "**Próximo passo claro.** Termina com 'Vamos conversar? Posso levar amostra grátis na próxima semana.' Não deixa o estabelecimento decidir o que fazer. Você puxa.",
+      "Se em 5 propostas entregues nenhuma virou venda, peça ajuda. Pode ser preço, pode ser produto, pode ser tipo de comércio errado. Tem como descobrir antes de gastar mais 5 propostas."
+    ],
     "title": "Modelo de proposta comercial de uma página",
     "description": "Modelo simples de proposta para vender em comércios da região: o que oferecer, preço de revenda, quantidade mínima, prazo de pagamento.",
     "type": "template",
@@ -167,7 +248,7 @@
     "free": true,
     "onlineOffline": "online",
     "estimatedTime": "4 min",
-    "practicalUseCase": "Use durante a tarefa task_proposta_b2b_simples.",
+    "practicalUseCase": "Use durante a tarefa 'Proposta simples pra comércios'.",
     "qualityScore": 4,
     "lastReviewed": "2026-04-01",
     "nextReview": "2026-10-01",
@@ -288,6 +369,17 @@
   },
   {
     "id": "res_microcredito_orientacao",
+    "body": [
+      "Microcrédito ajuda muita gente a começar e expandir. Mas tem proposta boa e proposta ruim no mesmo papel. Antes de assinar, confira esses 6 itens. Não tem pressa que justifique pular essa conferência.",
+      "**1. Taxa de juros mensal, não anual.** No papel costuma vir CET (Custo Efetivo Total) anual, que parece pequeno (35% ao ano). Pergunta direto: 'quanto é a parcela mensal de juros?' Tudo acima de 4% ao mês pra microcrédito é caro, vale comparar com outra proposta.",
+      "**2. Quantas parcelas e quanto cada uma.** 'Empréstimo de R$ 3.000 em 18 parcelas de R$ 220' pareceu razoável? Multiplica: você vai pagar R$ 3.960 por R$ 3.000 emprestados. R$ 960 a mais. É o custo real.",
+      "**3. Tem carência?** Carência é tempo até começar a pagar. Pra reformar uma cozinha que vai começar a vender em 30 dias, carência de 30 a 60 dias ajuda. Sem carência, você paga a primeira parcela antes de o investimento gerar retorno.",
+      "**4. Tem garantia exigida?** Microcrédito clássico não pede garantia patrimonial. Se a proposta exige carro, casa, ou avalista com bem, repensa. Existem programas (BNDES, banco do trabalhador) sem garantia formal pra valores até R$ 5.000 ou 10.000.",
+      "**5. Tem acompanhamento incluído?** Microcrédito de qualidade vem com agente de crédito que visita você antes e durante. Pessoa que ajuda a fazer plano de uso, conferir caixa, ajustar prazo. Se a proposta é só 'assina e leva o dinheiro', desconfia.",
+      "**6. Multa por atraso e por antecipação.** Atraso: quanto cobra por dia? Antecipação: você pode pagar antes e ganhar desconto, ou continua devendo o mesmo total? Multa por antecipação alta significa que o credor lucra com você ficando devendo. Não é parceiro.",
+      "**Compare 2 ou 3 propostas antes de assinar.** Banco do trabalhador, cooperativa local, banco comercial. A primeira não é necessariamente a melhor. 1 hora de pesquisa pode economizar R$ 500 ao longo do contrato.",
+      "Se você está com pressa pra fechar (vendedor empurrando, prazo de 24h, oferta 'só hoje'), pare e peça ajuda. Boa proposta de crédito não tem prazo apertado pra decisão."
+    ],
     "title": "Como entender uma proposta de microcrédito",
     "description": "Lista do que conferir antes de assinar um contrato de microcrédito: taxa, prazo, parcela, garantia e acompanhamento.",
     "type": "guide",
@@ -333,6 +425,17 @@
   },
   {
     "id": "res_pescadoras_metodologia",
+    "body": [
+      "Empreender com pouco capital exige um jeito diferente de pensar. Os princípios abaixo vêm de quem começou pequeno e cresceu com base sólida, sem queimar etapa. Não são truques. São hábitos.",
+      "**Comece pequeno, sempre.** O instinto é querer abrir grande pra parecer sério. O resultado é dívida com algo que ninguém testou. Comece com a menor escala que ainda permite vender. 5 unidades, 1 cliente, 1 sábado de feira. Crescer só depois que a base sustentar.",
+      "**Valide com cliente real, antes de gastar.** Conversa com 10 pessoas que poderiam comprar. Pergunta o que pagariam, em que situação. Anota. Se 3 ou mais demonstram demanda concreta (não 'que legal'), vale começar. Se ninguém pergunta preço, ajusta a oferta.",
+      "**Separe finanças do dia 1.** Conta do negócio diferente da pessoal. Mesmo que seja outra carteira no celular, ou outro caderno. Sem essa separação, você nunca sabe se o negócio dá certo. Mistura confunde tudo.",
+      "**Anote o caixa, mesmo simples.** Não precisa de software caro. Caderno com entrada e saída, todo dia, na hora. 7 dias de anotação mostra mais sobre seu negócio que 3 meses de achismo.",
+      "**Resolva o gargalo da semana, não o problema do ano.** Negócio sempre tem 5 problemas ao mesmo tempo. Pega o que mais atrapalha agora, conserta. Próxima semana, próximo gargalo. Foco curto bate em estratégia longa quando capital é pouco.",
+      "**Pede ajuda antes de quebrar.** Empreender sozinha é exaustivo. Rede de gente que já passou por isso (vizinha que tem outro negócio, grupo de WhatsApp do bairro, voluntário da Trilha) economiza meses. Pedir ajuda cedo não é fraqueza, é jogo.",
+      "**Constância vale mais que intensidade.** Postar 3 vezes por semana, todo mês, ganha de 30 posts numa semana e silêncio depois. Cliente confia em quem aparece sempre, mesmo que pequeno. Vale pra rede social, pra feira, pra qualquer canal.",
+      "Se você sente que está fazendo várias dessas coisas mas nada está crescendo, peça ajuda. Costuma ser ordem errada (saltou validar e foi direto pra escala) ou um detalhe que segura tudo."
+    ],
     "title": "Metodologia Pescadores: princípios para empreender com base",
     "description": "Resumo dos princípios da metodologia Pescadores: começar pequeno, validar com cliente real, separar finanças desde o dia 1.",
     "type": "guide",
@@ -356,6 +459,17 @@
 
   {
     "id": "res_alimentacao_higiene_basica",
+    "body": [
+      "Quem vende comida tem responsabilidade dobrada: cliente que passa mal não volta e ainda fala mal. Higiene boa custa pouco, exige hábito. O essencial cabe em 7 práticas que você consegue manter desde o primeiro dia.",
+      "**1. Lavagem de mão de verdade.** Antes de manipular alimento, depois de mexer em dinheiro, depois do banheiro, depois de tossir ou espirrar. Sabão e água por 20 segundos (cantar 'parabéns' inteiro 1 vez). Toalha de papel pra secar, não toalha de pano que fica úmida.",
+      "**2. Cabelo preso e proteção.** Cabelo solto cai em qualquer comida em algum momento. Touca descartável custa R$ 0,30 cada uma. Avental limpo, troca quando suja. Unha curta, sem esmalte que descasca em comida quente.",
+      "**3. Temperatura é o invisível mais perigoso.** Comida quente acima de 60°C, comida fria abaixo de 5°C. A zona perigosa fica entre 5°C e 60°C. Coxinha que ficou na bancada 2h em temperatura ambiente é candidata a contaminação. Termômetro de cozinha custa R$ 25 e resolve a dúvida.",
+      "**4. Limpeza de superfície entre tarefas.** Tábua que cortou frango cru não pode cortar verdura crua sem antes ser lavada com água e sabão. Use 2 tábuas (uma só pra crus de origem animal, outra pra resto). Faca igual. Bancada limpa com pano úmido e álcool 70% entre uma comida e outra.",
+      "**5. Armazenamento separado.** Geladeira: cru embaixo, pronto em cima (pra cru não pingar em pronto). Tudo tampado ou em pote fechado. Carne crua no congelador em saco lacrado. Data de quando entrou marcada no pote.",
+      "**6. Anotar o que entra e sai todo dia.** Quanto comprou, quando, quanto sobrou. Comida que ficou de ontem: pode reaquecer hoje, mas não amanhã. Anotação evita servir comida que você não lembra mais quando foi feita.",
+      "**7. Lixo bem fechado e longe da preparação.** Saco preto, lixeira com tampa, esvaziado todo dia. Lixo aberto perto da bancada atrai mosca, barata, rato. Cliente vê uma vez e não volta.",
+      "Se você vende mais de 50 refeições por semana ou faz delivery via aplicativo, vale procurar curso de Boas Práticas Alimentares (Sebrae, Senac e prefeituras costumam oferecer gratuito). Algumas plataformas exigem o certificado pra liberar venda."
+    ],
     "title": "Boas práticas de higiene para quem vende comida",
     "description": "O essencial de manipulação segura de alimentos: limpeza, armazenamento, transporte e o que vale a pena anotar todo dia.",
     "type": "guide",
@@ -378,6 +492,17 @@
   },
   {
     "id": "res_beleza_agendamento",
+    "body": [
+      "Manicure, cabelo, depilação, sobrancelha. Qualquer serviço com horário marcado vive ou morre na agenda. Cliente que furou e você não cobrou perde dinheiro. Cliente bem atendida e lembrada volta sempre. Os ajustes são pequenos.",
+      "**1. Tenha 1 lugar só pra agenda.** WhatsApp Business (com etiquetas), caderno tipo agenda escolar, ou app gratuito (Booksy, Google Calendar). Tudo no mesmo lugar. Evita marcar 2 clientes no mesmo horário e o caos que vem depois.",
+      "**2. Bloqueie horário fixo, mesmo no espaço de outra pessoa.** Se você atende em sala alugada ou na casa da cliente, ainda assim define seu horário (terça, quarta e quinta das 9h às 18h, por exemplo). Cliente entende quando pode chamar. Sem horário, você atende toda hora e nunca descansa.",
+      "**3. Confirme 1 dia antes via WhatsApp.** Mensagem padrão: 'Oi Maria, tudo bem? Confirmo seu horário amanhã às 14h, tá certo?' 80% das clientes responde. Se não responder em 12h, mensagem de novo. Se ainda não responder, libera o horário pra outra. Reduz furo pela metade.",
+      "**4. Política de remarcação clara.** 'Remarcação até 4h antes, sem custo. Furo (não veio e não avisou) na próxima vez precisa de 50% pago no Pix antes do horário.' Não é grosseria, é respeito ao seu tempo. Cliente boa entende.",
+      "**5. Anote preferência da cliente.** Cor da última manicure, tipo de corte que ela gostou, se prefere conversar ou ficar quieta. No caderno ou em campo de observação no WhatsApp. Quando ela voltar, você lembra. Cliente lembrada volta. Cliente esquecida procura outro lugar.",
+      "**6. Programa de fidelização simples.** A cada 5 atendimentos, o 6º com 30% de desconto. Ou: aniversário ganha 1 serviço grátis (de menor valor). Não precisa cartão fidelidade impresso, anota no WhatsApp. Custa pouco e fideliza muito.",
+      "**7. Avise sumiço com carinho, não cobrança.** Cliente que sumiu por 60 dias: 'Oi Maria, quanto tempo! Tá tudo bem? Tô com horário aberto na próxima quarta se quiser passar.' 30% volta só por causa da mensagem.",
+      "Se você está com agenda cheia mas a sobra de dinheiro continua baixa, peça ajuda. Costuma ser preço que precisa subir, ou produto/material que tá comendo a margem."
+    ],
     "title": "Agendamento e fidelização para serviços de beleza",
     "description": "Como organizar agenda em manicure, cabelo, depilação ou sobrancelha sem furar horário e perder cliente. Cobre: bloco de horário fixo no caderno (ou WhatsApp Business), confirmação 1 dia antes, política de remarcação e como criar fidelização sem programa de pontos complexo. Pensado pra quem atende em casa ou em sala alugada.",
     "type": "guide",
@@ -390,7 +515,7 @@
     "free": true,
     "onlineOffline": "online",
     "estimatedTime": "5 min",
-    "practicalUseCase": "Use junto com a tarefa task_planilha_pedidos_basica.",
+    "practicalUseCase": "Use junto com a tarefa 'Planilha simples de pedidos'.",
     "qualityScore": 4,
     "lastReviewed": "2026-05-08",
     "nextReview": "2026-11-08",
@@ -400,6 +525,17 @@
   },
   {
     "id": "res_moda_revenda_giro",
+    "body": [
+      "Revenda de roupa tem um problema invisível: dinheiro parado em peça que não sai. Se você compra muito e devagar, fica sem caixa. Se compra pouco, fica sem variedade. O ponto certo se calcula com 3 perguntas.",
+      "**Quantos dias até vender uma peça?** Pega as últimas 30 peças vendidas. Quantos dias se passaram entre a compra (sua) e a venda (cliente)? Se a média é 30 dias, seu giro é 30 dias. Tudo abaixo de 21 é bom. Acima de 45 pesa no caixa.",
+      "**Tamanhos e cores que sempre encalham.** Anota nos últimos 3 meses: o que ficou parado mais de 60 dias? Quase sempre tem padrão. PP encalha porque tem pouca demanda. Cor neon encalha em loja de bairro. Tamanho 50+ falta. Faz uma lista e usa pra próxima compra.",
+      "**Regra do 'só repõe o que vendeu'.** Vendeu 3 pretos GG essa semana? Compra 3 pretos GG na próxima reposição. Não vendeu nenhum amarelo M? Pula. Você compra o que move, não o que você acha bonito. Estoque é dinheiro, não decoração.",
+      "**Compre menos quantidade, mais variedade.** Em vez de comprar 20 do mesmo modelo, compra 5 de cada um de 4 modelos. Cliente quer ver opção. Você descobre rápido o que vende. Quando algo virar campeão, aí compra mais. Antes não.",
+      "**Liquide a cada 60 ou 90 dias.** Peça parada há mais de 60 dias com 20% de desconto. Mais de 90 dias com 30%. Mais de 4 meses, é prejuízo: vende a custo só pra fazer caixa. Dinheiro parado em peça encalhada vale menos que dinheiro virado em peça nova que vende.",
+      "**Exemplo numérico simples.** Você compra 1 vestido a R$ 35, vende a R$ 80. Margem de R$ 45. Se vende em 30 dias, ótimo. Se ficou 90 dias, calcula: a sala custa R$ 800/mês, divide pelo número de peças, esse vestido custou aluguel também. Margem real foi menor.",
+      "**Compre 70% do que vende e 30% de novidade.** Maioria do estoque é o que você sabe que vai sair. Um pedaço é teste de novidade. Sem teste, você nunca cresce. Sem base, você quebra. Equilíbrio.",
+      "Se você fez essas contas e sobrou pouco, ou está com peças há mais de 4 meses sem mover, peça ajuda. Costuma ter um padrão de compra que dá pra ajustar antes da próxima coleção."
+    ],
     "title": "Giro de estoque para revenda de roupas",
     "description": "Como decidir quanto comprar pra próxima coleção sem deixar dinheiro parado nem ficar sem peça. Cobre: cálculo de giro mínimo (quantos dias até vender uma peça), lista de tamanhos/cores que costumam encalhar, regra do 'só repõe o que vendeu' e quando vale liquidar pra fazer caixa. Inclui exemplo numérico simples — pra quem revende em casa, em feira, ou em sala pequena.",
     "type": "guide",
@@ -422,6 +558,17 @@
   },
   {
     "id": "res_artesanato_canais",
+    "body": [
+      "Quem faz artesanato tem 3 caminhos principais pra vender: feira, online, ou via comércio parceiro. Cada um pede um tipo de produto, preço e ritmo. Antes de tentar todos ao mesmo tempo, escolha 1 pra dominar.",
+      "**Feira é boa pra peça acima de R$ 60.** Cliente que vai em feira de artesanato espera ver originalidade, conversar com quem fez, levar uma peça única. Margem é cheia (sem taxa de marketplace, sem aluguel se for feira pública). Custa o tempo de montar, deslocamento, e a barraca. Vale pra peça com história.",
+      "**Marketplace funciona melhor pra peça abaixo de R$ 60.** Mercado Livre, Elo7, Shopee. O cliente busca em ferramenta de busca, decide pelo preço e pela foto. A taxa fica entre 12 e 20%. Não dá pra ter margem cheia. Mas alcança gente que feira nunca alcançaria.",
+      "**Comércio parceiro é meio termo.** Loja física que aceita peça em consignação ou compra fechada. Margem pro dono da loja é 30 a 40%. Fica sua peça lá, você não precisa vender. Bom pra quem produz e tem dificuldade de tempo pra estar na feira.",
+      "**Não tenta os 3 ao mesmo tempo no começo.** Cada canal pede uma abordagem. Foto pra marketplace é diferente de embalagem pra feira. Feche em 1 nos primeiros 6 meses. Quando estiver redondo, abre o segundo.",
+      "**Como escolher.** Você gosta de conversar com cliente? Feira. Você prefere produzir e mandar embora? Marketplace. Você quer alcance maior do que sua cidade? Marketplace. Sua peça precisa ser explicada? Feira ou comércio parceiro com cliente recorrente.",
+      "**Sobre exclusividade em comércio parceiro.** Não dê exclusividade total no início ('só vende aqui na minha loja'). Você ainda está testando demanda. Se o parceiro insistir em exclusividade, peça contrato com prazo (3 meses) e mínimo de venda mensal. Se ele não vender, você libera pra outro canal.",
+      "**Preço uniforme entre canais.** Se o mesmo brinco custa R$ 35 na feira e R$ 70 no marketplace, cliente que descobrir vai falar mal. Mantenha o mesmo preço sugerido pro consumidor final em todos. O que muda é a sua margem (no marketplace você ganha menos por conta da taxa, mas alcança mais).",
+      "Se você está em 2 ou 3 canais e nenhum vende bem, peça ajuda. Geralmente é foco diluído ou escolha errada de canal pro tipo de produto. Concentrar costuma ser a virada."
+    ],
     "title": "Canais de venda para artesanato: feira, online e venda em comércios",
     "description": "Comparativo prático pra quem faz artesanato e está decidindo onde investir tempo. Cobre: quando feira ainda vale mais que online (margem cheia, sem taxa de marketplace), como começar em marketplace sem se enrolar com plataforma, como abordar loja parceira pra revenda. Discute prós e contras de cada canal pra peças sob R$ 60 vs acima de R$ 60.",
     "type": "guide",

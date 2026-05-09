@@ -15,6 +15,16 @@ const TYPE_LABELS = {
   community: 'Comunidade',
 };
 
+function renderInline(text) {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    return part;
+  });
+}
+
 export default function ResourceDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -86,7 +96,7 @@ export default function ResourceDetail() {
         </div>
       </div>
 
-      {/* MAIN CONTENT — the description IS the summary */}
+      {/* MAIN CONTENT — description as summary */}
       <Card className="border-primary bg-primaryLight/30">
         <p className="font-hand text-secondary text-base leading-tight mb-2">
           {isTrilhaOriginal ? 'Resumo' : 'O que tem aqui'}
@@ -95,6 +105,37 @@ export default function ResourceDetail() {
           {resource.description}
         </p>
       </Card>
+
+      {/* FULL GUIDE BODY when present */}
+      {Array.isArray(resource.body) && resource.body.length > 0 && (
+        <Card>
+          <p className="font-hand text-secondary text-base leading-tight mb-3">
+            Guia completo
+          </p>
+          <div className="space-y-3">
+            {resource.body.map((paragraph, idx) => (
+              <p
+                key={idx}
+                className="text-ink text-sm leading-relaxed"
+              >
+                {renderInline(paragraph)}
+              </p>
+            ))}
+          </div>
+        </Card>
+      )}
+
+      {/* DRAFT NOTICE for Trilha originais sem body */}
+      {isTrilhaOriginal &&
+        (!Array.isArray(resource.body) || resource.body.length === 0) && (
+          <Card>
+            <p className="text-secondary text-sm leading-relaxed">
+              Esse guia ainda está em rascunho. Em breve fica disponível com o
+              conteúdo completo. Por enquanto, leia o resumo acima e veja os
+              conteúdos relacionados no fim da página.
+            </p>
+          </Card>
+        )}
 
       {/* External source action */}
       {!isTrilhaOriginal && resource.sourceLink && (
