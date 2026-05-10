@@ -103,7 +103,7 @@
       { "week": 4, "title": "Dois dias fixos pra organizar",  "tasks": ["task_dois_dias_fixos"] }
     ],
     "recommendedResources": ["res_organizacao_pedidos"],
-    "recommendedCases": ["case_keisha_lanches_atraso"],
+    "recommendedCases": ["case_keisha_lanches_atraso", "case_inventory_padaria_dia_perdido", "case_petshop_belem_agendamento"],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
     "warningFlags": ["delivery_delays"],
@@ -131,7 +131,7 @@
       { "week": 4, "title": "Marcar uma pausa por semana",     "tasks": ["task_marcar_pausa_semanal"] }
     ],
     "recommendedResources": ["res_pescadoras_rede"],
-    "recommendedCases": ["case_dona_lucia_sobrecarga"],
+    "recommendedCases": ["case_dona_lucia_sobrecarga", "case_mentoria_pares_efeito"],
     "recommendedOpportunities": ["opp_rede_pescadoras"],
     "supervisionLevel": "elevated",
     "warningFlags": ["overload_burnout_risk"],
@@ -159,7 +159,7 @@
       { "week": 4, "title": "Pedir indicação ativamente", "tasks": ["task_listar_20_clientes"] }
     ],
     "recommendedResources": ["res_fotos_celular"],
-    "recommendedCases": ["case_priya_acessorios_vitrine"],
+    "recommendedCases": ["case_priya_acessorios_vitrine", "case_dona_andreia_bonecas_vitrine"],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
     "warningFlags": [],
@@ -187,7 +187,7 @@
       { "week": 4, "title": "Primeiro post pedindo apoio", "tasks": ["task_primeiro_post_pedido"] }
     ],
     "recommendedResources": ["res_whatsapp_business_basico", "res_feira_bazar_basico"],
-    "recommendedCases": ["case_marina_doceira_comunidade"],
+    "recommendedCases": ["case_marina_doceira_comunidade", "case_confeccao_cuiaba_feira", "case_dona_andreia_bonecas_vitrine"],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
     "warningFlags": [],
@@ -215,7 +215,7 @@
       { "week": 4, "title": "Separar contas",               "tasks": ["task_separar_contas"] }
     ],
     "recommendedResources": ["res_caixa_basico", "res_feira_bazar_basico"],
-    "recommendedCases": [],
+    "recommendedCases": ["case_formalizacao_mei_decisao", "case_carrinho_lanche_brasilia_renda"],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
     "warningFlags": [],
@@ -243,7 +243,7 @@
       { "week": 4, "title": "Separar contas",                 "tasks": ["task_separar_contas"] }
     ],
     "recommendedResources": ["res_precificacao_simples", "res_feira_bazar_basico"],
-    "recommendedCases": [],
+    "recommendedCases": ["case_formalizacao_mei_decisao", "case_manicure_manaus_bico"],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
     "warningFlags": [],
@@ -271,7 +271,7 @@
       { "week": 4, "title": "Definir oferta, preço, entrega","tasks": ["task_definir_oferta_preco_entrega"] }
     ],
     "recommendedResources": ["res_precificacao_simples", "res_feira_bazar_basico"],
-    "recommendedCases": [],
+    "recommendedCases": ["case_jardineiro_bragança_carteira"],
     "recommendedOpportunities": [],
     "supervisionLevel": "light",
     "warningFlags": [],

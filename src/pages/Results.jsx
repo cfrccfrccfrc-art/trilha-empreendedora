@@ -17,6 +17,7 @@ export default function Results() {
   const navigate = useNavigate();
   const [result, setResult] = useState(null);
   const [ready, setReady] = useState(false);
+  const [taskOpen, setTaskOpen] = useState(false);
 
   useEffect(() => {
     try {
@@ -94,7 +95,7 @@ export default function Results() {
             <Card className="border-primary bg-primaryLight/30">
               <div className="flex gap-2 items-start">
                 <Sparkle className="w-5 h-5 mt-1 shrink-0" />
-                <div>
+                <div className="flex-1">
                   <p className="font-hand text-secondary text-base leading-tight mb-1">
                     Sua primeira missão
                   </p>
@@ -102,6 +103,69 @@ export default function Results() {
                   <p className="text-secondary text-sm leading-relaxed">
                     {firstTask.action}
                   </p>
+
+                  {taskOpen && (
+                    <div className="mt-4 space-y-3 border-t border-line pt-3">
+                      {firstTask.purpose && (
+                        <div>
+                          <p className="font-bold text-ink text-sm mb-1">
+                            Por que isso importa
+                          </p>
+                          <p className="text-secondary text-sm leading-relaxed">
+                            {firstTask.purpose}
+                          </p>
+                        </div>
+                      )}
+                      {firstTask.expectedLearning && (
+                        <div>
+                          <p className="font-bold text-ink text-sm mb-1">
+                            O que você vai aprender
+                          </p>
+                          <p className="text-secondary text-sm leading-relaxed">
+                            {firstTask.expectedLearning}
+                          </p>
+                        </div>
+                      )}
+                      {firstTask.reflectionQuestions?.length > 0 && (
+                        <div>
+                          <p className="font-bold text-ink text-sm mb-1">
+                            Perguntas pra refletir no fim
+                          </p>
+                          <ul className="list-disc pl-5 space-y-1 text-secondary text-sm">
+                            {firstTask.reflectionQuestions.map((q) => (
+                              <li key={q}>{q}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {firstTask.commonMistakes?.length > 0 && (
+                        <div>
+                          <p className="font-bold text-ink text-sm mb-1">
+                            Armadilhas comuns
+                          </p>
+                          <ul className="list-disc pl-5 space-y-1 text-secondary text-sm">
+                            {firstTask.commonMistakes.map((m) => (
+                              <li key={m}>{m}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      <p className="text-secondary text-xs italic leading-relaxed pt-1">
+                        Pra começar de verdade essa missão e marcar quando
+                        terminar, salve sua trilha abaixo.
+                      </p>
+                    </div>
+                  )}
+
+                  <button
+                    type="button"
+                    onClick={() => setTaskOpen((v) => !v)}
+                    className="text-primary text-sm font-semibold mt-3"
+                  >
+                    {taskOpen
+                      ? 'Esconder detalhes'
+                      : 'Ver detalhes da missão →'}
+                  </button>
                 </div>
               </div>
             </Card>
@@ -227,8 +291,13 @@ export default function Results() {
       <DonationBanner placement="results" />
 
       <div className="space-y-3 pt-2">
+        <p className="text-secondary text-sm leading-relaxed text-center px-2">
+          Pra começar as missões e marcar seu progresso, salve a trilha. A
+          gente guarda só ela, sem cadastro, sem cobrança, e você volta
+          quando quiser.
+        </p>
         <Button onClick={() => navigate('/salvar')} className="w-full">
-          Sim, salvar minha trilha
+          Salvar e começar
         </Button>
         <Button
           variant="ghost"
