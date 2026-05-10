@@ -372,6 +372,12 @@ function validateResources() {
         });
       }
     }
+
+    if (r.searchHint !== undefined) {
+      if (typeof r.searchHint !== 'string' || !r.searchHint.trim()) {
+        E(file, ctx, 'searchHint must be a non-empty string if present');
+      }
+    }
   }
 }
 

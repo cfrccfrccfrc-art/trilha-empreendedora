@@ -161,6 +161,16 @@ export default function ResourceDetail() {
               Abrir →
             </a>
           )}
+          {resource.sourceStatus && resource.sourceStatus !== 'active' && (
+            <p className="text-secondary text-xs leading-relaxed mt-3 italic">
+              Esse link às vezes muda de lugar. Se cair na página inicial,
+              procure por{' '}
+              <strong className="not-italic">
+                "{resource.searchHint || resource.title}"
+              </strong>{' '}
+              na biblioteca de {resource.source}.
+            </p>
+          )}
         </Card>
       )}
 
