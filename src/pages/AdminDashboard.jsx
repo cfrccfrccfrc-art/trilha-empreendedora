@@ -106,6 +106,13 @@ export default function AdminDashboard() {
       >
         Campanhas de doação (banner Pix)
       </Button>
+      <Button
+        variant="ghost"
+        onClick={() => navigate('/admin/historias')}
+        className="w-full"
+      >
+        Histórias enviadas pelos empreendedores
+      </Button>
 
       <div className="space-y-2">
         {filtered.map((row) => (

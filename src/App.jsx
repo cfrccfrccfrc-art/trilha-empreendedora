@@ -21,6 +21,7 @@ const Opportunities     = lazy(() => import('./pages/Opportunities'));
 const HelpRequest       = lazy(() => import('./pages/HelpRequest'));
 const OfferHelp         = lazy(() => import('./pages/OfferHelp'));
 const BadgeCard         = lazy(() => import('./pages/BadgeCard'));
+const MyStory           = lazy(() => import('./pages/MyStory'));
 
 // Supervisor / admin (lazy — only fetched when these users hit those routes)
 const SupervisorLogin     = lazy(() => import('./pages/SupervisorLogin'));
@@ -30,6 +31,7 @@ const AdminDashboard      = lazy(() => import('./pages/AdminDashboard'));
 const AdminPreview        = lazy(() => import('./pages/AdminPreview'));
 const AdminDonations      = lazy(() => import('./pages/AdminDonations'));
 const SourceRefresh       = lazy(() => import('./pages/SourceRefresh'));
+const AdminUserStories    = lazy(() => import('./pages/AdminUserStories'));
 
 function PageFallback() {
   return (
@@ -63,6 +65,7 @@ export default function App() {
           <Route path="/preciso-de-ajuda" element={<HelpRequest />} />
           <Route path="/posso-ajudar" element={<OfferHelp />} />
           <Route path="/cartao" element={<BadgeCard />} />
+          <Route path="/minha-historia" element={<MyStory />} />
 
           {/* Supervisor + admin — lazy */}
           <Route path="/supervisor" element={<SupervisorDashboard />} />
@@ -72,6 +75,7 @@ export default function App() {
           <Route path="/admin/preview" element={<AdminPreview />} />
           <Route path="/admin/doacoes" element={<AdminDonations />} />
           <Route path="/admin/fontes" element={<SourceRefresh />} />
+          <Route path="/admin/historias" element={<AdminUserStories />} />
         </Route>
       </Routes>
     </Suspense>

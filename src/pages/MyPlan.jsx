@@ -223,6 +223,33 @@ export default function MyPlan() {
         </div>
       ))}
 
+      {progress.percent === 100 && (
+        <Card className="border-primary bg-primaryLight/30">
+          <div className="flex gap-3 items-start mb-3">
+            <Sparkle className="w-7 h-7 mt-1 shrink-0" />
+            <div>
+              <p className="font-hand text-secondary text-base leading-tight mb-1">
+                Você terminou os 30 dias
+              </p>
+              <h3 className="font-bold text-ink leading-snug">
+                Topa contar como foi pra ajudar quem está começando?
+              </h3>
+            </div>
+          </div>
+          <p className="text-secondary text-sm leading-relaxed mb-3">
+            5 a 10 minutos. A gente edita, anonimiza no nível que você
+            autorizar, e publica como caso oficial pra inspirar outras
+            pessoas no seu mesmo perfil.
+          </p>
+          <Button
+            onClick={() => navigate('/minha-historia')}
+            className="w-full"
+          >
+            Contar minha história
+          </Button>
+        </Card>
+      )}
+
       <DonationBanner placement="my_plan" />
 
       <ShareBanner

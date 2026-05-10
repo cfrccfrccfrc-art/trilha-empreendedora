@@ -189,6 +189,26 @@ export default function BadgeCard() {
       {shareMsg && (
         <p className="text-secondary text-sm text-center">{shareMsg}</p>
       )}
+
+      {badgeLevel === 'Trilha de 30 dias concluída' && (
+        <Card className="border-primary bg-primaryLight/30">
+          <h3 className="font-bold text-ink mb-2">
+            Quer contar como foi pra ajudar quem está começando?
+          </h3>
+          <p className="text-secondary text-sm leading-relaxed mb-3">
+            Sua história em 5 a 10 minutos. A gente edita, anonimiza no
+            nível que você autorizar, e publica como caso oficial pra
+            inspirar quem cair no mesmo perfil que o seu.
+          </p>
+          <Button
+            onClick={() => navigate('/minha-historia')}
+            className="w-full"
+          >
+            Contar minha história
+          </Button>
+        </Card>
+      )}
+
       <Button
         variant="ghost"
         onClick={() => navigate('/minha-trilha')}

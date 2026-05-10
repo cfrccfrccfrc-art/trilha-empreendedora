@@ -64,6 +64,7 @@ const CASE_AUTHENTICITY = [
   'anonymized_local_case',
   'fictionalized_composite_case',
   'teaching_scenario_inspired_by_multiple_sources',
+  'user_submitted_anonymized',
 ];
 const TASK_REVIEW_LEVEL = ['light', 'elevated'];
 const TASK_EVIDENCE_TYPE = [
