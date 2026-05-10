@@ -11,6 +11,7 @@ import Card from '../components/Card';
 import Button from '../components/Button';
 import ProgressBar from '../components/ProgressBar';
 import DonationBanner from '../components/DonationBanner';
+import ShareBanner from '../components/ShareBanner';
 import { Sparkle } from '../components/Sketches';
 
 const STATUS_META = {
@@ -223,6 +224,13 @@ export default function MyPlan() {
       ))}
 
       <DonationBanner placement="my_plan" />
+
+      <ShareBanner
+        tone="soft"
+        title="Tá ajudando você?"
+        body="Conhece alguém começando ou tentando organizar o negócio? Manda a Trilha. É gratuita e sem cadastro pra começar."
+        shareText="Tô usando a Trilha Empreendedora pra organizar meu negócio. É gratuita e tem trilha de 30 dias com tarefas práticas. Vale a pena conhecer."
+      />
 
       <div className="space-y-3 pt-4">
         <Button

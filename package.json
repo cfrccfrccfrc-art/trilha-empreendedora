@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "node scripts/generate-sitemap.mjs && vite build",
     "preview": "vite preview",
     "validate-content": "node scripts/validate-content.mjs",
-    "test-scoring": "node src/utils/scoring.test.mjs"
+    "test-scoring": "node src/utils/scoring.test.mjs",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",

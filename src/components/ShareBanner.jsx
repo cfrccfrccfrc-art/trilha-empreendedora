@@ -15,13 +15,19 @@ function isDismissed() {
   }
 }
 
-export default function ShareBanner({ tone = 'soft' }) {
+export default function ShareBanner({
+  tone = 'soft',
+  title,
+  body,
+  shareText,
+  dismissible = true,
+}) {
   const [hidden, setHidden] = useState(true);
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    setHidden(isDismissed());
-  }, []);
+    setHidden(dismissible ? isDismissed() : false);
+  }, [dismissible]);
 
   const dismiss = () => {
     try {
@@ -37,6 +43,11 @@ export default function ShareBanner({ tone = 'soft' }) {
       ? 'bg-highlight/40 border-highlight'
       : 'bg-beige border-line';
 
+  const headline = title || 'Conhece alguém começando?';
+  const description =
+    body ||
+    'A Trilha é gratuita. Quanto mais gente conhecer, maior a rede de apoio.';
+
   return (
     <>
       <div
@@ -45,11 +56,10 @@ export default function ShareBanner({ tone = 'soft' }) {
         <ShareIcon className="w-7 h-7 text-primary shrink-0 mt-0.5" />
         <div className="flex-1">
           <p className="font-hand text-secondary text-base leading-tight mb-1">
-            Conhece alguém começando?
+            {headline}
           </p>
           <p className="text-ink text-sm leading-snug mb-3">
-            A Trilha é gratuita. Quanto mais gente conhecer, maior a rede de
-            apoio.
+            {description}
           </p>
           <div className="flex gap-2">
             <button
@@ -59,18 +69,24 @@ export default function ShareBanner({ tone = 'soft' }) {
             >
               Compartilhar →
             </button>
-            <button
-              type="button"
-              onClick={dismiss}
-              className="text-secondary text-sm ml-auto"
-            >
-              Dispensar
-            </button>
+            {dismissible && (
+              <button
+                type="button"
+                onClick={dismiss}
+                className="text-secondary text-sm ml-auto"
+              >
+                Dispensar
+              </button>
+            )}
           </div>
         </div>
       </div>
 
-      <ShareSheet open={open} onClose={() => setOpen(false)} />
+      <ShareSheet
+        open={open}
+        onClose={() => setOpen(false)}
+        text={shareText}
+      />
     </>
   );
 }

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Bloqueia rotas internas administrativas e de plano salvo
+Disallow: /admin
+Disallow: /supervisor
+Disallow: /salvar
+Disallow: /minha-trilha
+Disallow: /tarefa
+Disallow: /aprendizado
+Disallow: /cartao
+Disallow: /preciso-de-ajuda
+
+Sitemap: https://trilha-empreendedora.vercel.app/sitemap.xml

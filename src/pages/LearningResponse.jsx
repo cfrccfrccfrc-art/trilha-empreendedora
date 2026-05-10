@@ -9,6 +9,7 @@ import Card from '../components/Card';
 import Button from '../components/Button';
 import { OpenBook } from '../components/Sketches';
 import DonationBanner from '../components/DonationBanner';
+import ShareBanner from '../components/ShareBanner';
 
 export default function LearningResponse() {
   const { id } = useParams();
@@ -236,6 +237,16 @@ export default function LearningResponse() {
       </Card>
 
       {autoApproved && <DonationBanner placement="learning_response" />}
+
+      {autoApproved && (
+        <ShareBanner
+          tone="strong"
+          title="Você terminou. Quem mais aí pode usar?"
+          body="Conhece alguém começando ou que tentou e travou? Manda a Trilha pra ela. Gratuita, sem cadastro, e ajuda de verdade."
+          shareText="Acabei de terminar uma das missões da Trilha Empreendedora. Ela me ajudou a organizar o que fazer no negócio em passo prático. É gratuita. Vale tentar."
+          dismissible={false}
+        />
+      )}
 
       <div className="space-y-3 pt-2">
         <Button onClick={() => navigate('/minha-trilha')} className="w-full">
