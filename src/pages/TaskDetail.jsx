@@ -308,7 +308,7 @@ export default function TaskDetail() {
 
       {template?.commonMistakes?.length > 0 && (
         <Card>
-          <h3 className="font-bold text-ink mb-2">Cuidados comuns</h3>
+          <h3 className="font-bold text-ink mb-2">Armadilhas comuns</h3>
           <ul className="list-disc pl-5 space-y-1 text-secondary text-sm">
             {template.commonMistakes.map((m) => (
               <li key={m}>{m}</li>
