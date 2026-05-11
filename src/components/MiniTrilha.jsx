@@ -306,28 +306,43 @@ function GuideBlock({ guide }) {
         </Card>
       )}
 
-      {guide.relatedSources?.length > 0 && (
-        <Card>
-          <h3 className="font-bold text-ink mb-2">Onde se aprofundar</h3>
-          <ul className="space-y-2">
-            {guide.relatedSources.map((s) => {
-              const isExternal = s.url?.startsWith('http');
-              return (
-                <li key={s.url}>
-                  <a
-                    href={s.url}
-                    target={isExternal ? '_blank' : undefined}
-                    rel={isExternal ? 'noopener noreferrer' : undefined}
-                    className="text-primary text-sm font-semibold"
-                  >
-                    {s.label} →
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </Card>
-      )}
+      {guide.relatedSources?.length > 0 && <RelatedSources sources={guide.relatedSources} />}
     </div>
+  );
+}
+
+function RelatedSources({ sources }) {
+  const navigate = useNavigate();
+  return (
+    <Card>
+      <h3 className="font-bold text-ink mb-2">Onde se aprofundar</h3>
+      <ul className="space-y-2">
+        {sources.map((s) => {
+          const isExternal = s.url?.startsWith('http');
+          return (
+            <li key={s.url}>
+              {isExternal ? (
+                <a
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary text-sm font-semibold"
+                >
+                  {s.label} →
+                </a>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => navigate(s.url)}
+                  className="text-primary text-sm font-semibold text-left"
+                >
+                  {s.label} →
+                </button>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </Card>
   );
 }

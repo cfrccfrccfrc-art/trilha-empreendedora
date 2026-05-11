@@ -257,6 +257,7 @@ export default function Formalization() {
 }
 
 function GuideCard({ guide }) {
+  const navigate = useNavigate();
   return (
     <div className="space-y-4">
       <Card className="border-primary bg-primaryLight/30">
@@ -312,18 +313,31 @@ function GuideCard({ guide }) {
         <Card>
           <h3 className="font-bold text-ink mb-2">Onde se aprofundar</h3>
           <ul className="space-y-2">
-            {guide.relatedSources.map((s) => (
-              <li key={s.url}>
-                <a
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary text-sm font-semibold"
-                >
-                  {s.label} →
-                </a>
-              </li>
-            ))}
+            {guide.relatedSources.map((s) => {
+              const isExternal = s.url?.startsWith('http');
+              return (
+                <li key={s.url}>
+                  {isExternal ? (
+                    <a
+                      href={s.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary text-sm font-semibold"
+                    >
+                      {s.label} →
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => navigate(s.url)}
+                      className="text-primary text-sm font-semibold text-left"
+                    >
+                      {s.label} →
+                    </button>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </Card>
       )}

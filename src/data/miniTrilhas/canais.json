@@ -125,7 +125,7 @@
       "relatedSources": [
         { "label": "Fotos boas só com o celular (Trilha)",  "url": "/conteudos/res_fotos_celular" },
         { "label": "Canais para artesanato (Trilha)",       "url": "/conteudos/res_artesanato_canais" },
-        { "label": "Sebrae: cursos de marketing digital",    "url": "https://sebrae.com.br/" }
+        { "label": "Sebrae: cursos online gratuitos",        "url": "https://sebrae.com.br/sites/PortalSebrae/cursosonline?lang=pt" }
       ]
     }
   ]

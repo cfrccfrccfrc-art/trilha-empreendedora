@@ -20,7 +20,7 @@
     "howToFormalize": "Pra sair de PF e virar MEI, é gratuito e online. Próximo passo: leia o guia de MEI abaixo.",
     "relatedSources": [
       { "label": "Receita Federal: regras de IR pessoa física",       "url": "https://www.gov.br/receitafederal/" },
-      { "label": "Sebrae: quando vale a pena formalizar o negócio",   "url": "https://sebrae.com.br/" }
+      { "label": "Sebrae: vale a pena formalizar a sua empresa?",     "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/vale-a-pena-formalizar-a-sua-empresa,11cc5a80d8980810VgnVCM100000d701210aRCRD" }
     ],
     "lastReviewed": "2026-05-01",
     "nextReview": "2026-11-01",
@@ -51,7 +51,7 @@
     "howToFormalize": "É gratuito e online no Portal do Empreendedor (gov.br/empresas-e-negocios). Precisa: CPF, título de eleitor (ou recibo de IR), endereço residencial e da atividade, e escolher CNAEs (códigos de atividade). Em geral fica pronto na hora.",
     "relatedSources": [
       { "label": "Portal do Empreendedor (cadastro MEI)",                  "url": "https://www.gov.br/empresas-e-negocios/pt-br" },
-      { "label": "Sebrae: tudo sobre o MEI",                                "url": "https://sebrae.com.br/" },
+      { "label": "Sebrae: tudo sobre o MEI",                                "url": "https://sebrae.com.br/sites/PortalSebrae/mei" },
       { "label": "Receita Federal: regras e atividades permitidas (MEI)",  "url": "https://www.gov.br/receitafederal/" }
     ],
     "lastReviewed": "2026-05-01",
@@ -80,7 +80,7 @@
     "whatChanges": "Você passa a precisar de contador (em geral R$ 200–500/mês). Os impostos variam por regime e faturamento — no Simples, começam em torno de 4–6% do faturamento e sobem por faixa. Tem mais obrigações: declarações periódicas, escrituração contábil, eventual obrigação trabalhista se contratar.",
     "howToFormalize": "Esse processo SEMPRE começa com um contador. Ele orienta sobre tipo de empresa, regime tributário, abertura na Junta Comercial, alvarás municipais. Custo de abertura geralmente fica entre R$ 500 e R$ 1.500 (taxas + honorários). Demora 5–20 dias úteis.",
     "relatedSources": [
-      { "label": "Sebrae: quando deixar de ser MEI",                        "url": "https://sebrae.com.br/" },
+      { "label": "Sebrae: quando precisa fazer desenquadramento do MEI",     "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/quando-e-necessario-realizar-o-desenquadramento-do-mei,8251f45f1c9f2810VgnVCM100000d701210aRCRD" },
       { "label": "Receita Federal: Simples Nacional",                       "url": "https://www.gov.br/receitafederal/" },
       { "label": "gov.br: como abrir uma empresa",                          "url": "https://www.gov.br/empresas-e-negocios/pt-br" }
     ],
