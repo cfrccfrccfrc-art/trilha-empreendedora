@@ -188,5 +188,24 @@
     "sourceStatus": "active",
     "status": "active",
     "version": "1.0"
+  },
+  {
+    "id": "opp_sebrae_marketing_digital_resultados",
+    "title": "Sebrae: análise de resultados em marketing digital",
+    "description": "Curso online gratuito do Sebrae sobre como medir se o que você gasta em anúncio, post pago ou rede social está virando venda de verdade. Em vez de ensinar a gastar mais em divulgação, ensina a calcular retorno e parar de queimar dinheiro em estratégia que não funciona. Indicado especialmente pra quem já está investindo em digital sem ter certeza se compensa, ou pra quem quer entender se vale começar.",
+    "category": "curso_online",
+    "source": "Sebrae",
+    "sourceLink": "https://sebrae.com.br/sites/PortalSebrae/cursosonline?lang=pt",
+    "location": "online",
+    "city": null,
+    "state": null,
+    "online": true,
+    "free": true,
+    "estimatedTime": "7 h",
+    "recommendedArchetypes": ["digital_antes_da_base", "produto_bom_vitrine_fraca"],
+    "applicationDeadline": null,
+    "sourceStatus": "active",
+    "status": "active",
+    "version": "1.0"
   }
 ]
