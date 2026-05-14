@@ -809,5 +809,136 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+
+{
+  "id": "companion_plano_compra_etapas_jose",
+  "taskTemplateId": "task_plano_compra_etapas",
+  "archetypeId": "precisa_capital",
+  "personaName": "José",
+  "region": "Brasil, Salvador (BA)",
+  "personaContext": "Padaria de bairro há 8 anos, no Cabula. Faturamento bom mas quase tudo em pão francês. Quer expandir pra bolo de pote, salgado pra evento e café da manhã embalado pra entregar. Tinha listado R$ 12.400 em compras (forno novo, geladeira maior, batedeira industrial, kit embalagens, panfletos). Antes de pedir empréstimo redondo, decidiu dividir em etapas.",
+  "stumbles": [
+    {
+      "moment": "Primeira tentativa de dividir",
+      "whatHappened": "Separou a lista em 3 colunas no caderno: agora, em 30 dias, em 90 dias. Mas na hora de escolher o que vai na etapa 1, quis colocar tudo: 'sem o forno não dá pra fazer bolo, sem batedeira tampouco, sem geladeira o salgado estraga'. Etapa 1 ficou com R$ 9.800, etapa 2 com R$ 2.000, etapa 3 com R$ 600. Praticamente a lista cheia.",
+      "whatHelped": "Releu a definição: etapa 1 é o mínimo pra começar a vender alguma coisa nova, não pra abrir tudo de uma vez. Voltou e perguntou: 'qual produto novo eu posso lançar com o que JÁ tenho aqui hoje?'. Resposta: bolo de pote dava pra fazer com a batedeira doméstica + forno atual + kit pequeno de potes (R$ 280). Etapa 1 caiu pra R$ 280."
+    },
+    {
+      "moment": "Justificativa entre etapas",
+      "whatHappened": "Coloquei batedeira industrial na etapa 2 'porque vai facilitar'. Mas não soube responder a pergunta 'qual sinal de mercado vai me dizer que vale comprar?'. Era só preferência, não retorno.",
+      "whatHelped": "Definiu critério explícito pra passar de etapa: 'só compro batedeira industrial quando vender mais de 60 potes por semana 3 semanas seguidas'. Quando vender menos, mantém a doméstica. Esse critério tirou a ansiedade — não precisa decidir agora, decide quando o número aparecer."
+    }
+  ],
+  "breakthrough": "Etapa 1 final: R$ 280 (kit de potes). Etapa 2 (em 30-60 dias, condicional): R$ 2.000 (geladeira maior, se vender mais de 40 potes por semana). Etapa 3 (90 dias, condicional): R$ 9.600 (forno, batedeira, panfletos), se as etapas anteriores baterem meta. Em vez de empréstimo de R$ 12.400, José viu que dava pra começar com R$ 280 do próprio caixa e ainda esperar os dados antes de captar.",
+  "outcome": "Lançou bolo de pote no Instagram da padaria com 4 sabores em fevereiro. Em 6 semanas chegou em 50 potes por semana. Etapa 2 disparou: comprou geladeira maior com dinheiro do caixa, sem empréstimo. Etapa 3 ainda não aconteceu (faltam 10 potes pra bater o gatilho), mas agora ele tem dado pra decidir.",
+  "whenToAskForHelp": "Se você não consegue identificar uma etapa 1 que custe menos de 20% do total, peça ajuda. Provavelmente está confundindo 'preciso de tudo' com 'quero tudo'. Existe quase sempre um mínimo viável menor.",
+  "relatedCases": ["case_jose_padaria_equipamento"],
+  "relatedResources": ["res_capital_inteligente", "res_microcredito_orientacao"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+
+{
+  "id": "companion_ajustar_capacidade_joana",
+  "taskTemplateId": "task_ajustar_capacidade",
+  "archetypeId": "operacao_travada",
+  "personaName": "Joana",
+  "region": "Brasil, Aracaju (SE)",
+  "personaContext": "Depois de 2 semanas com a planilha de pedidos rodando, Joana percebeu que os atrasos não eram só falta de organização. Ela estava aceitando 40 a 45 pedidos por semana mas só conseguia entregar bem 30. A planilha mostrava: dos 45 da última semana, 8 atrasaram e 3 foram devolvidos. Decidiu encarar a capacidade real.",
+  "stumbles": [
+    {
+      "moment": "Contar a capacidade",
+      "whatHappened": "Tentou estimar 'no olho': 'eu acho que dá uns 50 por semana'. Mas quando olhou a planilha das últimas 4 semanas, viu que entregou no prazo: 28, 32, 29, 30. Média 30. Os 'uns 50' eram fantasia. A capacidade real era 30.",
+      "whatHelped": "Adotou a regra: capacidade é o que você ENTREGA bem nas últimas 4 semanas, não o que você acha que dá. Tirou a vontade do cálculo, deixou só o histórico."
+    },
+    {
+      "moment": "Ajustar prazo",
+      "whatHappened": "O prazo prometido no Instagram era 'entrego em 24h'. Mas com 40 pedidos por semana, isso virava 48h pra metade. Resistiu a mudar pra 48h fixo porque 'cliente novo vai escolher o concorrente que promete 24h'.",
+      "whatHelped": "Conversou com 5 clientes recorrentes pra entender. 4 disseram que prazo de 48h não muda o pedido. 1 disse que precisava de 24h só em ocasião especial. Mudou pra '48h padrão, 24h com taxa de R$ 8'. Cliente impaciente paga, cliente paciente espera. Os 2 lados ganham."
+    },
+    {
+      "moment": "O limite semanal",
+      "whatHappened": "Definiu o limite em 32 pedidos por semana (10% acima da capacidade real, pra forçar leve crescimento). Mas no primeiro dia já tinha 12 pedidos antes do almoço. Travou: 'fecho agora ou aceito mais 20?'",
+      "whatHelped": "Criou uma mensagem pronta pra cliente que chega com a agenda cheia: 'Oi! Esta semana tô com agenda fechada, posso te marcar pra terça que vem? Garante o seu horário.' 80% topa. Os outros 20% vão pro concorrente naquela vez, mas voltam na próxima."
+    }
+  ],
+  "breakthrough": "Em 3 semanas com o novo limite de 32 + prazo de 48h padrão, os atrasos caíram pra 1 por semana (eram 8). As reclamações públicas no Instagram pararam. E o mais importante: Joana parou de pular almoço pra dar conta. O movimento ficou igual em receita (32 pedidos × R$ 28 médio = R$ 896) mas com 80% menos estresse.",
+  "outcome": "2 meses depois, a capacidade real subiu pra 38 (com a rotina ajustada, ela rendia mais). Subiu o limite pra 40. A taxa de 24h virou fonte extra de R$ 200 por semana sem esforço. Quando alguém pergunta 'como você cresce', a resposta dela: 'parei de aceitar tudo e comecei a entregar bem'.",
+  "whenToAskForHelp": "Se a sua capacidade real (medida em 4 semanas) é menos da metade do que você acha que aguenta, peça ajuda. Costuma ter um gargalo invisível (uma etapa do processo, um fornecedor lento, um insumo que falta) que não dá pra resolver sozinha.",
+  "relatedCases": ["case_keisha_lanches_atraso"],
+  "relatedResources": ["res_organizacao_pedidos"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+
+{
+  "id": "companion_post_diario_7_dias_patricia",
+  "taskTemplateId": "task_post_diario_7_dias",
+  "archetypeId": "produto_bom_vitrine_fraca",
+  "personaName": "Patrícia",
+  "region": "Brasil, Florianópolis (SC)",
+  "personaContext": "Depois de refazer as fotos (semana 1) e organizar o perfil (semana 2), Patrícia chegou na parte que mais a assustava: postar todo dia. 'Eu não tenho conteúdo todo dia. E se ninguém curtir?'. Decidiu encarar mesmo com receio: 7 dias seguidos, nem que fosse foto pequena.",
+  "stumbles": [
+    {
+      "moment": "Dia 1 e 2",
+      "whatHappened": "Postou foto de produto novo nos 2 primeiros dias. Caprichou na legenda, na luz, no recorte. Ganhou 8 curtidas dia 1, 5 dia 2. Ficou desanimada: 'gastei 40 minutos pra cada post e o engajamento foi pior que antes'.",
+      "whatHelped": "Lembrou: o objetivo das 7 postagens não é viralizar, é treinar o algoritmo a mostrar o perfil dela com regularidade. Os primeiros 3 dias quase sempre têm desempenho fraco. Continuou."
+    },
+    {
+      "moment": "Dia 4",
+      "whatHappened": "Acabou o estoque de fotos boas de produto. Pensou em pular o dia. 'Não tenho nada novo'.",
+      "whatHelped": "Lembrou que post não precisa ser sempre produto. Postou uma foto do espaço de trabalho dela com a frase: 'Esta é a mesa onde nasce cada brinco'. Foto simples, luz natural, fundo limpo. Foi o post com MAIS curtidas da semana (24). Bastidor vendeu mais que produto."
+    },
+    {
+      "moment": "Dia 6",
+      "whatHappened": "Sábado, dia de feira. Tinha planejado postar antes mas esqueceu. Lembrou às 22h quando ia dormir.",
+      "whatHelped": "Em vez de pular, fez o post das 22h: foto da banca desmontada com 'feira de hoje terminou, obrigada quem passou'. Não foi o post mais bonito, mas manteve a corrente. Aprendeu: imperfeito e postado vence perfeito e adiado."
+    }
+  ],
+  "breakthrough": "Dia 7 ela percebeu o padrão. Os posts que foram melhor: o de bastidor (24 curtidas), o de cliente usando o brinco (18 curtidas), e o que ela explicava por que cada pedra tem significado (15 curtidas). Os fracos: foto pura de produto sem contexto. Patrícia decidiu: na próxima semana, 70% bastidor e história, 30% produto.",
+  "outcome": "Em 30 dias seguindo a regra, o perfil saiu de 200 pra 380 seguidores. Mais importante: 6 vendas online aconteceram, contra zero nos 6 meses anteriores. Patrícia não virou influencer. Ela só apareceu com regularidade.",
+  "whenToAskForHelp": "Se você postou os 7 dias e nenhuma postagem passou de 5 curtidas, peça ajuda. Costuma ser perfil sem bio clara, sem indicação de como comprar, ou audiência muito pequena ainda. Postar mais não resolve. Estruturar o perfil resolve.",
+  "relatedCases": ["case_priya_acessorios_vitrine"],
+  "relatedResources": ["res_fotos_celular", "res_whatsapp_business_basico"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+
+{
+  "id": "companion_listar_20_clientes_sandra",
+  "taskTemplateId": "task_listar_20_clientes",
+  "archetypeId": "renda_complementar",
+  "personaName": "Sandra",
+  "region": "Brasil, Goiânia (GO)",
+  "personaContext": "Professora pública, faz bolo de pote desde 2024 como renda extra. Já fatura cerca de R$ 2.800 por mês. Quase todos os clientes são colegas de escola e vizinhos. Sente que travou: 'já vendo pra todo mundo que conheço'. Decidiu listar 20 clientes possíveis pra próximos 90 dias, mesmo sem conhecer todo mundo da lista.",
+  "stumbles": [
+    {
+      "moment": "Primeiros 8 nomes",
+      "whatHappened": "Listou 8 nomes em 5 minutos: as 5 colegas que já compram, 2 vizinhas, 1 prima. Achou que tinha terminado. 'Não conheço mais ninguém que compraria'.",
+      "whatHelped": "Releu o desafio: 20 PESSOAS OU LUGARES que poderiam virar cliente. Lugar conta. Começou a pensar em estabelecimentos: a cantina da escola onde ela dá aula, o salão de cabelo onde vai todo mês, o petshop, a igreja. Cada um pode virar 5 a 30 potes por encomenda em evento."
+    },
+    {
+      "moment": "Pessoa 12",
+      "whatHappened": "Lembrou da mãe da aluna que sempre elogia os doces nas reuniões. Quase não colocou: 'ela só elogia, não vai comprar'.",
+      "whatHelped": "Mudou a régua: a lista é de pessoas que PODERIAM comprar, não que CERTAMENTE compram. Quem elogia público entrou. Quem perguntou preço sem fechar entrou. Quem comentou nas redes sociais entrou. Subiu de 8 pra 17 nomes."
+    },
+    {
+      "moment": "Como chegar até cada um",
+      "whatHappened": "Difícil parte: ao lado de cada nome, escrever como chegar. Pros conhecidos era óbvio (zap). Pros estabelecimentos, travou: 'eu chego e falo o quê?'",
+      "whatHelped": "Definiu 3 caminhos padrão: (1) zap com mensagem curta + foto, pra conhecidos; (2) visita presencial com 2 amostras pequenas grátis, pra estabelecimentos; (3) comentar no post deles antes de mandar mensagem, pra contatos das redes. 3 caminhos, 20 nomes distribuídos."
+    }
+  ],
+  "breakthrough": "Lista fechada em 22 nomes (passou de 20). Dos 22, ela estimou que pelo menos 8 viraram conversa real em 90 dias. Pra fazer essa lista andar sem virar mais um trabalho, decidiu: 2 contatos novos por semana, intercalando com a rotina da escola. Sem pressão de fechar tudo em 1 mês.",
+  "outcome": "Em 8 semanas, Sandra tinha abordado 16 dos 22. 5 viraram cliente recorrente (3 estabelecimentos + 2 pessoas). 4 disseram 'agora não, depois' (mantém na lista pra retomar em 60 dias). Os outros 7 não responderam ou recusaram. Faturamento mensal subiu pra R$ 4.100. Importante: como ainda é renda complementar, manteve a regra de 2 dias fixos pra negócio. Sem virar caos.",
+  "whenToAskForHelp": "Se você fechou a lista com 20 nomes mas todos são pessoas próximas (família, vizinha direta, colega de trabalho), peça ajuda pra ampliar. Lista de conhecido esgota rápido. O crescimento real vem de gente que não tinha como te encontrar antes.",
+  "relatedCases": ["case_formalizacao_mei_decisao", "case_carrinho_lanche_brasilia_renda"],
+  "relatedResources": ["res_caixa_basico", "res_feira_bazar_basico"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]
