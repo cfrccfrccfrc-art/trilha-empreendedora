@@ -1,6 +1,7 @@
 {
   "version": "1.1",
   "tieBreakOrder": [
+    "negocio_consolidado",
     "talento_sem_postura_comercial",
     "bico_pode_virar",
     "potencial_b2b_local",

@@ -70,9 +70,37 @@ export default function Results() {
 
   const hasFullContent = archetype.status === 'active';
 
+  const isConsolidated = archetype.id === 'negocio_consolidado';
+
   return (
     <div className="space-y-5">
       <PageHeader accent="Seu perfil" title={archetype.name} />
+
+      {isConsolidated && (
+        <Card className="border-primary bg-primaryLight/30">
+          <div className="flex gap-2 items-start">
+            <Sparkle className="w-5 h-5 mt-1 shrink-0" />
+            <div className="flex-1">
+              <p className="font-hand text-secondary text-base leading-tight mb-1">
+                Bom sinal
+              </p>
+              <h3 className="font-bold text-ink leading-snug mb-2">
+                Ao que parece, você já fez o básico
+              </h3>
+              <p className="text-secondary text-sm leading-relaxed">
+                Suas respostas indicam que você já tem controle financeiro,
+                presença online e formalização no lugar. A trilha aqui é
+                mais leve do que a básica, porque a próxima virada não é
+                de fundamento, é de estratégia. Pra decisões complexas, o
+                apoio humano direto do Projeto Pescadores costuma valer
+                mais que conteúdo.
+              </p>
+            </div>
+          </div>
+        </Card>
+      )}
+
+      {isConsolidated && <PescadoresHandoff variant="strategic" />}
 
       {hasFullContent && (
         <>

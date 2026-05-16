@@ -546,5 +546,105 @@
     "reviewLevel": "elevated",
     "active": true,
     "version": "1.0"
+  },
+
+  {
+    "id": "task_mapear_proximo_gargalo",
+    "title": "Mapear o próximo gargalo de crescimento",
+    "week": 1,
+    "archetypeId": "negocio_consolidado",
+    "action": "Identifique onde está o próximo limite real do seu negócio agora: capacidade de produção, capital de giro, divulgação, gente pra ajudar, foco do dono. Escolha 1. Anote 3 sinais concretos que apontam pra esse gargalo (atrasos, vendas perdidas, dinheiro parado, etc).",
+    "purpose": "Sem clareza do gargalo, qualquer investimento é palpite. Estratégia começa em saber o que segura o sistema.",
+    "expectedLearning": "Gargalo é o que limita a saída do sistema todo. Toda outra melhoria fica mais cara enquanto o gargalo continua lá.",
+    "reflectionQuestions": [
+      "Qual gargalo, se desaparecesse, mais aumentaria sua receita nos próximos 6 meses?",
+      "O que custa mais: resolver o gargalo identificado ou ignorá-lo por mais 6 meses?",
+      "Esse gargalo é diferente do que era 6 meses atrás? O que mudou?"
+    ],
+    "commonMistakes": [
+      "Confundir desconforto pessoal com gargalo real do negócio",
+      "Tentar resolver vários gargalos ao mesmo tempo",
+      "Listar gargalo genérico ('vender mais') em vez de específico"
+    ],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_5_movimentos_estrategicos",
+    "title": "5 movimentos estratégicos possíveis pros próximos 6 meses",
+    "week": 2,
+    "archetypeId": "negocio_consolidado",
+    "action": "Liste 5 movimentos que poderiam destravar o gargalo identificado na semana 1. Pode ser canal novo, produto novo, parceria, contratação, mudança de preço, capital. Pra cada um, anote custo estimado, retorno esperado e prazo até o retorno aparecer.",
+    "purpose": "Estratégia é escolha. Comparar 5 opções no papel força você a enxergar o que cada uma realmente entrega.",
+    "expectedLearning": "Não dá pra escolher sem ter as opções na mesa. Geralmente a 'opção óbvia' não é a melhor quando você compara custo/retorno.",
+    "reflectionQuestions": [
+      "Qual movimento tem maior retorno por real investido?",
+      "Qual te assusta mais? Por quê?",
+      "Algum desses 5 cabe no caixa atual sem precisar de empréstimo?"
+    ],
+    "commonMistakes": [
+      "Listar só o que é tendência (sem considerar seu contexto)",
+      "Não estimar custo nem retorno (vira lista de desejos)",
+      "Colocar 5 movimentos parecidos em vez de 5 distintos"
+    ],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_conversar_negocios_pares",
+    "title": "Conversar com 3 negócios pares ou um patamar acima",
+    "week": 3,
+    "archetypeId": "negocio_consolidado",
+    "action": "Identifique 3 donos de negócio do mesmo porte que o seu (ou um patamar acima). Marque conversa de 30 a 60 min com cada um. Pergunte como atravessaram o estágio em que você está agora. Anote o que se repete e o que diverge entre as 3 conversas.",
+    "purpose": "Quem está no mesmo barco enxerga oportunidades e armadilhas que consultor não vê. Pares na mesma fase costumam ter a melhor visão do próximo passo realista.",
+    "expectedLearning": "Decisão estratégica fica menos solitária quando você ouve quem já passou por algo parecido. O padrão entre 3 vozes costuma mostrar o caminho que sozinho passa despercebido.",
+    "reflectionQuestions": [
+      "O que se repetiu nas 3 conversas?",
+      "Qual movimento que eles fizeram cabe no seu caso agora?",
+      "Que armadilha eles cometeram que você consegue evitar?"
+    ],
+    "commonMistakes": [
+      "Conversar só com negócios muito maiores (sem contexto comum)",
+      "Não anotar e perder os padrões depois",
+      "Tomar a opinião deles como receita (em vez de insumo pra decisão própria)"
+    ],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+
+  {
+    "id": "task_decidir_1_aposta_6m",
+    "title": "Decidir 1 aposta estratégica pros próximos 6 meses",
+    "week": 4,
+    "archetypeId": "negocio_consolidado",
+    "action": "Escolha 1 aposta estratégica entre os 5 movimentos da semana 2 (filtrada pelas 3 conversas da semana 3). Defina: meta clara em número, recursos necessários (dinheiro + tempo), gatilho de revisão (que sinal de mercado em 60 dias te diz se vale continuar).",
+    "purpose": "Decisão estratégica é o ato de eliminar opções, não acumular. Sem gatilho de revisão, aposta vira ansiedade depois de 30 dias.",
+    "expectedLearning": "1 aposta priorizada e executada vence 5 apostas pulverizadas. Estratégia é foco em condições limitadas. O gatilho de revisão deixa a decisão revisável sem virar instabilidade.",
+    "reflectionQuestions": [
+      "Que sinal de mercado vai me dizer em 60 dias que a aposta tá funcionando?",
+      "O que vou parar de fazer pra liberar tempo e dinheiro pra essa aposta?",
+      "Como vou contar pra mim mesmo que falhou (e a hora de mudar)?"
+    ],
+    "commonMistakes": [
+      "Apostar em mais de 1 ao mesmo tempo",
+      "Não definir critério de revisão (vira ansiedade vaga)",
+      "Não decidir o que vai parar (tudo vira acúmulo)"
+    ],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
   }
 ]

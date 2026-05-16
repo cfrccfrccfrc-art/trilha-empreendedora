@@ -39,6 +39,12 @@ const VARIANTS = {
     body: 'Além da rede de voluntários da Trilha, você pode contar com o time do Projeto Pescadores, que é parceiro e atende casos de pequenos negócios diretamente. Gratuito.',
     cta: 'Abrir contato do Pescadores →',
   },
+  strategic: {
+    eyebrow: 'Pra decisão estratégica',
+    title: 'Estratégia destrava melhor com gente que com conteúdo',
+    body: 'Você já passou da fase de fundamentos. Nas próximas decisões (onde apostar, o que parar, quando expandir), uma conversa com o time do Projeto Pescadores costuma valer mais que ler mais material. Apoio individual, gratuito.',
+    cta: 'Conversar com o time do Pescadores →',
+  },
 };
 
 export default function PescadoresHandoff({ variant = 'soft' }) {

@@ -333,5 +333,33 @@
     "warningFlags": ["digital_overinvestment"],
     "contentVersion": "1.0",
     "status": "active"
+  },
+
+  {
+    "id": "negocio_consolidado",
+    "name": "Negócio com base sólida",
+    "shortDescription": "Você já tem o básico no lugar: controle de finanças, formalização, presença digital e tempo de estrada. O que falta agora é estratégia, não fundamento.",
+    "commonPain": "Continuar fazendo o que funcionou até aqui não vai te levar pro próximo nível. Mas escolher onde apostar quando já não dá pra fazer tudo é mais difícil do que parece.",
+    "typicalMistakes": [
+      "Abrir uma frente nova antes de fechar a atual",
+      "Trocar de estratégia toda semana por ansiedade",
+      "Tentar copiar negócios maiores sem o mesmo capital"
+    ],
+    "firstTaskId": "task_mapear_proximo_gargalo",
+    "avoidNow": "Evite expandir agora (novo canal, novo produto, contratar gente) sem antes identificar qual é o próximo gargalo real e qual aposta de fato move o negócio.",
+    "expectedLearning": "A trilha aqui é mais leve do que a básica, porque você já passou da fase de fundamentos. O foco é reflexão estratégica e, quando precisar destravar decisão complexa, apoio humano direto (Projeto Pescadores) costuma valer mais do que ler mais conteúdo.",
+    "roadmap30d": [
+      { "week": 1, "title": "Mapear o próximo gargalo",              "tasks": ["task_mapear_proximo_gargalo"] },
+      { "week": 2, "title": "5 movimentos estratégicos possíveis",   "tasks": ["task_5_movimentos_estrategicos"] },
+      { "week": 3, "title": "Conversar com 3 negócios pares",        "tasks": ["task_conversar_negocios_pares"] },
+      { "week": 4, "title": "Decidir 1 aposta de 6 meses",           "tasks": ["task_decidir_1_aposta_6m"] }
+    ],
+    "recommendedResources": ["res_proposta_b2b", "res_pescadoras_rede"],
+    "recommendedCases": ["case_juliana_geleias_b2b", "case_vinicius_websites_b2b"],
+    "recommendedOpportunities": ["opp_mentoria_b2b", "opp_sebrae_atendimento_presencial", "opp_rede_pescadoras"],
+    "supervisionLevel": "elevated",
+    "warningFlags": ["needs_strategic_review"],
+    "contentVersion": "1.0",
+    "status": "active"
   }
 ]
