@@ -10,6 +10,7 @@ import Card from '../components/Card';
 import Button from '../components/Button';
 import { Sparkle } from '../components/Sketches';
 import DonationBanner from '../components/DonationBanner';
+import PescadoresHandoff from '../components/PescadoresHandoff';
 
 const RESULT_KEY = 'trilha_diagnostic_result';
 
@@ -287,6 +288,8 @@ export default function Results() {
           </p>
         </Card>
       )}
+
+      <PescadoresHandoff variant="soft" />
 
       <DonationBanner placement="results" />
 

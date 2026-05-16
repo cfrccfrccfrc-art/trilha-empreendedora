@@ -8,6 +8,7 @@ import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import FilterChips from '../components/FilterChips';
+import PescadoresHandoff from '../components/PescadoresHandoff';
 
 const CATEGORIES = [
   { value: 'fotos_design',     label: 'Fotos / design' },
@@ -116,6 +117,9 @@ export default function HelpRequest() {
             Pedidos costumam ser respondidos em até 3 dias úteis.
           </p>
         </Card>
+
+        <PescadoresHandoff variant="helprequest" />
+
         <Button
           onClick={() => navigate(hasPlan ? '/minha-trilha' : '/')}
           className="w-full"
@@ -189,6 +193,8 @@ export default function HelpRequest() {
           {loading ? 'Enviando…' : 'Pedir ajuda'}
         </Button>
       </form>
+
+      <PescadoresHandoff variant="helprequest" />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { getSupabase, getPlanToken } from '../services/supabaseClient';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import PescadoresHandoff from '../components/PescadoresHandoff';
 import { Pin, WavyUnderline } from '../components/Sketches';
 
 const BUSINESS_TYPE_LABELS = {
@@ -207,6 +208,10 @@ export default function BadgeCard() {
             Contar minha história
           </Button>
         </Card>
+      )}
+
+      {badgeLevel === 'Trilha de 30 dias concluída' && (
+        <PescadoresHandoff variant="celebrate" />
       )}
 
       <Button

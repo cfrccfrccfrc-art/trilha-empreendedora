@@ -10,6 +10,7 @@ import Button from '../components/Button';
 import { OpenBook } from '../components/Sketches';
 import DonationBanner from '../components/DonationBanner';
 import ShareBanner from '../components/ShareBanner';
+import PescadoresHandoff from '../components/PescadoresHandoff';
 
 export default function LearningResponse() {
   const { id } = useParams();
@@ -235,6 +236,8 @@ export default function LearningResponse() {
             </p>
           )}
       </Card>
+
+      {stuck && <PescadoresHandoff variant="stuck" />}
 
       {autoApproved && <DonationBanner placement="learning_response" />}
 

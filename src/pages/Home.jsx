@@ -3,6 +3,7 @@ import archetypesData from '../data/archetypes.json';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import ShareBanner from '../components/ShareBanner';
+import PescadoresHandoff from '../components/PescadoresHandoff';
 import {
   HeroNotebook,
   WavyUnderline,
@@ -280,6 +281,11 @@ export default function Home() {
             </div>
           </div>
         </Card>
+      </section>
+
+      {/* PESCADORES — apoio humano parceiro */}
+      <section>
+        <PescadoresHandoff variant="onboarding" />
       </section>
 
       {/* SHARE BANNER */}
