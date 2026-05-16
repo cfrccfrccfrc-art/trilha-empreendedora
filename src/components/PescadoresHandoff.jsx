@@ -52,12 +52,18 @@ export default function PescadoresHandoff({ variant = 'soft' }) {
   return (
     <div className="rounded-2xl border border-line bg-paper p-4">
       <div className="flex gap-3 items-start">
-        <img
-          src="/pescadores-logo.svg"
-          alt="Projeto Pescadores"
-          width="48"
-          height="48"
+        <div
+          role="img"
+          aria-label="Projeto Pescadores"
           className="shrink-0 rounded-xl"
+          style={{
+            width: 48,
+            height: 48,
+            backgroundImage: 'url(/pescadores-logo.jpg)',
+            backgroundSize: '220%',
+            backgroundPosition: 'center 46%',
+            backgroundRepeat: 'no-repeat',
+          }}
         />
         <div className="flex-1 min-w-0">
           <p className="font-hand text-secondary text-base leading-tight mb-1">
