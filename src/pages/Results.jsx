@@ -317,8 +317,6 @@ export default function Results() {
         </Card>
       )}
 
-      <PescadoresHandoff variant="soft" />
-
       <DonationBanner placement="results" />
 
       <div className="space-y-3 pt-2">
