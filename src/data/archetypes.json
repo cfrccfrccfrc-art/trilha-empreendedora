@@ -1,7 +1,7 @@
 [
   {
     "id": "vende_sem_lucro",
-    "name": "Vende, mas não sabe se lucra",
+    "name": "\"Vendo todo dia, mas no fim do mês não sobra\"",
     "shortDescription": "Você já vende, mas ainda não tem clareza se está sobrando dinheiro depois dos custos.",
     "commonPain": "Confunde faturamento com lucro. Vende bem em alguns dias e mesmo assim não sobra dinheiro no fim do mês.",
     "typicalMistakes": [
@@ -29,7 +29,7 @@
 
   {
     "id": "ainda_e_ideia",
-    "name": "Ainda é ideia",
+    "name": "\"Tenho uma ideia, mas nunca testei com cliente\"",
     "shortDescription": "Você tem uma ideia, mas ainda não testou se alguém compraria de verdade.",
     "commonPain": "Fica meses ajustando o produto, o nome, a logo — sem ouvir o cliente que vai pagar por isso.",
     "typicalMistakes": [
@@ -57,7 +57,7 @@
 
   {
     "id": "precisa_capital",
-    "name": "Precisa de capital inicial",
+    "name": "\"Sei o que quero comprar, mas falta dinheiro\"",
     "shortDescription": "Você sente que só vai crescer com mais dinheiro pra investir — equipamento, estoque ou material.",
     "commonPain": "Acha que o problema é só falta de capital, mas ainda não sabe quanto custa o que precisa nem o que esse dinheiro vai gerar.",
     "typicalMistakes": [
@@ -85,7 +85,7 @@
 
   {
     "id": "operacao_travada",
-    "name": "Operação travada",
+    "name": "\"Aceito todo pedido, mas perco metade no caminho\"",
     "shortDescription": "Você vende, mas o pedido demora, atrasa ou se perde — e isso já está custando cliente.",
     "commonPain": "O dia parece curto, sempre tem um pedido atrasado ou uma promessa que não foi cumprida.",
     "typicalMistakes": [
@@ -113,7 +113,7 @@
 
   {
     "id": "empreendedora_sobrecarregada",
-    "name": "Empreendedora sobrecarregada",
+    "name": "\"Faço tudo sozinha e o dia nunca acaba\"",
     "shortDescription": "Você cuida do negócio, da casa e das pessoas — e está fazendo tudo sozinha.",
     "commonPain": "O dia acaba e você fez muito, mas não conseguiu o que mais importava. O cansaço virou rotina.",
     "typicalMistakes": [
@@ -141,7 +141,7 @@
 
   {
     "id": "produto_bom_vitrine_fraca",
-    "name": "Produto bom, vitrine fraca",
+    "name": "\"Quem vê de perto adora, mas pouca gente chega\"",
     "shortDescription": "Quem prova ou vê de perto adora o que você faz, mas pouca gente chega até você.",
     "commonPain": "Você sabe que o produto é bom — só não sabe como mostrar isso pra mais gente.",
     "typicalMistakes": [
@@ -169,7 +169,7 @@
 
   {
     "id": "vende_comunidade_nao_online",
-    "name": "Vende na comunidade, mas não online",
+    "name": "\"Minha vizinhança compra, mas não saio dela\"",
     "shortDescription": "Sua vizinhança conhece e compra, mas você ainda não conseguiu sair pra fora dela.",
     "commonPain": "Quase toda venda vem de boca a boca local. Quando o vizinho viaja ou muda, a venda some.",
     "typicalMistakes": [
@@ -197,7 +197,7 @@
 
   {
     "id": "renda_complementar",
-    "name": "Renda complementar",
+    "name": "\"Tenho trabalho fixo, o negócio vem em cima\"",
     "shortDescription": "Você trabalha em outra coisa e o negócio é renda extra. O tempo é curto e precisa render.",
     "commonPain": "Como o negócio é 'um a mais', acaba ficando bagunçado e nunca dá um próximo passo.",
     "typicalMistakes": [
@@ -225,7 +225,7 @@
 
   {
     "id": "bico_pode_virar",
-    "name": "Bico que pode virar negócio",
+    "name": "\"Faço bico que dá certo, mas ainda cobro por simpatia\"",
     "shortDescription": "Você faz bicos pra clientes que voltam e indicam — pode virar negócio se você decidir.",
     "commonPain": "A demanda existe, mas você ainda não cobra direito, não tem horário e perde pedido por falta de organização.",
     "typicalMistakes": [
@@ -253,7 +253,7 @@
 
   {
     "id": "talento_sem_postura_comercial",
-    "name": "Talento técnico sem postura comercial",
+    "name": "\"Manjo do que faço, mas travo na hora de cobrar\"",
     "shortDescription": "Você manja muito do que faz, mas trava na hora de cobrar, vender ou cobrar atraso.",
     "commonPain": "Faz produto/serviço excelente, mas perde venda no preço, no fechamento ou na cobrança.",
     "typicalMistakes": [
@@ -281,7 +281,7 @@
 
   {
     "id": "potencial_b2b_local",
-    "name": "Pode vender pra outros comércios",
+    "name": "\"Vendo bem pra pessoa, mas nunca tentei comércio\"",
     "shortDescription": "Seu produto/serviço cabe em outros comércios da região — mas você ainda só vende pra pessoa física.",
     "commonPain": "Vender de um em um cansa. Vender pra um comércio que revende é volume, mas exige outra postura.",
     "typicalMistakes": [
@@ -309,7 +309,7 @@
 
   {
     "id": "digital_antes_da_base",
-    "name": "Digital antes da base",
+    "name": "\"Posto bonito todo dia, mas não sei se sobra lucro\"",
     "shortDescription": "Você está investindo em redes sociais, anúncio ou loja online antes de ter custo, preço e operação no lugar.",
     "commonPain": "Faz post bonito, mas não sabe se a venda dá lucro, nem se aguenta a demanda se aparecer.",
     "typicalMistakes": [
@@ -337,7 +337,7 @@
 
   {
     "id": "negocio_consolidado",
-    "name": "Negócio com base sólida",
+    "name": "\"Tenho o básico no lugar, agora é decidir onde apostar\"",
     "shortDescription": "Você já tem o básico no lugar: controle de finanças, formalização, presença digital e tempo de estrada. O que falta agora é estratégia, não fundamento.",
     "commonPain": "Continuar fazendo o que funcionou até aqui não vai te levar pro próximo nível. Mas escolher onde apostar quando já não dá pra fazer tudo é mais difícil do que parece.",
     "typicalMistakes": [

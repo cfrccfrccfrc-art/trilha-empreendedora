@@ -202,7 +202,7 @@ export default function Home() {
           Encontra-se em alguma dessas situações?
         </h2>
         <p className="text-secondary text-sm leading-relaxed mb-4">
-          O diagnóstico identifica seu perfil entre os 12 caminhos abaixo.
+          O diagnóstico identifica seu perfil entre os 13 caminhos abaixo.
           Reconheceu algum?
         </p>
         <div className="grid grid-cols-2 gap-2">
