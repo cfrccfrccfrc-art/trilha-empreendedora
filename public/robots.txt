@@ -11,4 +11,4 @@ Disallow: /aprendizado
 Disallow: /cartao
 Disallow: /preciso-de-ajuda
 
-Sitemap: https://trilha-empreendedora.vercel.app/sitemap.xml
+Sitemap: https://trilhaempreendedora.com.br/sitemap.xml

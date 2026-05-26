@@ -11,7 +11,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DATA = path.join(ROOT, 'src', 'data');
 const OUT = path.join(ROOT, 'public', 'sitemap.xml');
 
-const SITE = process.env.SITE_URL || 'https://trilha-empreendedora.vercel.app';
+const SITE = process.env.SITE_URL || 'https://trilhaempreendedora.com.br';
 const TODAY = new Date().toISOString().slice(0, 10);
 
 function readJson(file) {
