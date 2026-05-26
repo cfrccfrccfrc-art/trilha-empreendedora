@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import archetypesData from '../data/archetypes.json';
+import { track } from '../services/telemetry';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import ShareBanner from '../components/ShareBanner';
@@ -87,6 +89,10 @@ function MiniTrilhaCard({ sketch, title, body, onClick }) {
 
 export default function Home() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    track('home_view');
+  }, []);
 
   const peeks = archetypesData.filter((a) => a.status === 'active');
 

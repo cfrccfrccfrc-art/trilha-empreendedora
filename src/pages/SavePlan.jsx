@@ -11,6 +11,7 @@ import { buildTasksForPlan } from '../utils/taskRouting';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import { track } from '../services/telemetry';
 
 const ANSWERS_KEY = 'trilha_diagnostic_answers';
 const RESULT_KEY = 'trilha_diagnostic_result';
@@ -154,6 +155,7 @@ export default function SavePlan() {
       }
 
       setPlanToken(planToken);
+      track('plan_saved', { archetypeId: result?.archetypeId });
       setSuccess(true);
       setTimeout(() => navigate('/minha-trilha', { replace: true }), 600);
     } catch (err) {

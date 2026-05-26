@@ -6,6 +6,7 @@ import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import { OpenBook, Sparkle } from '../components/Sketches';
+import { track } from '../services/telemetry';
 
 const initialForm = {
   business_short: '',
@@ -153,6 +154,10 @@ export default function MyStory() {
         .from('user_case_submissions')
         .insert(payload);
       if (error) throw error;
+      track('story_submitted', {
+        archetypeId: state.data?.plan?.archetype_id,
+        consentPublish: form.consent_publish,
+      });
       setSuccess(true);
     } catch (err) {
       console.error(err);

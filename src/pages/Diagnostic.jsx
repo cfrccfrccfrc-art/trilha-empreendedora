@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { track } from '../services/telemetry';
 import questionsData from '../data/questions.json';
 import archetypesData from '../data/archetypes.json';
 import scoringRules from '../data/scoringRules.json';
@@ -41,6 +42,10 @@ export default function Diagnostic() {
   const current = questions[index];
 
   useEffect(() => {
+    track('diagnostic_started');
+  }, []);
+
+  useEffect(() => {
     sessionStorage.setItem(ANSWERS_KEY, JSON.stringify(answers));
   }, [answers]);
 
@@ -66,6 +71,7 @@ export default function Diagnostic() {
       scoringRules
     );
     sessionStorage.setItem(RESULT_KEY, JSON.stringify(result));
+    track('diagnostic_completed', { archetypeId: result.archetypeId });
     navigate('/resultado');
   };
 

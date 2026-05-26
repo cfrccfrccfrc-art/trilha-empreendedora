@@ -32,6 +32,7 @@ const AdminPreview        = lazy(() => import('./pages/AdminPreview'));
 const AdminDonations      = lazy(() => import('./pages/AdminDonations'));
 const SourceRefresh       = lazy(() => import('./pages/SourceRefresh'));
 const AdminUserStories    = lazy(() => import('./pages/AdminUserStories'));
+const AdminMetrics        = lazy(() => import('./pages/AdminMetrics'));
 
 function PageFallback() {
   return (
@@ -76,6 +77,7 @@ export default function App() {
           <Route path="/admin/doacoes" element={<AdminDonations />} />
           <Route path="/admin/fontes" element={<SourceRefresh />} />
           <Route path="/admin/historias" element={<AdminUserStories />} />
+          <Route path="/admin/metricas" element={<AdminMetrics />} />
         </Route>
       </Routes>
     </Suspense>

@@ -6,6 +6,8 @@
 // sempre com mensagem clara de que é gratuito e externo à Trilha.
 // ----------------------------------------------------------------------------
 
+import { track } from '../services/telemetry';
+
 const PESCADORES_URL = 'https://projetopescadores.com.br/contato';
 
 const VARIANTS = {
@@ -77,6 +79,7 @@ export default function PescadoresHandoff({ variant = 'soft' }) {
             href={PESCADORES_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => track('pescadores_clicked', { variant })}
             className="text-primary text-sm font-semibold inline-block"
           >
             {v.cta}

@@ -11,6 +11,7 @@ import Button from '../components/Button';
 import { Sparkle } from '../components/Sketches';
 import DonationBanner from '../components/DonationBanner';
 import PescadoresHandoff from '../components/PescadoresHandoff';
+import { track } from '../services/telemetry';
 
 const RESULT_KEY = 'trilha_diagnostic_result';
 
@@ -39,6 +40,10 @@ export default function Results() {
     if (!result) return null;
     return archetypesData.find((a) => a.id === result.archetypeId);
   }, [result]);
+
+  useEffect(() => {
+    if (archetype?.id) track('results_view', { archetypeId: archetype.id });
+  }, [archetype?.id]);
 
   const firstTask = useMemo(() => {
     if (!result?.recommendedTaskId) return null;

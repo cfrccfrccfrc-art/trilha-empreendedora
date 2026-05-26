@@ -9,6 +9,7 @@ import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import { OpenBook } from '../components/Sketches';
+import { track } from '../services/telemetry';
 
 const MAX_PHOTOS = 3;
 
@@ -178,6 +179,12 @@ export default function TaskDetail() {
         textResponse,
         evidenceUrls,
         obstacle: statusReported === 'Fiz' ? null : obstacle,
+        needsHelp,
+      });
+      track('task_submitted', {
+        taskTemplateId: state.data.task?.task_template_id,
+        week: state.data.task?.week,
+        statusReported,
         needsHelp,
       });
       navigate(`/tarefa/${id}/aprendizado`);

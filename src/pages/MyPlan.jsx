@@ -14,6 +14,7 @@ import DonationBanner from '../components/DonationBanner';
 import ShareBanner from '../components/ShareBanner';
 import PescadoresHandoff from '../components/PescadoresHandoff';
 import { Sparkle } from '../components/Sketches';
+import { track } from '../services/telemetry';
 
 const STATUS_META = {
   a_fazer:           { label: 'A fazer',         className: 'bg-line text-secondary' },

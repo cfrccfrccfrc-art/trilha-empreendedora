@@ -113,6 +113,13 @@ export default function AdminDashboard() {
       >
         Histórias enviadas pelos empreendedores
       </Button>
+      <Button
+        variant="ghost"
+        onClick={() => navigate('/admin/metricas')}
+        className="w-full"
+      >
+        Métricas de uso (funil + engajamento)
+      </Button>
 
       <div className="space-y-2">
         {filtered.map((row) => (

@@ -1,12 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from './Button';
 import { ShareIcon } from './Sketches';
+import { track } from '../services/telemetry';
 
 const DEFAULT_TEXT =
   'Acabei de descobrir a Trilha Empreendedora — gratuita, ajuda quem está começando ou quer dar o próximo passo no negócio. Vale a pena conhecer.';
 
 export default function ShareSheet({ open, onClose, text = DEFAULT_TEXT }) {
   const [copied, setCopied] = useState(null);
+
+  useEffect(() => {
+    if (open) track('share_opened');
+  }, [open]);
+
   if (!open) return null;
 
   const url = typeof window !== 'undefined' ? window.location.origin : '';
@@ -23,6 +29,7 @@ export default function ShareSheet({ open, onClose, text = DEFAULT_TEXT }) {
   };
 
   const handleWhatsApp = () => {
+    track('share_whatsapp');
     const wa = `https://wa.me/?text=${encodeURIComponent(fullText)}`;
     window.open(wa, '_blank', 'noopener,noreferrer');
   };
