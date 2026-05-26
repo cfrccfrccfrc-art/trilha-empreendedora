@@ -31,6 +31,13 @@ export default function AdminDashboard() {
   const [tab, setTab] = useState(SOURCES[0].id);
   const [statusFilter, setStatusFilter] = useState(ALL);
 
+  const source = SOURCES.find((s) => s.id === tab);
+  const filtered = useMemo(() => {
+    if (!source) return [];
+    if (statusFilter === ALL) return source.data;
+    return source.data.filter((r) => (r.status || 'active') === statusFilter);
+  }, [source, statusFilter]);
+
   if (loading) return null;
   if (!session || !supervisor) return <Navigate to="/supervisor/login" replace />;
   if (!isAdmin) {
@@ -45,12 +52,6 @@ export default function AdminDashboard() {
       </div>
     );
   }
-
-  const source = SOURCES.find((s) => s.id === tab);
-  const filtered = useMemo(() => {
-    if (statusFilter === ALL) return source.data;
-    return source.data.filter((r) => (r.status || 'active') === statusFilter);
-  }, [source, statusFilter]);
 
   return (
     <div className="space-y-4">
