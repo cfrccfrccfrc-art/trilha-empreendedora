@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import archetypesData from '../data/archetypes.json';
 import { track } from '../services/telemetry';
@@ -89,12 +89,34 @@ function MiniTrilhaCard({ sketch, title, body, onClick }) {
 
 export default function Home() {
   const navigate = useNavigate();
+  const [overview, setOverview] = useState(null);
 
   useEffect(() => {
     track('home_view');
   }, []);
 
   const peeks = archetypesData.filter((a) => a.status === 'active');
+
+  const openOverview = (a) => {
+    setOverview(a);
+    track('archetype_overview_opened', { archetypeId: a.id });
+  };
+
+  const dismissOverview = () => {
+    if (overview) {
+      track('archetype_overview_dismissed', { archetypeId: overview.id });
+    }
+    setOverview(null);
+  };
+
+  const confirmWithDiagnostic = () => {
+    if (overview) {
+      track('archetype_overview_to_diagnostic', {
+        archetypeId: overview.id,
+      });
+    }
+    navigate('/diagnostico');
+  };
 
   return (
     <div className="space-y-10">
@@ -216,7 +238,7 @@ export default function Home() {
             <button
               key={a.id}
               type="button"
-              onClick={() => navigate('/diagnostico')}
+              onClick={() => openOverview(a)}
               className="text-left bg-paper border border-line rounded-2xl p-3 hover:bg-beige transition-colors"
             >
               <p className="font-semibold text-ink text-sm leading-snug mb-1">
@@ -337,6 +359,84 @@ export default function Home() {
         Adaptação livre, sem fins lucrativos. Inspirada no propósito da Khan
         Academy.
       </p>
+
+      {overview && (
+        <div
+          className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-ink/40"
+          onClick={dismissOverview}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Detalhes do perfil"
+        >
+          <div
+            className="w-full sm:max-w-md bg-paper rounded-t-3xl sm:rounded-3xl p-6 shadow-lg max-h-[92vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-3 mb-4">
+              <div className="min-w-0">
+                <p className="font-hand text-secondary text-base leading-tight mb-1">
+                  Esse perfil é o seu?
+                </p>
+                <h2 className="font-bold text-ink text-lg leading-snug">
+                  {overview.name}
+                </h2>
+              </div>
+              <button
+                type="button"
+                onClick={dismissOverview}
+                aria-label="Fechar"
+                className="w-8 h-8 rounded-full text-secondary hover:bg-line/40 shrink-0 text-base"
+              >
+                ✕
+              </button>
+            </div>
+
+            <p className="text-secondary text-sm leading-relaxed mb-4">
+              {overview.shortDescription}
+            </p>
+
+            <div className="bg-beige border border-line rounded-2xl p-3 mb-3">
+              <p className="font-bold text-ink text-sm mb-1">
+                O que costuma acontecer
+              </p>
+              <p className="text-secondary text-sm leading-relaxed">
+                {overview.commonPain}
+              </p>
+            </div>
+
+            {overview.typicalMistakes?.length > 0 && (
+              <div className="bg-paper border border-line rounded-2xl p-3 mb-4">
+                <p className="font-bold text-ink text-sm mb-2">
+                  Sinais típicos desse perfil
+                </p>
+                <ul className="list-disc pl-5 space-y-1 text-secondary text-sm leading-snug">
+                  {overview.typicalMistakes.map((m) => (
+                    <li key={m}>{m}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <p className="text-xs text-secondary leading-relaxed mb-3 px-1">
+              Reconheceu o cenário? Faz o diagnóstico pra confirmar. Se não
+              bater, dá pra voltar e conhecer outros perfis.
+            </p>
+
+            <div className="space-y-2">
+              <Button onClick={confirmWithDiagnostic} className="w-full">
+                Testar se é mesmo esse meu perfil
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={dismissOverview}
+                className="w-full"
+              >
+                Conhecer outros perfis
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
