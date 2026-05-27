@@ -9,6 +9,7 @@ import Button from '../components/Button';
 export default function SupervisorLogin() {
   const { loading, session, supervisor } = useSupervisorSession();
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(null);
@@ -17,11 +18,38 @@ export default function SupervisorLogin() {
     return <Navigate to="/supervisor" replace />;
   }
 
-  const handleSubmit = async (e) => {
+  const handlePasswordLogin = async (e) => {
     e.preventDefault();
     setError(null);
     if (!email.trim()) {
       setError('Coloque seu e-mail.');
+      return;
+    }
+    if (!password) {
+      setError('Coloque sua senha ou use o link mágico abaixo.');
+      return;
+    }
+    setSending(true);
+    try {
+      const client = getAuthClient();
+      const { error: authError } = await client.auth.signInWithPassword({
+        email: email.trim(),
+        password,
+      });
+      if (authError) throw authError;
+      // Sessão chega via onAuthStateChange; o Navigate no topo do componente redireciona.
+    } catch (err) {
+      console.error('signInWithPassword error:', err);
+      setError(err?.message || 'Não foi possível entrar. Confira o e-mail e a senha.');
+    } finally {
+      setSending(false);
+    }
+  };
+
+  const handleMagicLink = async () => {
+    setError(null);
+    if (!email.trim()) {
+      setError('Coloque seu e-mail antes de pedir o link.');
       return;
     }
     setSending(true);
@@ -74,9 +102,9 @@ export default function SupervisorLogin() {
       <PageHeader
         accent="Painel"
         title="Entrar como supervisor"
-        subtitle="Login por link mágico — sem senha."
+        subtitle="Entre com senha ou peça um link mágico no e-mail."
       />
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handlePasswordLogin} className="space-y-4">
         <div>
           <label className="block text-sm font-semibold text-ink mb-1">
             Seu e-mail
@@ -89,10 +117,30 @@ export default function SupervisorLogin() {
             autoComplete="email"
           />
         </div>
+        <div>
+          <label className="block text-sm font-semibold text-ink mb-1">
+            Senha
+          </label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full min-h-12 px-4 rounded-xl border border-line bg-paper text-ink text-base focus:outline-none focus:border-primary"
+            autoComplete="current-password"
+          />
+        </div>
         {error && <p className="text-coral text-sm">{error}</p>}
         <Button type="submit" disabled={sending} className="w-full">
-          {sending ? 'Enviando…' : 'Receber link mágico'}
+          {sending ? 'Entrando…' : 'Entrar'}
         </Button>
+        <button
+          type="button"
+          onClick={handleMagicLink}
+          disabled={sending}
+          className="w-full text-sm text-secondary underline underline-offset-4 disabled:opacity-50"
+        >
+          Sem senha? Receber link mágico no e-mail
+        </button>
       </form>
     </div>
   );
