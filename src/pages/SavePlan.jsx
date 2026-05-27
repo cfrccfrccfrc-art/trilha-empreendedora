@@ -155,7 +155,7 @@ export default function SavePlan() {
       }
 
       setPlanToken(planToken);
-      track('plan_saved', { archetypeId: result?.archetypeId });
+      track('plan_saved', { archetypeId: diagnostic.result?.archetypeId });
       setSuccess(true);
       setTimeout(() => navigate('/minha-trilha', { replace: true }), 600);
     } catch (err) {
