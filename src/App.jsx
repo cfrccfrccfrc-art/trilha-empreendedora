@@ -33,6 +33,7 @@ const AdminDonations      = lazy(() => import('./pages/AdminDonations'));
 const SourceRefresh       = lazy(() => import('./pages/SourceRefresh'));
 const AdminUserStories    = lazy(() => import('./pages/AdminUserStories'));
 const AdminMetrics        = lazy(() => import('./pages/AdminMetrics'));
+const Apresentacao        = lazy(() => import('./pages/Apresentacao'));
 
 function PageFallback() {
   return (
@@ -44,6 +45,9 @@ export default function App() {
   return (
     <Suspense fallback={<PageFallback />}>
       <Routes>
+        {/* Web-only — fora do Layout pra ter controle total da largura */}
+        <Route path="/apresentacao" element={<Apresentacao />} />
+
         <Route element={<Layout />}>
           {/* Core entrepreneur path — eager */}
           <Route path="/" element={<Home />} />
