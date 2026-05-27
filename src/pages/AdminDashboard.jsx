@@ -35,6 +35,8 @@ export default function AdminDashboard() {
   // Diagnóstico independente do hook: chamadas diretas ao client com timeout.
   const [probe, setProbe] = useState({ stage: 'init', err: null, raw: null, ms: null });
   const [probe2, setProbe2] = useState({ stage: 'init', err: null, ms: null });
+  const [probe3, setProbe3] = useState({ stage: 'init', err: null, ms: null, status: null });
+  const [swInfo, setSwInfo] = useState({ count: null });
   useEffect(() => {
     const t0 = Date.now();
     let mounted = true;
@@ -102,8 +104,65 @@ export default function AdminDashboard() {
         setProbe2({ stage: 'getUser-fail', err: e?.message || String(e), ms });
       });
 
+    // Probe 3: fetch direto ao endpoint Supabase (sem usar supabase-js).
+    // Isola se o travamento é da lib (supabase-js) ou da rede em si.
+    const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+    const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+    if (supabaseUrl && anonKey) {
+      const t0c = Date.now();
+      const ac = new AbortController();
+      const tid = setTimeout(() => ac.abort('TIMEOUT 5s'), 5000);
+      fetch(`${supabaseUrl}/auth/v1/settings`, {
+        method: 'GET',
+        headers: { apikey: anonKey },
+        signal: ac.signal,
+      })
+        .then((r) => {
+          clearTimeout(tid);
+          if (!mounted) return;
+          setProbe3({ stage: 'fetch-ok', err: null, ms: Date.now() - t0c, status: r.status });
+        })
+        .catch((e) => {
+          clearTimeout(tid);
+          if (!mounted) return;
+          setProbe3({ stage: 'fetch-fail', err: e?.message || String(e), ms: Date.now() - t0c, status: null });
+        });
+    } else {
+      setProbe3({ stage: 'env-missing', err: 'VITE_SUPABASE_URL ou ANON_KEY ausente', ms: 0, status: null });
+    }
+
+    // SW registrations (pra ver se há algum interceptando)
+    if (typeof navigator !== 'undefined' && navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations().then((regs) => {
+        if (!mounted) return;
+        setSwInfo({
+          count: regs.length,
+          scopes: regs.map((r) => r.scope),
+        });
+      }).catch(() => {
+        if (!mounted) return;
+        setSwInfo({ count: -1 });
+      });
+    }
+
     return () => { mounted = false; };
   }, []);
+
+  const unregisterSW = async () => {
+    try {
+      if (navigator.serviceWorker) {
+        const regs = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(regs.map((r) => r.unregister()));
+      }
+      if ('caches' in window) {
+        const names = await caches.keys();
+        await Promise.all(names.map((n) => caches.delete(n)));
+      }
+    } catch (e) {
+      console.error('unregister SW failed:', e);
+    }
+    window.location.reload();
+  };
 
   const resetAuth = () => {
     try { localStorage.removeItem('trilha_supervisor_auth'); } catch {}
@@ -137,9 +196,11 @@ export default function AdminDashboard() {
     },
     probeGetSession: probe,
     probeGetUser: probe2,
+    probeFetchDirect: probe3,
+    serviceWorker: swInfo,
     href: typeof window !== 'undefined' ? window.location.href : null,
     ua: typeof navigator !== 'undefined' ? navigator.userAgent : null,
-    build: 'admin-debug-4-lock-bypass',
+    build: 'admin-debug-5-fetch-probe',
   },
   null,
   2
@@ -151,6 +212,13 @@ export default function AdminDashboard() {
         className="mt-3 w-full min-h-10 px-4 rounded-xl bg-coral text-paper text-sm font-semibold"
       >
         Limpar sessão e voltar pro login
+      </button>
+      <button
+        type="button"
+        onClick={unregisterSW}
+        className="mt-2 w-full min-h-10 px-4 rounded-xl border border-coral text-coral text-sm font-semibold"
+      >
+        Desregistrar Service Worker e recarregar
       </button>
     </Card>
   );
