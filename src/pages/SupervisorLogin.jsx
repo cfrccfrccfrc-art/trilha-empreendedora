@@ -11,7 +11,6 @@ export default function SupervisorLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [sending, setSending] = useState(false);
-  const [sent, setSent] = useState(false);
   const [error, setError] = useState(null);
 
   if (!loading && session && supervisor) {
@@ -26,7 +25,7 @@ export default function SupervisorLogin() {
       return;
     }
     if (!password) {
-      setError('Coloque sua senha ou use o link mágico abaixo.');
+      setError('Coloque sua senha.');
       return;
     }
     setSending(true);
@@ -49,43 +48,6 @@ export default function SupervisorLogin() {
     }
   };
 
-  const handleMagicLink = async () => {
-    setError(null);
-    if (!email.trim()) {
-      setError('Coloque seu e-mail antes de pedir o link.');
-      return;
-    }
-    setSending(true);
-    try {
-      const client = getAuthClient();
-      const { error: authError } = await client.auth.signInWithOtp({
-        email: email.trim(),
-        options: { emailRedirectTo: `${window.location.origin}/supervisor` },
-      });
-      if (authError) throw authError;
-      setSent(true);
-    } catch (err) {
-      console.error('signInWithOtp error:', err);
-      setError(err?.message || 'Não foi possível enviar o link.');
-    } finally {
-      setSending(false);
-    }
-  };
-
-  if (sent) {
-    return (
-      <div className="space-y-5">
-        <PageHeader accent="Verifique o e-mail" title="Link enviado" />
-        <Card>
-          <p className="text-secondary text-sm leading-relaxed">
-            Mandamos um link mágico pra <strong>{email}</strong>. Clique nele
-            no celular ou computador onde você quer revisar tarefas.
-          </p>
-        </Card>
-      </div>
-    );
-  }
-
   if (!loading && session && !supervisor) {
     return (
       <div className="space-y-5">
@@ -105,7 +67,7 @@ export default function SupervisorLogin() {
       <PageHeader
         accent="Painel"
         title="Entrar como supervisor"
-        subtitle="Entre com senha ou peça um link mágico no e-mail."
+        subtitle="Entre com e-mail e senha cadastrados."
       />
       <form onSubmit={handlePasswordLogin} className="space-y-4">
         <div>
@@ -136,14 +98,6 @@ export default function SupervisorLogin() {
         <Button type="submit" disabled={sending} className="w-full">
           {sending ? 'Entrando…' : 'Entrar'}
         </Button>
-        <button
-          type="button"
-          onClick={handleMagicLink}
-          disabled={sending}
-          className="w-full text-sm text-secondary underline underline-offset-4 disabled:opacity-50"
-        >
-          Sem senha? Receber link mágico no e-mail
-        </button>
       </form>
     </div>
   );
