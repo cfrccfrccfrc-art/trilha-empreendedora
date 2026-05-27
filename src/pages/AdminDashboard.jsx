@@ -32,8 +32,9 @@ export default function AdminDashboard() {
   const [tab, setTab] = useState(SOURCES[0].id);
   const [statusFilter, setStatusFilter] = useState(ALL);
 
-  // Diagnóstico independente do hook: chamada direta ao client com timeout.
+  // Diagnóstico independente do hook: chamadas diretas ao client com timeout.
   const [probe, setProbe] = useState({ stage: 'init', err: null, raw: null, ms: null });
+  const [probe2, setProbe2] = useState({ stage: 'init', err: null, ms: null });
   useEffect(() => {
     const t0 = Date.now();
     let mounted = true;
@@ -57,8 +58,9 @@ export default function AdminDashboard() {
       return () => { mounted = false; };
     }
 
-    const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error('TIMEOUT 7s')), 7000));
-    Promise.race([client.auth.getSession(), timeout])
+    // Probe 1: getSession (path com refresh interno)
+    const timeout1 = new Promise((_, rej) => setTimeout(() => rej(new Error('TIMEOUT 7s')), 7000));
+    Promise.race([client.auth.getSession(), timeout1])
       .then((res) => {
         if (!mounted) return;
         const ms = Date.now() - t0;
@@ -78,8 +80,36 @@ export default function AdminDashboard() {
         setProbe({ stage: 'getSession-fail', err: e?.message || String(e), raw: storageInfo, ms });
       });
 
+    // Probe 2: getUser (path sem auto-refresh do storage, mas hit no servidor)
+    const t0b = Date.now();
+    const timeout2 = new Promise((_, rej) => setTimeout(() => rej(new Error('TIMEOUT 5s')), 5000));
+    Promise.race([client.auth.getUser(), timeout2])
+      .then((res) => {
+        if (!mounted) return;
+        const ms = Date.now() - t0b;
+        const u = res?.data?.user;
+        setProbe2({
+          stage: u ? 'user-ok' : 'no-user',
+          err: res?.error?.message || null,
+          ms,
+          email: u?.email || null,
+          uid: u?.id || null,
+        });
+      })
+      .catch((e) => {
+        if (!mounted) return;
+        const ms = Date.now() - t0b;
+        setProbe2({ stage: 'getUser-fail', err: e?.message || String(e), ms });
+      });
+
     return () => { mounted = false; };
   }, []);
+
+  const resetAuth = () => {
+    try { localStorage.removeItem('trilha_supervisor_auth'); } catch {}
+    try { sessionStorage.clear(); } catch {}
+    window.location.href = '/supervisor/login';
+  };
 
   const source = SOURCES.find((s) => s.id === tab);
   const filtered = useMemo(() => {
@@ -105,15 +135,23 @@ export default function AdminDashboard() {
       supervisorActive: supervisor?.active ?? null,
       isAdmin,
     },
-    probe,
+    probeGetSession: probe,
+    probeGetUser: probe2,
     href: typeof window !== 'undefined' ? window.location.href : null,
     ua: typeof navigator !== 'undefined' ? navigator.userAgent : null,
-    build: 'admin-debug-2',
+    build: 'admin-debug-3',
   },
   null,
   2
 )}
       </pre>
+      <button
+        type="button"
+        onClick={resetAuth}
+        className="mt-3 w-full min-h-10 px-4 rounded-xl bg-coral text-paper text-sm font-semibold"
+      >
+        Limpar sessão e voltar pro login
+      </button>
     </Card>
   );
 
