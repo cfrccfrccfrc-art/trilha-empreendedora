@@ -38,15 +38,67 @@ export default function AdminDashboard() {
     return source.data.filter((r) => (r.status || 'active') === statusFilter);
   }, [source, statusFilter]);
 
-  if (loading) return null;
-  if (!session || !supervisor) return <Navigate to="/supervisor/login" replace />;
-  if (!isAdmin) {
+  // DEBUG BLOCK — sempre renderiza primeiro, mesmo durante loading.
+  // Quando o problema for resolvido, removo este bloco.
+  const debug = (
+    <Card className="border-coral bg-coral/5">
+      <p className="font-bold text-coral text-sm mb-2">⚠ Modo diagnóstico</p>
+      <pre className="text-xs text-ink whitespace-pre-wrap font-mono leading-relaxed">
+{JSON.stringify(
+  {
+    loading,
+    hasSession: !!session,
+    sessionEmail: session?.user?.email || null,
+    hasSupervisor: !!supervisor,
+    supervisorRole: supervisor?.role || null,
+    supervisorActive: supervisor?.active ?? null,
+    isAdmin,
+    build: 'admin-debug-1',
+  },
+  null,
+  2
+)}
+      </pre>
+    </Card>
+  );
+
+  if (loading) {
     return (
-      <div className="space-y-5">
+      <div className="space-y-3">
+        <PageHeader title="Admin (carregando)" />
+        {debug}
+      </div>
+    );
+  }
+
+  if (!session) {
+    return <Navigate to="/supervisor/login" replace />;
+  }
+
+  if (!supervisor) {
+    return (
+      <div className="space-y-3">
         <PageHeader title="Admin" />
+        {debug}
         <Card className="border-coral">
           <p className="text-coral text-sm">
-            Acesso restrito a administradores.
+            Você está autenticada(o), mas não consta na lista de supervisores
+            ativos. Peça pra alguém da equipe te cadastrar.
+          </p>
+        </Card>
+      </div>
+    );
+  }
+
+  if (!isAdmin) {
+    return (
+      <div className="space-y-3">
+        <PageHeader title="Admin" />
+        {debug}
+        <Card className="border-coral">
+          <p className="text-coral text-sm">
+            Acesso restrito a administradores. Você está como{' '}
+            <strong>{supervisor.role || '(sem role)'}</strong>.
           </p>
         </Card>
       </div>
@@ -60,6 +112,8 @@ export default function AdminDashboard() {
         title="Conteúdo"
         subtitle="Conteúdo seed vive no repositório (JSON). Estado do banco fica sob /supervisor."
       />
+
+      {debug}
 
       <FilterChips
         label="Tabela"
