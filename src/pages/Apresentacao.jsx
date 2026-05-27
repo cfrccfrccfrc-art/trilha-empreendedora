@@ -1,4 +1,4 @@
-// Apresentação institucional — versão desktop-friendly, scroll-driven.
+// Apresentação institucional bilíngue (PT/EN).
 // Rota fora do Layout pra ter controle total da largura (web-only).
 // Texto à esquerda, visual à direita, 1 seção por viewport.
 
@@ -7,59 +7,271 @@ import { useNavigate } from 'react-router-dom';
 import archetypesData from '../data/archetypes.json';
 import ShareSheet from '../components/ShareSheet';
 import {
-  HeroNotebook,
   Sparkle,
   WavyUnderline,
   Lightbulb,
-  OpenBook,
-  Pin,
-  StepOne,
-  StepTwo,
-  StepThree,
 } from '../components/Sketches';
 import { track } from '../services/telemetry';
 
-const SHARE_TEXT =
-  'Conheça a Trilha Empreendedora — diagnóstico em 5 minutos, trilha prática de 30 dias, gratuita. Pra quem está começando ou tentando organizar o negócio.';
+const LANG_KEY = 'trilha_apresentacao_lang';
 
-function Section({
-  eyebrow,
-  title,
-  body,
-  visual,
-  bgClass = 'bg-paper',
-  align = 'left',
-}) {
+// ---------- Copy (PT / EN) ----------
+const COPY = {
+  pt: {
+    appName: 'Trilha Empreendedora',
+    share: 'Compartilhar',
+    shareText:
+      'Conheça a Trilha Empreendedora — diagnóstico em 5 minutos, trilha prática de 30 dias, gratuita. Pra quem está começando ou tentando organizar o negócio.',
+
+    heroEyebrow: 'Apresentação',
+    heroLine1: 'Pra quem empreende',
+    heroLine2: 'no escuro.',
+    heroBody:
+      'A Trilha Empreendedora é um diagnóstico gratuito de 5 minutos que entrega uma trilha de 30 dias com missões práticas, casos reais e companheiros de jornada — pra microempreendedor que quer próximo passo claro, não outra biblioteca de PDF.',
+
+    s1Eyebrow: 'A dor',
+    s1Line1: '30 milhões de empreendedores brasileiros.',
+    s1Line2: 'A maioria sozinha no escuro.',
+    s1Body:
+      'Vendem todo dia, mas no fim do mês não sobra. Não sabem se lucram. Não sabem onde começar a organizar. Conteúdo existe — Sebrae, BCB, YouTube têm bibliotecas inteiras. Falta TRILHA. Falta saber qual o próximo passo PRA ELE.',
+    s1Quotes: [
+      'Vendo todo dia, mas no fim do mês não sobra',
+      'Tenho uma ideia, mas nunca testei com cliente',
+      'Faço tudo sozinha e o dia nunca acaba',
+      'Quem vê de perto adora, mas pouca gente chega',
+      'Posto bonito todo dia, mas não sei se sobra lucro',
+    ],
+
+    s2Eyebrow: 'O que falta',
+    s2Line1: 'Catálogo é fácil.',
+    s2Line2: 'Mapa personalizado é raro.',
+    s2Body:
+      'O empreendedor não precisa de biblioteca. Precisa do próximo passo. Conteúdo solto não converte em ação. O que converte é diagnóstico + trilha curta + companheiro que já passou.',
+    s2BeforeLabel: 'Hoje:',
+    s2BeforeQuote:
+      '"Tem 800 artigos no Sebrae. Por onde eu começo?"',
+    s2AfterLabel: 'Com a Trilha:',
+    s2AfterQuote:
+      '"Você é o perfil X. Sua primeira missão é Y. Em 7 dias volta que tem a próxima."',
+
+    s3Eyebrow: 'A inspiração',
+    s3Line1: 'E se Khan Academy fosse um',
+    s3Line2: 'plano de 30 dias pro seu negócio?',
+    s3Body:
+      'Khan provou: educação prática, gratuita e estruturada escala. Self-service entrega qualidade sem call center. A Trilha aplica esse princípio ao microempreendedor brasileiro — sem mensalidade, sem cadastro pra começar, sem operadora.',
+    khanEyebrow: 'De onde vem a ideia',
+    khanTitle: 'Khan Academy',
+    khanBody:
+      'Educação prática, gratuita, no ritmo de quem precisa. Provou que self-service estruturado escala alcance educacional sem perder qualidade.',
+    khanFooter:
+      'A Trilha é uma adaptação livre desse princípio aplicada ao microempreendedor brasileiro.',
+
+    s4Eyebrow: 'Como funciona',
+    s4Line1: '5 minutos.',
+    s4Line2: '13 perfis.',
+    s4Line3: '30 dias.',
+    s4Body:
+      'Diagnóstico curto identifica seu perfil entre 13 caminhos possíveis. Recebe trilha de 4 missões práticas (uma por semana), com companheiros reais que já viveram a mesma fase — e casos curtos que mostram como a coisa joga no Brasil.',
+    mock1Progress: 'Pergunta 4 de 35',
+    mock1Question:
+      'Você sabe quanto entrou e saiu do negócio no último mês?',
+    mock1Options: ['Sim, com detalhes', 'Sim, mais ou menos', 'Não', 'Não sei'],
+    mock2Eyebrow: 'Seu perfil',
+    mock2Profile: '"Vendo todo dia, mas no fim do mês não sobra"',
+    mock2FirstMissionLabel: 'Sua primeira missão',
+    mock2FirstMission: 'Anotar entradas e saídas por 7 dias',
+    mock2WeekLabels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'],
+    mock3Eyebrow: 'Quem fez antes de você',
+    mock3PersonaTitle: 'Dona Marlene, a quitanda em Olinda',
+    mock3Day1: 'Dia 1',
+    mock3Day1Body:
+      "Começou confiante, mas só lembrou de anotar à noite. Valor: 'mais ou menos R$ 12'.",
+    mock3DaySun: 'Domingo',
+    mock3DaySunBody:
+      "Somou tudo: sobrou R$ 260, e ela jurava ter 'uns R$ 800'.",
+
+    s5Eyebrow: 'Como escala',
+    s5Line1: 'Self-service.',
+    s5Line2: 'Sem fricção.',
+    s5Body:
+      'Tudo entregue por código. Nenhuma operadora atendendo zap, nenhuma mensalidade, nenhum cadastro obrigatório. Conteúdo curado pra alta densidade. Mantida por doação Pix voluntária.',
+    scaleMainLabel: 'itens de conteúdo curado, no ar',
+    scaleProfilesLabel: 'perfis cobertos',
+    scaleCompanionsLabel: 'companheiros',
+    scaleOperatorsLabel: 'atendentes',
+
+    s6Eyebrow: 'O pulo do gato',
+    s6Line1: 'Trilha é o topo do funil.',
+    s6Line2: 'Pescadores fecha.',
+    s6Body:
+      'Quando ler conteúdo não basta, o empreendedor é encaminhado pra apoio humano direto do Projeto Pescadores — parceiro que atende casos individualmente, gratuito. A Trilha educa, qualifica e direciona quem precisa de gente. Pescadores recebe casos com base já trabalhada.',
+    funnelTopLabel: 'milhares de visitas',
+    funnelMidLabel: 'diagnóstico em 5 min',
+    funnelMid2Label: 'trilha de 30 dias',
+    funnelBottomLabel: 'quem trava pede apoio humano',
+    funnelOutLabel: 'Projeto Pescadores',
+
+    s7Eyebrow: 'A visão',
+    s7TitlePre: 'Cada empreendedora que termina os 30 dias é',
+    s7TitleHighlight: 'um negócio menos no escuro.',
+    s7Body:
+      'Conhece quem precisa? Compartilha. Tem parceria possível (Sebrae regional, igreja de bairro, CRAS, programa social)? Manda mensagem. A app é gratuita e cresce com quem espalha.',
+    s7CtaPrimary: 'Compartilhar a Trilha →',
+    s7CtaSecondary: 'Falar com o Pescadores',
+    s7Footer: 'Trilha Empreendedora · gratuita · sem fins lucrativos · ',
+  },
+  en: {
+    appName: 'Trilha Empreendedora',
+    share: 'Share',
+    shareText:
+      'Check out Trilha Empreendedora — a 5-minute free diagnostic and a practical 30-day journey for micro-entrepreneurs. For people just starting or trying to organize their business.',
+
+    heroEyebrow: 'The pitch',
+    heroLine1: 'For those who run a business',
+    heroLine2: 'in the dark.',
+    heroBody:
+      'Trilha Empreendedora ("Entrepreneur Trail") is a free 5-minute diagnostic that delivers a 30-day journey with practical missions, real cases, and peer companions — for the Brazilian micro-entrepreneur who wants a clear next step, not yet another PDF library.',
+
+    s1Eyebrow: 'The pain',
+    s1Line1: '30 million Brazilian entrepreneurs.',
+    s1Line2: 'Most of them alone in the dark.',
+    s1Body:
+      "They sell every day, but nothing's left at month-end. They don't know if they're profitable. They don't know where to start. Content exists — Sebrae, the Central Bank, YouTube are full libraries. What's missing is a JOURNEY. Knowing what the next step is FOR THEM.",
+    s1Quotes: [
+      "I sell every day, but nothing's left at month-end",
+      'I have an idea, but never tested it with a customer',
+      'I do everything alone and the day never ends',
+      'Those who see it up close love it, but few find their way to me',
+      "I post pretty every day, but don't know if I'm making any profit",
+    ],
+
+    s2Eyebrow: "What's missing",
+    s2Line1: 'A catalog is easy.',
+    s2Line2: 'A personalized map is rare.',
+    s2Body:
+      "Entrepreneurs don't need a library. They need the next step. Loose content doesn't convert to action. What converts is diagnostic + short journey + a companion who's been there.",
+    s2BeforeLabel: 'Today:',
+    s2BeforeQuote:
+      "\"There are 800 articles on Sebrae. Where do I even start?\"",
+    s2AfterLabel: 'With Trilha:',
+    s2AfterQuote:
+      "\"You're profile X. Your first mission is Y. Come back in 7 days for the next.\"",
+
+    s3Eyebrow: 'The inspiration',
+    s3Line1: 'What if Khan Academy were a',
+    s3Line2: '30-day plan for your business?',
+    s3Body:
+      'Khan proved it: practical, free, structured education scales. Self-service delivers quality without a call center. Trilha applies that principle to the Brazilian micro-entrepreneur — no subscription, no signup to begin, no operator.',
+    khanEyebrow: 'Where the idea comes from',
+    khanTitle: 'Khan Academy',
+    khanBody:
+      'Practical, free education, at the pace of who needs it. Proved that structured self-service can scale educational reach without sacrificing quality.',
+    khanFooter:
+      'Trilha is a free-form adaptation of that principle, applied to the Brazilian micro-entrepreneur.',
+
+    s4Eyebrow: 'How it works',
+    s4Line1: '5 minutes.',
+    s4Line2: '13 profiles.',
+    s4Line3: '30 days.',
+    s4Body:
+      "A short diagnostic identifies your profile among 13 possible paths. You get a journey of 4 practical missions (one per week), with real companions who've lived the same stage — and short cases that show how things play out in Brazil.",
+    mock1Progress: 'Question 4 of 35',
+    mock1Question:
+      'Do you know how much came in and went out of the business last month?',
+    mock1Options: ['Yes, in detail', 'Yes, roughly', 'No', "Don't know"],
+    mock2Eyebrow: 'Your profile',
+    mock2Profile: '"I sell every day, but nothing\'s left at month-end"',
+    mock2FirstMissionLabel: 'Your first mission',
+    mock2FirstMission: 'Track income and expenses for 7 days',
+    mock2WeekLabels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+    mock3Eyebrow: 'Someone who did it before you',
+    mock3PersonaTitle: 'Dona Marlene, the grocery shop in Olinda',
+    mock3Day1: 'Day 1',
+    mock3Day1Body:
+      "Started confident, but only remembered to log at night. Amount: 'around R$ 12'.",
+    mock3DaySun: 'Sunday',
+    mock3DaySunBody:
+      "Added it all up: R$ 260 left over — and she swore she had 'about R$ 800'.",
+
+    s5Eyebrow: 'How it scales',
+    s5Line1: 'Self-service.',
+    s5Line2: 'No friction.',
+    s5Body:
+      'Everything delivered by code. No operators answering WhatsApp, no subscription, no required signup. Curated content for high density. Supported by voluntary Pix donations.',
+    scaleMainLabel: 'curated content items, live',
+    scaleProfilesLabel: 'profiles covered',
+    scaleCompanionsLabel: 'companions',
+    scaleOperatorsLabel: 'operators',
+
+    s6Eyebrow: 'The twist',
+    s6Line1: 'Trilha is the top of the funnel.',
+    s6Line2: 'Pescadores closes it.',
+    s6Body:
+      "When reading content isn't enough, the entrepreneur is referred to direct human support from Projeto Pescadores — a partner that handles cases individually, free of charge. Trilha educates, qualifies, and routes those who need human help. Pescadores receives cases with the foundations already in place.",
+    funnelTopLabel: 'thousands of visits',
+    funnelMidLabel: '5-minute diagnostic',
+    funnelMid2Label: '30-day journey',
+    funnelBottomLabel: 'those stuck ask for human help',
+    funnelOutLabel: 'Projeto Pescadores',
+
+    s7Eyebrow: 'The vision',
+    s7TitlePre: 'Every entrepreneur who completes the 30 days is',
+    s7TitleHighlight: 'one less business in the dark.',
+    s7Body:
+      'Know someone who needs this? Share it. See a possible partnership (a regional business support agency, a local church, a community center, a social program)? Reach out. The app is free and grows with the people who spread the word.',
+    s7CtaPrimary: 'Share Trilha →',
+    s7CtaSecondary: 'Talk to Pescadores',
+    s7Footer: 'Trilha Empreendedora · free · non-profit · ',
+  },
+};
+
+// ---------- Layout primitive ----------
+function Section({ children, bgClass = 'bg-paper' }) {
   return (
     <section
       className={`${bgClass} min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24`}
     >
       <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        <div
-          className={`space-y-5 ${align === 'right' ? 'lg:order-2' : ''}`}
-        >
-          {eyebrow && (
-            <p className="font-hand text-secondary text-xl leading-tight">
-              {eyebrow}
-            </p>
-          )}
-          <h2 className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
-            {title}
-          </h2>
-          {typeof body === 'string' ? (
-            <p className="text-secondary text-lg sm:text-xl leading-relaxed max-w-xl">
-              {body}
-            </p>
-          ) : (
-            body
-          )}
-        </div>
-        <div className={align === 'right' ? 'lg:order-1' : ''}>{visual}</div>
+        {children}
       </div>
     </section>
   );
 }
 
+function TextBlock({ eyebrow, titleLines, body, align = 'left' }) {
+  return (
+    <div className={`space-y-5 ${align === 'right' ? 'lg:order-2' : ''}`}>
+      {eyebrow && (
+        <p className="font-hand text-secondary text-xl leading-tight">
+          {eyebrow}
+        </p>
+      )}
+      <h2 className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
+        {titleLines.map((line, i) => (
+          <span key={i}>
+            {line.highlight ? (
+              <span className="text-primary">{line.text}</span>
+            ) : (
+              line.text
+            )}
+            {i < titleLines.length - 1 && <br />}
+          </span>
+        ))}
+      </h2>
+      {body && (
+        <p className="text-secondary text-lg sm:text-xl leading-relaxed max-w-xl">
+          {body}
+        </p>
+      )}
+    </div>
+  );
+}
+
+function VisualBlock({ children, align = 'left' }) {
+  return <div className={align === 'right' ? 'lg:order-1' : ''}>{children}</div>;
+}
+
+// ---------- Visuals ----------
 function PhoneFrame({ children, className = '' }) {
   return (
     <div
@@ -75,7 +287,7 @@ function PhoneFrame({ children, className = '' }) {
   );
 }
 
-function FunnelVisual() {
+function FunnelVisual({ t }) {
   return (
     <div className="relative mx-auto max-w-md">
       <svg viewBox="0 0 400 360" className="w-full">
@@ -96,42 +308,42 @@ function FunnelVisual() {
           y="80"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="22"
+          fontSize="20"
           fontWeight="700"
           fill="#2B2A28"
         >
-          milhares de visitas
+          {t.funnelTopLabel}
         </text>
         <text
           x="200"
           y="135"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="18"
+          fontSize="17"
           fontWeight="600"
           fill="#5A574F"
         >
-          diagnóstico em 5 min
+          {t.funnelMidLabel}
         </text>
         <text
           x="200"
           y="180"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="16"
+          fontSize="15"
           fill="#5A574F"
         >
-          trilha de 30 dias
+          {t.funnelMid2Label}
         </text>
         <text
           x="200"
           y="215"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="14"
+          fontSize="13"
           fill="#5A574F"
         >
-          quem trava pede apoio humano
+          {t.funnelBottomLabel}
         </text>
         <path
           d="M 200 240 L 200 290"
@@ -154,11 +366,11 @@ function FunnelVisual() {
           y="335"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="18"
+          fontSize="17"
           fontWeight="700"
           fill="#D8EEF5"
         >
-          Projeto Pescadores
+          {t.funnelOutLabel}
         </text>
       </svg>
     </div>
@@ -201,20 +413,13 @@ function NetworkVisual() {
   );
 }
 
-function PainQuotes() {
-  const sampled = [
-    'Vendo todo dia, mas no fim do mês não sobra',
-    'Tenho uma ideia, mas nunca testei com cliente',
-    'Faço tudo sozinha e o dia nunca acaba',
-    'Quem vê de perto adora, mas pouca gente chega',
-    'Posto bonito todo dia, mas não sei se sobra lucro',
-  ];
+function PainQuotes({ quotes }) {
   return (
     <div className="space-y-3 max-w-md mx-auto">
-      {sampled.map((q, i) => (
+      {quotes.map((q, i) => (
         <div
           key={q}
-          className="bg-paper border border-line rounded-2xl p-4 shadow-sm transform"
+          className="bg-paper border border-line rounded-2xl p-4 shadow-sm"
           style={{
             transform: `rotate(${i % 2 === 0 ? -0.8 : 0.8}deg) translateX(${
               i * 4
@@ -232,51 +437,43 @@ function PainQuotes() {
   );
 }
 
-function KhanCitationVisual() {
+function KhanCitationVisual({ t }) {
   return (
     <div className="bg-beige border border-line rounded-3xl p-8 max-w-md mx-auto shadow-sm">
       <div className="flex items-start gap-4 mb-4">
         <Lightbulb className="w-12 h-12 shrink-0" />
         <p className="font-hand text-secondary text-lg leading-tight">
-          De onde vem a ideia
+          {t.khanEyebrow}
         </p>
       </div>
       <p className="font-sans font-bold text-2xl text-ink leading-snug mb-3">
-        Khan Academy
+        {t.khanTitle}
       </p>
-      <p className="text-secondary text-base leading-relaxed">
-        Educação prática, gratuita, no ritmo de quem precisa. Provou que
-        self-service estruturado escala alcance educacional sem perder
-        qualidade.
-      </p>
+      <p className="text-secondary text-base leading-relaxed">{t.khanBody}</p>
       <div className="border-t border-line pt-3 mt-4">
         <p className="text-xs text-secondary italic leading-snug">
-          A Trilha é uma adaptação livre desse princípio aplicada ao
-          microempreendedor brasileiro.
+          {t.khanFooter}
         </p>
       </div>
     </div>
   );
 }
 
-function ProductMocks() {
+function ProductMocks({ t }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
       <PhoneFrame className="rotate-[-3deg]">
-        <p className="font-hand text-secondary text-sm mb-2">Pergunta 4 de 35</p>
+        <p className="font-hand text-secondary text-sm mb-2">
+          {t.mock1Progress}
+        </p>
         <div className="w-full h-1.5 bg-line rounded-full mb-5 overflow-hidden">
           <div className="h-full bg-primary w-[11%]" />
         </div>
         <h3 className="font-bold text-ink text-lg leading-tight mb-4">
-          Você sabe quanto entrou e saiu do negócio no último mês?
+          {t.mock1Question}
         </h3>
         <div className="space-y-2">
-          {[
-            'Sim, com detalhes',
-            'Sim, mais ou menos',
-            'Não',
-            'Não sei',
-          ].map((label, i) => (
+          {t.mock1Options.map((label, i) => (
             <div
               key={label}
               className={`text-sm rounded-xl border px-3 py-2 ${
@@ -292,20 +489,20 @@ function ProductMocks() {
       </PhoneFrame>
 
       <PhoneFrame className="sm:translate-y-6">
-        <p className="font-hand text-secondary text-sm">Seu perfil</p>
+        <p className="font-hand text-secondary text-sm">{t.mock2Eyebrow}</p>
         <h3 className="font-bold text-ink text-base leading-snug mb-3">
-          "Vendo todo dia, mas no fim do mês não sobra"
+          {t.mock2Profile}
         </h3>
         <div className="bg-primaryLight/40 border border-primary rounded-xl p-3 mb-3">
           <p className="font-hand text-secondary text-xs mb-1">
-            Sua primeira missão
+            {t.mock2FirstMissionLabel}
           </p>
           <p className="text-ink text-sm font-semibold">
-            Anotar entradas e saídas por 7 dias
+            {t.mock2FirstMission}
           </p>
         </div>
         <div className="space-y-1.5">
-          {['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'].map((w) => (
+          {t.mock2WeekLabels.map((w) => (
             <div
               key={w}
               className="flex gap-2 items-center text-xs text-secondary"
@@ -319,23 +516,22 @@ function ProductMocks() {
 
       <PhoneFrame className="rotate-[2deg]">
         <p className="font-hand text-secondary text-sm mb-1">
-          Quem fez antes de você
+          {t.mock3Eyebrow}
         </p>
         <h3 className="font-bold text-ink text-base leading-snug mb-3">
-          Dona Marlene, a quitanda em Olinda
+          {t.mock3PersonaTitle}
         </h3>
         <div className="space-y-2">
           <div className="bg-paper border border-line rounded-xl p-2">
-            <p className="font-hand text-primary text-xs">Dia 1</p>
+            <p className="font-hand text-primary text-xs">{t.mock3Day1}</p>
             <p className="text-ink text-xs leading-snug">
-              Começou confiante, mas só lembrou de anotar à noite. Valor:
-              'mais ou menos R$ 12'.
+              {t.mock3Day1Body}
             </p>
           </div>
           <div className="bg-paper border border-line rounded-xl p-2">
-            <p className="font-hand text-primary text-xs">Domingo</p>
+            <p className="font-hand text-primary text-xs">{t.mock3DaySun}</p>
             <p className="text-ink text-xs leading-snug">
-              Somou tudo: sobrou R$ 260, e ela jurava ter 'uns R$ 800'.
+              {t.mock3DaySunBody}
             </p>
           </div>
         </div>
@@ -344,46 +540,68 @@ function ProductMocks() {
   );
 }
 
-function ScaleNumbers() {
+function ScaleNumbers({ t }) {
   return (
     <div className="space-y-8 max-w-md mx-auto text-center">
       <div>
         <p className="font-sans font-bold text-[8rem] sm:text-[9rem] text-primary leading-none">
           184
         </p>
-        <p className="text-secondary text-lg mt-2">
-          itens de conteúdo curado, no ar
-        </p>
+        <p className="text-secondary text-lg mt-2">{t.scaleMainLabel}</p>
       </div>
       <div className="grid grid-cols-3 gap-4 pt-4">
         <div>
           <p className="font-sans font-bold text-3xl text-ink">13</p>
-          <p className="text-xs text-secondary">perfis cobertos</p>
+          <p className="text-xs text-secondary">{t.scaleProfilesLabel}</p>
         </div>
         <div>
           <p className="font-sans font-bold text-3xl text-ink">28</p>
-          <p className="text-xs text-secondary">companheiros</p>
+          <p className="text-xs text-secondary">{t.scaleCompanionsLabel}</p>
         </div>
         <div>
           <p className="font-sans font-bold text-3xl text-ink">0</p>
-          <p className="text-xs text-secondary">atendentes</p>
+          <p className="text-xs text-secondary">{t.scaleOperatorsLabel}</p>
         </div>
       </div>
     </div>
   );
 }
 
+// ---------- Page ----------
 export default function Apresentacao() {
   const navigate = useNavigate();
   const [shareOpen, setShareOpen] = useState(false);
+  const [lang, setLang] = useState(() => {
+    try {
+      const saved = localStorage.getItem(LANG_KEY);
+      if (saved === 'pt' || saved === 'en') return saved;
+    } catch {
+      // ignore
+    }
+    return 'pt';
+  });
+  const t = COPY[lang];
 
   useEffect(() => {
-    track('apresentacao_view');
+    track('apresentacao_view', { lang });
     document.documentElement.style.scrollBehavior = 'smooth';
+    document.documentElement.setAttribute('lang', lang === 'en' ? 'en' : 'pt-BR');
     return () => {
       document.documentElement.style.scrollBehavior = '';
+      document.documentElement.setAttribute('lang', 'pt-BR');
     };
-  }, []);
+  }, [lang]);
+
+  const switchLang = (next) => {
+    if (next === lang) return;
+    setLang(next);
+    try {
+      localStorage.setItem(LANG_KEY, next);
+    } catch {
+      // ignore
+    }
+    track('apresentacao_lang_switched', { to: next });
+  };
 
   const activeCount = archetypesData.filter((a) => a.status === 'active')
     .length;
@@ -392,7 +610,7 @@ export default function Apresentacao() {
     <div className="bg-paper min-h-screen overflow-x-hidden">
       {/* Top bar minimal */}
       <div className="fixed top-0 left-0 right-0 z-20 bg-paper/85 backdrop-blur border-b border-line">
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 py-3 flex items-center justify-between">
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 py-3 flex items-center justify-between gap-3">
           <button
             type="button"
             onClick={() => navigate('/')}
@@ -400,19 +618,57 @@ export default function Apresentacao() {
           >
             <Sparkle className="w-5 h-5" />
             <span className="font-hand text-secondary text-base">
-              Trilha Empreendedora
+              {t.appName}
             </span>
           </button>
-          <button
-            type="button"
-            onClick={() => {
-              track('apresentacao_share_clicked');
-              setShareOpen(true);
-            }}
-            className="text-primary text-sm font-semibold"
-          >
-            Compartilhar →
-          </button>
+
+          <div className="flex items-center gap-4">
+            {/* Lang toggle */}
+            <div
+              role="group"
+              aria-label="Idioma / Language"
+              className="flex items-center text-sm border border-line rounded-full overflow-hidden"
+            >
+              <button
+                type="button"
+                onClick={() => switchLang('pt')}
+                aria-pressed={lang === 'pt'}
+                className={`px-3 py-1 font-semibold transition-colors ${
+                  lang === 'pt'
+                    ? 'bg-ink text-paper'
+                    : 'text-secondary hover:bg-line/40'
+                }`}
+              >
+                PT
+              </button>
+              <button
+                type="button"
+                onClick={() => switchLang('en')}
+                aria-pressed={lang === 'en'}
+                className={`px-3 py-1 font-semibold transition-colors ${
+                  lang === 'en'
+                    ? 'bg-ink text-paper'
+                    : 'text-secondary hover:bg-line/40'
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => {
+                track('apresentacao_share_clicked', {
+                  placement: 'topbar',
+                  lang,
+                });
+                setShareOpen(true);
+              }}
+              className="text-primary text-sm font-semibold"
+            >
+              {t.share} →
+            </button>
+          </div>
         </div>
       </div>
 
@@ -420,151 +676,149 @@ export default function Apresentacao() {
       <section className="min-h-screen flex items-center px-6 sm:px-10 py-24 sm:py-32">
         <div className="max-w-6xl mx-auto w-full">
           <p className="font-hand text-secondary text-xl mb-6">
-            Apresentação
+            {t.heroEyebrow}
           </p>
           <h1 className="font-sans font-bold text-5xl sm:text-7xl lg:text-[6.5rem] text-ink leading-[0.95] mb-8">
-            Pra quem empreende
+            {t.heroLine1}
             <br />
-            no escuro.
+            {t.heroLine2}
           </h1>
           <WavyUnderline className="w-64 h-4 mb-8" />
           <p className="text-secondary text-xl sm:text-2xl leading-relaxed max-w-3xl">
-            A Trilha Empreendedora é um diagnóstico gratuito de 5 minutos
-            que entrega uma trilha de 30 dias com missões práticas, casos
-            reais e companheiros de jornada — pra microempreendedor que
-            quer próximo passo claro, não outra biblioteca de PDF.
+            {t.heroBody}
           </p>
         </div>
       </section>
 
       {/* 1 — A DOR */}
-      <Section
-        bgClass="bg-beige"
-        eyebrow="A dor"
-        title={
-          <>
-            30 milhões de empreendedores brasileiros.
-            <br />
-            <span className="text-primary">A maioria sozinha no escuro.</span>
-          </>
-        }
-        body="Vendem todo dia, mas no fim do mês não sobra. Não sabem se lucram. Não sabem onde começar a organizar. Conteúdo existe — Sebrae, BCB, YouTube têm bibliotecas inteiras. Falta TRILHA. Falta saber qual o próximo passo PRA ELE."
-        visual={<PainQuotes />}
-      />
+      <Section bgClass="bg-beige">
+        <TextBlock
+          eyebrow={t.s1Eyebrow}
+          titleLines={[
+            { text: t.s1Line1, highlight: false },
+            { text: t.s1Line2, highlight: true },
+          ]}
+          body={t.s1Body}
+        />
+        <VisualBlock>
+          <PainQuotes quotes={t.s1Quotes} />
+        </VisualBlock>
+      </Section>
 
       {/* 2 — O QUE FALTA */}
-      <Section
-        eyebrow="O que falta"
-        title={
-          <>
-            Catálogo é fácil.
-            <br />
-            <span className="text-primary">Mapa personalizado é raro.</span>
-          </>
-        }
-        body="O empreendedor não precisa de biblioteca. Precisa do próximo passo. Conteúdo solto não converte em ação. O que converte é diagnóstico + trilha curta + companheiro que já passou."
-        align="right"
-        visual={
+      <Section>
+        <TextBlock
+          eyebrow={t.s2Eyebrow}
+          titleLines={[
+            { text: t.s2Line1, highlight: false },
+            { text: t.s2Line2, highlight: true },
+          ]}
+          body={t.s2Body}
+          align="right"
+        />
+        <VisualBlock align="right">
           <div className="bg-paper border border-line rounded-3xl p-8 max-w-md mx-auto shadow-sm">
-            <p className="text-secondary text-sm mb-3">Hoje:</p>
+            <p className="text-secondary text-sm mb-3">{t.s2BeforeLabel}</p>
             <p className="text-ink text-lg mb-6 leading-snug">
-              "Tem 800 artigos no Sebrae. Por onde eu começo?"
+              {t.s2BeforeQuote}
             </p>
-            <p className="text-secondary text-sm mb-3">Com a Trilha:</p>
-            <p className="text-ink text-lg leading-snug">
-              "Você é o perfil X. Sua primeira missão é Y. Em 7 dias volta
-              que tem a próxima."
-            </p>
+            <p className="text-secondary text-sm mb-3">{t.s2AfterLabel}</p>
+            <p className="text-ink text-lg leading-snug">{t.s2AfterQuote}</p>
           </div>
-        }
-      />
+        </VisualBlock>
+      </Section>
 
       {/* 3 — INSPIRAÇÃO */}
-      <Section
-        bgClass="bg-beige"
-        eyebrow="A inspiração"
-        title={
-          <>
-            E se Khan Academy fosse um
-            <br />
-            <span className="text-primary">plano de 30 dias pro seu negócio?</span>
-          </>
-        }
-        body="Khan provou: educação prática, gratuita e estruturada escala. Self-service entrega qualidade sem call center. A Trilha aplica esse princípio ao microempreendedor brasileiro — sem mensalidade, sem cadastro pra começar, sem operadora."
-        visual={<KhanCitationVisual />}
-      />
+      <Section bgClass="bg-beige">
+        <TextBlock
+          eyebrow={t.s3Eyebrow}
+          titleLines={[
+            { text: t.s3Line1, highlight: false },
+            { text: t.s3Line2, highlight: true },
+          ]}
+          body={t.s3Body}
+        />
+        <VisualBlock>
+          <KhanCitationVisual t={t} />
+        </VisualBlock>
+      </Section>
 
       {/* 4 — COMO FUNCIONA */}
-      <Section
-        eyebrow="Como funciona"
-        title={
-          <>
-            5 minutos.
-            <br />
-            {activeCount} perfis.
-            <br />
-            <span className="text-primary">30 dias.</span>
-          </>
-        }
-        body="Diagnóstico curto identifica seu perfil entre 13 caminhos possíveis. Recebe trilha de 4 missões práticas (uma por semana), com companheiros reais que já viveram a mesma fase — e casos curtos que mostram como a coisa joga no Brasil."
-        align="right"
-        visual={<ProductMocks />}
-      />
+      <Section>
+        <TextBlock
+          eyebrow={t.s4Eyebrow}
+          titleLines={[
+            { text: t.s4Line1, highlight: false },
+            {
+              text: `${activeCount}${t.s4Line2.replace('13', '')}`,
+              highlight: false,
+            },
+            { text: t.s4Line3, highlight: true },
+          ]}
+          body={t.s4Body}
+          align="right"
+        />
+        <VisualBlock align="right">
+          <ProductMocks t={t} />
+        </VisualBlock>
+      </Section>
 
       {/* 5 — ESCALABILIDADE */}
-      <Section
-        bgClass="bg-beige"
-        eyebrow="Como escala"
-        title={
-          <>
-            Self-service.
-            <br />
-            <span className="text-primary">Sem fricção.</span>
-          </>
-        }
-        body="Tudo entregue por código. Nenhuma operadora atendendo zap, nenhuma mensalidade, nenhum cadastro obrigatório. Conteúdo curado pra alta densidade. Mantida por doação Pix voluntária."
-        visual={<ScaleNumbers />}
-      />
+      <Section bgClass="bg-beige">
+        <TextBlock
+          eyebrow={t.s5Eyebrow}
+          titleLines={[
+            { text: t.s5Line1, highlight: false },
+            { text: t.s5Line2, highlight: true },
+          ]}
+          body={t.s5Body}
+        />
+        <VisualBlock>
+          <ScaleNumbers t={t} />
+        </VisualBlock>
+      </Section>
 
       {/* 6 — PESCADORES FUNIL */}
-      <Section
-        eyebrow="O pulo do gato"
-        title={
-          <>
-            Trilha é o topo do funil.
-            <br />
-            <span className="text-primary">Pescadores fecha.</span>
-          </>
-        }
-        body="Quando ler conteúdo não basta, o empreendedor é encaminhado pra apoio humano direto do Projeto Pescadores — parceiro que atende casos individualmente, gratuito. A Trilha educa, qualifica e direciona quem precisa de gente. Pescadores recebe casos com base já trabalhada."
-        align="right"
-        visual={<FunnelVisual />}
-      />
+      <Section>
+        <TextBlock
+          eyebrow={t.s6Eyebrow}
+          titleLines={[
+            { text: t.s6Line1, highlight: false },
+            { text: t.s6Line2, highlight: true },
+          ]}
+          body={t.s6Body}
+          align="right"
+        />
+        <VisualBlock align="right">
+          <FunnelVisual t={t} />
+        </VisualBlock>
+      </Section>
 
       {/* 7 — VISÃO + CTA */}
       <section className="bg-ink text-paper min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24">
         <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-6">
-            <p className="font-hand text-paper/70 text-xl">A visão</p>
+            <p className="font-hand text-paper/70 text-xl">{t.s7Eyebrow}</p>
             <h2 className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-              Cada empreendedora que termina os 30 dias é{' '}
-              <span className="text-highlight">um negócio menos no escuro</span>.
+              {t.s7TitlePre}{' '}
+              <span className="text-highlight">{t.s7TitleHighlight}</span>
             </h2>
             <p className="text-paper/80 text-lg sm:text-xl leading-relaxed">
-              Conhece quem precisa? Compartilha. Tem parceria possível
-              (Sebrae regional, igreja de bairro, CRAS, programa social)?
-              Manda mensagem. A app é gratuita e cresce com quem espalha.
+              {t.s7Body}
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
               <button
                 type="button"
                 onClick={() => {
-                  track('apresentacao_share_clicked', { placement: 'final' });
+                  track('apresentacao_share_clicked', {
+                    placement: 'final',
+                    lang,
+                  });
                   setShareOpen(true);
                 }}
                 className="bg-highlight text-ink font-bold px-6 py-3 rounded-2xl hover:bg-highlight/90 transition-colors"
               >
-                Compartilhar a Trilha →
+                {t.s7CtaPrimary}
               </button>
               <a
                 href="https://projetopescadores.com.br/contato"
@@ -573,15 +827,16 @@ export default function Apresentacao() {
                 onClick={() =>
                   track('apresentacao_pescadores_clicked', {
                     placement: 'final',
+                    lang,
                   })
                 }
                 className="border border-paper/40 text-paper px-6 py-3 rounded-2xl hover:bg-paper/10 transition-colors"
               >
-                Falar com o Pescadores
+                {t.s7CtaSecondary}
               </a>
             </div>
             <p className="text-paper/50 text-sm pt-4">
-              Trilha Empreendedora · gratuita · sem fins lucrativos ·{' '}
+              {t.s7Footer}
               <button
                 type="button"
                 onClick={() => navigate('/')}
@@ -598,7 +853,7 @@ export default function Apresentacao() {
       <ShareSheet
         open={shareOpen}
         onClose={() => setShareOpen(false)}
-        text={SHARE_TEXT}
+        text={t.shareText}
       />
     </div>
   );
