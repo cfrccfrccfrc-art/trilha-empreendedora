@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import archetypes from '../data/archetypes.json';
 import tasks from '../data/taskTemplates.json';
@@ -8,6 +8,7 @@ import opportunities from '../data/opportunities.json';
 import feedback from '../data/feedbackTemplates.json';
 import rubrics from '../data/rubrics.json';
 import { useSupervisorSession } from '../utils/useSupervisorSession';
+import { getAuthClient } from '../services/supabaseClient';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
@@ -31,6 +32,55 @@ export default function AdminDashboard() {
   const [tab, setTab] = useState(SOURCES[0].id);
   const [statusFilter, setStatusFilter] = useState(ALL);
 
+  // Diagnóstico independente do hook: chamada direta ao client com timeout.
+  const [probe, setProbe] = useState({ stage: 'init', err: null, raw: null, ms: null });
+  useEffect(() => {
+    const t0 = Date.now();
+    let mounted = true;
+
+    let storageInfo;
+    try {
+      const raw = localStorage.getItem('trilha_supervisor_auth');
+      storageInfo = raw ? `present (${raw.length} chars)` : 'MISSING';
+    } catch (e) {
+      storageInfo = `read-err: ${e?.message || e}`;
+    }
+    if (mounted) {
+      setProbe((p) => ({ ...p, stage: 'storage-read', raw: storageInfo }));
+    }
+
+    let client;
+    try {
+      client = getAuthClient();
+    } catch (e) {
+      if (mounted) setProbe((p) => ({ ...p, stage: 'client-init-fail', err: e?.message || String(e) }));
+      return () => { mounted = false; };
+    }
+
+    const timeout = new Promise((_, rej) => setTimeout(() => rej(new Error('TIMEOUT 7s')), 7000));
+    Promise.race([client.auth.getSession(), timeout])
+      .then((res) => {
+        if (!mounted) return;
+        const ms = Date.now() - t0;
+        const s = res?.data?.session;
+        setProbe({
+          stage: s ? 'session-ok' : 'no-session',
+          err: res?.error?.message || null,
+          raw: storageInfo,
+          ms,
+          email: s?.user?.email || null,
+          uid: s?.user?.id || null,
+        });
+      })
+      .catch((e) => {
+        if (!mounted) return;
+        const ms = Date.now() - t0;
+        setProbe({ stage: 'getSession-fail', err: e?.message || String(e), raw: storageInfo, ms });
+      });
+
+    return () => { mounted = false; };
+  }, []);
+
   const source = SOURCES.find((s) => s.id === tab);
   const filtered = useMemo(() => {
     if (!source) return [];
@@ -46,14 +96,19 @@ export default function AdminDashboard() {
       <pre className="text-xs text-ink whitespace-pre-wrap font-mono leading-relaxed">
 {JSON.stringify(
   {
-    loading,
-    hasSession: !!session,
-    sessionEmail: session?.user?.email || null,
-    hasSupervisor: !!supervisor,
-    supervisorRole: supervisor?.role || null,
-    supervisorActive: supervisor?.active ?? null,
-    isAdmin,
-    build: 'admin-debug-1',
+    hook: {
+      loading,
+      hasSession: !!session,
+      sessionEmail: session?.user?.email || null,
+      hasSupervisor: !!supervisor,
+      supervisorRole: supervisor?.role || null,
+      supervisorActive: supervisor?.active ?? null,
+      isAdmin,
+    },
+    probe,
+    href: typeof window !== 'undefined' ? window.location.href : null,
+    ua: typeof navigator !== 'undefined' ? navigator.userAgent : null,
+    build: 'admin-debug-2',
   },
   null,
   2
