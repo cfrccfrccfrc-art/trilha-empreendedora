@@ -37,9 +37,26 @@ function StatusBadge({ status }) {
   );
 }
 
+const DIAGNOSTIC_SESSION_KEYS = [
+  'trilha_diagnostic_answers',
+  'trilha_diagnostic_index',
+  'trilha_diagnostic_result',
+];
+
 export default function MyPlan() {
   const navigate = useNavigate();
   const [state, setState] = useState({ loading: true, error: null, data: null });
+  const [confirmReset, setConfirmReset] = useState(false);
+
+  const resetPlan = () => {
+    clearPlanToken();
+    try {
+      for (const k of DIAGNOSTIC_SESSION_KEYS) sessionStorage.removeItem(k);
+    } catch {
+      // ignore
+    }
+    navigate('/diagnostico', { replace: true });
+  };
 
   useEffect(() => {
     const token = getPlanToken();
@@ -285,6 +302,40 @@ export default function MyPlan() {
         >
           Compartilhar meu cartão
         </Button>
+      </div>
+
+      <div className="pt-6">
+        {confirmReset ? (
+          <Card className="border-coral bg-coral/5">
+            <h3 className="font-bold text-ink mb-2">Recomeçar do zero?</h3>
+            <p className="text-secondary text-sm leading-relaxed mb-4">
+              Isso apaga sua trilha atual, todas as tarefas que você já fez
+              e seu cadastro (nome e nome do negócio) deste aparelho. Você
+              vai precisar responder o diagnóstico de novo e cadastrar tudo
+              outra vez. Não dá pra voltar atrás depois.
+            </p>
+            <div className="space-y-2">
+              <Button onClick={resetPlan} className="w-full">
+                Sim, quero recomeçar
+              </Button>
+              <Button
+                variant="ghost"
+                onClick={() => setConfirmReset(false)}
+                className="w-full"
+              >
+                Cancelar
+              </Button>
+            </div>
+          </Card>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setConfirmReset(true)}
+            className="w-full text-sm text-secondary underline underline-offset-4 py-2"
+          >
+            Refazer trilha do zero
+          </button>
+        )}
       </div>
     </div>
   );
