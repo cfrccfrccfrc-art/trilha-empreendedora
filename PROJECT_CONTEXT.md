@@ -475,3 +475,142 @@ Estas situações exigem confirmação do usuário antes de você executar:
 - Push pra repo remoto (não tem repo configurado ainda, mas se tiver no futuro).
 
 Se o pedido cabe nesse grupo, confirme. Se é refinamento puramente local (texto, layout, sketch), pode seguir.
+
+---
+
+## 14. Atualizações pós-v1 (estado atual de produção)
+
+Este bloco resume o que mudou depois da v1 deste documento. As seções 1–13 acima ainda descrevem a arquitetura essencial; aqui ficam só os deltas relevantes.
+
+### Deploy + domínio
+
+- **Site no ar:** `https://trilhaempreendedora.com.br` (apex) e `www` redirecionando pro apex. `https://trilha-empreendedora.vercel.app` ainda funciona e tem 301 pro domínio próprio (via `vercel.json`).
+- **GitHub:** repositório público em `https://github.com/cfrccfrccfrc-art/trilha-empreendedora`. Auto-deploy a cada push pra `main`.
+- **Vercel project:** `cfrccfrccfrc-arts-projects/trilha-empreendedora`. Domínios apex + www adicionados via CLI.
+- **DNS:** Registro.br com 2 A records pra `76.76.21.21` (apex + www). SSL provisionado pelo Vercel via Let's Encrypt.
+- **Migrations Supabase aplicadas:** 0001, 0002, 0003, 0004, 0005 (user_case_submissions), 0006 (client_events).
+- **Bucket `task-evidence`** criado no Storage.
+- **1º admin** existe na tabela `supervisors` (role=admin, active=true).
+
+### Arquétipos: agora 13 (não 12)
+
+Novo arquétipo `negocio_consolidado` ("Tenho o básico no lugar, agora é decidir onde apostar") roteia quem já tem fundamentos (>1 ano de negócio, finanças controladas, formalização, presença online regular). Trilha leve de reflexão estratégica em vez de fundamentos básicos, com Pescadores handoff prominente.
+
+Os 13 `name` foram trocados de rótulos descritivos pra **quotes em 1ª pessoa entre aspas** (ex: "Vendo todo dia, mas no fim do mês não sobra"). Schema.name agora guarda a quote com aspas embutidas. Tudo que renderiza `{archetype.name}` mostra a quote direto.
+
+### Novas tasks estratégicas (4)
+
+- `task_mapear_proximo_gargalo` (W1 negocio_consolidado)
+- `task_5_movimentos_estrategicos` (W2)
+- `task_conversar_negocios_pares` (W3)
+- `task_decidir_1_aposta_6m` (W4)
+
+Total geral: **184 itens de conteúdo, 31 task templates ativos, 29 companions, 13 archetypes ativos, 20 cases, 21 resources, 11 opportunities**.
+
+### Personas dos cases ficaram brasileiras
+
+3 cases adaptados estrangeiros foram rebatizados (Keisha→Joana/Aracaju, Amina→Aline/Teresina, Priya→Patrícia/Florianópolis). 8 companions correspondentes seguiram. IDs preservados (slugs internos não mudam).
+
+Nova persona high-tech: **Vinícius** (Recife, estudante + iFood + faz sites) em `case_vinicius_websites_b2b` + `companion_listar_compradores_locais_vinicius`. Cobre o arquétipo `potencial_b2b_local`.
+
+### Resources com body completo
+
+14 Trilha originais ganharam campo `body` (array de parágrafos com `**negrito**` markdown leve). Renderiza expandido em `/conteudos/<id>` como "Guia completo".
+
+Schema novo: `body` (array opcional de strings) e `searchHint` (string opcional). Validador atualizado.
+
+Links externos Sebrae + BCB todos com deep links reais (não mais homepage). `sourceStatus` desses 5 saiu de `needs_review` pra `active`.
+
+### Nova feature: contribuir caso aos 30 dias
+
+Rota `/minha-historia` (MyStory.jsx) onde empreendedor que completou 30 dias pode enviar sua história estruturada (business_short, biggest_change, favorite_week, difficulty, result_concrete, message_to_others + consentimentos). Salva em `user_case_submissions` (migration 0005). Admin revisa em `/admin/historias`, move status (submitted → in_review → anonymized → published).
+
+CTAs disparam em BadgeCard nível 3 (30 dias completos) e em MyPlan quando progress=100%.
+
+Schema enum: `caseAuthenticityType` aceita `user_submitted_anonymized`.
+
+### Pescadores: parceria oficial integrada
+
+Componente `PescadoresHandoff` com 5 variantes (`onboarding`, `soft`, `stuck`, `celebrate`, `helprequest`, `strategic`). Logo oficial em `public/pescadores-logo.jpg` (arquivo fornecido pelo dono). Aparece em 6 telas: Home (variant onboarding), Results (apenas pra `negocio_consolidado`, variant strategic), HelpRequest (helprequest, 2×), LearningResponse (stuck, quando review.review_status é "precisa_ajustar" ou "travada"), MyPlan (soft), BadgeCard (celebrate, nível 3).
+
+Link sempre externo `https://projetopescadores.com.br/contato`, sempre opcional, sempre com label "gratuito + parceiro + externo à Trilha".
+
+Recursos `res_pescadoras_rede` (URL real do parceiro) e `res_pescadoras_metodologia` (renomeado pra "Princípios para empreender com pouco capital" — neutro).
+
+### Telemetria (migration 0006 + service)
+
+Tabela `client_events` (event_type, plan_token, page, meta jsonb, created_at). `src/services/telemetry.js` com `track()` que batchea em 1.5s. RLS: insert livre (anon+auth), select só admin.
+
+Eventos chave plumbados em ~12 pontos:
+- `home_view`, `diagnostic_started`, `diagnostic_completed`, `results_view`
+- `plan_saved`, `task_submitted`, `story_submitted`
+- `pescadores_clicked`, `share_opened`, `share_whatsapp`
+- `archetype_overview_opened`, `archetype_overview_to_diagnostic`, `archetype_overview_dismissed`
+- `apresentacao_view`, `apresentacao_lang_switched`, `apresentacao_share_clicked`, `apresentacao_pescadores_clicked`, `apresentacao_autoplay_started/paused/finished`, `apresentacao_audio_toggled`
+
+Admin tela `/admin/metricas` (`AdminMetrics.jsx`) com funil (Home→Diag→Plan→Task→Story), engajamento (Pescadores, share, results_view) e taxas calculadas. Filtro 24h/7d/30d/tudo.
+
+### PWA
+
+`vite-plugin-pwa@1.3` com service worker auto-update. Manifest com nome, descrição, theme `#4F7CAC`, bg `#FFFDF7`, display standalone, locale pt-BR. Ícone em `public/icon.svg` (caderno espiral em paleta da Trilha). Precache 41 entries / ~898 KB. Runtime cache pra Google Fonts.
+
+App instalável no Android/iOS via "Adicionar à tela inicial". Shell offline disponível (Supabase ainda exige conexão pra dados).
+
+### Página `/apresentacao` (pitch institucional)
+
+Rota fora do Layout (web-first, full-width). 8 seções scroll-driven (Hero + 7 ideias). Bilíngue PT/EN com toggle no top bar (`COPY` object inline, persistido em localStorage). Auto-scroll com play/pause + 8 dots de progresso, timing por seção (9–15s, total ~100s), pausa em scroll manual (wheel/touch/keys).
+
+**Trilha sonora opcional via `public/bailey.mp3`** (arquivo do dono, atualmente um placeholder 0-byte aguardando override). Toca quando auto-scroll ativo + não mutado. Toggle de mute aparece só durante o tour. Falha silenciosa se arquivo ausente/inválido.
+
+Gênero balanceado em PT ("empreendedor ou empreendedora", "quem empreende", "companheiro ou companheira", "encaminhada(o)"). EN é neutro por padrão.
+
+### SEO foundations
+
+- `index.html` com meta description, canonical, Open Graph completo, Twitter Card
+- `public/og-image.svg` 1200x630 com identidade Trilha
+- `public/robots.txt` permite crawl, bloqueia rotas internas
+- `public/sitemap.xml` gerado automaticamente em todo build via `scripts/generate-sitemap.mjs` (42 URLs: 10 estáticas + 14 conteúdos + 18 cases). `SITE_URL` env var sobrescreve default.
+- `vercel.json` com SPA rewrite + redirects www→apex + .vercel.app→apex
+
+Pendente: Schema.org markup (HowTo nos guides, Article nos cases, FAQPage no help), prerender SSG, URLs amigáveis, submit sitemap ao Google Search Console.
+
+### Pendências conhecidas
+
+1. **`/admin` em branco** (provavelmente cache SW antigo) — versão de diagnóstico está deployada (`AdminDashboard.jsx` mostra bloco laranja com state). Aguarda usuário testar em janela anônima fora do FortiGuard. Quando confirmar, remove o bloco debug e volta UI normal.
+2. **FortiGuard** bloqueia `trilhaempreendedora.com.br` na rede atual do usuário (categoria "Newly Observed Domain"). Resolve em 24-72h naturalmente ou via pedido de reavaliação no link do FortiGuard.
+3. **Supabase Auth URL** — pendente trocar Site URL pro domínio próprio assim que confirmar SSL estável. Hoje aceita `*.vercel.app` + apex.
+4. **Press kit + página `/imprensa` + QR code + `MEDIA_KIT.md`** — proposto, não executado.
+5. **Schema.org markup** — proposto, não executado (SEO Fase 3).
+6. **SMTP custom no Supabase Auth** — pra eliminar o rate limit de 4 magic-links por hora. Recomendado pra produção, opcional pra MVP.
+7. **`bailey.mp3` real** — arquivo placeholder 0-byte em `public/`. O dono vai gravar e fazer override.
+
+### Arquivos importantes adicionados desde v1
+
+```
+PROJECT_CONTEXT.md            (este arquivo, com a seção 14)
+SESSIONS_LOG.md               (histórico de sessões — ver arquivo)
+vercel.json                   (rewrites + redirects www→apex)
+scripts/generate-sitemap.mjs  (auto-gera sitemap no build)
+src/services/telemetry.js     (track()+batch)
+src/components/PescadoresHandoff.jsx
+src/pages/Apresentacao.jsx    (rota web-only pitch)
+src/pages/AdminMetrics.jsx
+src/pages/AdminUserStories.jsx
+src/pages/MyStory.jsx
+public/pescadores-logo.jpg    (logo do parceiro)
+public/icon.svg               (ícone PWA)
+public/og-image.svg
+public/manifest.webmanifest   (gerado por vite-plugin-pwa)
+public/sw.js                  (gerado por vite-plugin-pwa)
+public/bailey.mp3             (placeholder, dono vai gravar)
+supabase/migrations/0005_user_case_submissions.sql
+supabase/migrations/0006_client_events.sql
+```
+
+### Decisões importantes desde v1
+
+- **NÃO usar editor admin pra conteúdo** — confirmado, segue o modelo "edit JSON → commit → deploy"
+- **NÃO virar SaaS** — gratuito, sem cadastro pra começar, mantido por doação Pix
+- **Pescadores é parceiro de apoio humano**, não fonte de metodologia. Conteúdo da Trilha é adaptação livre + Khan Academy como inspiração geral.
+- **`/apresentacao` é web-first**, não tenta encaixar no mobile do Layout. Tour pra parceiros, jornalistas, decisores.
+- **Telemetria é leve, sem analytics externo** — tabela própria no Supabase. Privacy-friendly.

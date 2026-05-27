@@ -604,6 +604,47 @@ export default function Apresentacao() {
   const timerRef = useRef(null);
   const manualScrollIgnoreUntil = useRef(0);
 
+  // Audio (trilha sonora opcional — public/bailey.mp3).
+  // Browsers só permitem play após user gesture. Como o tour só toca quando
+  // o usuário clica em ▶, isso conta como gesture e o áudio pode tocar junto.
+  const audioRef = useRef(null);
+  const [muted, setMuted] = useState(false);
+  const [audioAvailable, setAudioAvailable] = useState(false);
+
+  useEffect(() => {
+    const audio = new Audio('/bailey.mp3');
+    audio.loop = true;
+    audio.volume = 0.4;
+    audio.preload = 'auto';
+    const onCanPlay = () => setAudioAvailable(true);
+    const onError = () => setAudioAvailable(false);
+    audio.addEventListener('canplaythrough', onCanPlay);
+    audio.addEventListener('error', onError);
+    audioRef.current = audio;
+    return () => {
+      audio.pause();
+      audio.removeEventListener('canplaythrough', onCanPlay);
+      audio.removeEventListener('error', onError);
+      audio.src = '';
+      audioRef.current = null;
+    };
+  }, []);
+
+  // Sincroniza áudio com auto-scroll: toca quando play está ativo e som não
+  // está mutado. Pausa quando o tour pausa, quando muta, ou no fim.
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying && !muted) {
+      audio.play().catch(() => {
+        // Browser bloqueou (autoplay policy ou erro do arquivo).
+        // Não atrapalha o tour, só sem som.
+      });
+    } else {
+      audio.pause();
+    }
+  }, [isPlaying, muted]);
+
   useEffect(() => {
     track('apresentacao_view', { lang });
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -783,6 +824,56 @@ export default function Apresentacao() {
                 </svg>
               )}
             </button>
+
+            {/* Mute / unmute audio (só aparece quando o tour está tocando) */}
+            {isPlaying && (
+              <button
+                type="button"
+                onClick={() => {
+                  setMuted((m) => {
+                    track('apresentacao_audio_toggled', {
+                      to: !m ? 'muted' : 'unmuted',
+                      audioAvailable,
+                    });
+                    return !m;
+                  });
+                }}
+                aria-label={
+                  muted
+                    ? lang === 'en'
+                      ? 'Unmute soundtrack'
+                      : 'Ativar trilha sonora'
+                    : lang === 'en'
+                    ? 'Mute soundtrack'
+                    : 'Silenciar trilha sonora'
+                }
+                className="w-9 h-9 rounded-full border border-line text-ink hover:bg-line/40 flex items-center justify-center transition-colors"
+              >
+                {muted ? (
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M3 6h2l3-2.5v9L5 10H3V6z" />
+                    <path
+                      d="M11 6l3 3M14 6l-3 3"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                  </svg>
+                ) : (
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M3 6h2l3-2.5v9L5 10H3V6z" />
+                    <path
+                      d="M11 5.5c1 0.7 1 4.3 0 5M12.8 4c1.7 1.4 1.7 6.6 0 8"
+                      stroke="currentColor"
+                      strokeWidth="1.3"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                  </svg>
+                )}
+              </button>
+            )}
 
             {/* Progress dots */}
             <div
