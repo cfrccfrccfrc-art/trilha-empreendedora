@@ -5,13 +5,21 @@ produto.
 
 ## Acesso
 
-1. Faça login via `/supervisor/login` (mesmo fluxo dos supervisores).
-2. Você precisa ter `role = 'admin'` na tabela `supervisors`.
-3. Depois de logada, `/admin`, `/admin/preview` e `/admin/fontes` ficam
+1. Faça login em `https://trilhaempreendedora.com.br/supervisor/login` com
+   e-mail e senha cadastrados no Supabase Auth.
+2. Você precisa ter linha em `supervisors` com `role = 'admin'` e
+   `active = true`.
+3. Depois de logada, `/admin`, `/admin/preview`, `/admin/fontes`,
+   `/admin/doacoes`, `/admin/historias` e `/admin/metricas` ficam
    disponíveis.
 
-Bootstrap do primeiro admin: ver instruções no fim de
-`supabase/migrations/0002_supervisors.sql`.
+Magic-link foi descontinuado: o fluxo de callback (`detectSessionInUrl`)
+fica desativado no client supervisor por causa de um bug do init do
+`supabase-js v2` que travava o hook. Login é sempre email + senha.
+
+Senha expira a sessão em ~1 hora (não tem auto-refresh). Quando expirar,
+loga de novo na mesma tela. Pra trocar senha de um user existente, ver
+seção "Cadastro de supervisores" abaixo.
 
 ## Onde mora cada coisa
 
@@ -150,23 +158,98 @@ INSERT INTO content_gaps (type, reference_id, metric, observation)
 VALUES ('task_failure', 'task_xxx', 0.55, 'Taxa subiu depois da mudança X');
 ```
 
-## Cadastro de supervisores
+## Cadastro de supervisores e admins
+
+Tem dois passos: criar o usuário no Supabase Auth (com senha) e promover
+ele em `supervisors`.
+
+### Passo 1: criar o usuário com senha
+
+No dashboard do Supabase: `Authentication → Users → Add user → Create new
+user`.
+
+Preenche:
+
+- **Email**: e-mail da pessoa
+- **Password**: senha forte (manda pra ela por canal seguro, não por
+  WhatsApp ou email aberto)
+- **Marca "Auto Confirm User"** — sem isso a pessoa receberia email de
+  confirmação que talvez não chegue
+
+Confirma. Aparece o novo user na lista. Clica no email pra ver o detalhe
+e **anota o `User UID` (UUID)**.
+
+### Passo 2: promover em `supervisors`
+
+No SQL Editor:
 
 ```sql
-INSERT INTO supervisors (user_id, email, name, role)
-VALUES ('<uuid de auth.users>', 'pessoa@email.com', 'Nome', 'supervisor');
+-- Admin (acessa /admin, vê tudo):
+INSERT INTO supervisors (user_id, email, name, role, active)
+VALUES (
+  '<UUID do passo 1>',
+  'pessoa@email.com',
+  'Nome da pessoa',
+  'admin',
+  true
+);
+
+-- Supervisor (só /supervisor pra revisar tarefas, sem /admin):
+INSERT INTO supervisors (user_id, email, name, role, active)
+VALUES (
+  '<UUID do passo 1>',
+  'pessoa@email.com',
+  'Nome da pessoa',
+  'supervisor',
+  true
+);
 ```
 
-Pra desativar:
+### Passo 3: passar acesso pra pessoa
+
+Manda pra ela:
+
+- URL: `https://trilhaempreendedora.com.br/supervisor/login`
+- Email e senha definidos no Passo 1
+
+Ela pode trocar a senha depois? Não pela app (não tem fluxo de reset).
+Hoje o caminho é:
+
+1. Ela te avisa que quer trocar
+2. Você vai em `Authentication → Users → ... → Send password recovery`
+   (manda email com link de reset) OU apaga o user e recria com nova senha
+   (precisa atualizar o `user_id` em `supervisors` se recriar)
+
+### Mudanças em supervisores existentes
 
 ```sql
+-- Desativar (sem apagar histórico):
 UPDATE supervisors SET active = false WHERE email = 'pessoa@email.com';
+
+-- Reativar:
+UPDATE supervisors SET active = true WHERE email = 'pessoa@email.com';
+
+-- Promover a admin:
+UPDATE supervisors SET role = 'admin' WHERE email = 'pessoa@email.com';
+
+-- Rebaixar a supervisor:
+UPDATE supervisors SET role = 'supervisor' WHERE email = 'pessoa@email.com';
+
+-- Trocar email (se a pessoa mudou de email, troca nos dois lugares):
+UPDATE supervisors SET email = 'novo@email.com' WHERE email = 'antigo@email.com';
+-- E no Authentication → Users → edita o email lá também, ou apaga e recria.
 ```
 
-Pra promover a admin:
+### Recuperar acesso quando o `user_id` saiu de sincronia
+
+Se você recriou o user no Authentication (UUID novo) sem atualizar
+`supervisors`, a pessoa loga mas vê "Você está autenticada(o), mas não
+consta na lista de supervisores ativos". Pra arrumar:
 
 ```sql
-UPDATE supervisors SET role = 'admin' WHERE email = 'pessoa@email.com';
+UPDATE supervisors
+SET user_id = (SELECT id FROM auth.users WHERE email = 'pessoa@email.com')
+WHERE email = 'pessoa@email.com';
 ```
 
 ## Copyright
