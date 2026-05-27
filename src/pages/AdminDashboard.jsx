@@ -139,7 +139,7 @@ export default function AdminDashboard() {
     probeGetUser: probe2,
     href: typeof window !== 'undefined' ? window.location.href : null,
     ua: typeof navigator !== 'undefined' ? navigator.userAgent : null,
-    build: 'admin-debug-3',
+    build: 'admin-debug-4-lock-bypass',
   },
   null,
   2
