@@ -37,7 +37,10 @@ export default function SupervisorLogin() {
         password,
       });
       if (authError) throw authError;
-      // Sessão chega via onAuthStateChange; o Navigate no topo do componente redireciona.
+      // Token foi salvo no localStorage por signInWithPassword. Reload pra
+      // o hook reler o storage e detectar a sessão (não usa mais getSession).
+      window.location.replace('/supervisor');
+      return;
     } catch (err) {
       console.error('signInWithPassword error:', err);
       setError(err?.message || 'Não foi possível entrar. Confira o e-mail e a senha.');

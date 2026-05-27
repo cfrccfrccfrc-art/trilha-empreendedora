@@ -43,6 +43,47 @@ export function getAuthClient() {
   return authClient;
 }
 
+const SUPERVISOR_STORAGE_KEY = 'trilha_supervisor_auth';
+
+// Lê a sessão do supervisor direto do localStorage. Bypassa getSession() do
+// supabase-js v2, que em alguns ambientes trava o init interno indefinidamente.
+export function readSupervisorSession() {
+  try {
+    const raw = localStorage.getItem(SUPERVISOR_STORAGE_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed?.access_token || !parsed?.user) return null;
+    // expires_at vem em segundos unix epoch.
+    if (parsed.expires_at && Date.now() >= parsed.expires_at * 1000) {
+      return null;
+    }
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+export function clearSupervisorSession() {
+  try {
+    localStorage.removeItem(SUPERVISOR_STORAGE_KEY);
+  } catch {
+    // ignore
+  }
+}
+
+// Client autenticado on-the-fly pra queries do supervisor. NÃO usa
+// persistSession nem init proativo, então não trava como o getAuthClient.
+export function getAuthedClient(accessToken) {
+  return createClient(url, key, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
+    },
+    global: { headers: { Authorization: `Bearer ${accessToken}` } },
+  });
+}
+
 export function getPlanToken() {
   try {
     return localStorage.getItem(PLAN_TOKEN_KEY);

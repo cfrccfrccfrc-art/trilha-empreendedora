@@ -200,7 +200,7 @@ export default function AdminDashboard() {
     serviceWorker: swInfo,
     href: typeof window !== 'undefined' ? window.location.href : null,
     ua: typeof navigator !== 'undefined' ? navigator.userAgent : null,
-    build: 'admin-debug-6-no-refresh-no-detect',
+    build: 'admin-debug-7-bypass-init',
   },
   null,
   2
