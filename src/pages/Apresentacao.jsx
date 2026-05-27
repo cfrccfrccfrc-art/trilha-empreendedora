@@ -2,7 +2,7 @@
 // Rota fora do Layout pra ter controle total da largura (web-only).
 // Texto à esquerda, visual à direita, 1 seção por viewport.
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import archetypesData from '../data/archetypes.json';
 import ShareSheet from '../components/ShareSheet';
@@ -14,6 +14,21 @@ import {
 import { track } from '../services/telemetry';
 
 const LANG_KEY = 'trilha_apresentacao_lang';
+
+// Tempo de leitura de cada seção, em ms. Calibrado pra dar tempo de ler
+// o texto + observar o visual. Total: ~100s pra rodar tudo automaticamente.
+// Index 0 = Hero, 1-7 = Sections 1 a 7.
+const SECTION_DURATIONS_MS = [
+  13000, // Hero — pitch curto + tagline longa
+  12000, // 1 — A dor + 5 quotes (precisa tempo pra ler os quotes)
+  10000, // 2 — O que falta + antes/depois
+  12000, // 3 — Khan card
+  15000, // 4 — Como funciona + 3 phone mocks (mais coisa pra escanear)
+   9000, // 5 — Escalabilidade (visual numérico)
+  13000, // 6 — Funil Pescadores
+  12000, // 7 — Visão final + CTAs
+];
+const TOTAL_SECTIONS = SECTION_DURATIONS_MS.length;
 
 // ---------- Copy (PT / EN) ----------
 const COPY = {
@@ -33,7 +48,7 @@ const COPY = {
     s1Line1: '30 milhões de empreendedores brasileiros.',
     s1Line2: 'A maioria sozinha no escuro.',
     s1Body:
-      'Vendem todo dia, mas no fim do mês não sobra. Não sabem se lucram. Não sabem onde começar a organizar. Conteúdo existe — Sebrae, BCB, YouTube têm bibliotecas inteiras. Falta TRILHA. Falta saber qual o próximo passo PRA ELE.',
+      'Vendem todo dia, mas no fim do mês não sobra. Não sabem se lucram. Não sabem onde começar a organizar. Conteúdo existe — Sebrae, BCB, YouTube têm bibliotecas inteiras. Falta TRILHA. Falta saber qual o próximo passo PRA CADA UM.',
     s1Quotes: [
       'Vendo todo dia, mas no fim do mês não sobra',
       'Tenho uma ideia, mas nunca testei com cliente',
@@ -46,7 +61,7 @@ const COPY = {
     s2Line1: 'Catálogo é fácil.',
     s2Line2: 'Mapa personalizado é raro.',
     s2Body:
-      'O empreendedor não precisa de biblioteca. Precisa do próximo passo. Conteúdo solto não converte em ação. O que converte é diagnóstico + trilha curta + companheiro que já passou.',
+      'Quem empreende não precisa de biblioteca. Precisa do próximo passo. Conteúdo solto não converte em ação. O que converte é diagnóstico + trilha curta + companheiro ou companheira que já passou.',
     s2BeforeLabel: 'Hoje:',
     s2BeforeQuote:
       '"Tem 800 artigos no Sebrae. Por onde eu começo?"',
@@ -58,7 +73,7 @@ const COPY = {
     s3Line1: 'E se Khan Academy fosse um',
     s3Line2: 'plano de 30 dias pro seu negócio?',
     s3Body:
-      'Khan provou: educação prática, gratuita e estruturada escala. Self-service entrega qualidade sem call center. A Trilha aplica esse princípio ao microempreendedor brasileiro — sem mensalidade, sem cadastro pra começar, sem operadora.',
+      'Khan provou: educação prática, gratuita e estruturada escala. Self-service entrega qualidade sem call center. A Trilha aplica esse princípio a quem empreende no Brasil — sem mensalidade, sem cadastro pra começar, sem operadora.',
     khanEyebrow: 'De onde vem a ideia',
     khanTitle: 'Khan Academy',
     khanBody:
@@ -104,7 +119,7 @@ const COPY = {
     s6Line1: 'Trilha é o topo do funil.',
     s6Line2: 'Pescadores fecha.',
     s6Body:
-      'Quando ler conteúdo não basta, o empreendedor é encaminhado pra apoio humano direto do Projeto Pescadores — parceiro que atende casos individualmente, gratuito. A Trilha educa, qualifica e direciona quem precisa de gente. Pescadores recebe casos com base já trabalhada.',
+      'Quando ler conteúdo não basta, quem está fazendo a trilha é encaminhada(o) pra apoio humano direto do Projeto Pescadores — parceiro que atende casos individualmente, gratuito. A Trilha educa, qualifica e direciona quem precisa de gente. Pescadores recebe casos com base já trabalhada.',
     funnelTopLabel: 'milhares de visitas',
     funnelMidLabel: 'diagnóstico em 5 min',
     funnelMid2Label: 'trilha de 30 dias',
@@ -112,7 +127,7 @@ const COPY = {
     funnelOutLabel: 'Projeto Pescadores',
 
     s7Eyebrow: 'A visão',
-    s7TitlePre: 'Cada empreendedora que termina os 30 dias é',
+    s7TitlePre: 'Cada empreendedor ou empreendedora que termina os 30 dias é',
     s7TitleHighlight: 'um negócio menos no escuro.',
     s7Body:
       'Conhece quem precisa? Compartilha. Tem parceria possível (Sebrae regional, igreja de bairro, CRAS, programa social)? Manda mensagem. A app é gratuita e cresce com quem espalha.',
@@ -226,9 +241,10 @@ const COPY = {
 };
 
 // ---------- Layout primitive ----------
-function Section({ children, bgClass = 'bg-paper' }) {
+function Section({ children, bgClass = 'bg-paper', idx }) {
   return (
     <section
+      data-tour-section={idx}
       className={`${bgClass} min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24`}
     >
       <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -582,6 +598,12 @@ export default function Apresentacao() {
   });
   const t = COPY[lang];
 
+  // Auto-scroll state
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const timerRef = useRef(null);
+  const manualScrollIgnoreUntil = useRef(0);
+
   useEffect(() => {
     track('apresentacao_view', { lang });
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -591,6 +613,114 @@ export default function Apresentacao() {
       document.documentElement.setAttribute('lang', 'pt-BR');
     };
   }, [lang]);
+
+  // Tracker: qual seção está visível agora (via IntersectionObserver).
+  useEffect(() => {
+    const els = Array.from(
+      document.querySelectorAll('[data-tour-section]')
+    );
+    if (!els.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Pega a seção com maior interseção visível.
+        let best = null;
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          if (!best || entry.intersectionRatio > best.intersectionRatio) {
+            best = entry;
+          }
+        }
+        if (best) {
+          const idx = parseInt(best.target.dataset.tourSection, 10);
+          if (!Number.isNaN(idx)) setCurrentIdx(idx);
+        }
+      },
+      {
+        threshold: [0.3, 0.5, 0.7],
+      }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  // Engine do auto-scroll: quando isPlaying=true, agenda próximo scroll
+  // baseado no tempo de leitura da seção atual.
+  useEffect(() => {
+    if (!isPlaying) {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+      return;
+    }
+
+    const duration = SECTION_DURATIONS_MS[currentIdx] || 11000;
+    const nextIdx = currentIdx + 1;
+
+    timerRef.current = setTimeout(() => {
+      if (nextIdx >= TOTAL_SECTIONS) {
+        setIsPlaying(false);
+        track('apresentacao_autoplay_finished', { lang });
+        return;
+      }
+      const nextEl = document.querySelector(
+        `[data-tour-section="${nextIdx}"]`
+      );
+      if (nextEl) {
+        // Marca janela curta pra ignorar a próxima detecção de scroll manual.
+        manualScrollIgnoreUntil.current = Date.now() + 1200;
+        nextEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, duration);
+
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+        timerRef.current = null;
+      }
+    };
+  }, [isPlaying, currentIdx, lang]);
+
+  // Pausa auto-scroll quando usuário rolar manualmente (wheel/touch/keys).
+  useEffect(() => {
+    if (!isPlaying) return;
+    const onManualScroll = () => {
+      if (Date.now() < manualScrollIgnoreUntil.current) return;
+      setIsPlaying(false);
+      track('apresentacao_autoplay_paused', {
+        reason: 'manual_scroll',
+        atSection: currentIdx,
+      });
+    };
+    window.addEventListener('wheel', onManualScroll, { passive: true });
+    window.addEventListener('touchmove', onManualScroll, { passive: true });
+    const onKey = (e) => {
+      if (
+        [' ', 'ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End'].includes(
+          e.key
+        )
+      ) {
+        onManualScroll();
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => {
+      window.removeEventListener('wheel', onManualScroll);
+      window.removeEventListener('touchmove', onManualScroll);
+      window.removeEventListener('keydown', onKey);
+    };
+  }, [isPlaying, currentIdx]);
+
+  const togglePlay = () => {
+    const next = !isPlaying;
+    setIsPlaying(next);
+    track(next ? 'apresentacao_autoplay_started' : 'apresentacao_autoplay_paused', {
+      reason: 'button',
+      atSection: currentIdx,
+      lang,
+    });
+  };
 
   const switchLang = (next) => {
     if (next === lang) return;
@@ -622,7 +752,57 @@ export default function Apresentacao() {
             </span>
           </button>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Play / pause auto-scroll */}
+            <button
+              type="button"
+              onClick={togglePlay}
+              aria-label={
+                isPlaying
+                  ? lang === 'en'
+                    ? 'Pause auto-scroll'
+                    : 'Pausar auto-scroll'
+                  : lang === 'en'
+                  ? 'Play tour'
+                  : 'Tocar tour'
+              }
+              className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors ${
+                isPlaying
+                  ? 'bg-primary text-paper'
+                  : 'border border-line text-ink hover:bg-line/40'
+              }`}
+            >
+              {isPlaying ? (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+                  <rect x="2" y="1" width="3" height="12" rx="1" />
+                  <rect x="9" y="1" width="3" height="12" rx="1" />
+                </svg>
+              ) : (
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+                  <path d="M3 1.5 L3 12.5 L12 7 Z" />
+                </svg>
+              )}
+            </button>
+
+            {/* Progress dots */}
+            <div
+              className="hidden sm:flex items-center gap-1.5"
+              aria-label={`${currentIdx + 1} / ${TOTAL_SECTIONS}`}
+            >
+              {Array.from({ length: TOTAL_SECTIONS }).map((_, i) => (
+                <span
+                  key={i}
+                  className={`block rounded-full transition-all ${
+                    i === currentIdx
+                      ? 'w-4 h-1.5 bg-primary'
+                      : i < currentIdx
+                      ? 'w-1.5 h-1.5 bg-primary/40'
+                      : 'w-1.5 h-1.5 bg-line'
+                  }`}
+                />
+              ))}
+            </div>
+
             {/* Lang toggle */}
             <div
               role="group"
@@ -664,7 +844,7 @@ export default function Apresentacao() {
                 });
                 setShareOpen(true);
               }}
-              className="text-primary text-sm font-semibold"
+              className="hidden sm:inline-block text-primary text-sm font-semibold"
             >
               {t.share} →
             </button>
@@ -673,7 +853,10 @@ export default function Apresentacao() {
       </div>
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center px-6 sm:px-10 py-24 sm:py-32">
+      <section
+        data-tour-section="0"
+        className="min-h-screen flex items-center px-6 sm:px-10 py-24 sm:py-32"
+      >
         <div className="max-w-6xl mx-auto w-full">
           <p className="font-hand text-secondary text-xl mb-6">
             {t.heroEyebrow}
@@ -691,7 +874,7 @@ export default function Apresentacao() {
       </section>
 
       {/* 1 — A DOR */}
-      <Section bgClass="bg-beige">
+      <Section bgClass="bg-beige" idx={1}>
         <TextBlock
           eyebrow={t.s1Eyebrow}
           titleLines={[
@@ -706,7 +889,7 @@ export default function Apresentacao() {
       </Section>
 
       {/* 2 — O QUE FALTA */}
-      <Section>
+      <Section idx={2}>
         <TextBlock
           eyebrow={t.s2Eyebrow}
           titleLines={[
@@ -729,7 +912,7 @@ export default function Apresentacao() {
       </Section>
 
       {/* 3 — INSPIRAÇÃO */}
-      <Section bgClass="bg-beige">
+      <Section bgClass="bg-beige" idx={3}>
         <TextBlock
           eyebrow={t.s3Eyebrow}
           titleLines={[
@@ -744,7 +927,7 @@ export default function Apresentacao() {
       </Section>
 
       {/* 4 — COMO FUNCIONA */}
-      <Section>
+      <Section idx={4}>
         <TextBlock
           eyebrow={t.s4Eyebrow}
           titleLines={[
@@ -764,7 +947,7 @@ export default function Apresentacao() {
       </Section>
 
       {/* 5 — ESCALABILIDADE */}
-      <Section bgClass="bg-beige">
+      <Section bgClass="bg-beige" idx={5}>
         <TextBlock
           eyebrow={t.s5Eyebrow}
           titleLines={[
@@ -779,7 +962,7 @@ export default function Apresentacao() {
       </Section>
 
       {/* 6 — PESCADORES FUNIL */}
-      <Section>
+      <Section idx={6}>
         <TextBlock
           eyebrow={t.s6Eyebrow}
           titleLines={[
@@ -795,7 +978,10 @@ export default function Apresentacao() {
       </Section>
 
       {/* 7 — VISÃO + CTA */}
-      <section className="bg-ink text-paper min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24">
+      <section
+        data-tour-section="7"
+        className="bg-ink text-paper min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24"
+      >
         <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-6">
             <p className="font-hand text-paper/70 text-xl">{t.s7Eyebrow}</p>
