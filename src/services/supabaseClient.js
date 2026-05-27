@@ -19,16 +19,23 @@ export function getSupabase(planToken = null) {
 }
 
 // Separate authenticated client for supervisors/admins.
-// Persists session so magic-link sign-in survives reloads.
-// `lock` bypassa o navigator.locks interno do supabase-js v2 que pode entrar
-// em deadlock em alguns browsers/PWAs. Para single-tab admin é seguro.
+// Persists session so password / magic-link sign-in survive reloads.
+// Notas:
+// - `lock` bypassa o navigator.locks interno do supabase-js v2 (deadlock
+//   conhecido em alguns ambientes).
+// - `autoRefreshToken: false` e `detectSessionInUrl: false` impedem o init
+//   interno (`_initializePromise`) de travar quando tenta refresh proativo
+//   ou parse de URL. Sem isso, getSession()/getUser() travam pra sempre.
+// - Magic-link continua funcionando porque o token vem no hash da URL e o
+//   SupervisorLogin processa o callback manualmente via onAuthStateChange.
 let authClient = null;
 export function getAuthClient() {
   if (authClient) return authClient;
   authClient = createClient(url, key, {
     auth: {
       persistSession: true,
-      autoRefreshToken: true,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
       storageKey: 'trilha_supervisor_auth',
       lock: (_name, _acquireTimeout, fn) => fn(),
     },
