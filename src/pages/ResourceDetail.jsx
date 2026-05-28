@@ -35,7 +35,7 @@ export default function ResourceDetail() {
 
   if (!resource) {
     return (
-      <div className="space-y-5">
+      <div className="space-y-5 md:max-w-3xl md:mx-auto">
         <PageHeader title="Conteúdo" />
         <Card>
           <p className="text-secondary text-sm">
@@ -76,7 +76,7 @@ export default function ResourceDetail() {
   };
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 md:max-w-3xl md:mx-auto">
       <PageHeader accent={resource.source} title={resource.title} />
 
       {/* Top metadata strip */}

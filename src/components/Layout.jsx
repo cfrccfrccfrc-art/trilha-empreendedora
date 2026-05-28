@@ -2,7 +2,23 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { BackArrow } from './Sketches';
 import BottomNav, { shouldShowBottomNav } from './BottomNav';
 
-function TopNav() {
+// Rotas que aproveitam largura desktop (bibliotecas, consultor B2B). O fluxo
+// principal (diagnóstico, resultado, trilha, tarefa) continua mobile-style
+// mesmo em desktop porque é foco de leitura curta e atenção alta.
+const WIDE_PREFIXES = [
+  '/conteudos',
+  '/casos',
+  '/oportunidades',
+  '/preciso-de-ajuda',
+  '/posso-ajudar',
+  '/biblioteca',
+];
+
+function isWideRoute(pathname) {
+  return WIDE_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`));
+}
+
+function TopNav({ wide }) {
   const navigate = useNavigate();
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -30,24 +46,55 @@ function TopNav() {
       >
         Trilha Empreendedora
       </button>
+
+      {wide && (
+        <nav className="hidden md:flex items-center gap-1 text-sm">
+          <WideNavLink to="/conteudos" label="Conteúdos" />
+          <WideNavLink to="/casos" label="Casos" />
+          <WideNavLink to="/oportunidades" label="Oportunidades" />
+          <WideNavLink to="/biblioteca/tarefas" label="Tarefas" />
+        </nav>
+      )}
     </div>
+  );
+}
+
+function WideNavLink({ to, label }) {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const active =
+    location.pathname === to || location.pathname.startsWith(`${to}/`);
+  return (
+    <button
+      type="button"
+      onClick={() => navigate(to)}
+      className={`px-3 py-1.5 rounded-lg font-semibold transition-colors ${
+        active
+          ? 'text-primary bg-primaryLight/40'
+          : 'text-secondary hover:text-ink hover:bg-line/40'
+      }`}
+    >
+      {label}
+    </button>
   );
 }
 
 export default function Layout() {
   const location = useLocation();
   const showBottomNav = shouldShowBottomNav(location.pathname);
+  const wide = isWideRoute(location.pathname);
+
   return (
     <div className="min-h-full">
       <main
-        className={`mx-auto w-full max-w-md min-h-screen px-5 py-6 ${
-          showBottomNav ? 'pb-24' : ''
-        }`}
+        className={`mx-auto w-full px-5 py-6 min-h-screen ${
+          wide ? 'max-w-md md:max-w-5xl md:px-8' : 'max-w-md'
+        } ${showBottomNav ? 'pb-24 md:pb-6' : ''}`}
       >
-        <TopNav />
+        <TopNav wide={wide} />
         <Outlet />
       </main>
-      <BottomNav />
+      <BottomNav wide={wide} />
     </div>
   );
 }

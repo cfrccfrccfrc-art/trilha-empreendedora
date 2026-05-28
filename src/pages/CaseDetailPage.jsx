@@ -26,7 +26,7 @@ export default function CaseDetailPage() {
 
   if (!caseItem) {
     return (
-      <div className="space-y-5">
+      <div className="space-y-5 md:max-w-3xl md:mx-auto">
         <PageHeader title="Caso" />
         <Card>
           <p className="text-secondary text-sm">
@@ -46,7 +46,7 @@ export default function CaseDetailPage() {
 
   if (caseItem.status !== 'active') {
     return (
-      <div className="space-y-5">
+      <div className="space-y-5 md:max-w-3xl md:mx-auto">
         <PageHeader accent="Em construção" title={caseItem.title} />
         <Card>
           <p className="text-secondary text-sm">
@@ -75,7 +75,7 @@ export default function CaseDetailPage() {
     'Caso pedagógico não-protegido por direito autoral.';
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 md:max-w-3xl md:mx-auto">
       <PageHeader
         accent={`${caseItem.region} · ${caseItem.readingTime}`}
         title={caseItem.title}

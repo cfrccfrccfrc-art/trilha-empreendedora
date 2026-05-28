@@ -73,38 +73,39 @@ export default function CaseLibrary() {
         {list.length} {list.length === 1 ? 'caso' : 'casos'}
       </p>
 
-      <div className="space-y-3">
-        {list.map((c) => (
-          <Card
-            key={c.id}
-            className="cursor-pointer hover:bg-beige transition-colors"
-            onClick={() => navigate(`/casos/${c.id}`)}
-          >
-            <div className="flex justify-between items-start gap-3 mb-2">
-              <h3 className="font-semibold text-ink leading-snug flex-1">
-                {c.title}
-              </h3>
-              <span className="shrink-0 text-xs px-2 py-1 rounded-full bg-line text-secondary">
-                {c.readingTime}
-              </span>
-            </div>
-            <p className="text-secondary text-sm leading-snug mb-2">
-              {c.dilemma}
-            </p>
-            <div className="flex flex-wrap gap-2 text-xs text-secondary">
-              <span>{c.region}</span>
-              <span>· {c.sector}</span>
-            </div>
-          </Card>
-        ))}
-        {list.length === 0 && (
-          <Card>
-            <p className="text-secondary text-sm">
-              Nenhum caso com esses filtros.
-            </p>
-          </Card>
-        )}
-      </div>
+      {list.length === 0 ? (
+        <Card>
+          <p className="text-secondary text-sm">
+            Nenhum caso com esses filtros.
+          </p>
+        </Card>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {list.map((c) => (
+            <Card
+              key={c.id}
+              className="cursor-pointer hover:bg-beige transition-colors h-full"
+              onClick={() => navigate(`/casos/${c.id}`)}
+            >
+              <div className="flex justify-between items-start gap-3 mb-2">
+                <h3 className="font-semibold text-ink leading-snug flex-1">
+                  {c.title}
+                </h3>
+                <span className="shrink-0 text-xs px-2 py-1 rounded-full bg-line text-secondary">
+                  {c.readingTime}
+                </span>
+              </div>
+              <p className="text-secondary text-sm leading-snug mb-2">
+                {c.dilemma}
+              </p>
+              <div className="flex flex-wrap gap-2 text-xs text-secondary">
+                <span>{c.region}</span>
+                <span>· {c.sector}</span>
+              </div>
+            </Card>
+          ))}
+        </div>
+      )}
 
       <div className="pt-4">
         <button

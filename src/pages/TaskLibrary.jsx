@@ -102,29 +102,31 @@ export default function TaskLibrary() {
             <p className="font-hand text-secondary text-lg leading-tight px-1">
               {arch?.name || archId}
             </p>
-            {list.map((t) => (
-              <Card
-                key={t.id}
-                className="cursor-pointer hover:bg-beige transition-colors"
-                onClick={() => navigate(`/biblioteca/tarefas/${t.id}`)}
-              >
-                <div className="flex justify-between items-start gap-3">
-                  <div className="flex-1">
-                    <p className="font-semibold text-ink leading-snug mb-1">
-                      {t.title}
-                    </p>
-                    {t.action && (
-                      <p className="text-xs text-secondary leading-relaxed line-clamp-2">
-                        {t.action}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+              {list.map((t) => (
+                <Card
+                  key={t.id}
+                  className="cursor-pointer hover:bg-beige transition-colors h-full"
+                  onClick={() => navigate(`/biblioteca/tarefas/${t.id}`)}
+                >
+                  <div className="flex justify-between items-start gap-3">
+                    <div className="flex-1">
+                      <p className="font-semibold text-ink leading-snug mb-1">
+                        {t.title}
                       </p>
-                    )}
+                      {t.action && (
+                        <p className="text-xs text-secondary leading-relaxed line-clamp-2">
+                          {t.action}
+                        </p>
+                      )}
+                    </div>
+                    <span className="text-xs text-secondary font-semibold shrink-0">
+                      S{t.week}
+                    </span>
                   </div>
-                  <span className="text-xs text-secondary font-semibold shrink-0">
-                    S{t.week}
-                  </span>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              ))}
+            </div>
           </div>
         );
       })}

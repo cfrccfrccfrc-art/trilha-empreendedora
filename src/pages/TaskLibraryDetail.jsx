@@ -42,7 +42,7 @@ export default function TaskLibraryDetail() {
 
   if (!task) {
     return (
-      <div className="space-y-5">
+      <div className="space-y-5 md:max-w-3xl md:mx-auto">
         <PageHeader title="Tarefa" />
         <Card>
           <p className="text-secondary text-sm">Não encontramos essa tarefa.</p>
@@ -64,7 +64,7 @@ export default function TaskLibraryDetail() {
   });
 
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 md:max-w-3xl md:mx-auto">
       <PageHeader
         accent={archetype ? archetype.name : 'Tarefa'}
         title={task.title}

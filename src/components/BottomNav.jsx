@@ -21,14 +21,16 @@ export function shouldShowBottomNav(pathname) {
   return !HIDDEN_PREFIXES.some((p) => pathname.startsWith(p));
 }
 
-export default function BottomNav() {
+export default function BottomNav({ wide = false }) {
   const location = useLocation();
   const navigate = useNavigate();
   if (!shouldShowBottomNav(location.pathname)) return null;
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 bg-paper/95 backdrop-blur border-t border-line"
+      className={`fixed bottom-0 left-0 right-0 z-40 bg-paper/95 backdrop-blur border-t border-line ${
+        wide ? 'md:hidden' : ''
+      }`}
       aria-label="Atalhos"
     >
       <div className="mx-auto w-full max-w-md grid grid-cols-5">

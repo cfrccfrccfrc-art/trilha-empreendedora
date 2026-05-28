@@ -116,39 +116,40 @@ export default function Resources() {
         {list.length} {list.length === 1 ? 'material' : 'materiais'}
       </p>
 
-      <div className="space-y-3">
-        {list.map((r) => (
-          <Card
-            key={r.id}
-            className="cursor-pointer hover:bg-beige transition-colors"
-            onClick={() => navigate(`/conteudos/${r.id}`)}
-          >
-            <div className="flex justify-between items-start gap-3 mb-2">
-              <h3 className="font-semibold text-ink leading-snug flex-1">
-                {r.title}
-              </h3>
-              <span className="shrink-0 text-xs px-2 py-1 rounded-full bg-line text-secondary">
-                {TYPE_LABELS[r.type] || r.type}
-              </span>
-            </div>
-            <p className="text-secondary text-sm leading-relaxed mb-3">
-              {r.description}
-            </p>
-            <div className="flex flex-wrap gap-2 items-center text-xs text-secondary">
-              <span>Fonte: <strong>{r.source}</strong></span>
-              {r.estimatedTime && <span>· {r.estimatedTime}</span>}
-              <span>· {r.topic}</span>
-            </div>
-          </Card>
-        ))}
-        {list.length === 0 && (
-          <Card>
-            <p className="text-secondary text-sm">
-              Nenhum material com esses filtros. Tente afrouxar a seleção.
-            </p>
-          </Card>
-        )}
-      </div>
+      {list.length === 0 ? (
+        <Card>
+          <p className="text-secondary text-sm">
+            Nenhum material com esses filtros. Tente afrouxar a seleção.
+          </p>
+        </Card>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {list.map((r) => (
+            <Card
+              key={r.id}
+              className="cursor-pointer hover:bg-beige transition-colors h-full"
+              onClick={() => navigate(`/conteudos/${r.id}`)}
+            >
+              <div className="flex justify-between items-start gap-3 mb-2">
+                <h3 className="font-semibold text-ink leading-snug flex-1">
+                  {r.title}
+                </h3>
+                <span className="shrink-0 text-xs px-2 py-1 rounded-full bg-line text-secondary">
+                  {TYPE_LABELS[r.type] || r.type}
+                </span>
+              </div>
+              <p className="text-secondary text-sm leading-relaxed mb-3">
+                {r.description}
+              </p>
+              <div className="flex flex-wrap gap-2 items-center text-xs text-secondary">
+                <span>Fonte: <strong>{r.source}</strong></span>
+                {r.estimatedTime && <span>· {r.estimatedTime}</span>}
+                <span>· {r.topic}</span>
+              </div>
+            </Card>
+          ))}
+        </div>
+      )}
 
       <Button
         variant="ghost"

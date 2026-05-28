@@ -107,48 +107,49 @@ export default function Opportunities() {
         {list.length} {list.length === 1 ? 'oportunidade' : 'oportunidades'}
       </p>
 
-      <div className="space-y-3">
-        {list.map((o) => {
-          const isExternal = (o.sourceLink || '').startsWith('http');
-          return (
-            <Card key={o.id}>
-              <div className="flex justify-between items-start gap-3 mb-2">
-                <h3 className="font-semibold text-ink leading-snug flex-1">
-                  {o.title}
-                </h3>
-                <span className="shrink-0 text-xs px-2 py-1 rounded-full bg-line text-secondary">
-                  {CATEGORY_LABELS[o.category] || o.category}
-                </span>
-              </div>
-              <p className="text-secondary text-sm leading-relaxed mb-3">
-                {o.description}
-              </p>
-              <div className="flex flex-wrap gap-2 items-center text-xs text-secondary mb-3">
-                <span>{o.online ? 'Online' : 'Presencial'}</span>
-                {o.estimatedTime && <span>· {o.estimatedTime}</span>}
-                <span>· {o.free ? 'Gratuito' : 'Pago'}</span>
-              </div>
-              {o.sourceLink && (
-                <a
-                  href={o.sourceLink}
-                  target={isExternal ? '_blank' : undefined}
-                  rel={isExternal ? 'noopener noreferrer' : undefined}
-                  className="text-primary text-sm font-semibold inline-block"
-                >
-                  Saber mais →
-                </a>
-              )}
-            </Card>
-          );
-        })}
-        {list.length === 0 && (
-          <Card>
-            <p className="text-secondary text-sm">
-              Nenhuma oportunidade com esses filtros.
-            </p>
-          </Card>
-        )}
-      </div>
+      {list.length === 0 ? (
+        <Card>
+          <p className="text-secondary text-sm">
+            Nenhuma oportunidade com esses filtros.
+          </p>
+        </Card>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          {list.map((o) => {
+            const isExternal = (o.sourceLink || '').startsWith('http');
+            return (
+              <Card key={o.id} className="h-full flex flex-col">
+                <div className="flex justify-between items-start gap-3 mb-2">
+                  <h3 className="font-semibold text-ink leading-snug flex-1">
+                    {o.title}
+                  </h3>
+                  <span className="shrink-0 text-xs px-2 py-1 rounded-full bg-line text-secondary">
+                    {CATEGORY_LABELS[o.category] || o.category}
+                  </span>
+                </div>
+                <p className="text-secondary text-sm leading-relaxed mb-3">
+                  {o.description}
+                </p>
+                <div className="flex flex-wrap gap-2 items-center text-xs text-secondary mb-3">
+                  <span>{o.online ? 'Online' : 'Presencial'}</span>
+                  {o.estimatedTime && <span>· {o.estimatedTime}</span>}
+                  <span>· {o.free ? 'Gratuito' : 'Pago'}</span>
+                </div>
+                {o.sourceLink && (
+                  <a
+                    href={o.sourceLink}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                    className="text-primary text-sm font-semibold inline-block mt-auto"
+                  >
+                    Saber mais →
+                  </a>
+                )}
+              </Card>
+            );
+          })}
+        </div>
+      )}
 
       <Button
         variant="ghost"
