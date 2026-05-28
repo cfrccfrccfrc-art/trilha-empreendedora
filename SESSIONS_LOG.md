@@ -73,3 +73,64 @@ Tudo nesta sessão foi feito com Claude Code num único contexto. Resumo do que 
 - Telemetria leve sem analytics externo (privacy-friendly)
 - `/apresentacao` é web-first (fora do Layout mobile)
 - Em ties de scoring, archetype consolidado ganha (segurança: pessoa avançada não cai em fundamento básico)
+
+---
+
+## Sessão 27-28/05/2026 — login bug + biblioteca B2B + responsividade
+
+### O quê
+
+Sessão longa de 3 frentes intercaladas: caçar o bug do `/admin` em branco, construir camada B2B pro time de consultores do Projeto Pescadores, e abrir as bibliotecas pra desktop.
+
+### Auth do supervisor (saga do dia)
+
+Sintoma: usuário logado em `/supervisor/login` (sem erro), mas `/admin` ficava em branco. Card de diagnóstico mostrava `loading: true` eternamente.
+
+Investigação:
+1. Hipótese inicial (cache do SW) descartada — bug persistiu em janela privada.
+2. Probe1 (`getSession`) timeout em 7s. Probe2 (`getUser`) timeout em 5s. Probe3 (fetch direto pro Supabase) respondeu 200 em ~200ms. Concluído: rede OK, lib travada.
+3. Tentativa de bypass do `lock` (navigator.locks) não resolveu.
+4. Tentativa de desativar `autoRefreshToken` + `detectSessionInUrl` não resolveu.
+5. Diagnóstico final: `_initializePromise` do GoTrueClient trava por motivo não identificado em algumas combinações Chrome/PWA. `signInWithPassword` não depende desse init e funciona; `getSession`/`getUser` dependem e travam.
+
+Fix definitivo: `useSupervisorSession` agora lê o token direto do `localStorage` (chave `trilha_supervisor_auth`) e usa um cliente Supabase novo via `getAuthedClient(token)` (sem `persistSession` nem auto-refresh, com Authorization Bearer) pra fazer a query do `supervisors`. Bypass completo do init travado.
+
+Decisões correlatas:
+- Login passou a ser **email + senha**. Magic-link foi descontinuado.
+- Botão de magic-link saiu do `SupervisorLogin`.
+- Sessão expira em ~1h sem refresh — pra admin tá ok.
+
+### Biblioteca B2B pra consultores Pescadores
+
+Frente nova (Sprint 1):
+- `src/utils/exports.js`: `formatCaseAsMarkdown` + `formatTaskAsMarkdown` retornam Markdown limpo
+- `src/components/CopyTextButton.jsx`: copy pra clipboard com feedback "Copiado!"
+- `/casos/<id>` ganhou card "Pra consultores e parceiros" com botão de copy
+- Rotas novas: `/biblioteca/tarefas` (catálogo agrupado por arquétipo, filtros) e `/biblioteca/tarefas/<id>` (detalhe da tarefa avulsa)
+- Links discretos "Sou consultor ou parceiro" em `/casos` e `/preciso-de-ajuda`
+- Sitemap atualizado pra indexar `/biblioteca/tarefas` + cada uma das 31 tarefas
+
+### Responsividade desktop (Sprint 2)
+
+Decisão: fluxo principal (`/diagnostico`, `/resultado`, `/salvar`, `/minha-trilha`, `/tarefa/:id`) continua mobile-style por foco. Bibliotecas e telas B2B viram desktop-friendly:
+- `Layout` detecta rotas wide e libera `max-w-5xl` em md+
+- `TopNav` em md+ ganha sub-nav com Conteúdos / Casos / Oportunidades / Tarefas
+- `BottomNav` se esconde em md+ nessas rotas
+- Listas viram grid 1/2/3 cols
+- Detalhes usam `max-w-3xl` em md+
+
+### Outras correções pontuais do dia
+
+- `SavePlan.jsx`: `result is not defined` na linha 158 (referência órfã a `result` em vez de `diagnostic.result`). Trilha era salva mas mostrava erro pro usuário, confundindo.
+- `SavePlan.jsx`: pós-save (`setPlanToken`, `track`) envolvidos em try/catch isolados — falha aí não bloqueia redirect pra `/minha-trilha`.
+- `MyPlan.jsx`: novo botão discreto "Refazer trilha do zero" com confirmação. Cobre o caso onde a pessoa refaz o diagnóstico mas `plan_token` antigo redirecionava.
+- `Apresentacao.jsx`: logo Pescadores dentro do retângulo final do funil (estava só texto).
+- `ADMIN_GUIDE.md`: seção "Cadastro de supervisores e admins" reescrita com passo a passo completo (criar user no Auth → INSERT em supervisors → recuperação de user_id fora de sincronia).
+
+### Decisões registradas
+
+- Login do supervisor é email + senha (magic-link descontinuado)
+- Time de consultores Pescadores é audiência B2B prioritária da biblioteca
+- Fluxo do empreendedor permanece mobile-only mesmo em desktop (foco)
+- Bibliotecas (`/biblioteca/*` e similares) ganham layout aberto em md+
+- Páginas internas do admin ainda usam `getAuthClient` direto; migrar pra `getAuthedClient(token)` só se o bug do init voltar

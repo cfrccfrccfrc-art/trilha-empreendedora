@@ -574,35 +574,69 @@ Gênero balanceado em PT ("empreendedor ou empreendedora", "quem empreende", "co
 
 Pendente: Schema.org markup (HowTo nos guides, Article nos cases, FAQPage no help), prerender SSG, URLs amigáveis, submit sitemap ao Google Search Console.
 
+### Auth supervisor: bypass do init do supabase-js (sessão 27-28/05/2026)
+
+Sintoma: `/admin` ficava em branco mesmo logando com sucesso. `getSession()` e `getUser()` do `supabase-js v2.45.4` travavam o `_initializePromise` interno indefinidamente (timeout 7s em ambos). Fetch direto ao Supabase respondia 200 em ~200ms, então era a lib, não a rede.
+
+Fix: `useSupervisorSession` agora lê o token direto do `localStorage` (chave `trilha_supervisor_auth`) e usa um cliente Supabase fresh (`getAuthedClient(token)` em `supabaseClient.js`) sem `persistSession` pra fazer a query do `supervisors`. Não passa mais pelo init travado.
+
+Decisões correlatas:
+- **Login agora é email + senha** (`signInWithPassword`), magic-link foi descontinuado. `detectSessionInUrl: false` no client supervisor impede processar callback de hash, então o botão "Receber link mágico" saiu da UI.
+- **Sessão expira em ~1h** (sem `autoRefreshToken`). Pra admin casual tá ok.
+- **Cadastro de admin/supervisor**: 2 passos, ver `ADMIN_GUIDE.md` seção "Cadastro de supervisores e admins".
+
+### Biblioteca pra consultores B2B (sessão 27-28/05/2026)
+
+Time de consultores do Projeto Pescadores usa a Trilha como referência no atendimento. Pra que copiem conteúdo formatado pra Slack/Notion/Word/Google Docs:
+
+- `src/utils/exports.js`: `formatCaseAsMarkdown(case)` e `formatTaskAsMarkdown(task)` retornam Markdown limpo (cabeçalho, metadados, seções, fonte).
+- `src/components/CopyTextButton.jsx`: botão reutilizável que copia pro clipboard com feedback "Copiado!" e fallback pra browsers antigos.
+- Rota `/casos/<id>` ganhou card "Pra consultores e parceiros" com `CopyTextButton`.
+- Rotas novas: `/biblioteca/tarefas` (catálogo agrupado por arquétipo, filtros de arquétipo + semana) e `/biblioteca/tarefas/<id>` (detalhe da tarefa avulsa, sem o frame de submissão, com `CopyTextButton`).
+- Links discretos "Sou consultor ou parceiro" em `/casos` (lista) e `/preciso-de-ajuda`.
+- Sitemap agora indexa `/biblioteca/tarefas` e cada uma das 31 tarefas.
+
+### Responsividade desktop nas bibliotecas (sessão 27-28/05/2026)
+
+Fluxo principal (`/`, `/diagnostico`, `/resultado`, `/salvar`, `/minha-trilha`, `/tarefa/:id`) continua mobile-style em qualquer largura por decisão de foco. Bibliotecas ganham layout aberto:
+
+- `Layout.jsx` detecta rotas wide (`/conteudos`, `/casos`, `/oportunidades`, `/preciso-de-ajuda`, `/posso-ajudar`, `/biblioteca/*`) e libera `max-w-5xl` em md+.
+- `TopNav` ganha sub-nav horizontal em md+ com links pra Conteúdos, Casos, Oportunidades, Tarefas.
+- `BottomNav` se esconde em md+ nessas rotas (TopNav cobre); fica em mobile.
+- Listas (`Resources`, `CaseLibrary`, `Opportunities`, `TaskLibrary`) viram grid 1/2/3 cols em mobile/md/lg.
+- Telas de detalhe (`CaseDetailPage`, `TaskLibraryDetail`, `ResourceDetail`) usam `max-w-3xl` em md+ pra leitura confortável.
+
 ### Pendências conhecidas
 
-1. **`/admin` em branco** (provavelmente cache SW antigo) — versão de diagnóstico está deployada (`AdminDashboard.jsx` mostra bloco laranja com state). Aguarda usuário testar em janela anônima fora do FortiGuard. Quando confirmar, remove o bloco debug e volta UI normal.
-2. **FortiGuard** bloqueia `trilhaempreendedora.com.br` na rede atual do usuário (categoria "Newly Observed Domain"). Resolve em 24-72h naturalmente ou via pedido de reavaliação no link do FortiGuard.
-3. **Supabase Auth URL** — pendente trocar Site URL pro domínio próprio assim que confirmar SSL estável. Hoje aceita `*.vercel.app` + apex.
-4. **Press kit + página `/imprensa` + QR code + `MEDIA_KIT.md`** — proposto, não executado.
-5. **Schema.org markup** — proposto, não executado (SEO Fase 3).
-6. **SMTP custom no Supabase Auth** — pra eliminar o rate limit de 4 magic-links por hora. Recomendado pra produção, opcional pra MVP.
-7. **`bailey.mp3` real** — arquivo placeholder 0-byte em `public/`. O dono vai gravar e fazer override.
+1. **FortiGuard** ainda bloqueia o domínio em algumas redes corporativas. Resolve em 24-72h naturalmente.
+2. **Supabase Auth URL** — pendente trocar Site URL pro domínio próprio.
+3. **Press kit + página `/imprensa` + QR code + `MEDIA_KIT.md`** — proposto, não executado.
+4. **Schema.org markup** — proposto, não executado (SEO Fase 3).
+5. **Páginas internas do admin** (`AdminUserStories`, `AdminMetrics`, `SourceRefresh`, `SupervisorReview`, `SupervisorDashboard`) ainda usam `getAuthClient()` direto pra queries. Funcionaram no teste, mas se o bug do init voltar, travam. Plano: migrar pra `getAuthedClient(token)` se ressurgir.
 
 ### Arquivos importantes adicionados desde v1
 
 ```
-PROJECT_CONTEXT.md            (este arquivo, com a seção 14)
-SESSIONS_LOG.md               (histórico de sessões — ver arquivo)
-vercel.json                   (rewrites + redirects www→apex)
-scripts/generate-sitemap.mjs  (auto-gera sitemap no build)
-src/services/telemetry.js     (track()+batch)
+PROJECT_CONTEXT.md                       (este arquivo, com a seção 14)
+SESSIONS_LOG.md                          (histórico de sessões)
+vercel.json                              (rewrites + redirects www→apex)
+scripts/generate-sitemap.mjs             (auto-gera sitemap no build)
+src/services/telemetry.js                (track()+batch)
 src/components/PescadoresHandoff.jsx
-src/pages/Apresentacao.jsx    (rota web-only pitch)
+src/components/CopyTextButton.jsx        (copy pra clipboard com feedback)
+src/utils/exports.js                     (Markdown formatters pra cases + tarefas)
+src/pages/Apresentacao.jsx               (rota web-only pitch)
 src/pages/AdminMetrics.jsx
 src/pages/AdminUserStories.jsx
 src/pages/MyStory.jsx
-public/pescadores-logo.jpg    (logo do parceiro)
-public/icon.svg               (ícone PWA)
+src/pages/TaskLibrary.jsx                (catálogo /biblioteca/tarefas)
+src/pages/TaskLibraryDetail.jsx          (detalhe da tarefa avulsa B2B)
+public/pescadores-logo.jpg               (logo do parceiro)
+public/bailey.mp3                        (trilha sonora do /apresentacao, 3.2MB)
+public/icon.svg                          (ícone PWA)
 public/og-image.svg
-public/manifest.webmanifest   (gerado por vite-plugin-pwa)
-public/sw.js                  (gerado por vite-plugin-pwa)
-public/bailey.mp3             (placeholder, dono vai gravar)
+public/manifest.webmanifest              (gerado por vite-plugin-pwa)
+public/sw.js                             (gerado por vite-plugin-pwa)
 supabase/migrations/0005_user_case_submissions.sql
 supabase/migrations/0006_client_events.sql
 ```
@@ -614,3 +648,6 @@ supabase/migrations/0006_client_events.sql
 - **Pescadores é parceiro de apoio humano**, não fonte de metodologia. Conteúdo da Trilha é adaptação livre + Khan Academy como inspiração geral.
 - **`/apresentacao` é web-first**, não tenta encaixar no mobile do Layout. Tour pra parceiros, jornalistas, decisores.
 - **Telemetria é leve, sem analytics externo** — tabela própria no Supabase. Privacy-friendly.
+- **Login do supervisor é só email + senha** (magic-link descontinuado por causa do bug do init do supabase-js).
+- **Fluxo principal do empreendedor é mobile-style mesmo em desktop** (foco de leitura curta). Só bibliotecas e telas pra consultor B2B (`/biblioteca/*`) aproveitam largura desktop.
+- **Time de consultores Pescadores é audiência B2B prioritária** — `/biblioteca/tarefas` e botões "Copiar texto" foram desenhados pra eles. Outras personas (jornalistas, educadores) podem reusar.
