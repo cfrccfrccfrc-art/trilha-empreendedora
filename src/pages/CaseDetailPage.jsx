@@ -6,7 +6,9 @@ import taskTemplates from '../data/taskTemplates.json';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import CopyTextButton from '../components/CopyTextButton';
 import { Lightbulb, OpenBook } from '../components/Sketches';
+import { formatCaseAsMarkdown } from '../utils/exports';
 
 const AUTHENTICITY_LABELS = {
   anonymized_local_case:
@@ -196,6 +198,26 @@ export default function CaseDetailPage() {
           </Button>
         </Card>
       )}
+
+      <div className="border border-line rounded-2xl p-4 bg-beige/50 space-y-3">
+        <div>
+          <p className="text-xs text-secondary font-semibold uppercase tracking-wide mb-1">
+            Pra consultores e parceiros
+          </p>
+          <p className="text-xs text-secondary leading-relaxed">
+            Copia esse caso em texto formatado pra usar em Slack, Notion,
+            Word ou Google Docs no atendimento.
+          </p>
+        </div>
+        <CopyTextButton
+          text={formatCaseAsMarkdown(caseItem, {
+            baseUrl:
+              typeof window !== 'undefined' ? window.location.origin : undefined,
+          })}
+          label="Copiar caso em texto"
+          className="w-full"
+        />
+      </div>
 
       <Button
         variant="ghost"

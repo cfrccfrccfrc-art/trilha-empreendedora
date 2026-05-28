@@ -312,6 +312,9 @@ function FunnelVisual({ t }) {
             <stop offset="0" stopColor="#FFF4D6" />
             <stop offset="1" stopColor="#4F7CAC" stopOpacity="0.18" />
           </linearGradient>
+          <clipPath id="pescadoresLogoClip">
+            <circle cx="115" cy="333" r="18" />
+          </clipPath>
         </defs>
         <path
           d="M 30 30 L 370 30 L 270 230 L 130 230 Z"
@@ -370,19 +373,36 @@ function FunnelVisual({ t }) {
         />
         <polygon points="200,300 195,290 205,290" fill="#2B2A28" />
         <rect
-          x="120"
+          x="95"
           y="305"
-          width="160"
-          height="50"
+          width="210"
+          height="55"
           rx="12"
           fill="#0B1F3A"
         />
+        <circle
+          cx="115"
+          cy="333"
+          r="19"
+          fill="#FFFDF7"
+          stroke="#D8EEF5"
+          strokeWidth="1.5"
+        />
+        <image
+          href="/pescadores-logo.jpg"
+          x="97"
+          y="315"
+          width="36"
+          height="36"
+          preserveAspectRatio="xMidYMid slice"
+          clipPath="url(#pescadoresLogoClip)"
+        />
         <text
-          x="200"
-          y="335"
+          x="225"
+          y="338"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="17"
+          fontSize="16"
           fontWeight="700"
           fill="#D8EEF5"
         >

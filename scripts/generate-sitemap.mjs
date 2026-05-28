@@ -29,6 +29,7 @@ const STATIC_ROUTES = [
   { path: '/mini/capital', priority: '0.7', changefreq: 'monthly' },
   { path: '/mini/canais', priority: '0.7', changefreq: 'monthly' },
   { path: '/posso-ajudar', priority: '0.5', changefreq: 'monthly' },
+  { path: '/biblioteca/tarefas', priority: '0.7', changefreq: 'monthly' },
 ];
 
 function urlEntry({ path: p, priority, changefreq, lastmod = TODAY }) {
@@ -74,11 +75,22 @@ for (const c of cases) {
   );
 }
 
+const tasks = readJson('taskTemplates.json').filter((t) => t.active !== false);
+for (const t of tasks) {
+  lines.push(
+    urlEntry({
+      path: `/biblioteca/tarefas/${t.id}`,
+      priority: '0.5',
+      changefreq: 'monthly',
+    })
+  );
+}
+
 lines.push('</urlset>');
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, lines.join('\n') + '\n', 'utf8');
 
 const totalUrls =
-  STATIC_ROUTES.length + resources.length + cases.length;
+  STATIC_ROUTES.length + resources.length + cases.length + tasks.length;
 console.log(`✓ sitemap.xml gerado com ${totalUrls} URLs em ${OUT}`);

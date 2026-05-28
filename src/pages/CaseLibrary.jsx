@@ -105,6 +105,16 @@ export default function CaseLibrary() {
           </Card>
         )}
       </div>
+
+      <div className="pt-4">
+        <button
+          type="button"
+          onClick={() => navigate('/biblioteca/tarefas')}
+          className="w-full text-xs text-secondary underline underline-offset-4 py-2"
+        >
+          Sou consultor ou parceiro: ver biblioteca de tarefas
+        </button>
+      </div>
     </div>
   );
 }

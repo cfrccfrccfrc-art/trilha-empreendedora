@@ -22,6 +22,8 @@ const HelpRequest       = lazy(() => import('./pages/HelpRequest'));
 const OfferHelp         = lazy(() => import('./pages/OfferHelp'));
 const BadgeCard         = lazy(() => import('./pages/BadgeCard'));
 const MyStory           = lazy(() => import('./pages/MyStory'));
+const TaskLibrary       = lazy(() => import('./pages/TaskLibrary'));
+const TaskLibraryDetail = lazy(() => import('./pages/TaskLibraryDetail'));
 
 // Supervisor / admin (lazy — only fetched when these users hit those routes)
 const SupervisorLogin     = lazy(() => import('./pages/SupervisorLogin'));
@@ -71,6 +73,10 @@ export default function App() {
           <Route path="/posso-ajudar" element={<OfferHelp />} />
           <Route path="/cartao" element={<BadgeCard />} />
           <Route path="/minha-historia" element={<MyStory />} />
+
+          {/* Biblioteca pra consultores e parceiros (B2B do Pescadores) */}
+          <Route path="/biblioteca/tarefas" element={<TaskLibrary />} />
+          <Route path="/biblioteca/tarefas/:id" element={<TaskLibraryDetail />} />
 
           {/* Supervisor + admin — lazy */}
           <Route path="/supervisor" element={<SupervisorDashboard />} />
