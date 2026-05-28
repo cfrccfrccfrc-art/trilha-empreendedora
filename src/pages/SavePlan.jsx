@@ -154,8 +154,19 @@ export default function SavePlan() {
         if (tasksError) throw tasksError;
       }
 
-      setPlanToken(planToken);
-      track('plan_saved', { archetypeId: diagnostic.result?.archetypeId });
+      // Trilha gravada com sucesso. Daqui pra frente, qualquer falha (storage
+      // bloqueado, telemetria, etc.) NÃO pode reverter a UX — os dados já
+      // estão no banco e o usuário precisa ser redirecionado pra trilha.
+      try {
+        setPlanToken(planToken);
+      } catch (postErr) {
+        console.error('SavePlan post-save setPlanToken failed:', postErr);
+      }
+      try {
+        track('plan_saved', { archetypeId: diagnostic.result?.archetypeId });
+      } catch (postErr) {
+        console.error('SavePlan post-save track failed:', postErr);
+      }
       setSuccess(true);
       setTimeout(() => navigate('/minha-trilha', { replace: true }), 600);
     } catch (err) {
