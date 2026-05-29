@@ -121,38 +121,46 @@ export default function Home() {
   return (
     <div className="space-y-10">
       {/* HERO */}
-      <section>
-        <div className="flex items-start gap-3 mb-3">
-          <p className="font-hand text-secondary text-xl leading-tight">
-            Trilha Empreendedora
+      <section className="relative -mt-2">
+        <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-highlight/20 blur-2xl pointer-events-none" />
+        <div className="absolute top-20 -right-10 w-32 h-32 rounded-full bg-primaryLight/40 blur-2xl pointer-events-none" />
+
+        <div className="relative">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkle className="w-6 h-6" />
+            <p className="font-hand text-secondary text-xl leading-tight">
+              Trilha Empreendedora
+            </p>
+          </div>
+
+          <h1 className="font-sans font-bold text-4xl md:text-5xl text-ink leading-[1.05] tracking-tight mb-2">
+            Encontre o próximo passo certo pro seu negócio.
+          </h1>
+          <WavyUnderline className="w-48 h-3 mb-5" />
+
+          <p className="text-secondary text-base md:text-lg leading-relaxed mb-6">
+            Você responde algumas perguntas rápidas e recebe uma trilha
+            prática pra organizar, vender melhor, entender seus números e
+            dar o próximo passo.
           </p>
-          <Sparkle className="w-5 h-5 mt-1" />
+
+          <div className="flex justify-center my-8">
+            <div className="relative">
+              <div className="absolute inset-0 bg-highlight/30 rounded-full blur-xl scale-90" />
+              <HeroNotebook className="relative w-48 h-48 md:w-56 md:h-56" />
+            </div>
+          </div>
+
+          <Button
+            onClick={() => navigate('/diagnostico')}
+            className="w-full mb-3 text-lg"
+          >
+            Começar diagnóstico
+          </Button>
+          <p className="text-xs text-secondary text-center">
+            Grátis · Sem cadastro pra começar · 5 minutos
+          </p>
         </div>
-
-        <h1 className="font-sans font-bold text-3xl text-ink leading-tight mb-1">
-          Encontre o próximo passo certo para o seu negócio.
-        </h1>
-        <WavyUnderline className="w-40 h-3 mb-5" />
-
-        <p className="text-secondary text-base leading-relaxed mb-6">
-          Você responde algumas perguntas rápidas e recebe uma trilha prática
-          para organizar, vender melhor, entender seus números e dar o próximo
-          passo.
-        </p>
-
-        <div className="flex justify-center my-6">
-          <HeroNotebook className="w-40 h-40" />
-        </div>
-
-        <Button
-          onClick={() => navigate('/diagnostico')}
-          className="w-full mb-3"
-        >
-          Começar diagnóstico
-        </Button>
-        <p className="text-xs text-secondary text-center">
-          Grátis. Sem cadastro pra começar. Leva 5 minutos.
-        </p>
       </section>
 
       {/* COMO FUNCIONA */}
@@ -164,19 +172,26 @@ export default function Home() {
           Três passos simples
         </h2>
         <div className="space-y-3">
-          {STEPS.map((s, idx) => (
-            <Card key={idx} className="flex gap-4 items-start">
-              <s.Icon className="w-12 h-12 shrink-0" />
-              <div>
-                <p className="font-bold text-ink leading-snug mb-1">
-                  {idx + 1}. {s.title}
-                </p>
-                <p className="text-secondary text-sm leading-relaxed">
-                  {s.body}
-                </p>
-              </div>
-            </Card>
-          ))}
+          {STEPS.map((s, idx) => {
+            const tones = ['highlight', 'primary', 'soft'];
+            return (
+              <Card
+                key={idx}
+                tone={tones[idx]}
+                className="flex gap-4 items-start"
+              >
+                <s.Icon className="w-12 h-12 shrink-0" />
+                <div>
+                  <p className="font-bold text-ink leading-snug mb-1">
+                    {idx + 1}. {s.title}
+                  </p>
+                  <p className="text-secondary text-sm leading-relaxed">
+                    {s.body}
+                  </p>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </section>
 
@@ -268,27 +283,34 @@ export default function Home() {
           Tudo gratuito, num só lugar
         </h2>
         <div className="grid grid-cols-1 gap-3">
-          {FEATURES.map((f, idx) => (
-            <Card key={idx} className="flex gap-4 items-start">
-              <div className="shrink-0">
-                <f.Icon className="w-9 h-9" />
-              </div>
-              <div>
-                <p className="font-bold text-ink leading-snug mb-1">
-                  {f.title}
-                </p>
-                <p className="text-secondary text-sm leading-relaxed">
-                  {f.body}
-                </p>
-              </div>
-            </Card>
-          ))}
+          {FEATURES.map((f, idx) => {
+            const tones = ['soft', 'primary', 'highlight', 'green'];
+            return (
+              <Card
+                key={idx}
+                tone={tones[idx % tones.length]}
+                className="flex gap-4 items-start"
+              >
+                <div className="shrink-0">
+                  <f.Icon className="w-9 h-9" />
+                </div>
+                <div>
+                  <p className="font-bold text-ink leading-snug mb-1">
+                    {f.title}
+                  </p>
+                  <p className="text-secondary text-sm leading-relaxed">
+                    {f.body}
+                  </p>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </section>
 
       {/* METODOLOGIA */}
       <section>
-        <Card className="bg-beige border-line">
+        <Card tone="soft">
           <div className="flex gap-3 items-start">
             <Lightbulb className="w-10 h-10 shrink-0" />
             <div>
@@ -323,16 +345,17 @@ export default function Home() {
 
       {/* FINAL CTA */}
       <section>
-        <Card className="border-primary bg-primaryLight/40">
-          <h2 className="font-bold text-ink text-xl leading-snug mb-2">
-            Pronto para descobrir seu próximo passo?
+        <Card tone="ink" className="text-center">
+          <Sparkle className="w-7 h-7 mx-auto mb-3" color="#F7E27C" />
+          <h2 className="font-bold text-paper text-2xl leading-snug mb-2">
+            Pronto pra descobrir seu próximo passo?
           </h2>
-          <p className="text-secondary text-sm leading-relaxed mb-4">
+          <p className="text-paper/70 text-sm leading-relaxed mb-5">
             5 minutos pra responder. 30 dias pra praticar.
           </p>
           <Button
             onClick={() => navigate('/diagnostico')}
-            className="w-full"
+            className="w-full bg-highlight text-ink hover:bg-highlight/90 shadow-lg"
           >
             Começar diagnóstico
           </Button>

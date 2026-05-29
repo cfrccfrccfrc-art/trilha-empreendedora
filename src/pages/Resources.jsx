@@ -127,7 +127,9 @@ export default function Resources() {
           {list.map((r) => (
             <Card
               key={r.id}
-              className="cursor-pointer hover:bg-beige transition-colors h-full"
+              interactive
+              tone="soft"
+              className="h-full"
               onClick={() => navigate(`/conteudos/${r.id}`)}
             >
               <div className="flex justify-between items-start gap-3 mb-2">

@@ -118,7 +118,7 @@ export default function Opportunities() {
           {list.map((o) => {
             const isExternal = (o.sourceLink || '').startsWith('http');
             return (
-              <Card key={o.id} className="h-full flex flex-col">
+              <Card key={o.id} tone="soft" className="h-full flex flex-col">
                 <div className="flex justify-between items-start gap-3 mb-2">
                   <h3 className="font-semibold text-ink leading-snug flex-1">
                     {o.title}

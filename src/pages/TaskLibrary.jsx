@@ -106,7 +106,9 @@ export default function TaskLibrary() {
               {list.map((t) => (
                 <Card
                   key={t.id}
-                  className="cursor-pointer hover:bg-beige transition-colors h-full"
+                  interactive
+                  tone="soft"
+                  className="h-full"
                   onClick={() => navigate(`/biblioteca/tarefas/${t.id}`)}
                 >
                   <div className="flex justify-between items-start gap-3">

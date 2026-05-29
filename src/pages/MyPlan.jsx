@@ -225,20 +225,31 @@ export default function MyPlan() {
           <p className="font-hand text-secondary text-lg leading-tight px-1">
             Semana {week}
           </p>
-          {weekTasks.map((task) => (
-            <Card
-              key={task.id}
-              className="cursor-pointer hover:bg-beige transition-colors"
-              onClick={() => navigate(`/tarefa/${task.id}`)}
-            >
-              <div className="flex justify-between items-start gap-3">
-                <p className="font-semibold text-ink leading-snug flex-1">
-                  {task.title}
-                </p>
-                <StatusBadge status={task.status} />
-              </div>
-            </Card>
-          ))}
+          {weekTasks.map((task) => {
+            const tone =
+              task.status === 'concluida'
+                ? 'green'
+                : task.status === 'precisa_ajustar'
+                ? 'coral'
+                : task.status === 'enviada'
+                ? 'primary'
+                : 'default';
+            return (
+              <Card
+                key={task.id}
+                interactive
+                tone={tone}
+                onClick={() => navigate(`/tarefa/${task.id}`)}
+              >
+                <div className="flex justify-between items-start gap-3">
+                  <p className="font-semibold text-ink leading-snug flex-1">
+                    {task.title}
+                  </p>
+                  <StatusBadge status={task.status} />
+                </div>
+              </Card>
+            );
+          })}
         </div>
       ))}
 

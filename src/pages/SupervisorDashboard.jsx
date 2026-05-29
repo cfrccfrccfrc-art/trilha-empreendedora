@@ -118,7 +118,8 @@ export default function SupervisorDashboard() {
           return (
             <Card
               key={s.id}
-              className="cursor-pointer hover:bg-beige transition-colors"
+              interactive
+              tone="soft"
               onClick={() => navigate(`/supervisor/revisar/${s.id}`)}
             >
               <div className="flex justify-between items-start gap-3 mb-2">

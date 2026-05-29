@@ -84,7 +84,9 @@ export default function CaseLibrary() {
           {list.map((c) => (
             <Card
               key={c.id}
-              className="cursor-pointer hover:bg-beige transition-colors h-full"
+              interactive
+              tone="soft"
+              className="h-full"
               onClick={() => navigate(`/casos/${c.id}`)}
             >
               <div className="flex justify-between items-start gap-3 mb-2">
