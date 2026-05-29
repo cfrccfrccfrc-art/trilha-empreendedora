@@ -8,6 +8,7 @@ import archetypesData from '../data/archetypes.json';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import PersonaAvatar from '../components/PersonaAvatar';
 import { OpenBook, Lightbulb, Sparkle } from '../components/Sketches';
 
 const AUTHENTICITY_LABELS = {
@@ -120,11 +121,18 @@ export default function TaskCompanion() {
         subtitle={template ? template.title : null}
       />
 
-      <div className="flex gap-3 items-start text-xs text-secondary leading-relaxed bg-beige rounded-2xl p-3 border border-line">
-        <OpenBook className="w-9 h-9 shrink-0" />
-        <div>
-          <p className="text-ink font-semibold mb-1">{companion.region}</p>
-          <p>{authenticity}</p>
+      <div className="flex gap-4 items-center bg-beige/60 border border-line rounded-2xl p-4">
+        <PersonaAvatar name={companion.personaName} size={64} />
+        <div className="flex-1 min-w-0">
+          <p className="text-ink font-bold leading-snug">
+            {companion.personaName}
+          </p>
+          <p className="text-secondary text-xs leading-relaxed">
+            {companion.region}
+          </p>
+          <p className="text-secondary text-xs leading-relaxed mt-1">
+            {authenticity}
+          </p>
         </div>
       </div>
 

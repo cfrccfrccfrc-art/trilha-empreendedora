@@ -18,6 +18,7 @@ import {
   Pin,
   HeartCoin,
   DocumentStamp,
+  PathTrail,
 } from '../components/Sketches';
 
 const STEPS = [
@@ -119,7 +120,7 @@ export default function Home() {
   };
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-12">
       {/* HERO */}
       <section className="relative -mt-2">
         <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full bg-highlight/20 blur-2xl pointer-events-none" />
@@ -162,6 +163,10 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <div className="flex items-center gap-2 text-secondary/40 -my-2 px-4">
+        <PathTrail className="flex-1 h-5" />
+      </div>
 
       {/* COMO FUNCIONA */}
       <section>
@@ -342,6 +347,10 @@ export default function Home() {
       <section>
         <ShareBanner tone="soft" />
       </section>
+
+      <div className="flex items-center gap-2 text-secondary/40 -my-2 px-4">
+        <PathTrail className="flex-1 h-5" />
+      </div>
 
       {/* FINAL CTA */}
       <section>
