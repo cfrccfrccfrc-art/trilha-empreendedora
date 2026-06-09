@@ -78,13 +78,21 @@ export function scoreAnswers(answers, questions, archetypes, rules) {
     });
 
   const minScore = rules?.minScoreForArchetype ?? 0;
+  const perArchetype = rules?.minScorePerArchetype || {};
   const fallback = rules?.fallbackArchetype ?? null;
-  const top = ranked[0];
 
-  // Engagement floor: even if a tiny archetype has 100% ratio, require a
-  // minimum raw score so the user actually engaged with relevant questions.
-  const archetypeId =
-    top && top.score >= minScore ? top.id : fallback;
+  // Walk the ranking and pick the first archetype that meets its own
+  // threshold. Per-archetype thresholds override the global one. This lets
+  // us require, e.g., that `negocio_consolidado` only wins with a strong
+  // raw score, while keeping the global floor low for narrower archetypes.
+  let archetypeId = fallback;
+  for (const cand of ranked) {
+    const needed = perArchetype[cand.id] ?? minScore;
+    if (cand.score >= needed) {
+      archetypeId = cand.id;
+      break;
+    }
+  }
 
   const painThreshold = rules?.painThreshold ?? 0;
   const sortedPains = Object.entries(painScores)

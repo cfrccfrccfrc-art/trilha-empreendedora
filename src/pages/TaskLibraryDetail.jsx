@@ -9,6 +9,7 @@ import Card from '../components/Card';
 import Button from '../components/Button';
 import CopyTextButton from '../components/CopyTextButton';
 import PersonaAvatar from '../components/PersonaAvatar';
+import JsonLd from '../components/JsonLd';
 import { formatTaskAsMarkdown } from '../utils/exports';
 
 const REVIEW_LABELS = {
@@ -64,8 +65,44 @@ export default function TaskLibraryDetail() {
       typeof window !== 'undefined' ? window.location.origin : undefined,
   });
 
+  const howToSteps = [];
+  if (task.action) {
+    howToSteps.push({
+      '@type': 'HowToStep',
+      name: 'A ação',
+      text: task.action,
+    });
+  }
+  if (Array.isArray(task.reflectionQuestions)) {
+    for (const q of task.reflectionQuestions) {
+      howToSteps.push({
+        '@type': 'HowToStep',
+        name: 'Pergunta de reflexão',
+        text: q,
+      });
+    }
+  }
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: task.title,
+    description: task.purpose || task.expectedLearning || task.action,
+    inLanguage: 'pt-BR',
+    isAccessibleForFree: true,
+    url: `https://trilhaempreendedora.com.br/biblioteca/tarefas/${task.id}`,
+    totalTime: 'P7D',
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Microempreendedores brasileiros',
+    },
+    publisher: { '@id': 'https://trilhaempreendedora.com.br/#organization' },
+    step: howToSteps,
+  };
+
   return (
     <div className="space-y-5 md:max-w-5xl md:mx-auto">
+      <JsonLd id={`task-${task.id}`} schema={schema} />
+
       <PageHeader
         accent={archetype ? archetype.name : 'Tarefa'}
         title={task.title}

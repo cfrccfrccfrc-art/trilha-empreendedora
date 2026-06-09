@@ -13,6 +13,7 @@ import ProgressBar from '../components/ProgressBar';
 import DonationBanner from '../components/DonationBanner';
 import ShareBanner from '../components/ShareBanner';
 import PescadoresHandoff from '../components/PescadoresHandoff';
+import DisclaimerNote from '../components/DisclaimerNote';
 import { Sparkle } from '../components/Sketches';
 import { track } from '../services/telemetry';
 
@@ -314,6 +315,8 @@ export default function MyPlan() {
           Compartilhar meu cartão
         </Button>
       </div>
+
+      <DisclaimerNote variant="compact" className="pt-2" />
 
       <div className="pt-6">
         {confirmReset ? (

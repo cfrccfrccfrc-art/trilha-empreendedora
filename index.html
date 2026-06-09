@@ -10,7 +10,7 @@
     <title>Trilha Empreendedora — diagnóstico gratuito e trilha de 30 dias para o seu negócio</title>
     <meta
       name="description"
-      content="Diagnóstico de 5 minutos para microempreendedores brasileiros. Identifica o seu perfil entre 12 caminhos e monta uma trilha de 30 dias com 4 missões práticas. Gratuito, sem cadastro, mantido por doação Pix."
+      content="Diagnóstico de 5 minutos para microempreendedores brasileiros. Identifica o seu perfil entre 13 caminhos e monta uma trilha de 30 dias com 4 missões práticas. Gratuito, sem cadastro, mantido por doação Pix."
     />
 
     <link rel="canonical" href="https://trilhaempreendedora.com.br/" />
@@ -26,7 +26,7 @@
     />
     <meta
       property="og:description"
-      content="Diagnóstico de 5 minutos para microempreendedores brasileiros. 12 perfis, 30 dias de missões práticas, gratuito, sem cadastro."
+      content="Diagnóstico de 5 minutos para microempreendedores brasileiros. 13 perfis, 30 dias de missões práticas, gratuito, sem cadastro."
     />
     <meta property="og:image" content="https://trilhaempreendedora.com.br/og-image.svg" />
     <meta property="og:image:type" content="image/svg+xml" />
@@ -52,6 +52,37 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Patrick+Hand&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Schema.org: WebSite + Organization (estáticos, válidos pra qualquer rota) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://trilhaempreendedora.com.br/#website",
+          "url": "https://trilhaempreendedora.com.br/",
+          "name": "Trilha Empreendedora",
+          "description": "Diagnóstico de 5 minutos para microempreendedores brasileiros, com trilha de 30 dias com 4 missões práticas. Gratuito, sem cadastro.",
+          "inLanguage": "pt-BR",
+          "publisher": { "@id": "https://trilhaempreendedora.com.br/#organization" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://trilhaempreendedora.com.br/#organization",
+          "name": "Trilha Empreendedora",
+          "url": "https://trilhaempreendedora.com.br/",
+          "logo": "https://trilhaempreendedora.com.br/icon.svg",
+          "description": "Plataforma educacional gratuita para microempreendedores brasileiros. Diagnóstico de perfil + trilha de 30 dias com missões práticas. Adaptação livre sem fins lucrativos, inspirada no propósito da Khan Academy.",
+          "areaServed": "BR",
+          "knowsLanguage": "pt-BR",
+          "sameAs": [
+            "https://github.com/cfrccfrccfrc-art/trilha-empreendedora"
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>

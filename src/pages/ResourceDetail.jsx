@@ -5,6 +5,7 @@ import archetypesData from '../data/archetypes.json';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import JsonLd from '../components/JsonLd';
 import { OpenBook, Sparkle } from '../components/Sketches';
 
 const TYPE_LABELS = {
@@ -75,8 +76,26 @@ export default function ResourceDetail() {
     }
   };
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: resource.title,
+    description: resource.description,
+    inLanguage: 'pt-BR',
+    isAccessibleForFree: true,
+    url: `https://trilhaempreendedora.com.br/conteudos/${resource.id}`,
+    articleSection: resource.topic,
+    audience: {
+      '@type': 'Audience',
+      audienceType: 'Microempreendedores brasileiros',
+    },
+    publisher: { '@id': 'https://trilhaempreendedora.com.br/#organization' },
+  };
+
   return (
     <div className="space-y-5 md:max-w-3xl md:mx-auto">
+      <JsonLd id={`resource-${resource.id}`} schema={schema} />
+
       <PageHeader accent={resource.source} title={resource.title} />
 
       {/* Top metadata strip */}

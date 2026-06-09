@@ -8,6 +8,7 @@ import { compressImage } from '../utils/imageCompress';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
+import DisclaimerNote from '../components/DisclaimerNote';
 import { OpenBook } from '../components/Sketches';
 import { track } from '../services/telemetry';
 
@@ -568,6 +569,8 @@ export default function TaskDetail() {
           </form>
         </Card>
       )}
+
+      <DisclaimerNote variant="compact" className="pt-2" />
 
       <Button
         variant="ghost"

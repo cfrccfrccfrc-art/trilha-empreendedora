@@ -131,5 +131,69 @@ assert(
   `got ${r6.archetypeId}`
 );
 
+console.log(
+  '\n--- Test 7: 1+ano organizado + falta clientes → produto_bom_vitrine_fraca ---'
+);
+// Pessoa com fundamentos no lugar (MEI, 1+ano, finanças OK, divulga online) mas
+// dor explícita "faltam clientes". Antes do fix 1.2 caía em negocio_consolidado
+// porque ratio alto + tiebreak. Agora deve cair em produto_bom_vitrine_fraca.
+const orgWantsClients = {
+  q_stage_selling: 'sells_regularly',
+  q_stage_time: 'gt_1y',
+  q_time_dedication: 'gt_30h',
+  q_channels_online: 'rare',
+  q_finances_track: 'yes_detailed',
+  q_finances_profit: 'yes_monthly',
+  q_finances_costs: 'yes_per_item',
+  q_capital_formal: 'mei',
+  q_goals_main: 'no_clients',
+};
+const r7 = scoreAnswers(orgWantsClients, questions, archetypes, rules);
+console.log('  archetypeId:', r7.archetypeId);
+console.log(
+  '  scores nonzero:',
+  Object.fromEntries(
+    Object.entries(r7.archetypeScores).filter(([, v]) => v)
+  )
+);
+assert(
+  '1+ano organizado + dor=clientes NÃO cai em negocio_consolidado',
+  r7.archetypeId !== 'negocio_consolidado',
+  `got ${r7.archetypeId}`
+);
+assert(
+  '1+ano organizado + dor=clientes → produto_bom_vitrine_fraca',
+  r7.archetypeId === 'produto_bom_vitrine_fraca',
+  `got ${r7.archetypeId}`
+);
+
+console.log(
+  '\n--- Test 8: consolidado de verdade (todos sinais fortes) → negocio_consolidado ---'
+);
+// Pessoa que tem TODOS os sinais estruturais fortes E não declara dor
+// específica de fundamento. Continua caindo em negocio_consolidado mesmo
+// com o threshold maior.
+const trueConsolidated = {
+  q_stage_selling: 'sells_regularly',
+  q_stage_time: 'gt_1y',
+  q_time_dedication: 'gt_30h',
+  q_channels_online: 'frequent',
+  q_finances_track: 'yes_detailed',
+  q_finances_profit: 'yes_monthly',
+  q_finances_costs: 'yes_per_item',
+  q_capital_formal: 'cnpj',
+};
+const r8 = scoreAnswers(trueConsolidated, questions, archetypes, rules);
+console.log('  archetypeId:', r8.archetypeId);
+console.log(
+  '  negocio_consolidado score:',
+  r8.archetypeScores.negocio_consolidado
+);
+assert(
+  'consolidado de verdade → negocio_consolidado',
+  r8.archetypeId === 'negocio_consolidado',
+  `got ${r8.archetypeId} (score=${r8.archetypeScores.negocio_consolidado})`
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

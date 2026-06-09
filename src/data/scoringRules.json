@@ -1,7 +1,6 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "tieBreakOrder": [
-    "negocio_consolidado",
     "talento_sem_postura_comercial",
     "bico_pode_virar",
     "potencial_b2b_local",
@@ -13,9 +12,13 @@
     "empreendedora_sobrecarregada",
     "operacao_travada",
     "vende_sem_lucro",
+    "negocio_consolidado",
     "ainda_e_ideia"
   ],
   "minScoreForArchetype": 3,
+  "minScorePerArchetype": {
+    "negocio_consolidado": 11
+  },
   "fallbackArchetype": "ainda_e_ideia",
   "painThreshold": 2
 }

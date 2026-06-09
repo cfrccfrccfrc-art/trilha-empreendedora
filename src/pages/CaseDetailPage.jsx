@@ -7,6 +7,7 @@ import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import CopyTextButton from '../components/CopyTextButton';
+import JsonLd from '../components/JsonLd';
 import { Lightbulb, OpenBook } from '../components/Sketches';
 import { formatCaseAsMarkdown } from '../utils/exports';
 
@@ -74,8 +75,32 @@ export default function CaseDetailPage() {
     AUTHENTICITY_LABELS[caseItem.caseAuthenticityType] ||
     'Caso pedagógico não-protegido por direito autoral.';
 
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: caseItem.title,
+    description: caseItem.dilemma,
+    inLanguage: 'pt-BR',
+    isAccessibleForFree: true,
+    url: `https://trilhaempreendedora.com.br/casos/${caseItem.id}`,
+    articleSection: caseItem.sector,
+    keywords: [
+      'microempreendedorismo',
+      'baixa renda',
+      caseItem.sector,
+      caseItem.region,
+    ].filter(Boolean).join(', '),
+    learningResourceType: 'Case Study',
+    educationalUse: 'Self-study',
+    audience: { '@type': 'Audience', audienceType: 'Microempreendedores brasileiros' },
+    publisher: { '@id': 'https://trilhaempreendedora.com.br/#organization' },
+    teaches: caseItem.lessonLearned,
+  };
+
   return (
     <div className="space-y-5 md:max-w-5xl md:mx-auto">
+      <JsonLd id={`case-${caseItem.id}`} schema={schema} />
+
       <PageHeader
         accent={`${caseItem.region} · ${caseItem.readingTime}`}
         title={caseItem.title}

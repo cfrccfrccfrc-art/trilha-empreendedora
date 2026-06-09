@@ -11,6 +11,7 @@ import Button from '../components/Button';
 import { Sparkle } from '../components/Sketches';
 import DonationBanner from '../components/DonationBanner';
 import PescadoresHandoff from '../components/PescadoresHandoff';
+import DisclaimerNote from '../components/DisclaimerNote';
 import { track } from '../services/telemetry';
 
 const RESULT_KEY = 'trilha_diagnostic_result';
@@ -323,6 +324,8 @@ export default function Results() {
       )}
 
       <DonationBanner placement="results" />
+
+      <DisclaimerNote />
 
       <div className="space-y-3 pt-2">
         <p className="text-secondary text-sm leading-relaxed text-center px-2">
