@@ -795,5 +795,53 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "case_joelma_lembrancinhas_janela",
+  "title": "Joelma, a mãe solo que prometia 'pra amanhã' e queimava a madrugada",
+  "region": "Brasil, Olinda (PE)",
+  "sector": "geral",
+  "archetypes": ["cuidador_empreendedor"],
+  "readingTime": "5 min",
+  "dilemma": "Mãe solo de Tarcísio (3 anos). Faz lembrancinha de festa infantil em casa há 2 anos. Aceitava qualquer prazo apertado pra não perder venda, queimava madrugada e ficava de cama no dia seguinte. Faturamento R$ 2.300/mês, mas o corpo já não aguentava.",
+  "situation": "Joelma tem 31 anos, mora em Olinda (PE). Tarcísio tem 3 anos, vai meio-período pra creche (7h30-12h). Mãe dela ajuda 3 tardes por semana, mas precisa também cuidar do irmão dela. Joelma faz lembrancinha de festa (caixinha personalizada, kit decorado, doce embalado) por encomenda via Instagram (1.200 seguidores) e WhatsApp. Cliente quer entrega em 3-5 dias normalmente, mas vários pedem 'pra ontem' (lembrou da festa em cima da hora). Joelma aceita 80% desses prazos apertados. Queima madrugada. Tarcísio acorda mais cedo nos dias que ela dormiu pouco. Vira ciclo. Sente que tá quase desistindo.",
+  "options": [
+    "Continuar aceitando prazo apertado. Cliente exige, ela entrega, ciclo se mantém até o burnout final.",
+    "Parar de vender por Instagram e voltar a vender só pras vizinhas que já conhecem o ritmo dela — perde alcance.",
+    "Mapear janelas reais (7h30-12h da creche + 14h-15h do soninho do Tarcísio = 5h30 de janela média por dia útil), definir oferta principal (kit de 30 unidades padronizado que cabe em 4 janelas), criar tabela de prazo escrita (kit padrão: 5 dias úteis; kit customizado: 8 dias úteis), comunicar tabela como política nova, e ter mensagem pré-escrita pra cliente que insiste em 'rápido'."
+  ],
+  "tradeoffs": "Continuar aceitando prazo apertado leva ao colapso físico e perda da operação inteira (sem Joelma, não há negócio). Voltar pra vizinhança preserva saúde mas estagna em R$ 800-1.200/mês. Mapear janelas + tabela escrita preserva alcance, profissionaliza comunicação, filtra cliente caótico (que vai pra outra prestadora desorganizada) e mantém saúde da Joelma. Cliente bom aceita 5 dias. Cliente que exige 24h não era cliente sustentável.",
+  "lessonLearned": "Quem cuida e empreende não precisa esconder o cuidado nem se desculpar por ele. Mapear janelas reais + oferta que cabe + prazo escrito + plano de continuidade muda a relação com cliente: vira profissional com política clara, não vira mãe pedindo desculpa.",
+  "tropicalizedLesson": "No Brasil, mãe solo (e cuidadora de qualquer pessoa em casa) empreende com tempo extremamente fragmentado. A tentação é trabalhar à noite pra 'compensar' — vira ciclo de exaustão que destrói o que sustenta tudo. A tabela escrita de prazos no WhatsApp Business é a ferramenta mais transformadora pra esse perfil. Custa zero, comunica profissionalismo, e despessoaliza a recusa de prazo apertado. Cliente que entende, fica. Cliente que exige sem entender, sai — e quase sempre era cliente caro mesmo. O que parece restrição (oferta principal única, prazo de 5 dias) vira sustentabilidade do negócio.",
+  "practicalTask": "task_mapear_janelas_reais",
+  "relatedResources": ["res_organizacao_pedidos", "res_whatsapp_business_basico"],
+  "helpTrigger": "Se você cuida de alguém em casa, empreende há mais de 6 meses, e queima madrugada mais de 1 vez por semana pra entregar prazo apertado, peça ajuda. O ciclo se quebra com tabela escrita, não com mais esforço.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "case_tereza_trico_cuidado_pai",
+  "title": "Tereza, o tricô feito em janelas de 2 horas e o cliente que quase saiu",
+  "region": "Brasil, Pelotas (RS)",
+  "sector": "geral",
+  "archetypes": ["cuidador_empreendedor"],
+  "readingTime": "5 min",
+  "dilemma": "Cuida do pai com Alzheimer há 6 anos. Faz tricô artesanal (manta, peça sob medida) por encomenda. Cliente quer prazo curto, ela aceita por não querer parecer 'desorganizada'. Pai piorou em maio, ela atrasou 4 pedidos, sentiu que ia perder a base de clientes inteira.",
+  "situation": "Tereza tem 54 anos, mora em Pelotas (RS). Cuida do pai (Seu Joaquim, 78 anos, Alzheimer médio) sozinha há 6 anos. Conta com cuidadora paga 8h-10h da manhã (R$ 1.400/mês). Resto do dia é dela. Faz tricô artesanal (manta, peça sob medida, casaco infantil) e vende por uma página simples no Instagram e por indicação. Faturamento R$ 1.900/mês. Em maio, pai teve piora (não dormia à noite, agressivo de manhã). Tereza não dormia, produção rendeu metade, atrasou 4 pedidos em 2 semanas. 2 clientes mandaram mensagem irritada. 1 cancelou. Sentiu que ia perder tudo.",
+  "options": [
+    "Continuar escondendo do cliente que cuida do pai, achando que isso desqualifica. Aceitar prazo apertado e torcer.",
+    "Contar a história completa em cada conversa de venda, esperar que cliente 'entenda'. Mistura emoção com profissionalismo.",
+    "Tabela escrita de prazos (manta simples 15 dias, sob medida 25 dias), mensagem pré-escrita no WhatsApp explicando política, e plano de continuidade pra dia ruim ('em caso de imprevisto, prazo pode estender em 5 dias, comunicado com antecedência'). Sem detalhar motivo pessoal — comunicação profissional."
+  ],
+  "tradeoffs": "Esconder leva a ciclo de promessa e atraso, perde cliente fiel devagar. Contar a história em cada venda confunde cliente, mistura emoção com comércio, gera pena ou descrédito (nenhum dos dois é bom pra negócio). Tabela escrita + mensagem pré-escrita comunica profissionalismo, protege a privacidade do cuidado, e filtra cliente que aceita prazo realista. Quando dia ruim chegar de novo (vai chegar), cliente recebe comunicação clara antes do atraso, não depois.",
+  "lessonLearned": "Cuidar de alguém em casa não precisa virar argumento de venda nem segredo vergonhoso. É contexto privado que dita a tabela de prazos — e a tabela é o que aparece pro cliente, não o contexto. Cliente paga pela entrega no prazo combinado, não pelo motivo do prazo.",
+  "tropicalizedLesson": "No Brasil, milhões de mulheres entre 45 e 65 anos cuidam de pai/mãe idoso(a) em casa enquanto tentam manter renda. A tentação de contar a história ('meu pai tá doente, por isso atrasei') gera pena no cliente — pena não sustenta repetição de venda. Tabela escrita + mensagem profissional preserva a dignidade do cuidador e a confiança comercial. WhatsApp Business com prazo de 15-25 dias declarado funciona pra artesanato e serviço sob medida no Brasil — cliente que quer 'pra ontem' procura industrializado, não tricô feito à mão. Filtra o que não era cliente certo desde o começo.",
+  "practicalTask": "task_prazo_realista_comunicado",
+  "relatedResources": ["res_whatsapp_business_basico", "res_organizacao_pedidos"],
+  "helpTrigger": "Se você cuida de alguém em casa, atrasou 2+ pedidos no último trimestre, e sente que cliente fiel tá começando a sumir, peça ajuda. Não é falta de competência — é falta de comunicação escrita. Tabela e mensagem pré-escrita destravam.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

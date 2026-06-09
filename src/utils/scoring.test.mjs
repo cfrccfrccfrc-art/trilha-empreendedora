@@ -217,5 +217,46 @@ assert(
   r9.flags.includes('restart_after_close')
 );
 
+console.log(
+  '\n--- Test 10: caregiver em q_home_business_reason → cuidador_empreendedor ---'
+);
+// Pessoa marca "cuido de alguém em casa". Tem que cair em cuidador_empreendedor
+// mesmo que pontue em outros arquétipos por outras respostas (porque +5 supera
+// score acumulado normal em poucas perguntas).
+const caregiver = {
+  q_home_business_reason: 'caregiver',
+};
+const r10 = scoreAnswers(caregiver, questions, archetypes, rules);
+console.log('  archetypeId:', r10.archetypeId);
+console.log('  flags:', r10.flags);
+assert(
+  'caregiver sozinho → cuidador_empreendedor',
+  r10.archetypeId === 'cuidador_empreendedor',
+  `got ${r10.archetypeId}`
+);
+assert(
+  'flag caregiver presente',
+  r10.flags.includes('caregiver')
+);
+
+console.log(
+  '\n--- Test 11: empreendedora_sobrecarregada (sem caregiver) ainda funciona ---'
+);
+// Pessoa pontua forte em sobrecarregada mas NÃO escolhe caregiver. Tem que
+// cair em sobrecarregada, não em cuidador.
+const overloaded = {
+  q_stage_selling: 'sells_regularly',
+  q_time_dedication: 'lt_5h',
+  q_goals_main: 'time_overload',
+  q_home_business_reason: 'by_choice',
+};
+const r11 = scoreAnswers(overloaded, questions, archetypes, rules);
+console.log('  archetypeId:', r11.archetypeId);
+assert(
+  'overloaded sem caregiver → empreendedora_sobrecarregada',
+  r11.archetypeId === 'empreendedora_sobrecarregada',
+  `got ${r11.archetypeId}`
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

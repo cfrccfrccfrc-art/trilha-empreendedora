@@ -505,7 +505,7 @@ Os 13 `name` foram trocados de rótulos descritivos pra **quotes em 1ª pessoa e
 - `task_conversar_negocios_pares` (W3)
 - `task_decidir_1_aposta_6m` (W4)
 
-Total geral (pós-sessão de 09/06/2026): **35 task templates ativos, 31 companions, 14 archetypes ativos, 29 cases, 21 resources, 11 opportunities**.
+Total geral (após sessões de 09/06/2026): **39 task templates ativos, 42 companions, 15 archetypes ativos, 33 cases, 21 resources, 11 opportunities, 36 perguntas no diagnóstico**.
 
 ### Personas dos cases ficaram brasileiras
 
@@ -620,6 +620,36 @@ Sprint 3 dedicado a tirar o "pobre" do look & feel. 7 blocos:
 - **PathTrail** entre seções principais da Home.
 - **PersonaAvatar** novo: círculo com iniciais em Patrick Hand, cor determinística por nome (hash). Usado em `TaskCompanion` e em `TaskLibraryDetail`.
 - **Layout 2-col em md+** nas telas de detalhe (`CaseDetailPage`, `TaskLibraryDetail`): conteúdo principal à esquerda, sidebar sticky à direita com tarefa prática, recursos, copy text, voltar.
+
+### 15º arquétipo: cuidador empreendedor (sessão 09/06/2026)
+
+Adicionado `cuidador_empreendedor` ("Cuido de alguém em casa, preciso fazer o negócio caber nesse espaço") cobrindo público de mães solo de crianças pequenas, filhas/filhos cuidando de pais idosos, esposas/esposos cuidando de pessoa adoecida. Dor única: tempo fragmentado em janelas curtas + cliente exigindo prazo apertado + ciclo de queimar madrugada que vira burnout.
+
+Diferenciação de `empreendedora_sobrecarregada`: ali o gatilho é volume de trabalho. Aqui é cuidado externo não delegável.
+
+Roadmap 30d específico (centrado em encaixar negócio no tempo real):
+- W1 `task_mapear_janelas_reais`: cronometrar tempo de trabalho efetivo (não ideal) por 7 dias
+- W2 `task_oferta_caber_janela`: definir 1 oferta principal que cabe na janela média
+- W3 `task_prazo_realista_comunicado`: tabela de prazos escrita + mensagem padrão no WhatsApp Business
+- W4 `task_plano_continuidade`: plano pra dia ruim de cuidado (lista de clientes flexíveis, mensagem pré-escrita, backup humano)
+
+Cobertura de conteúdo (sem deixar nenhuma task órfã):
+- 2 cases (`case_joelma_lembrancinhas_janela` em Olinda, `case_tereza_trico_cuidado_pai` em Pelotas)
+- 4 companions cobrindo todas as W1-W4 (Joelma em W1+W2, Tereza em W3+W4)
+
+Pergunta nova (35 → 36 perguntas no diagnóstico):
+- `q_home_business_reason` ("Você trabalha de casa hoje? Se sim, qual o motivo principal?") com 4 opções
+- Opção `caregiver` ("Sim, cuido de alguém em casa e não posso sair em horário fixo") pontua +5 pra `cuidador_empreendedor` + flag `caregiver`
+- Outras 3 opções (not_home, by_choice, until_space) não pontuam — não enviesa diagnóstico de quem não é cuidador
+- Pergunta posicionada na seção "context", order 28 (depois de capital, antes de community)
+
+Scoring:
+- `cuidador_empreendedor` adicionado ao `tieBreakOrder` antes de `empreendedora_sobrecarregada` (em empate, cuidador específico ganha)
+- Sem `minScorePerArchetype` (max possível 5 pts em 1 questão, threshold padrão 3 cobre)
+- Testes 10 e 11 novos: caregiver sozinho → cuidador; overload sem caregiver → sobrecarregada continua funcionando
+- 19 testes passando
+
+Decisão sobre #3 (pivot necessário, "tô há anos no mesmo e tá morrendo"): **não vai entrar agora**. Diferenciá-lo do `negocio_consolidado` exigiria 1-2 perguntas novas (e o questionário já chegou a 36). Reavaliar se GSC mostrar busca real por keywords tipo "negócio antigo perdendo cliente", "pivot pequeno empreendedor".
 
 ### 14º arquétipo: recomeço pós-falha (sessão 09/06/2026)
 

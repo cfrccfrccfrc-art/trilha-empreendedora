@@ -1255,5 +1255,142 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "companion_mapear_janelas_reais_joelma",
+  "taskTemplateId": "task_mapear_janelas_reais",
+  "archetypeId": "cuidador_empreendedor",
+  "personaName": "Joelma",
+  "region": "Brasil, Olinda (PE)",
+  "personaContext": "Mãe solo de Tarcísio (3 anos). Faz lembrancinha de festa infantil há 2 anos. Tarcísio vai meio-período pra creche, mãe dela ajuda 3 tardes/semana. Joelma decidiu mapear janelas reais antes de aceitar mais qualquer pedido apertado.",
+  "stumbles": [
+    {
+      "moment": "Dia 1 — fantasia x realidade",
+      "whatHappened": "Começou pensando 'tenho 4-5h por dia útil'. Quando foi anotar hora por hora, descobriu que da creche das 7h30 às 12h, perde 30min levando Tarcísio + 30min pra organizar a casa + 15min de café. Janela real útil é 7h30 às 11h, com 1 ou 2 interrupções de WhatsApp do cliente. Não 5h. 3h.",
+      "whatHelped": "Parou de chutar e começou a cronometrar. Colocou alarme no celular: cada vez que sentava pra trabalhar, marcava hora. Cada interrupção, marcava também. No fim do dia, tinha número real, não palpite."
+    },
+    {
+      "moment": "Dias 3-4 — descobre a janela invisível",
+      "whatHappened": "Achou que produção dela acontecia só na manhã. Mas notou que 13h30-15h, quando Tarcísio dorme, ela conseguia mais 60-90 minutos focados. Nunca tinha contado isso como tempo de trabalho — só usava pra 'descansar' (rede social).",
+      "whatHelped": "Adicionou essa janela ao mapa. Decidiu testar 7 dias usando 60 minutos dessa janela pra produção. Se o cochilo durar menos, ela para. Se durar mais, ganha. Janela 'invisível' virou janela tracked."
+    },
+    {
+      "moment": "Fim da semana — total e média",
+      "whatHappened": "Somou tudo: 14h efetivas na semana (não 28h que ela imaginava). Sentiu desânimo no primeiro momento — 'metade do que pensei'.",
+      "whatHelped": "Mãe dela (que ajuda 3 tardes) disse: 'querida, é com essas 14h que você sustentou o aluguel e a creche por 2 anos. Saber que são 14 não te tira nada. Te dá realidade pra planejar'. Joelma anotou: janela média 75 minutos, total semanal 14h. A média deu nome ao tempo que ela tinha. Não é pouco. É o que existe."
+    }
+  ],
+  "breakthrough": "Joelma fechou o mapa com 14h semanais úteis distribuídas em 11 janelas. Janela média de 75 minutos. Janela mais frequente: 60-75 minutos da manhã. Decidiu que oferta principal da semana 2 ia ser dimensionada pra caber em 75 minutos.",
+  "outcome": "O mapa virou referência. Toda vez que cliente perguntava 'consegue pra quarta?', Joelma olhava o mapa antes de responder. Em 4 semanas reduziu noites em claro em 80%. Tarcísio dormiu mais. Ela dormiu mais. Faturamento se manteve, mas a sustentabilidade voltou.",
+  "whenToAskForHelp": "Se você tenta mapear janelas mas escreve só o IDEAL ('teria 4h por dia se desse tudo certo') sem cronometrar a realidade, peça ajuda. Cronômetro de 7 dias é o que separa fantasia do dado real.",
+  "relatedCases": ["case_joelma_lembrancinhas_janela"],
+  "relatedResources": ["res_organizacao_pedidos"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_oferta_caber_janela_joelma",
+  "taskTemplateId": "task_oferta_caber_janela",
+  "archetypeId": "cuidador_empreendedor",
+  "personaName": "Joelma",
+  "region": "Brasil, Olinda (PE)",
+  "personaContext": "Joelma continua. Já mapeou: 14h/semana em janelas médias de 75 minutos. Agora precisa definir 1 oferta principal que cabe na janela de 75 min, e decidir o que fazer com as outras 8 ofertas que ela tinha.",
+  "stumbles": [
+    {
+      "moment": "Lista das 8 ofertas e janela exigida",
+      "whatHappened": "Listou: (1) kit padrão 30 unidades, (2) kit customizado com nome do aniversariante, (3) caixinha sob medida com tema escolhido, (4) cone de pipoca decorado, (5) sacolinha personalizada, (6) lembrancinha de mesversário, (7) lembrancinha de chá de bebê, (8) topo de bolo. Pra cada uma estimou o tempo. Travou: 'todas dão pra fazer em pedaços'.",
+      "whatHelped": "Refraseou: cabe em janela de 75min sem interrupção? Kit padrão: cabe (já vinha pronto, só montagem). Kit customizado: 2h30 — não cabe sem queimar uma janela inteira em personalização. Caixinha sob medida: 4h+ — só dá em fim de semana inteiro. Cone, sacolinha, mesversário, chá de bebê: ~90min cada — quase cabe, queima às vezes. Topo de bolo: 45min — cabe de boa."
+    },
+    {
+      "moment": "Decidir cortar",
+      "whatHappened": "A oferta que dava mais lucro unitário (kit customizado, R$ 180 vs R$ 90 do padrão) era justamente a que não cabia. Joelma travou: 'cortar isso é cortar 40% do faturamento'.",
+      "whatHelped": "Conversou com a mãe e a vizinha (que faz bolo de pote). A vizinha sugeriu: 'em vez de cortar, oferece só pra semana com agenda fechada antes — quem quer customizado entra na fila e espera 12 dias úteis'. Joelma aceitou: customizado continua na lista, mas com prazo 12 dias úteis (em vez de 7) e só 2 por semana. Caixinha sob medida foi pra 'só sob consulta' (1 por mês). Cone, sacolinha, mesversário, chá de bebê viraram um pacote 'lembrancinhas variadas' com mesmo prazo do kit padrão."
+    },
+    {
+      "moment": "Oferta principal definida",
+      "whatHappened": "Sobrou: kit padrão 30 unidades virou OFERTA PRINCIPAL. Topo de bolo entrou como 'extra rápido'. Customizado e sob medida com prazo maior e limite. Sentiu medo de 'parecer pequena'.",
+      "whatHelped": "Releu o mapa da semana 1: 14h semanais. Kit padrão R$ 90, cabe em 1 janela de 75min cada. Pode fazer 11 kits/semana (1 por janela). 11 x R$ 90 = R$ 990/semana = R$ 4.000/mês de teto. Era 73% acima do faturamento atual (R$ 2.300). A oferta 'pequena' tinha o dobro do teto que ela imaginava."
+    }
+  ],
+  "breakthrough": "Joelma escreveu 1 folha: 'OFERTA PRINCIPAL: kit padrão 30 unidades, R$ 90, prazo 5 dias úteis. Pacote variado (cone/sacolinha/mesversário): R$ 110, mesmo prazo. Customizado: R$ 180, prazo 12 dias, 2 por semana. Sob medida: sob consulta, prazo 20 dias.' Folha foi parar na geladeira.",
+  "outcome": "No primeiro mês com o cardápio reduzido, Joelma vendeu 7 kits padrão + 3 pacotes variados + 2 customizados = R$ 1.470. Faturamento mais baixo que mês anterior — mas ela trabalhou 14h/semana, sem queimar madrugada. Dormiu. Tarcísio dormiu. Mês 2 com a tabela rodando: 10 kits + 4 pacotes + 2 customizados = R$ 1.880. Mês 3 já em R$ 2.450 (acima do anterior) com 14h saudáveis.",
+  "whenToAskForHelp": "Se você mapeou janelas mas não consegue cortar nenhuma oferta porque 'cliente vai sumir', peça ajuda. Quase sempre as ofertas que pareciam essenciais estavam queimando margem por exigir janela que não existe.",
+  "relatedCases": ["case_joelma_lembrancinhas_janela"],
+  "relatedResources": ["res_organizacao_pedidos", "res_precificacao_simples"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_prazo_realista_comunicado_tereza",
+  "taskTemplateId": "task_prazo_realista_comunicado",
+  "archetypeId": "cuidador_empreendedor",
+  "personaName": "Tereza",
+  "region": "Brasil, Pelotas (RS)",
+  "personaContext": "Filha que cuida do pai (Alzheimer, 78 anos). Faz tricô artesanal sob medida há 8 anos. Em maio atrasou 4 pedidos por piora do pai, perdeu 1 cliente. Agora vai criar tabela escrita de prazos e mensagem padrão no WhatsApp Business.",
+  "stumbles": [
+    {
+      "moment": "Sentir que a tabela é 'desculpa antecipada'",
+      "whatHappened": "Resistiu a escrever a tabela. 'Não é meio que avisar antes que vou atrasar? Cliente vai achar que sou desorganizada'.",
+      "whatHelped": "Olhou tabela de outras prestadoras (oficina mecânica, marceneiro, costureira do bairro). Todas tinham prazo escrito (5 dias, 15 dias, 30 dias). Ninguém escondia, ninguém pedia desculpa. Era padrão. Tabela não é desculpa antecipada — é política de prazo, igual qualquer profissional faz."
+    },
+    {
+      "moment": "Decidir prazo apertado vs prazo confortável",
+      "whatHappened": "Manta simples: tempo apertado 12 dias (3h por dia, 4 dias), tempo confortável 18 dias. Sob medida: apertado 20 dias, confortável 30. Travou em 'qual coloco na tabela?'.",
+      "whatHelped": "Aplicou a regra de 30-50% de folga sobre o apertado. Manta simples: 15 dias úteis (entre 12 e 18). Sob medida: 25 dias úteis (entre 20 e 30). Em dia normal, ela entrega antes (cliente fica feliz). Em dia ruim de cuidado, ela ainda tem espaço."
+    },
+    {
+      "moment": "Escrever a mensagem do WhatsApp Business",
+      "whatHappened": "Primeira versão: 'Olá! Recebi seu pedido. Por motivo de cuidado familiar, meus prazos são um pouco mais longos do que oficina industrial. Manta simples 15 dias úteis...'",
+      "whatHelped": "Releu e percebeu que 'cuidado familiar' invadia a privacidade do contexto E pedia compreensão antecipada. Sobrinha (24 anos, trabalha em marketing) ajudou a reescrever: 'Olá! Obrigada pelo interesse. Trabalho com tricô artesanal feito à mão. Prazos: manta simples 15 dias úteis, peça sob medida 25 dias úteis, do dia do pagamento de 50%. Pedido confirmado entra na fila com data prevista. Em caso de atraso (raro), aviso com 5 dias de antecedência.' Direta. Profissional. Sem desculpa."
+    }
+  ],
+  "breakthrough": "Tereza configurou a mensagem no WhatsApp Business como resposta automática pra 'tabela de prazos'. Cliente que perguntava 'quanto tempo?' recebia automático. Tabela impressa também ficou colada na porta do armário onde guarda lã. A versão final eliminou 'cuidado familiar' — virou política de prazo, não confissão.",
+  "outcome": "Em 30 dias, Tereza recebeu 14 pedidos. 11 aceitaram o prazo de 15 dias direto. 2 disseram 'tem como antes? Festa em 8 dias' — Tereza respondeu 'não consigo neste prazo, te aviso quando outra vaga abrir'. Ambos sumiram. O cliente perdido em maio voltou em junho, viu a tabela, comentou 'amei que ficou organizado'. Faturamento estabilizou. Pai piorou em outubro: ela acionou o protocolo, avisou os 3 pedidos em produção com 5 dias de antecedência, todos toparam. Cliente que importava ficou.",
+  "whenToAskForHelp": "Se você tem cuidado em casa e ainda não tem tabela escrita de prazos publicada pro cliente, peça ajuda. Você vai descobrir que o cliente que importa aceita prazo claro — e o que exige prazo apertado quase nunca era cliente bom mesmo.",
+  "relatedCases": ["case_tereza_trico_cuidado_pai"],
+  "relatedResources": ["res_whatsapp_business_basico", "res_organizacao_pedidos"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_plano_continuidade_tereza",
+  "taskTemplateId": "task_plano_continuidade",
+  "archetypeId": "cuidador_empreendedor",
+  "personaName": "Tereza",
+  "region": "Brasil, Pelotas (RS)",
+  "personaContext": "Tereza continua. Tabela de prazos já rodando há 30 dias. Agora precisa montar plano de continuidade pro próximo dia ruim de cuidado do pai (vai acontecer, ela sabe).",
+  "stumbles": [
+    {
+      "moment": "Resistência a planejar pra emergência",
+      "whatHappened": "Sentiu que planejar pra dia ruim era 'chamar o azar'. 'Tô bem agora, por que pensar nisso?'.",
+      "whatHelped": "Lembrou de maio (4 pedidos atrasados, 1 cliente perdido). Planejar antes da emergência é menos doloroso do que improvisar durante. Decidiu encarar como protocolo, não como pessimismo. Igual extintor: ninguém acende fogo pra usar, mas todo prédio tem."
+    },
+    {
+      "moment": "Lista de clientes por tolerância",
+      "whatHappened": "Começou a separar clientes 'flexíveis' vs 'apertados'. Sentiu desconforto: 'tô discriminando cliente?'.",
+      "whatHelped": "Reformou: não é discriminar, é prever. Cliente flexível (presente de aniversário, peça pra avó usar no inverno) topa 5 dias de adiamento sem problema. Cliente apertado (presente pra casamento na semana, peça pra evento específico) precisa de prazo certo. Saber quem é qual ANTES da emergência permite priorizar quando o dia ruim chegar."
+    },
+    {
+      "moment": "Mensagem pré-escrita de adiamento",
+      "whatHappened": "Texto inicial: 'Olá, infelizmente preciso adiar seu pedido por motivos pessoais imprevistos. Peço desculpas...'.",
+      "whatHelped": "Refez: 'Olá [nome]! Preciso adiar a entrega do seu pedido em 5 dias úteis por situação familiar. Novo prazo: [data]. Mantenho qualidade e te aviso quando estiver na fase final. Se preferir cancelar com reembolso, tudo bem também — me avisa.' Mais curta, mais objetiva, dá opção pro cliente. Sem 'desculpa', sem 'imprevistos' (que soa vago). Comunicação adulta."
+    },
+    {
+      "moment": "Backup humano",
+      "whatHappened": "Pra 'quem chamar pra ajuda pontual' tinha dificuldade. Mora longe de família, vizinha pouco próxima.",
+      "whatHelped": "Listou 3 pessoas pra coisas diferentes: (1) prima Vânia (Curitiba) — pra ouvir e dar conselho quando ela tá no limite, mesmo de longe; (2) vizinha do prédio (Dona Eulália) — pode ficar 30min com o pai se Tereza precisar sair urgente comprar algo; (3) cuidadora atual da manhã (Marlene) — topa fazer hora extra paga 1-2 dias por mês em emergência. Cada uma com sua função. Sem sobrecarregar uma só."
+    }
+  ],
+  "breakthrough": "Plano em 1 folha: lista de 14 clientes ativos separados (8 flexíveis, 6 apertados), mensagem pré-escrita salva no WhatsApp, 3 backups humanos com função clara. Folha foi pra mesma pasta da tabela de prazos. Em caso de dia ruim: ela abre a pasta, identifica quais pedidos avisar (os apertados primeiro), copia/cola a mensagem, troca o nome e a data.",
+  "outcome": "Em outubro, pai teve nova piora (10 dias de noite ruim). Tereza acionou o protocolo no dia 2: identificou 3 pedidos apertados em produção, mandou mensagem pra cada um com novo prazo +5 dias. 2 toparam, 1 perguntou se podia cancelar com reembolso parcial — Tereza aceitou. Acionou a Dona Eulália 1 manhã pra ficar 40min com o pai enquanto entregava 1 pedido. Chamou a Marlene pra hora extra 1 dia. Saiu da crise com 0 cliente perdido (1 cancelamento amigável). Pai melhorou no dia 9. Tereza voltou ao ritmo. Sem dano à reputação.",
+  "whenToAskForHelp": "Se você cuida de alguém em casa e ainda não tem plano escrito pra dia ruim, peça ajuda. O plano nunca é luxo. O custo de não ter é descobrir que precisava no exato momento em que você não tem cabeça pra montar.",
+  "relatedCases": ["case_tereza_trico_cuidado_pai"],
+  "relatedResources": ["res_organizacao_pedidos", "res_whatsapp_business_basico"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

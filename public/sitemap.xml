@@ -409,6 +409,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://trilhaempreendedora.com.br/casos/case_joelma_lembrancinhas_janela</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/casos/case_tereza_trico_cuidado_pai</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_anotar_7_dias</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -619,6 +631,30 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_mapear_janelas_reais</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_oferta_caber_janela</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_prazo_realista_comunicado</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_plano_continuidade</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://trilhaempreendedora.com.br/perfis/vende_sem_lucro</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -698,6 +734,12 @@
   </url>
   <url>
     <loc>https://trilhaempreendedora.com.br/perfis/recomecou_apos_falir</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/perfis/cuidador_empreendedor</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

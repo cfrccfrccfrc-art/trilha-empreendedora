@@ -389,5 +389,33 @@
     "warningFlags": ["needs_strategic_review", "finance_blind"],
     "contentVersion": "1.0",
     "status": "active"
+  },
+
+  {
+    "id": "cuidador_empreendedor",
+    "name": "\"Cuido de alguém em casa, preciso fazer o negócio caber nesse espaço\"",
+    "shortDescription": "Você empreende porque cuida de alguém que mora com você (filho pequeno, idoso, pessoa que precisa de companhia ou cuidado contínuo). Negócio existe pra caber na rotina de cuidado — não o contrário.",
+    "commonPain": "O tempo é interrompido em janelas pequenas. Cliente quer prazo curto, mas seu prazo depende do dia da pessoa que você cuida. Você aceita prazo impossível pra não perder venda, queima a noite, atrasa, fica mal vista. Sem perder o cuidado nem o trabalho, parece impossível.",
+    "typicalMistakes": [
+      "Prometer prazo curto pra fechar venda e queimar madrugada quando o cuidado consome o dia",
+      "Esconder do cliente que você cuida de alguém, achando que isso te desqualifica como profissional",
+      "Não ter plano pra dia ruim de cuidado (criança doente, idoso piora) — qualquer imprevisto vira atraso e cliente perdido"
+    ],
+    "firstTaskId": "task_mapear_janelas_reais",
+    "avoidNow": "Evite aceitar pedido com prazo curto antes de mapear suas janelas reais de trabalho. Evite produto que exige produção contínua de mais de 90 minutos sem interrupção. Evite crescer em volume antes de ter plano de continuidade pra emergência.",
+    "expectedLearning": "Quem cuida e empreende não precisa esconder o cuidado nem se desculpar por ele. Negócio que cabe na rotina real (janelas curtas, produto compatível, prazo comunicado com folga, plano de backup) sustenta sem se quebrar. O caminho não é trabalhar mais horas. É produzir o certo nas horas que existem.",
+    "roadmap30d": [
+      { "week": 1, "title": "Mapear janelas reais de trabalho na semana",       "tasks": ["task_mapear_janelas_reais"] },
+      { "week": 2, "title": "Definir 1 oferta que cabe na janela",               "tasks": ["task_oferta_caber_janela"] },
+      { "week": 3, "title": "Comunicar prazo realista por escrito",              "tasks": ["task_prazo_realista_comunicado"] },
+      { "week": 4, "title": "Plano de continuidade pra emergência",              "tasks": ["task_plano_continuidade"] }
+    ],
+    "recommendedResources": ["res_organizacao_pedidos", "res_whatsapp_business_basico", "res_caixa_basico"],
+    "recommendedCases": ["case_joelma_lembrancinhas_janela", "case_tereza_trico_cuidado_pai"],
+    "recommendedOpportunities": ["opp_rede_pescadoras", "opp_sebrae_atendimento_presencial", "opp_apoio_juridico_mei"],
+    "supervisionLevel": "elevated",
+    "warningFlags": ["caregiver", "time_constrained"],
+    "contentVersion": "1.0",
+    "status": "active"
   }
 ]

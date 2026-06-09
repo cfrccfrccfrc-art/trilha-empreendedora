@@ -6,7 +6,7 @@ import Card from '../components/Card';
 import Button from '../components/Button';
 import JsonLd from '../components/JsonLd';
 
-// Índice indexável dos 14 perfis. Cada item linka pra /perfis/<id>. Boa
+// Índice indexável dos 15 perfis. Cada item linka pra /perfis/<id>. Boa
 // landing pra busca tipo "perfis de microempreendedor", "tipos de empreendedor",
 // "diagnóstico de negócio".
 export default function ArchetypesIndex() {
@@ -19,9 +19,9 @@ export default function ArchetypesIndex() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Os 14 perfis de microempreendedor brasileiro',
+    name: 'Os 15 perfis de microempreendedor brasileiro',
     description:
-      'Os 14 caminhos que a Trilha Empreendedora identifica no diagnóstico de 5 minutos. Cada perfil descreve uma situação comum, sinais típicos e o que costuma destravar.',
+      'Os 15 caminhos que a Trilha Empreendedora identifica no diagnóstico de 5 minutos. Cada perfil descreve uma situação comum, sinais típicos e o que costuma destravar.',
     inLanguage: 'pt-BR',
     isAccessibleForFree: true,
     url: 'https://trilhaempreendedora.com.br/perfis',
@@ -43,7 +43,7 @@ export default function ArchetypesIndex() {
 
       <PageHeader
         accent="Perfis"
-        title="Os 14 caminhos do microempreendedor"
+        title="Os 15 caminhos do microempreendedor"
         subtitle="O diagnóstico identifica em qual desses cenários você está hoje. Cada perfil tem uma trilha de 30 dias pensada pra ele."
       />
 

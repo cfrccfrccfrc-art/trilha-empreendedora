@@ -265,3 +265,72 @@ Atualizado em todos os lugares user-facing:
 - Quem fechou e quer voltar não é "ainda é ideia" nem "vende sem lucro" — é arquétipo próprio com dor própria
 - W1 começa olhando pra trás (inventário) antes de olhar pra frente — é o que diferencia o roadmap dos outros 13
 - Cases novos focam em sociedade (Isabel) e cabine compartilhada (Renata) como soluções práticas brasileiras, não em "comece do zero forte"
+
+---
+
+## Sessão 09/06/2026 (parte 2) — auditoria + 15º arquétipo (cuidador empreendedor)
+
+### Auditoria de conteúdo
+
+Rodou auditoria pra ver gaps que validate-content não pega. Achados:
+- 3 arquétipos sem nenhum companion (talento_sem_postura_comercial, digital_antes_da_base, negocio_consolidado)
+- 6 tasks sem nenhum companion
+- 2 arquétipos com só 1 case (ainda_e_ideia, digital_antes_da_base)
+- 1 resource com sourceStatus needs_review
+
+### Pacote A + B (10 commits no commit e05fa99)
+
+8 companions novos:
+- companion_lista_servicos_precos_carmen (talento_sem_postura_comercial)
+- companion_anotar_7_dias_mariana (digital_antes_da_base)
+- 4 companions do Bia cobrindo W1-W4 do negocio_consolidado
+- companion_decidir_mesmo_ou_diferente_renata (recomecou_apos_falir W2)
+- companion_testar_com_5_clientes_antigos_isabel (recomecou_apos_falir W3)
+
+2 cases novos:
+- case_diego_barbeiro_reels_lucro (digital_antes_da_base, Salvador)
+- case_eduardo_hamburgueria_validacao (ainda_e_ideia, BH)
+
+Fix técnico:
+- res_alimentacao_higiene_basica: sourceStatus needs_review → active (era flag antiga; recurso é Trilha original com body)
+
+### 15º arquétipo: cuidador empreendedor
+
+Avaliação prévia: cuidador colidiria com empreendedora_sobrecarregada sem pergunta nova. Pivot necessário (#16 candidato) colidiria com negocio_consolidado sem 2 perguntas novas. Decisão: adicionar cuidador (1 pergunta nova) + descartar pivot (custo mais alto, valor menor).
+
+Novo arquétipo `cuidador_empreendedor`:
+- Quote: "Cuido de alguém em casa, preciso fazer o negócio caber nesse espaço"
+- Dor única: tempo fragmentado em janelas curtas + cliente exigindo prazo apertado + ciclo de queimar madrugada que vira burnout
+- Diferenciação de empreendedora_sobrecarregada: gatilho é cuidado externo não delegável, não volume
+
+Roadmap específico (centrado em encaixar negócio no tempo real):
+- W1 task_mapear_janelas_reais (cronometrar tempo efetivo por 7 dias)
+- W2 task_oferta_caber_janela (oferta única que cabe na janela média)
+- W3 task_prazo_realista_comunicado (tabela escrita + mensagem no WhatsApp Business)
+- W4 task_plano_continuidade (plano pra dia ruim de cuidado)
+
+Cobertura sem deixar tarefa órfã:
+- 2 cases: case_joelma_lembrancinhas_janela (Olinda, mãe solo Tarcísio 3 anos), case_tereza_trico_cuidado_pai (Pelotas, filha cuidando pai com Alzheimer)
+- 4 companions cobrindo todas as W1-W4 (Joelma em W1+W2, Tereza em W3+W4)
+
+Pergunta nova q_home_business_reason:
+- Section: context, order 28
+- Opção caregiver pontua +5 pra cuidador_empreendedor + flag caregiver
+- 3 outras opções (not_home, by_choice, until_space) não enviesam quem não é cuidador
+- Diagnóstico cresceu de 35 → 36 perguntas (impacto mínimo no tempo)
+
+Scoring:
+- tieBreakOrder: cuidador_empreendedor antes de empreendedora_sobrecarregada
+- Sem minScorePerArchetype (max 5 pts em 1 questão, threshold padrão cobre)
+- Teste 10: caregiver sozinho → cuidador_empreendedor
+- Teste 11: overloaded sem caregiver → continua caindo em sobrecarregada
+- 19 testes passando
+
+Referências 14→15 atualizadas em: index.html, Home, ArchetypesIndex, ArchetypeProfile, Apresentacao PT+EN, App.jsx.
+
+### Decisões registradas
+
+- Cuidador empreendedor é arquétipo próprio, não variante de sobrecarregada
+- Pergunta nova é trade-off justo (1 pergunta a mais pra cobrir público real de cuidadoras)
+- Pivot necessário fica fora do escopo atual (custo > benefício sem dado de busca real)
+- Pergunta q_home_business_reason desenhada pra não enviesar quem não é cuidador (3 das 4 opções não pontuam)

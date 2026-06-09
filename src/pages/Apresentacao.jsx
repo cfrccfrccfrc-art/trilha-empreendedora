@@ -83,10 +83,10 @@ const COPY = {
 
     s4Eyebrow: 'Como funciona',
     s4Line1: '5 minutos.',
-    s4Line2: '14 perfis.',
+    s4Line2: '15 perfis.',
     s4Line3: '30 dias.',
     s4Body:
-      'Diagnóstico curto identifica seu perfil entre 14 caminhos possíveis. Recebe trilha de 4 missões práticas (uma por semana), com companheiros reais que já viveram a mesma fase — e casos curtos que mostram como a coisa joga no Brasil.',
+      'Diagnóstico curto identifica seu perfil entre 15 caminhos possíveis. Recebe trilha de 4 missões práticas (uma por semana), com companheiros reais que já viveram a mesma fase — e casos curtos que mostram como a coisa joga no Brasil.',
     mock1Progress: 'Pergunta 4 de 35',
     mock1Question:
       'Você sabe quanto entrou e saiu do negócio no último mês?',
@@ -186,10 +186,10 @@ const COPY = {
 
     s4Eyebrow: 'How it works',
     s4Line1: '5 minutes.',
-    s4Line2: '14 profiles.',
+    s4Line2: '15 profiles.',
     s4Line3: '30 days.',
     s4Body:
-      "A short diagnostic identifies your profile among 14 possible paths. You get a journey of 4 practical missions (one per week), with real companions who've lived the same stage — and short cases that show how things play out in Brazil.",
+      "A short diagnostic identifies your profile among 15 possible paths. You get a journey of 4 practical missions (one per week), with real companions who've lived the same stage — and short cases that show how things play out in Brazil.",
     mock1Progress: 'Question 4 of 35',
     mock1Question:
       'Do you know how much came in and went out of the business last month?',
