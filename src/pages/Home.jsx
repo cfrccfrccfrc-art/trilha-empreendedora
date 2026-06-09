@@ -238,6 +238,12 @@ export default function Home() {
             body="Sobre canais: foco presencial, híbrido pequeno, ou pronta(o) pra crescer."
             onClick={() => navigate('/mini/canais')}
           />
+          <MiniTrilhaCard
+            sketch={<Sparkle className="w-14 h-14 shrink-0" />}
+            title="Você consegue prever o caixa do mês que vem?"
+            body="Sobre projeção: vai no feeling, anota o passado, ou projeta 3 meses pra frente."
+            onClick={() => navigate('/mini/projecao')}
+          />
         </div>
       </section>
 

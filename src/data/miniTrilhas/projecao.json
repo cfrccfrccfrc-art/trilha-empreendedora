@@ -1,0 +1,130 @@
+{
+  "slug": "projecao",
+  "accent": "Mini-trilha rápida",
+  "title": "Você consegue prever o caixa do mês que vem?",
+  "subtitle": "Cinco perguntas pra ver se você projeta o futuro do negócio ou só reage ao passado.",
+  "introBody": "Em mais ou menos 2 minutos. Sem cadastro.",
+  "warning": {
+    "title": "Pra que serve isso",
+    "body": "Projetar entrada e saída evita susto no fim do mês. Quem só anota o passado descobre o problema tarde. Quem projeta vê antes."
+  },
+  "tieBreakOrder": ["projecao_3meses", "projecao_passado", "projecao_chute"],
+  "tabLabels": {
+    "projecao_chute": "Vou no feeling",
+    "projecao_passado": "Anoto, mas não projeto",
+    "projecao_3meses": "Projeto 3 meses pra frente"
+  },
+  "questions": [
+    {
+      "id": "q1", "order": 1,
+      "text": "Você consegue estimar quanto vai ENTRAR mês que vem?",
+      "helpText": "Faturamento esperado, considerando clientes recorrentes, sazonalidade do seu setor e pedidos já confirmados.",
+      "options": [
+        { "id": "nao",       "label": "Não tenho ideia",                                "score": { "projecao_chute": 3, "projecao_passado": 0, "projecao_3meses": 0 } },
+        { "id": "parecido",  "label": "Acho que vai ser parecido com mês passado",      "score": { "projecao_chute": 1, "projecao_passado": 3, "projecao_3meses": 0 } },
+        { "id": "estimo",    "label": "Sim, estimo com base em pedidos e histórico",   "score": { "projecao_chute": 0, "projecao_passado": 1, "projecao_3meses": 3 } }
+      ]
+    },
+    {
+      "id": "q2", "order": 2,
+      "text": "Você consegue estimar quanto vai SAIR mês que vem?",
+      "helpText": "Custos fixos (aluguel, internet, taxa de cartão), variáveis (matéria-prima, embalagem) e custos pessoais que dependem do negócio.",
+      "options": [
+        { "id": "nao",     "label": "Não, gasto conforme aparece",                   "score": { "projecao_chute": 3, "projecao_passado": 0, "projecao_3meses": 0 } },
+        { "id": "fixos",   "label": "Os fixos sim, os variáveis não",                "score": { "projecao_chute": 1, "projecao_passado": 2, "projecao_3meses": 1 } },
+        { "id": "tudo",    "label": "Sim, ambos. Tenho previsão escrita",            "score": { "projecao_chute": 0, "projecao_passado": 1, "projecao_3meses": 3 } }
+      ]
+    },
+    {
+      "id": "q3", "order": 3,
+      "text": "Você compara o que esperava com o que aconteceu de fato no fim do mês?",
+      "options": [
+        { "id": "nunca",     "label": "Não, nunca comparei",                          "score": { "projecao_chute": 3, "projecao_passado": 1, "projecao_3meses": 0 } },
+        { "id": "as_vezes",  "label": "Às vezes, quando lembro",                      "score": { "projecao_chute": 1, "projecao_passado": 2, "projecao_3meses": 1 } },
+        { "id": "sempre",    "label": "Sim, sempre. Ajusto a projeção do mês seguinte","score": { "projecao_chute": 0, "projecao_passado": 0, "projecao_3meses": 3 } }
+      ]
+    },
+    {
+      "id": "q4", "order": 4,
+      "text": "Se um cliente importante sumir agora, você tem caixa pra quanto tempo?",
+      "helpText": "Reserva ou capital de giro que cobre os custos fixos enquanto você recupera a receita.",
+      "options": [
+        { "id": "nao_sei",  "label": "Não sei, nunca pensei",                          "score": { "projecao_chute": 3, "projecao_passado": 1, "projecao_3meses": 0 } },
+        { "id": "1_mes",    "label": "Mais ou menos 1 mês",                            "score": { "projecao_chute": 1, "projecao_passado": 2, "projecao_3meses": 1 } },
+        { "id": "3_meses",  "label": "3 meses ou mais",                                "score": { "projecao_chute": 0, "projecao_passado": 1, "projecao_3meses": 3 } }
+      ]
+    },
+    {
+      "id": "q5", "order": 5,
+      "text": "Daqui a 3 meses, você consegue dizer se vai sobrar ou faltar dinheiro?",
+      "options": [
+        { "id": "nao",       "label": "Não, é mistério",                              "score": { "projecao_chute": 3, "projecao_passado": 0, "projecao_3meses": 0 } },
+        { "id": "duvida",    "label": "Tenho um palpite, mas não confio nele",         "score": { "projecao_chute": 1, "projecao_passado": 3, "projecao_3meses": 0 } },
+        { "id": "tenho_cenarios", "label": "Sim, e tenho cenário otimista e pessimista","score": { "projecao_chute": 0, "projecao_passado": 1, "projecao_3meses": 3 } }
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "id": "projecao_chute",
+      "name": "Você vai no feeling",
+      "shortDescription": "Você toca o negócio reagindo ao que aparece. Sem visibilidade do futuro, o caixa surpreende.",
+      "whatItIs": "Você não projeta entrada nem saída. Quando o mês vira, descobre se sobrou ou faltou. Quase sempre, descobre tarde — quando já era pra ter ajustado.",
+      "whenItMakesSense": [
+        "Negócio muito recente (menos de 3 meses), em que ainda não dá pra projetar com base em histórico"
+      ],
+      "whenItDoesnt": [
+        "Negócio com mais de 6 meses operando",
+        "Quando tem custo fixo relevante (aluguel, taxa de cartão recorrente, fornecedor recorrente)",
+        "Quando depende de poucos clientes — sumir um vira problema grande"
+      ],
+      "whatChanges": "Sem projetar, você descobre o problema só quando ele já estourou. Cliente que some, mês fraco de feira, alta no fornecedor: tudo vira surpresa em vez de cenário esperado.",
+      "nextStep": "Começa pelo básico: anota entrada e saída por 7 dias (tarefa task_anotar_7_dias). Depois projeta o próximo mês com base nisso. Não precisa ser exato — precisa existir.",
+      "relatedSources": [
+        { "label": "Anotar entrada e saída por 7 dias (Trilha)",           "url": "/conteudos/res_caixa_diario" },
+        { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" }
+      ]
+    },
+    {
+      "id": "projecao_passado",
+      "name": "Você anota, mas não projeta",
+      "shortDescription": "Você sabe o que já aconteceu. Falta um passo: usar isso pra prever o que vem.",
+      "whatItIs": "Você tem o registro do passado (anotação, planilha, app), mas não usa pra estimar o próximo mês. Sabe que mês passado entrou X, mas não sabe se mês que vem vai ser parecido, melhor ou pior.",
+      "whenItMakesSense": [
+        "Fase de transição. Você já saiu do feeling cego e está construindo base",
+        "Negócio em sazonalidade forte (feira, festa), em que projetar é mais difícil"
+      ],
+      "whenItDoesnt": [
+        "Quando tem custo fixo + clientes recorrentes — dá pra projetar com bastante confiança",
+        "Quando o caixa está apertado — precisa antecipar pra evitar furo"
+      ],
+      "whatChanges": "Anotar o passado te dá realidade. Projetar o futuro te dá tempo. Tempo pra ajustar preço, cortar custo, segurar gasto antes do mês ficar feio.",
+      "nextStep": "No fim do mês atual, anota a previsão pro próximo mês em 3 números só: faturamento esperado, custo fixo esperado, sobra esperada. No fim do mês seguinte, compara com o real. Repete 2 meses. Sua intuição vai calibrar.",
+      "relatedSources": [
+        { "label": "Anotar entrada e saída por 7 dias (Trilha)",           "url": "/conteudos/res_caixa_diario" },
+        { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" }
+      ]
+    },
+    {
+      "id": "projecao_3meses",
+      "name": "Você projeta 3 meses pra frente",
+      "shortDescription": "Você enxerga o caixa antes dele acontecer. Boa hora pra simular cenários e decidir aposta.",
+      "whatItIs": "Você tem estimativa de entrada, saída, reserva e enxerga o que vem. Sabe se cliente grande sumir, aguenta quanto tempo. Pode tomar decisão de aposta com cabeça fria.",
+      "whenItMakesSense": [
+        "Decidir aposta (novo produto, novo canal, primeira contratação) com cenário otimista E pessimista",
+        "Negociar prazo com fornecedor sabendo seu giro real",
+        "Avaliar empréstimo com clareza de parcela vs sobra projetada"
+      ],
+      "whenItDoesnt": [
+        "Tomar decisão grande com base só em cenário otimista (revisa o pessimista antes)",
+        "Travar nos números e parar de testar — projeção serve pra decidir, não pra adiar"
+      ],
+      "whatChanges": "Você decide com tempo. Cliente que some não vira pânico, vira plano B já pensado. Mês ruim já estava previsto. Aposta nova começa só quando o caixa aguenta.",
+      "nextStep": "Faz uma revisão trimestral: pega seus 3 últimos meses, compara projetado com realizado, identifica onde sua estimativa erra mais (entrada? custo variável? sazonalidade?). Ajusta seu modelo. Esse ciclo melhora a cada trimestre.",
+      "relatedSources": [
+        { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" },
+        { "label": "Banco Central: Cidadania Financeira",                   "url": "https://www.bcb.gov.br/cidadaniafinanceira" }
+      ]
+    }
+  ]
+}
