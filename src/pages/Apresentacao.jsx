@@ -330,13 +330,28 @@ function CounterUp({ to, duration = 1600, className = '', format = (n) => n }) {
 }
 
 // ---------- Layout primitive ----------
-function Section({ children, bgClass = 'bg-paper', idx }) {
+// Dot pattern sutil pra dar identidade "papel pautado" sem virar ruído.
+// SVG inline pra não depender de asset externo.
+const DOT_PATTERN_STYLE = {
+  backgroundImage:
+    'radial-gradient(circle, rgba(43,43,43,0.08) 1px, transparent 1px)',
+  backgroundSize: '24px 24px',
+};
+
+function Section({ children, bgClass = 'bg-paper', idx, pattern = true }) {
   return (
     <section
       data-tour-section={idx}
-      className={`${bgClass} min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24`}
+      className={`${bgClass} relative min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24 overflow-hidden`}
     >
-      <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      {pattern && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-40 pointer-events-none"
+          style={DOT_PATTERN_STYLE}
+        />
+      )}
+      <div className="relative max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {children}
       </div>
     </section>
@@ -392,7 +407,7 @@ function VisualBlock({ children, align = 'left' }) {
 function PhoneFrame({ children, className = '' }) {
   return (
     <div
-      className={`mx-auto bg-ink rounded-[2.5rem] p-2 shadow-2xl max-w-[280px] ${className}`}
+      className={`mx-auto bg-ink rounded-[2.5rem] p-2 shadow-2xl max-w-[280px] ring-1 ring-ink/10 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.45)] transition-shadow duration-300 ${className}`}
     >
       <div className="bg-paper rounded-[2rem] overflow-hidden">
         <div className="px-5 py-6 min-h-[420px] relative">
@@ -406,8 +421,10 @@ function PhoneFrame({ children, className = '' }) {
 
 function FunnelVisual({ t }) {
   return (
+    <Reveal>
     <div className="relative mx-auto max-w-md">
-      <svg viewBox="0 0 400 360" className="w-full">
+      <div className="absolute inset-0 -m-8 rounded-full bg-highlight/15 blur-3xl pointer-events-none" />
+      <svg viewBox="0 0 400 360" className="relative w-full drop-shadow-2xl">
         <defs>
           <linearGradient id="funnelGrad" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#FFF4D6" />
@@ -511,6 +528,7 @@ function FunnelVisual({ t }) {
         </text>
       </svg>
     </div>
+    </Reveal>
   );
 }
 
@@ -577,29 +595,33 @@ function PainQuotes({ quotes }) {
 
 function KhanCitationVisual({ t }) {
   return (
-    <div className="bg-beige border border-line rounded-3xl p-8 max-w-md mx-auto shadow-sm">
-      <div className="flex items-start gap-4 mb-4">
-        <Lightbulb className="w-12 h-12 shrink-0" />
-        <p className="font-hand text-secondary text-lg leading-tight">
-          {t.khanEyebrow}
+    <Reveal>
+      <div className="relative bg-paper border border-line rounded-3xl p-8 max-w-md mx-auto shadow-xl ring-1 ring-ink/5">
+        <div className="absolute -top-3 -left-3 w-16 h-16 rounded-full bg-highlight/40 blur-2xl pointer-events-none" />
+        <div className="relative flex items-start gap-4 mb-4">
+          <Lightbulb className="w-12 h-12 shrink-0" />
+          <p className="font-hand text-secondary text-lg leading-tight">
+            {t.khanEyebrow}
+          </p>
+        </div>
+        <p className="font-sans font-bold text-3xl text-ink leading-snug mb-3 tracking-tight">
+          {t.khanTitle}
         </p>
+        <p className="text-secondary text-base leading-relaxed">{t.khanBody}</p>
+        <div className="border-t border-line pt-3 mt-4">
+          <p className="text-xs text-secondary italic leading-snug">
+            {t.khanFooter}
+          </p>
+        </div>
       </div>
-      <p className="font-sans font-bold text-2xl text-ink leading-snug mb-3">
-        {t.khanTitle}
-      </p>
-      <p className="text-secondary text-base leading-relaxed">{t.khanBody}</p>
-      <div className="border-t border-line pt-3 mt-4">
-        <p className="text-xs text-secondary italic leading-snug">
-          {t.khanFooter}
-        </p>
-      </div>
-    </div>
+    </Reveal>
   );
 }
 
 function ProductMocks({ t }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <Reveal delay={0}>
       <PhoneFrame className="rotate-[-3deg]">
         <p className="font-hand text-secondary text-sm mb-2">
           {t.mock1Progress}
@@ -625,7 +647,9 @@ function ProductMocks({ t }) {
           ))}
         </div>
       </PhoneFrame>
+      </Reveal>
 
+      <Reveal delay={200}>
       <PhoneFrame className="sm:translate-y-6">
         <p className="font-hand text-secondary text-sm">{t.mock2Eyebrow}</p>
         <h3 className="font-bold text-ink text-base leading-snug mb-3">
@@ -651,7 +675,9 @@ function ProductMocks({ t }) {
           ))}
         </div>
       </PhoneFrame>
+      </Reveal>
 
+      <Reveal delay={400}>
       <PhoneFrame className="rotate-[2deg]">
         <p className="font-hand text-secondary text-sm mb-1">
           {t.mock3Eyebrow}
@@ -674,6 +700,7 @@ function ProductMocks({ t }) {
           </div>
         </div>
       </PhoneFrame>
+      </Reveal>
     </div>
   );
 }
