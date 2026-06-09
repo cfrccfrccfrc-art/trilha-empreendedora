@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import resourcesData from '../data/resources.json';
 import opportunitiesData from '../data/opportunities.json';
 import casesData from '../data/cases.json';
-import { getAuthClient } from '../services/supabaseClient';
+import { getAuthedClient } from '../services/supabaseClient';
 import { useSupervisorSession } from '../utils/useSupervisorSession';
 import {
   fetchTaskFailureRates,
@@ -43,7 +43,7 @@ export default function SourceRefresh() {
     let cancelled = false;
     (async () => {
       try {
-        const client = getAuthClient();
+        const client = getAuthedClient(session.access_token);
         const [overdue, gaps, failures] = await Promise.all([
           fetchOverdueContentReviews(client),
           fetchOpenContentGaps(client),
@@ -74,7 +74,7 @@ export default function SourceRefresh() {
 
   const handleMark = async (contentType, contentId) => {
     try {
-      const client = getAuthClient();
+      const client = getAuthedClient(session.access_token);
       const next = nextReviewDate(contentType);
       const { error } = await client.from('content_reviews').insert({
         content_type: contentType,

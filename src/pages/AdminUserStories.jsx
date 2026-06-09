@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import archetypesData from '../data/archetypes.json';
-import { getAuthClient } from '../services/supabaseClient';
+import { getAuthedClient } from '../services/supabaseClient';
 import { useSupervisorSession } from '../utils/useSupervisorSession';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
@@ -52,7 +52,7 @@ export default function AdminUserStories() {
     setLoadingData(true);
     setError(null);
     try {
-      const client = getAuthClient();
+      const client = getAuthedClient(session.access_token);
       const { data, error: e } = await client
         .from('user_case_submissions')
         .select('*')
@@ -80,7 +80,7 @@ export default function AdminUserStories() {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      const client = getAuthClient();
+      const client = getAuthedClient(session.access_token);
       const { error: e } = await client
         .from('user_case_submissions')
         .update({ status: newStatus })
@@ -95,7 +95,7 @@ export default function AdminUserStories() {
   const handleSaveNotes = async (id) => {
     const local = editing[id] || {};
     try {
-      const client = getAuthClient();
+      const client = getAuthedClient(session.access_token);
       const payload = {};
       if (local.reviewer_notes !== undefined)
         payload.reviewer_notes = local.reviewer_notes;

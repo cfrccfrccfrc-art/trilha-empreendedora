@@ -4,7 +4,7 @@ import archetypesData from '../data/archetypes.json';
 import taskTemplates from '../data/taskTemplates.json';
 import feedbackTemplates from '../data/feedbackTemplates.json';
 import rubrics from '../data/rubrics.json';
-import { getAuthClient } from '../services/supabaseClient';
+import { getAuthedClient } from '../services/supabaseClient';
 import { useSupervisorSession } from '../utils/useSupervisorSession';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
@@ -39,7 +39,7 @@ export default function SupervisorReview() {
     (async () => {
       setLoadingData(true);
       try {
-        const client = getAuthClient();
+        const client = getAuthedClient(session.access_token);
         const { data: sub, error: e1 } = await client
           .from('task_submissions')
           .select(`
@@ -146,7 +146,7 @@ export default function SupervisorReview() {
     setError(null);
     setSubmitting(true);
     try {
-      const client = getAuthClient();
+      const client = getAuthedClient(session.access_token);
       const decisionMeta = DECISIONS.find((d) => d.value === decision);
 
       const fbTemplate = feedbackTemplates.find((f) => f.id === feedbackId);

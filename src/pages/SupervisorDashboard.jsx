@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import archetypesData from '../data/archetypes.json';
-import { getAuthClient } from '../services/supabaseClient';
+import { getAuthedClient } from '../services/supabaseClient';
 import { useSupervisorSession } from '../utils/useSupervisorSession';
 import { fetchPendingSubmissions } from '../services/contentService';
 import PageHeader from '../components/PageHeader';
@@ -27,7 +27,7 @@ export default function SupervisorDashboard() {
     (async () => {
       setLoadingItems(true);
       try {
-        const client = getAuthClient();
+        const client = getAuthedClient(session.access_token);
         const list = await fetchPendingSubmissions(client, {
           needsHelp: needsHelpFilter || undefined,
           status: statusFilter !== ALL ? statusFilter : undefined,

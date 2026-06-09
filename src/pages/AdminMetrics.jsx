@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { getAuthClient } from '../services/supabaseClient';
+import { getAuthedClient } from '../services/supabaseClient';
 import { useSupervisorSession } from '../utils/useSupervisorSession';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
@@ -52,7 +52,7 @@ export default function AdminMetrics() {
     setLoadingData(true);
     setError(null);
     try {
-      const client = getAuthClient();
+      const client = getAuthedClient(session.access_token);
       const queries = [];
 
       // client_events: agrupar por event_type
