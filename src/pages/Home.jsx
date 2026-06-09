@@ -119,6 +119,33 @@ export default function Home() {
     navigate('/diagnostico');
   };
 
+  // Atalho: pula o diagnóstico e vai direto pro resultado com o arquétipo
+  // escolhido. Mesma lógica do botão em /perfis/:id.
+  const skipDiagnosticAndStart = () => {
+    if (!overview) return;
+    track('archetype_overview_skip_diagnostic', { archetypeId: overview.id });
+    const syntheticResult = {
+      archetypeId: overview.id,
+      archetypeScores: { [overview.id]: 100 },
+      archetypeMaxes: { [overview.id]: 100 },
+      archetypeRatios: { [overview.id]: 1 },
+      mainPain: null,
+      secondaryPain: null,
+      painScores: {},
+      flags: ['self_selected'],
+      recommendedTaskId: overview.firstTaskId || null,
+    };
+    try {
+      sessionStorage.setItem(
+        'trilha_diagnostic_result',
+        JSON.stringify(syntheticResult)
+      );
+    } catch (e) {
+      console.error('skipDiagnosticAndStart storage failed:', e);
+    }
+    navigate('/resultado');
+  };
+
   return (
     <div className="space-y-12">
       {/* HERO */}
@@ -469,13 +496,19 @@ export default function Home() {
             )}
 
             <p className="text-xs text-secondary leading-relaxed mb-3 px-1">
-              Reconheceu o cenário? Faz o diagnóstico pra confirmar. Se não
-              bater, dá pra voltar e conhecer outros perfis.
+              Reconheceu o cenário? Três caminhos a partir daqui:
             </p>
 
             <div className="space-y-2">
               <Button onClick={confirmWithDiagnostic} className="w-full">
                 Testar se é mesmo esse meu perfil
+              </Button>
+              <Button
+                variant="secondary"
+                onClick={skipDiagnosticAndStart}
+                className="w-full"
+              >
+                Já me identifico, começar a trilha
               </Button>
               <Button
                 variant="ghost"
