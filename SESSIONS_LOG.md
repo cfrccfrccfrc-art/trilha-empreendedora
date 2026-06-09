@@ -203,3 +203,65 @@ Componente DisclaimerNote em 2 variantes. Texto reconhece que a Trilha pode erra
 - SMTP custom no Supabase foi descartado: magic-link foi descontinuado, não há fluxo público que dispara email
 - Trilha audita conteúdo periodicamente e adiciona cases/mini-trilhas conforme dores são identificadas
 - Layout 2-col em desktop é só pra telas de detalhe das bibliotecas; fluxo principal continua mobile-only mesmo em desktop
+
+---
+
+## Sessão 09/06/2026 — 14º arquétipo (recomeço pós-falha)
+
+### O quê
+
+Adicionou o 14º arquétipo cobrindo gap mais óbvio depois da auditoria: pessoa que já teve negócio, fechou, e quer voltar. Esse perfil hoje caía em arquétipos errados:
+- Quem diz "tenho ideia" → `ainda_e_ideia` (mas é experiência queimada, não ideia)
+- Quem diz "vendo sem lucro" → `vende_sem_lucro` (mas não tá vendendo, tá hesitando em começar de novo)
+
+Público real e mensurável: mais de 7 milhões de MEIs baixados no Brasil entre 2020 e 2024.
+
+### Novo arquétipo `recomecou_apos_falir`
+
+Quote em 1ª pessoa: "Já tive negócio, fechei, agora não sei se tento de novo"
+
+Dor única que diferencia dos 13:
+- Medo emocional ("levo a família junto se errar de novo")
+- Dívida pendente do anterior
+- Trauma de margem (cobra abaixo do mercado pra "garantir cliente desta vez", repetindo o erro)
+- Síndrome do "vou começar pequenininho" (defesa que vira sub-dimensionamento)
+
+### Roadmap 30 dias
+
+- W1 `task_inventario_negocio_anterior`: 3 acertos + 3 erros + 3 sinais que não viu, escritos em folha
+- W2 `task_decidir_mesmo_ou_diferente`: mesmo ajustado OU diferente OU sociedade, escolhendo um caminho
+- W3 `task_testar_com_5_clientes_antigos`: mensagem pra 5 clientes do anterior testando a hipótese
+- W4 `task_piso_minimo_margem`: 3 números escritos (margem mín, reserva mín, dependência máx por cliente)
+
+### Cases novos
+
+- `case_padaria_dona_isabel_voltou` (Diadema/SP): padaria fechou em 2021 com R$ 38 mil de dívida, voltou em 2025 em sociedade com sobrinho que cuida do digital
+- `case_manicure_renata_voltou` (Manaus/AM): estúdio fechou por reajuste de R$ 80 no aluguel sem reserva, volta com cabine compartilhada + 3 pisos escritos (margem 45%, reserva R$ 2.400, dependência ≤10%)
+
+### Companions narrativos
+
+- `companion_inventario_negocio_anterior_isabel`: Dona Isabel fazendo o exercício, mostrando como travou em "a pandemia me derrubou" e como destravou separando "o que o mundo trouxe" de "como reagi"
+- `companion_piso_minimo_margem_renata`: Renata calibrando os 3 números, conversando com colega que tem estúdio há 8 anos, fixando folha física na pasta de instrumentos
+
+### Scoring
+
+- Nova opção em `q_stage_selling`: `had_closed` "Já tive negócio, fechei, quero voltar" pontua +5 pra `recomecou_apos_falir` + flag `restart_after_close`
+- `recomecou_apos_falir` adicionado ao `tieBreakOrder` (12ª posição, entre `vende_sem_lucro` e `negocio_consolidado`)
+- Sem `minScorePerArchetype` específico (max possível é 5, threshold padrão de 3 cobre)
+- Teste 9 novo: `had_closed` sozinho → `recomecou_apos_falir`. 16 testes passando.
+
+### Referências 13→14
+
+Atualizado em todos os lugares user-facing:
+- `index.html` title/og:description
+- Home (texto "13 caminhos" e link "Ler sobre os 13 perfis")
+- ArchetypesIndex (Schema CollectionPage + PageHeader + subtitle)
+- ArchetypeProfile (CTA "13 caminhos" + botão "Voltar pros 13 perfis")
+- Apresentacao em PT e EN (s4Line2 + body)
+- App.jsx comentário
+
+### Decisões registradas
+
+- Quem fechou e quer voltar não é "ainda é ideia" nem "vende sem lucro" — é arquétipo próprio com dor própria
+- W1 começa olhando pra trás (inventário) antes de olhar pra frente — é o que diferencia o roadmap dos outros 13
+- Cases novos focam em sociedade (Isabel) e cabine compartilhada (Renata) como soluções práticas brasileiras, não em "comece do zero forte"

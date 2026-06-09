@@ -361,5 +361,33 @@
     "warningFlags": ["needs_strategic_review"],
     "contentVersion": "1.0",
     "status": "active"
+  },
+
+  {
+    "id": "recomecou_apos_falir",
+    "name": "\"Já tive negócio, fechei, agora não sei se tento de novo\"",
+    "shortDescription": "Você já empreendeu antes. Por algum motivo, fechou. Quer voltar, mas o medo de errar de novo trava cada decisão. A trilha aqui é diferente: começa olhando pra trás antes de olhar pra frente.",
+    "commonPain": "Tem ideia, tem experiência, tem energia. Mas tem dívida pendente, trauma de margem apertada, e medo de levar a família junto se errar de novo. A vontade existe, o piso pra começar parece longe.",
+    "typicalMistakes": [
+      "Começar idêntico ao anterior, sem avaliar o que de fato falhou",
+      "Começar tão pequeno por defesa que o negócio não tem chance real de funcionar",
+      "Cobrar abaixo do mercado pra 'garantir cliente desta vez' e repetir o erro de margem do anterior"
+    ],
+    "firstTaskId": "task_inventario_negocio_anterior",
+    "avoidNow": "Evite pegar empréstimo novo pra reabrir antes de fazer o inventário do que aprendeu. Evite repetir o mesmo modelo só porque é o que você conhece. Evite começar grande pra 'dessa vez dar certo' e evite começar minúsculo demais pra 'não correr risco'.",
+    "expectedLearning": "Quem fechou negócio anterior tem ativo que quem nunca empreendeu não tem: aprendizado caro. Voltar bem é menos sobre coragem nova e mais sobre extrair o que aprendeu, ajustar o modelo, e definir os pisos (margem, reserva, dependência de cliente) que protegem o segundo tempo.",
+    "roadmap30d": [
+      { "week": 1, "title": "Inventário do que aprendeu",                "tasks": ["task_inventario_negocio_anterior"] },
+      { "week": 2, "title": "Decidir: mesmo, diferente ou em sociedade",  "tasks": ["task_decidir_mesmo_ou_diferente"] },
+      { "week": 3, "title": "Testar com 5 clientes do antigo",           "tasks": ["task_testar_com_5_clientes_antigos"] },
+      { "week": 4, "title": "Definir piso mínimo de margem",             "tasks": ["task_piso_minimo_margem"] }
+    ],
+    "recommendedResources": ["res_capital_inteligente", "res_microcredito_orientacao", "res_pescadoras_rede"],
+    "recommendedCases": ["case_padaria_dona_isabel_voltou", "case_manicure_renata_voltou"],
+    "recommendedOpportunities": ["opp_microcredito_orientacao", "opp_sebrae_atendimento_presencial", "opp_rede_pescadoras"],
+    "supervisionLevel": "elevated",
+    "warningFlags": ["needs_strategic_review", "finance_blind"],
+    "contentVersion": "1.0",
+    "status": "active"
   }
 ]

@@ -39,7 +39,8 @@
       { "id": "sells_regularly", "label": "Já vendo regularmente", "scoring": { "archetypes": { "vende_sem_lucro": 2, "bico_pode_virar": 1 }, "pains": {}, "flags": [] } },
       { "id": "sells_sometimes", "label": "Vendo de vez em quando", "scoring": { "archetypes": { "vende_sem_lucro": 1, "renda_complementar": 1 }, "pains": {}, "flags": [] } },
       { "id": "just_started", "label": "Estou começando agora", "scoring": { "archetypes": { "ainda_e_ideia": 2 }, "pains": {}, "flags": [] } },
-      { "id": "just_idea", "label": "Tenho só a ideia", "scoring": { "archetypes": { "ainda_e_ideia": 3 }, "pains": {}, "flags": [] } }
+      { "id": "just_idea", "label": "Tenho só a ideia", "scoring": { "archetypes": { "ainda_e_ideia": 3 }, "pains": {}, "flags": [] } },
+      { "id": "had_closed", "label": "Já tive negócio, fechei, quero voltar", "scoring": { "archetypes": { "recomecou_apos_falir": 5 }, "pains": {}, "flags": ["restart_after_close"] } }
     ]
   },
   {

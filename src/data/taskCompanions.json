@@ -940,5 +940,71 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "companion_inventario_negocio_anterior_isabel",
+  "taskTemplateId": "task_inventario_negocio_anterior",
+  "archetypeId": "recomecou_apos_falir",
+  "personaName": "Dona Isabel",
+  "region": "Brasil, Diadema (SP)",
+  "personaContext": "Teve padaria de bairro por 12 anos, fechou em janeiro de 2021 com R$ 38 mil de dívida. Trabalhou 4 anos como cozinheira em restaurante pra pagar tudo. Hoje tem R$ 6 mil guardados, sobrinho que topou ser sócio, e decisão pendente entre voltar igual, voltar diferente, ou voltar em sociedade. Decidiu fazer o inventário do que aprendeu antes de decidir qualquer coisa.",
+  "stumbles": [
+    {
+      "moment": "3 coisas que funcionaram",
+      "whatHappened": "Começou com 'as pessoas gostavam' e 'eu sabia tudo da padaria'. Travou. Achou que tudo que funcionou tinha morrido junto com o fechamento. 'Se funcionasse de verdade, por que fechou?'",
+      "whatHelped": "Reformulou a pergunta com ajuda da filha (24 anos, agora trabalha em farmácia): 'mãe, durante 12 anos o que dava certo até começar a pandemia?'. Aí veio: (1) salgado fresco no fim da tarde era diferencial, fila virava a esquina às 17h; (2) crédito na caderneta pros 30 clientes mais antigos não atrasava mais que 15 dias; (3) o sabor do bolo simples (sem cobertura) era reconhecido — gente do bairro vizinho vinha comprar. 3 ativos. Concretos."
+    },
+    {
+      "moment": "3 coisas que falharam",
+      "whatHappened": "Quase só escreveu 'a pandemia'. Sentiu que era injusto consigo, mas também difícil olhar pro que de fato falhou na gestão dela.",
+      "whatHelped": "Repensou em duas linhas: 'o que o mundo trouxe' e 'como eu reagi'. Pandemia foi mundo. Mas: (1) ela dependia 60% do almoço do escritório do bairro — concentração que ela sabia mas adiou diversificar; (2) ela nunca tinha reserva de 2 meses guardada — sempre repunha estoque com o que entrava; (3) ela demorou 6 meses pra cortar custo quando o movimento caiu, esperando 'voltar ao normal'. Não escolheu a pandemia, mas escolheu não diversificar, não guardar, e adiar a decisão de cortar."
+    },
+    {
+      "moment": "3 sinais que ela não viu",
+      "whatHappened": "Mais difícil. Sentiu que se ela tinha visto algum sinal, teria reagido. 'Tinha sinal mesmo?'",
+      "whatHelped": "Conversou com o sobrinho. Ele lembrou de detalhes que ela não tinha registrado como sinal: (1) o escritório do bairro tinha demitido 30% da equipe em 2019 — almoço já tava caindo antes da pandemia; (2) o filho da gerente de um escritório grande pediu pra comprar bolo congelado em 2019 ('a gente queria oferecer almoço em casa') — sinal de mudança de hábito; (3) o aluguel ia reajustar em janeiro de 2020 e ela já tava pensando em renegociar. Os sinais tavam lá, espalhados em conversas que ela não registrou como dado."
+    }
+  ],
+  "breakthrough": "No fim do exercício, tinha 9 itens escritos numa folha pautada. Quando releu, percebeu duas coisas: o ativo principal (salgado fresco + bolo simples + crédito a clientes antigos) sobrevive ao que fechou. E o problema principal não foi a pandemia em si, foi a dependência sem diversificação. Decidiu que o novo modelo, qualquer que seja, tem que ter no mínimo 3 fontes de receita e reserva de 2 meses antes de assinar contrato.",
+  "outcome": "O inventário ficou guardado numa pasta. Dona Isabel mostrou pro sobrinho na conversa da semana 2 sobre sociedade. Ele entendeu melhor o que ela carrega e propôs dividir as 3 fontes: pão e salgado pra ela (manhã), café e bolo de pote pro Instagram dele (tarde), e parceria com 2 estabelecimentos vizinhos (fim de tarde). Discutível, mas concreto. A folha do inventário virou a base da combinação por escrito.",
+  "whenToAskForHelp": "Se você fechou negócio anterior e o inventário ficou cheio de 'o mundo me derrubou' sem nomear nada que estava no seu controle, peça ajuda. Não pra te culpar, pra encontrar o que você de fato pode mudar no próximo.",
+  "relatedCases": ["case_padaria_dona_isabel_voltou"],
+  "relatedResources": ["res_capital_inteligente"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_piso_minimo_margem_renata",
+  "taskTemplateId": "task_piso_minimo_margem",
+  "archetypeId": "recomecou_apos_falir",
+  "personaName": "Renata",
+  "region": "Brasil, Manaus (AM)",
+  "personaContext": "Teve estúdio de unhas em galeria popular de Manaus de 2019 a 2022. Fechou porque o aluguel reajustou R$ 80 e ela não tinha caixa. Atende em casa há 2 anos, faturamento R$ 4.500/mês, 60 clientes fixas. Quer voltar pra estúdio, mas escolheu definir 3 pisos escritos antes de assinar qualquer contrato.",
+  "stumbles": [
+    {
+      "moment": "Margem mínima",
+      "whatHappened": "Começou com 30% e achou justo. 'É o que o mercado faz.' Mas quando releu o inventário (W1), lembrou que no estúdio anterior a margem era 28% e ela mal cobria custo de vida.",
+      "whatHelped": "Recalculou olhando custo real: produto (R$ 8 a R$ 18 por serviço) + tempo (1.5h média) + custo do espaço dividido pela ocupação. Pra cobrir custo de vida (alimentação, transporte, contribuição MEI, 1/3 do aluguel de casa que é dela) precisava de margem mínima de 45%, não 30%. Anotou 45% como piso inegociável. Se cliente pedir desconto que derrube margem abaixo disso, não fecha."
+    },
+    {
+      "moment": "Reserva mínima",
+      "whatHappened": "Quis colocar 1 mês de aluguel como reserva ('R$ 880 é o que me derrubou antes, 1 mês resolve'). Mas a realidade é que o que derrubou foi não conseguir absorver UM reajuste — então 1 mês cobre uma vez, não cobre uma sequência.",
+      "whatHelped": "Conversou com uma colega que tem estúdio há 8 anos. A colega: 'se eu tenho 3 aluguéis guardados, consigo negociar prazo, pagar atrasado sem prejuízo, e não preciso aceitar cliente ruim por desespero'. Renata anotou: reserva mínima de R$ 2.400 (3 aluguéis no formato de cabine compartilhada) guardada antes de assinar qualquer contrato. Se cair abaixo disso por mais de 2 meses, ela revê o modelo."
+    },
+    {
+      "moment": "Dependência máxima por cliente",
+      "whatHappened": "Quase pulou essa pergunta. 'Não dependo de cliente único, atendo 60 pessoas.' Mas quando olhou o caderno, viu que 3 clientes (todas trabalhavam em escritório de advocacia) representavam 22% do faturamento mensal.",
+      "whatHelped": "Definiu piso: nenhum cliente pode passar de 10% do faturamento mensal. Se passar, ela ativa uma das duas saídas: aumenta clientela alvo (campanha rápida na Faculdade próxima) ou negocia com o cliente um pacote anual a preço maior. Concentração é risco silencioso, não vantagem."
+    }
+  ],
+  "breakthrough": "Os 3 números viraram uma folha com 3 linhas: 'margem ≥ 45% sempre', 'reserva ≥ R$ 2.400', 'cliente ≤ 10% do faturamento'. Renata fotografou e mandou pro WhatsApp da mãe (que cuida do filho dela enquanto trabalha). Pediu pra mãe lembrar dela sempre que ela falar em aceitar desconto fora da faixa ou comprometer reserva. A folha física ficou colada na parte de dentro da pasta de instrumentos.",
+  "outcome": "Renata levou 4 meses pra acumular os R$ 2.400 de reserva. Em julho, fechou cabine compartilhada com 2 colegas (aluguel individual R$ 350). No segundo mês, uma cliente nova pediu pacote mensal com desconto que derrubaria margem pra 38%. Ela olhou a folha, recusou educadamente, ofereceu pacote num formato diferente que mantinha 45%. Cliente aceitou. Renata percebeu: a regra escrita não afasta cliente bom, afasta acordo ruim.",
+  "whenToAskForHelp": "Se você fechou negócio por motivo financeiro específico (margem, custo fixo, dependência), está há 1+ ano voltando, mas ainda não definiu por escrito como vai evitar repetir esse motivo, peça ajuda. Um olhar de fora ajuda a calibrar números que pareçam altos demais (e desistir antes) ou baixos demais (e repetir o erro).",
+  "relatedCases": ["case_manicure_renata_voltou"],
+  "relatedResources": ["res_capital_inteligente", "res_beleza_agendamento"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

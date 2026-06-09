@@ -80,7 +80,7 @@ export default function App() {
           <Route path="/biblioteca/tarefas" element={<TaskLibrary />} />
           <Route path="/biblioteca/tarefas/:id" element={<TaskLibraryDetail />} />
 
-          {/* Perfis dos 13 arquétipos — páginas evergreen indexáveis */}
+          {/* Perfis dos 14 arquétipos — páginas evergreen indexáveis */}
           <Route path="/perfis" element={<ArchetypesIndex />} />
           <Route path="/perfis/:id" element={<ArchetypeProfile />} />
 

@@ -646,5 +646,104 @@
     "reviewLevel": "elevated",
     "active": true,
     "version": "1.0"
+  },
+  {
+    "id": "task_inventario_negocio_anterior",
+    "title": "Inventário do que aprendeu no negócio anterior",
+    "week": 1,
+    "archetypeId": "recomecou_apos_falir",
+    "action": "Em uma folha (ou bloco de notas no celular), escreva: 3 coisas que funcionaram no negócio anterior + 3 coisas que falharam + 3 sinais que você deveria ter percebido antes do problema virar fechamento. Use frases curtas, números concretos quando lembrar.",
+    "purpose": "Transformar a experiência anterior em informação prática. Quem fechou tem aprendizado caro pago. Sem inventário escrito, o aprendizado some na emoção e na vergonha.",
+    "expectedLearning": "O fechamento do negócio anterior não é um fracasso vergonhoso a esquecer. É um conjunto de lições específicas que, se você nomear, fica do seu lado pra proteger o segundo tempo.",
+    "reflectionQuestions": [
+      "Os 3 problemas que você listou eram do negócio, do mercado, ou da gestão? Quem é dono de qual?",
+      "Em quais dos 3 sinais você já estava percebendo, mas adiou enfrentar?",
+      "Tem alguma das 3 coisas que funcionaram que vale levar pro próximo, mesmo que o negócio seja diferente?"
+    ],
+    "commonMistakes": [
+      "Botar a culpa só em fatores externos (pandemia, fornecedor, governo) sem nomear o que você poderia ter feito diferente",
+      "Botar a culpa só em você (auto-flagelo) sem reconhecer o que de fato fugiu do seu controle",
+      "Pular a tarefa porque 'lembrar dói demais' — anotar dói menos do que repetir o erro"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_decidir_mesmo_ou_diferente",
+    "title": "Decidir: mesmo negócio, negócio diferente, ou em sociedade",
+    "week": 2,
+    "archetypeId": "recomecou_apos_falir",
+    "action": "Com o inventário da semana 1 na mão, escolha um dos 3 caminhos por escrito: (A) MESMO negócio ajustado nos 3 pontos que falharam, (B) negócio DIFERENTE que aproveita 1-2 coisas que funcionaram antes, ou (C) SOCIEDADE com alguém que cobre o que você tem dificuldade. Escreva 2-3 frases justificando.",
+    "purpose": "Forçar uma decisão em vez de deixar o medo decidir por adiamento. Cada um dos 3 caminhos é válido, mas escolher fechar a porta pros outros dois libera energia pra começar.",
+    "expectedLearning": "A indecisão entre voltar igual, mudar tudo ou se associar é a principal armadilha de quem fechou negócio anterior. Decidir um caminho não é apostar a vida — é começar a testar de verdade em vez de só ruminar.",
+    "reflectionQuestions": [
+      "Qual caminho parece mais seguro? Qual parece mais animador? São o mesmo?",
+      "Se você escolher MESMO ajustado, o ajuste é grande o suficiente pra mudar o resultado?",
+      "Se DIFERENTE, qual é o ativo do anterior que você vai aproveitar?",
+      "Se SOCIEDADE, com quem, e com qual divisão clara?"
+    ],
+    "commonMistakes": [
+      "Escolher 'MESMO ajustado' por inércia, sem identificar de fato o que ajustar",
+      "Escolher 'DIFERENTE' empolgada(o) sem aproveitar nenhum ativo do anterior — começa do zero sem precisar",
+      "Escolher 'SOCIEDADE' sem combinar regras por escrito (ver mini-trilha sócio/família)"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_testar_com_5_clientes_antigos",
+    "title": "Testar a ideia com 5 clientes do negócio anterior",
+    "week": 3,
+    "archetypeId": "recomecou_apos_falir",
+    "action": "Pegue contato de 5 clientes do negócio anterior que ainda lembram de você positivamente. Mande mensagem direta no WhatsApp explicando que está pensando em voltar com [o que você decidiu na semana 2] e pergunte: (1) você voltaria a comprar? (2) em que condição? (3) o que mudaria pra ficar melhor que da última vez? Anote as 5 respostas.",
+    "purpose": "Sair da cabeça e ir pra realidade. Cliente que conhece seu trabalho dá a melhor informação possível: combina memória do anterior com vontade do presente.",
+    "expectedLearning": "Você descobre rápido se a base que sustentava antes ainda existe ou se mudou. E descobre, sem custo, o que precisa ajustar pra evitar o problema de margem ou de canal que derrubou o negócio anterior.",
+    "reflectionQuestions": [
+      "Dos 5, quantos disseram que voltariam a comprar?",
+      "O que mais apareceu como 'condição'? Preço? Prazo? Forma de entrega?",
+      "Apareceu alguma sugestão que você não tinha pensado e faz sentido?",
+      "Se menos de 2 dos 5 disseram que voltariam, vale repensar a escolha da semana 2?"
+    ],
+    "commonMistakes": [
+      "Escolher só clientes que você sabe que vão dizer sim — não dá informação útil",
+      "Escolher 5 sem conexão real (você não falava com eles há 3+ anos) — resposta vaga",
+      "Não anotar as respostas e seguir só com a impressão geral — perde detalhe que vale ouro"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_piso_minimo_margem",
+    "title": "Definir piso mínimo de margem antes de reabrir",
+    "week": 4,
+    "archetypeId": "recomecou_apos_falir",
+    "action": "Em uma folha, escreva 3 números que você não vai furar no segundo tempo: (1) margem mínima por venda (em % ou R$), (2) reserva mínima do caixa em dinheiro guardado (em meses de operação), (3) dependência máxima de um único cliente (em % do faturamento). Esses 3 números são suas linhas vermelhas. Justifica cada um com base no inventário da semana 1.",
+    "purpose": "Criar regras escritas que protegem você da repetição do erro anterior. Decisão emocional sob pressão (cliente pedindo desconto, mês ruim) precisa esbarrar em regra escrita em momento frio.",
+    "expectedLearning": "Negócio que reabre sem definir piso de margem, reserva e dependência repete o mesmo desfecho. Definir os números agora, em momento frio, evita repetir a decisão errada em momento quente.",
+    "reflectionQuestions": [
+      "A margem mínima que você escolheu cobre seu custo de vida ou só cobre o custo do negócio?",
+      "A reserva mínima que você escolheu aguenta quanto tempo de queda de venda?",
+      "A dependência máxima por cliente: se o maior cliente atual passar do limite, qual é seu plano?",
+      "Quem mais precisa saber desses 3 números pra te lembrar? (sócio, esposo(a), contador, filha)"
+    ],
+    "commonMistakes": [
+      "Escolher números 'realistas demais' que repetem o piso baixo do negócio anterior",
+      "Escolher números 'ideais demais' que ninguém consegue cumprir, e abandonar logo",
+      "Escrever e guardar sozinha(o), sem compartilhar com alguém que ajude a respeitar a regra"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "elevated",
+    "active": true,
+    "version": "1.0"
   }
 ]

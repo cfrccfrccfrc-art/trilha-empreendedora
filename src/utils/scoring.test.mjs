@@ -195,5 +195,27 @@ assert(
   `got ${r8.archetypeId} (score=${r8.archetypeScores.negocio_consolidado})`
 );
 
+console.log(
+  '\n--- Test 9: had_closed em q_stage_selling → recomecou_apos_falir ---'
+);
+// Pessoa marca "Já tive negócio, fechei, quero voltar". Tem que cair em
+// recomecou_apos_falir mesmo que pontue em outros arquétipos por outras
+// respostas (porque +5 é mais que score acumulado normal em poucas perguntas).
+const hadClosed = {
+  q_stage_selling: 'had_closed',
+};
+const r9 = scoreAnswers(hadClosed, questions, archetypes, rules);
+console.log('  archetypeId:', r9.archetypeId);
+console.log('  flags:', r9.flags);
+assert(
+  'had_closed sozinho → recomecou_apos_falir',
+  r9.archetypeId === 'recomecou_apos_falir',
+  `got ${r9.archetypeId}`
+);
+assert(
+  'flag restart_after_close presente',
+  r9.flags.includes('restart_after_close')
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

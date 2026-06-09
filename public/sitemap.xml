@@ -385,6 +385,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://trilhaempreendedora.com.br/casos/case_padaria_dona_isabel_voltou</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/casos/case_manicure_renata_voltou</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_anotar_7_dias</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -571,6 +583,30 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_inventario_negocio_anterior</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_decidir_mesmo_ou_diferente</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_testar_com_5_clientes_antigos</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/biblioteca/tarefas/task_piso_minimo_margem</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://trilhaempreendedora.com.br/perfis/vende_sem_lucro</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -644,6 +680,12 @@
   </url>
   <url>
     <loc>https://trilhaempreendedora.com.br/perfis/negocio_consolidado</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://trilhaempreendedora.com.br/perfis/recomecou_apos_falir</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

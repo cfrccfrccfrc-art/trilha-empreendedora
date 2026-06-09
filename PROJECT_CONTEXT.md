@@ -505,7 +505,7 @@ Os 13 `name` foram trocados de rótulos descritivos pra **quotes em 1ª pessoa e
 - `task_conversar_negocios_pares` (W3)
 - `task_decidir_1_aposta_6m` (W4)
 
-Total geral: **184 itens de conteúdo, 31 task templates ativos, 29 companions, 13 archetypes ativos, 20 cases, 21 resources, 11 opportunities**.
+Total geral (pós-sessão de 09/06/2026): **35 task templates ativos, 31 companions, 14 archetypes ativos, 29 cases, 21 resources, 11 opportunities**.
 
 ### Personas dos cases ficaram brasileiras
 
@@ -620,6 +620,30 @@ Sprint 3 dedicado a tirar o "pobre" do look & feel. 7 blocos:
 - **PathTrail** entre seções principais da Home.
 - **PersonaAvatar** novo: círculo com iniciais em Patrick Hand, cor determinística por nome (hash). Usado em `TaskCompanion` e em `TaskLibraryDetail`.
 - **Layout 2-col em md+** nas telas de detalhe (`CaseDetailPage`, `TaskLibraryDetail`): conteúdo principal à esquerda, sidebar sticky à direita com tarefa prática, recursos, copy text, voltar.
+
+### 14º arquétipo: recomeço pós-falha (sessão 09/06/2026)
+
+Adicionado `recomecou_apos_falir` ("Já tive negócio, fechei, agora não sei se tento de novo") cobrindo o público de mais de 7 milhões de MEIs baixados no Brasil entre 2020 e 2024 que querem voltar a empreender. Não é `ainda_e_ideia` (esse nunca tentou) nem `vende_sem_lucro` (esse tá vendendo). É próprio.
+
+Dor única: medo emocional + dívida pendente + trauma de margem + síndrome do "vou começar pequenininho" por defesa.
+
+Roadmap 30d específico:
+- W1: `task_inventario_negocio_anterior` (3 acertos + 3 erros + 3 sinais ignorados do negócio anterior)
+- W2: `task_decidir_mesmo_ou_diferente` (mesmo ajustado / diferente / em sociedade)
+- W3: `task_testar_com_5_clientes_antigos` (mensagem pra 5 clientes do anterior)
+- W4: `task_piso_minimo_margem` (margem mín + reserva mín + dependência máx por cliente)
+
+Cobertura de conteúdo:
+- 2 cases novos (`case_padaria_dona_isabel_voltou` em Diadema, `case_manicure_renata_voltou` em Manaus)
+- 2 companions narrativos (Dona Isabel fazendo o inventário, Renata definindo os pisos)
+
+Scoring:
+- Nova opção `had_closed` em `q_stage_selling` ("Já tive negócio, fechei, quero voltar") pontua +5 pra `recomecou_apos_falir` + flag `restart_after_close`
+- `recomecou_apos_falir` adicionado no `tieBreakOrder` entre `vende_sem_lucro` e `negocio_consolidado`
+- Sem `minScorePerArchetype` específico (max possível é 5, threshold padrão de 3 funciona)
+- Teste 9 novo: `had_closed` sozinho → `recomecou_apos_falir`. 16 testes passando.
+
+Total: **14 arquétipos ativos**, 35 task templates, 31 companions, 29 cases.
 
 ### Auditoria + ajustes (sessão 29-30/05/2026)
 

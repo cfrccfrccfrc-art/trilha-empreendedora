@@ -699,5 +699,53 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "case_padaria_dona_isabel_voltou",
+  "title": "Dona Isabel, a padaria que fechou em 2021 e voltou diferente em 2025",
+  "region": "Brasil, Diadema (SP)",
+  "sector": "alimentacao",
+  "archetypes": ["recomecou_apos_falir"],
+  "readingTime": "5 min",
+  "dilemma": "Padaria de bairro fechou em 2021 com R$ 38 mil de dívida com fornecedor e aluguel. Quatro anos depois, dívida quase quitada e vontade de voltar. Mas voltar como? Mesma padaria? Outra coisa? Sociedade com o sobrinho que entende de Instagram?",
+  "situation": "Dona Isabel teve padaria de bairro em Diadema (SP) por 12 anos. Vendia pão, salgado, bolo, refeição rápida no almoço. Faturamento médio de R$ 22 mil/mês até 2019. Em 2020 perdeu 60% do movimento (escritórios fecharam, almoço sumiu). Tentou aguentar 1 ano só com pão. Em janeiro de 2021 fechou com R$ 38 mil de dívida (fornecedor de farinha, aluguel, energia atrasada). Pagou em 4 anos trabalhando como cozinheira em restaurante. Hoje tem R$ 6 mil guardados, 56 anos, energia. O sobrinho de 24 anos cuida da padaria moderna no centro e topou virar sócio. Dona Isabel hesita: 'mas se der errado de novo?'",
+  "options": [
+    "Voltar com a mesma padaria igual antes, no mesmo bairro, com os R$ 6 mil — repete o modelo que falhou na crise.",
+    "Abrir café de bairro com cardápio reduzido (pão fresco + 3 salgados + café), sem dependência de almoço — ajusta o ponto frágil mas perde o que funcionou.",
+    "Aceitar sociedade com o sobrinho: cardápio reduzido + cardápio de delivery via Instagram que o sobrinho cuida + ponto pequeno em rua com movimento de manhã. Sociedade combinada por escrito (divisão de lucro, papel de cada um, regra se um sair)."
+  ],
+  "tradeoffs": "Voltar igual sem ter ajustado os 3 sinais que derrubaram antes (dependência do almoço corporativo, sem caixa de reserva, sem canal alternativo) repete o desfecho. Café sozinha perde a vantagem do sobrinho que já conhece o digital. Sociedade combinada por escrito mantém o que ela manja (pão e salgado), cobre o que ela não manja (Instagram, delivery), e a divisão escrita protege a relação familiar quando aperto vier.",
+  "lessonLearned": "Voltar não é repetir nem começar do zero. É pegar o que aprendeu, escolher um modelo ajustado nos pontos que falharam, e definir regras com quem volta junto.",
+  "tropicalizedLesson": "No Brasil, mais de 7 milhões de MEIs foram baixados entre 2020 e 2024. A maioria das pessoas que volta a empreender depois de fechar tenta voltar igual — e quebra de novo pelos mesmos motivos. O que funciona é o inventário escrito (semana 1 da trilha): o que funcionou, o que falhou, o que você ignorou como sinal. Sociedade com alguém da família ou da rede que cobre o que você não manja é caminho legítimo e comum no comércio brasileiro, mas só se vier com combinado escrito sobre divisão e saída. Sem isso, vira problema duplo (perde negócio e perde relação).",
+  "practicalTask": "task_inventario_negocio_anterior",
+  "relatedResources": ["res_capital_inteligente", "res_microcredito_orientacao"],
+  "helpTrigger": "Se você fechou negócio anterior há mais de 1 ano, tem energia pra voltar, mas está há 3+ meses adiando a decisão entre os 3 caminhos, peça ajuda. Conversar com olhar de fora destrava sem custo.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "case_manicure_renata_voltou",
+  "title": "Renata, a manicure que faliu por R$ 80 e voltou com regra escrita",
+  "region": "Brasil, Manaus (AM)",
+  "sector": "beleza",
+  "archetypes": ["recomecou_apos_falir"],
+  "readingTime": "4 min",
+  "dilemma": "Tinha estúdio de unhas em galeria de Manaus. Fechou em 2022 porque o aluguel subiu R$ 80 e ela não tinha reserva. Dois anos depois, atende em casa por indicação. Quer voltar pra estúdio. Tem medo de assinar contrato e perder de novo.",
+  "situation": "Renata tem 34 anos, mora em Manaus. Em 2019 abriu estúdio de unhas em galeria popular do centro. Cabine alugada por R$ 800/mês, 3-4 clientes/dia, faturamento médio R$ 7 mil. Em junho 2022 a administração da galeria reajustou aluguel pra R$ 880. Renata não tinha R$ 80 a mais no caixa, atrasou 2 meses, foi notificada, devolveu a cabine, levou os instrumentos pra casa. Hoje atende em casa, faturamento R$ 4.500/mês com gel e fibra (foi se especializando). Tem 60 clientes fixas. Vontade de voltar pra estúdio pra atender mais sem mexer na rotina da casa. Lembra do trauma: 'R$ 80 me derrubou'.",
+  "options": [
+    "Voltar pra galeria igual antes, mesma cabine, mesmo modelo. Tem o trauma específico mas é o que ela conhece.",
+    "Continuar em casa pra sempre. Seguro, mas teto de faturamento já tá próximo (clientela do bairro saturou).",
+    "Voltar pra estúdio, mas com 3 regras escritas que não vai furar: (1) reserva mínima de R$ 2.400 (3 aluguéis) no caixa antes de assinar, (2) buscar cabine compartilhada com 2 colegas pra dividir aluguel (R$ 350/cabeça em vez de R$ 880), (3) margem mínima de 45% por serviço — se cliente pedir desconto que derrube margem abaixo disso, não fecha."
+  ],
+  "tradeoffs": "Voltar igual sem reserva nem regra repete o desfecho de 2022. Continuar em casa pra sempre estabiliza mas não cresce. Voltar com 3 pisos escritos (reserva, divisão de aluguel, margem mínima) custa 4-6 meses de preparação a mais, mas elimina os 3 mecanismos que derrubaram antes. Cabine compartilhada é prática comum em Manaus, Belém e várias capitais — divide custo fixo, mantém autonomia.",
+  "lessonLearned": "Quem fechou por margem apertada precisa voltar com piso de margem escrito. Quem fechou por custo fixo precisa voltar com reserva escrita. Regra escrita no momento frio (planejamento) protege da decisão emocional no momento quente (cliente pedindo desconto, mês fraco).",
+  "tropicalizedLesson": "No Brasil, profissional de beleza que volta pra estúdio depois de fechar costuma cair em duas armadilhas: (a) volta sozinha pra cabine inteira que não cabe no faturamento ainda, ou (b) fica em casa pra sempre por trauma. Cabine compartilhada em galeria popular é solução prática, comum no Norte e Nordeste, e quase invisível no Sul/Sudeste — vale considerar mesmo se 'ninguém faz assim aqui'. R$ 300-400 de aluguel compartilhado com regra de horário definida libera espaço sem repetir o risco de aluguel sozinho.",
+  "practicalTask": "task_piso_minimo_margem",
+  "relatedResources": ["res_capital_inteligente", "res_beleza_agendamento"],
+  "helpTrigger": "Se você fechou negócio por motivo específico (margem, custo fixo, cliente principal) e quer voltar sem ter definido por escrito como evitar esse mesmo motivo, peça ajuda. A regra escrita é o que separa repetir o erro de aprender com ele.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

@@ -208,7 +208,7 @@ export default function ArchetypeProfile() {
         </h3>
         <p className="text-paper/70 text-sm leading-relaxed mb-4">
           Reconheceu o cenário? Faz o diagnóstico de 5 minutos pra confirmar
-          ou descobrir o seu perfil real entre os 13 caminhos.
+          ou descobrir o seu perfil real entre os 14 caminhos.
         </p>
         <Button
           onClick={() => navigate('/diagnostico')}
@@ -225,7 +225,7 @@ export default function ArchetypeProfile() {
         onClick={() => navigate('/perfis')}
         className="w-full"
       >
-        ← Ver os 13 perfis
+        ← Ver os 14 perfis
       </Button>
     </div>
   );
