@@ -12,6 +12,7 @@ const WIDE_PREFIXES = [
   '/preciso-de-ajuda',
   '/posso-ajudar',
   '/biblioteca',
+  '/perfis',
 ];
 
 function isWideRoute(pathname) {
@@ -49,6 +50,7 @@ function TopNav({ wide }) {
 
       {wide && (
         <nav className="hidden md:flex items-center gap-1 text-sm">
+          <WideNavLink to="/perfis" label="Perfis" />
           <WideNavLink to="/conteudos" label="Conteúdos" />
           <WideNavLink to="/casos" label="Casos" />
           <WideNavLink to="/oportunidades" label="Oportunidades" />

@@ -30,6 +30,7 @@ const STATIC_ROUTES = [
   { path: '/mini/canais', priority: '0.7', changefreq: 'monthly' },
   { path: '/posso-ajudar', priority: '0.5', changefreq: 'monthly' },
   { path: '/biblioteca/tarefas', priority: '0.7', changefreq: 'monthly' },
+  { path: '/perfis', priority: '0.8', changefreq: 'monthly' },
 ];
 
 function urlEntry({ path: p, priority, changefreq, lastmod = TODAY }) {
@@ -86,11 +87,28 @@ for (const t of tasks) {
   );
 }
 
+const archetypes = readJson('archetypes.json').filter(
+  (a) => a.status === 'active'
+);
+for (const a of archetypes) {
+  lines.push(
+    urlEntry({
+      path: `/perfis/${a.id}`,
+      priority: '0.7',
+      changefreq: 'monthly',
+    })
+  );
+}
+
 lines.push('</urlset>');
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 fs.writeFileSync(OUT, lines.join('\n') + '\n', 'utf8');
 
 const totalUrls =
-  STATIC_ROUTES.length + resources.length + cases.length + tasks.length;
+  STATIC_ROUTES.length +
+  resources.length +
+  cases.length +
+  tasks.length +
+  archetypes.length;
 console.log(`✓ sitemap.xml gerado com ${totalUrls} URLs em ${OUT}`);

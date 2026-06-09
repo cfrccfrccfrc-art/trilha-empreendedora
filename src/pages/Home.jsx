@@ -277,6 +277,13 @@ export default function Home() {
         >
           Descobrir meu perfil →
         </Button>
+        <button
+          type="button"
+          onClick={() => navigate('/perfis')}
+          className="w-full text-xs text-secondary underline underline-offset-4 py-2 mt-1"
+        >
+          Ler sobre os 13 perfis sem fazer o diagnóstico
+        </button>
       </section>
 
       {/* O QUE VOCÊ TEM */}

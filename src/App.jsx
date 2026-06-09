@@ -24,6 +24,8 @@ const BadgeCard         = lazy(() => import('./pages/BadgeCard'));
 const MyStory           = lazy(() => import('./pages/MyStory'));
 const TaskLibrary       = lazy(() => import('./pages/TaskLibrary'));
 const TaskLibraryDetail = lazy(() => import('./pages/TaskLibraryDetail'));
+const ArchetypesIndex   = lazy(() => import('./pages/ArchetypesIndex'));
+const ArchetypeProfile  = lazy(() => import('./pages/ArchetypeProfile'));
 
 // Supervisor / admin (lazy — only fetched when these users hit those routes)
 const SupervisorLogin     = lazy(() => import('./pages/SupervisorLogin'));
@@ -77,6 +79,10 @@ export default function App() {
           {/* Biblioteca pra consultores e parceiros (B2B do Pescadores) */}
           <Route path="/biblioteca/tarefas" element={<TaskLibrary />} />
           <Route path="/biblioteca/tarefas/:id" element={<TaskLibraryDetail />} />
+
+          {/* Perfis dos 13 arquétipos — páginas evergreen indexáveis */}
+          <Route path="/perfis" element={<ArchetypesIndex />} />
+          <Route path="/perfis/:id" element={<ArchetypeProfile />} />
 
           {/* Supervisor + admin — lazy */}
           <Route path="/supervisor" element={<SupervisorDashboard />} />
