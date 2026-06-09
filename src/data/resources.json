@@ -529,12 +529,12 @@
     "onlineOffline": "online",
     "estimatedTime": "6 min",
     "practicalUseCase": "Material obrigatório pra quem vende alimentos prontos.",
-    "qualityScore": 3,
-    "lastReviewed": "2026-04-01",
-    "nextReview": "2026-07-01",
-    "sourceStatus": "needs_review",
+    "qualityScore": 4,
+    "lastReviewed": "2026-06-09",
+    "nextReview": "2026-12-09",
+    "sourceStatus": "active",
     "status": "active",
-    "version": "1.0"
+    "version": "1.1"
   },
   {
     "id": "res_beleza_agendamento",

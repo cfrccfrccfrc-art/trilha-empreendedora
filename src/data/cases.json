@@ -747,5 +747,53 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "case_diego_barbeiro_reels_lucro",
+  "title": "Diego, o barbeiro com 35 mil seguidores e R$ 380 de lucro no fim do mês",
+  "region": "Brasil, Salvador (BA)",
+  "sector": "servicos",
+  "archetypes": ["digital_antes_da_base", "vende_sem_lucro"],
+  "readingTime": "4 min",
+  "dilemma": "Posta Reels todo dia, fila de 1 semana no salão, 35 mil seguidores no Instagram. Faturamento mensal de R$ 9.800. Mas quando finalmente anotou entrada e saída, descobriu que sobrou R$ 380 num mês. O Instagram bonito esconde negócio apertado.",
+  "situation": "Diego tem 27 anos, é barbeiro em salão em Salvador há 4 anos. Posta 1-2 Reels por dia no Instagram (35 mil seguidores), com vídeos de corte degradê, fade, navalhada. Cobra R$ 60 corte simples, R$ 80 com barba. Atende 8-10 clientes por dia, 6 dias por semana. Aluguel da cadeira no salão: R$ 1.200/mês. Cliente fila de 1 semana pra agendar. Diego acha que tá ganhando bem porque o salão é cheio. Mãe insistiu e ele anotou entrada e saída 7 dias seguidos.",
+  "options": [
+    "Continuar como tá. Insta funciona, fila é prova de demanda.",
+    "Largar o Instagram e focar só no boca a boca pra cortar 'gastos com conteúdo'. Simplifica mas perde alcance.",
+    "Continuar postando, mas adicionar 3 mudanças: (1) anotar entrada/saída todo dia (mantém o número visível), (2) ajustar preço pra R$ 70/90 (cliente fiel topa, fila absorve), (3) cortar contrato com o estudante que filma os Reels (R$ 800/mês) — gravar com tripé caseiro 1-2 vezes por semana em vez de diário."
+  ],
+  "tradeoffs": "Continuar igual com R$ 380 de sobra mensal vira aperto em qualquer mês de pequena queda (feriado, doença, equipamento). Largar Instagram corta alcance que sustenta a fila — fila é o que dá poder pra negociar preço. Ajustar 3 pontos mantém o que funciona (presença digital), corta o custo invisível (estudante que ele banca pra produção) e ajusta preço pro nível da fila. Cliente fiel topa R$ 70 porque ele já paga R$ 80 sem corte de barba.",
+  "lessonLearned": "Instagram bonito + fila de cliente + preço abaixo do mercado + custo invisível = trabalho duro e caixa apertado. Anotar 7 dias mostra o número real, e o número real abre 3 mudanças pequenas que destravam.",
+  "tropicalizedLesson": "No Brasil, prestador de serviço com presença digital (barbeiro, manicure, cabeleireira, esteticista, personal trainer) costuma terceirizar produção do conteúdo (estudante de pub, primo que entende de edição, namorada designer) por R$ 600 a R$ 1.500/mês. Esse custo fica invisível porque é descontado direto do caixa sem aparecer no preço. Quando a pessoa anota 7 dias, descobre que 12-18% do faturamento vai pro 'colaborador de mídia' que sustenta a vaidade do feed sem proporção com retorno. Gravar com tripé caseiro 1-2 vezes/semana mantém presença e libera margem. Quando o negócio crescer, dá pra retomar produção profissional com contrato proporcional.",
+  "practicalTask": "task_anotar_7_dias",
+  "relatedResources": ["res_caixa_basico", "res_precificacao_simples"],
+  "helpTrigger": "Se você tem presença digital boa (2 mil+ seguidores reais, conteúdo regular) e nunca anotou entrada e saída por 7 dias seguidos, peça ajuda pra começar. O feed bonito esconde o número real, e o número real abre as decisões certas.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "case_eduardo_hamburgueria_validacao",
+  "title": "Eduardo, R$ 25 mil guardados e o ponto que ele quase alugou sem testar nada",
+  "region": "Brasil, Belo Horizonte (MG)",
+  "sector": "alimentacao",
+  "archetypes": ["ainda_e_ideia"],
+  "readingTime": "4 min",
+  "dilemma": "Programador de 28 anos juntou R$ 25 mil em 3 anos pra abrir hamburgueria gourmet. Tem receita testada na família, ponto identificado, projeção planilhada. Mas nunca vendeu 1 hambúrguer pra estranho. Quase assinou contrato de 12 meses com aluguel de R$ 3.800.",
+  "situation": "Eduardo trabalha em empresa de tecnologia em Belo Horizonte, sonha em abrir hamburgueria gourmet há 4 anos. Cresceu vendo o pai (cozinheiro de bar) e desenvolveu receita própria de hambúrguer artesanal. Família e amigos elogiam há 2 anos ('você precisa abrir!'). Em 2025 juntou R$ 25 mil. Encontrou ponto de 35m² em bairro de classe média em BH (R$ 3.800/mês + IPTU + condomínio). Fez planilha: capacidade 80 hambúrgueres/dia, preço médio R$ 32, faturamento projetado R$ 60 mil/mês, margem 35%. Planilha bate. Contrato de 12 meses no pacote. Quase assinou em maio.",
+  "options": [
+    "Assinar contrato e abrir a hamburgueria em 60 dias. Capital cobre reforma + estoque inicial + 2 meses de aluguel.",
+    "Adiar 6 meses pra juntar mais R$ 15 mil de reserva extra.",
+    "Antes de assinar QUALQUER contrato, testar com 3 formatos de baixo custo em 60 dias: (1) 4 fins de semana vendendo via Instagram com retirada na casa dele (delivery em raio de 3 km), (2) 1 pop-up em feira gastronômica local (taxa de R$ 200), (3) 1 parceria com bar amigo cedendo cozinha à noite (terça e quarta, 2 horas)."
+  ],
+  "tradeoffs": "Assinar agora compromete R$ 45 mil em 12 meses de aluguel + custo de abrir, sem ter validado se cliente compra fora do círculo da família. Adiar 6 meses só pra juntar reserva NÃO resolve a hipótese central (cliente vai pagar R$ 32 em hambúrguer dele?). Testar 3 formatos em 60 dias custa R$ 800-1.200 (matéria-prima + taxa feira + embalagem), valida demanda real, e descobre se a receita escala fora do controle dele. Se vender 30 unidades/fim de semana via Insta e esgotar a pop-up, prova que tem mercado. Se vender 8, ele descobriu antes de comprometer R$ 25 mil.",
+  "lessonLearned": "Quem tem capital, planilha e receita testada na família ainda não vendeu o produto. Validar com 3 formatos de baixo custo em 60 dias é o que separa abertura confiante de abertura corajosa. Coragem custa R$ 25 mil. Validação custa R$ 1.200.",
+  "tropicalizedLesson": "No Brasil, a hamburgueria gourmet (e versão dela: brunch, açaí, marmita fit, doce gourmet, cervejaria artesanal) é o sonho de classe média que mais quebra na fase 1. O motivo quase nunca é o produto. É o salto direto de 'eu acho que é bom' pra 'aluguei ponto, comprei equipamento, abri'. Sem teste de mercado real (Insta, pop-up, parceria), a planilha vira ficção e o capital vira piso de aprendizado. Quem testa primeiro descobre se o preço aguenta cliente fora do círculo, se a receita escala (5 unidades é diferente de 50), e se ele aguenta a operação na pressão. Isso custa pouco e ensina muito.",
+  "practicalTask": "task_mvp_primeira_venda",
+  "relatedResources": ["res_validar_ideia", "res_capital_inteligente"],
+  "helpTrigger": "Se você tem capital guardado, planilha de projeção feita, e está a 30 dias de assinar contrato de ponto sem ter vendido 10 unidades pra estranho fora do seu círculo, peça ajuda. Validar custa pouco. Adiar a validação custa o capital inteiro se a hipótese errar.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

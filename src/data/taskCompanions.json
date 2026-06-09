@@ -1006,5 +1006,254 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "companion_lista_servicos_precos_carmen",
+  "taskTemplateId": "task_lista_servicos_precos",
+  "archetypeId": "talento_sem_postura_comercial",
+  "personaName": "Dona Carmen",
+  "region": "Brasil, Belford Roxo (RJ)",
+  "personaContext": "Costureira há mais de 30 anos em Belford Roxo, faz 25-30 ajustes por semana em casa. Cobra R$ 15 pra bainha (mercado da região: R$ 25-35) e R$ 20 pra cintura. Sabe que tá ganhando menos, mas trava na hora de subir preço pra cliente fiel. Decidiu escrever a lista de serviços e preços por escrito antes de qualquer conversa.",
+  "stumbles": [
+    {
+      "moment": "Listar serviços",
+      "whatHappened": "Pegou folha A4 e começou a escrever 'bainha, ajuste cintura, ajuste vestido'. Travou em 3 itens. Sentiu que era pouco e que estava esquecendo. Mas não sabia o que faltava.",
+      "whatHelped": "A filha sugeriu olhar o caderno de pagamento dos últimos 30 dias. Apareceram 11 serviços diferentes que ela faz e nunca tinha nomeado: ajuste de manga, troca de zíper, ajuste de costas, conserto de calça rasgada, bainha pra cortina, ajuste de moletom, alteração de vestido festa, ajuste de blusa social, troca de elástico, conserto de bolso descosurado, fechamento de barra. 11 linhas saíram em 10 minutos depois que ela viu o caderno como dado."
+    },
+    {
+      "moment": "Pesquisar preço da região",
+      "whatHappened": "Pra preencher a coluna 'preço atual' foi fácil. Mas a coluna 'preço novo' a deixou paralisada. 'Como eu sei o que cobrar?'",
+      "whatHelped": "Mandou mensagem pra 2 vizinhas costureiras (já se conhecem há anos, atendem em bairros diferentes pra evitar concorrência direta) perguntando: 'oi, você cobra quanto por bainha?'. As duas responderam em meia hora: R$ 28 e R$ 32. Carmen anotou R$ 25 como 'preço novo' (ainda abaixo das duas, ela manteve postura de mercado regional sem sair gritando). Repetiu pros outros 10 serviços. Cada um saiu com referência."
+    },
+    {
+      "moment": "Diferença entre cliente novo e antigo",
+      "whatHappened": "Quase tomou decisão emocional de fazer 2 tabelas: 'cobro caro do novo, mantenho barato pro antigo'. Filha avisou que isso volta a ela em 2 meses (clientela antiga vai indicar pra novas e gerar conflito de preço).",
+      "whatHelped": "Manteve 1 tabela só. Decidiu que cliente antigo recebe aviso por escrito 45 dias antes da nova tabela entrar. Cliente novo já recebe a tabela. Mesmo preço pra todo mundo. Diferença é o aviso prévio, não o valor."
+    }
+  ],
+  "breakthrough": "Tabela de 11 linhas escrita em 1 tarde. Carmen levou pra impressão na papelaria da esquina (R$ 1,50, A4 colorido). Fixou na parede da sala onde atende. Cliente passa por ela na entrada. Vê a tabela. Faz a conta sozinho. Não precisa mais perguntar 'quanto custa' nem ouvir 'ah, pra você faço por menos'.",
+  "outcome": "Em 2 semanas Carmen subiu o preço médio dela em 60% (de R$ 15 pra R$ 25 em bainha, equivalente nos outros). 3 das 30 clientes regulares reclamaram, 1 saiu. As outras 26 continuaram, e Carmen recebeu indicação de 4 novas clientes que viram a tabela e acharam organizado. Faturamento mensal subiu de R$ 1.800 pra R$ 2.700. A folha impressa virou prova de que ela é profissional.",
+  "whenToAskForHelp": "Se você tem mais de 5 serviços diferentes e ainda não tem tabela escrita pesquisada com colegas da região, peça ajuda. A tabela é o documento que te tira da posição de 'cobrar por simpatia' e te coloca na posição de 'cobrar por mercado'.",
+  "relatedCases": ["case_carmen_costura_ajustes"],
+  "relatedResources": ["res_precificacao_simples", "res_sebrae_precificacao"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_anotar_7_dias_mariana",
+  "taskTemplateId": "task_anotar_7_dias",
+  "archetypeId": "digital_antes_da_base",
+  "personaName": "Mariana",
+  "region": "Brasil, Brasília (DF)",
+  "personaContext": "26 anos, mora em Brasília, faz bolo de pote e doce gourmet desde 2023. Instagram com 8.400 seguidores, posta 4-5 vezes por semana com foto bonita, vídeo de produção, story de bastidor. Faturamento médio R$ 5.200/mês. Mãe e amigas perguntam: 'mas tá sobrando dinheiro?'. Ela responde 'tá indo bem'. No fundo, não sabe. Decidiu fazer a tarefa de anotar 7 dias 'só pra ver'.",
+  "stumbles": [
+    {
+      "moment": "Dia 1",
+      "whatHappened": "Acordou animada. Começou anotando no caderno. Esqueceu de anotar 2 vendas que vieram por Direct na hora do almoço (estava editando vídeo). À noite tentou lembrar, contou errado. 'Será que entrou R$ 180 ou R$ 220?'.",
+      "whatHelped": "Trocou caderno por planilha simples no celular (Google Sheets). Configurou notificação às 11h, 15h e 20h: 'anota o que entrou e saiu nas últimas horas'. 3 toques por dia. Resolveu o problema da memória."
+    },
+    {
+      "moment": "Dias 3-4 — o invisível apareceu",
+      "whatHappened": "Foi anotando entrada (vendas) e saída (matéria-prima). Achou que ia sobrar bonito. Na quinta-feira começou a notar: motoboy R$ 28 por entrega, embalagem R$ 4 por pote, fita decorativa R$ 0,80, gás cozinha (cota), energia (cota), Internet (cota), iFood comissão 23% em 4 vendas grandes. Cada item parecia pequeno. Somados começavam a comer.",
+      "whatHelped": "Adicionou uma coluna 'custos pequenos' na planilha. Cada notificação ela completava 3 colunas: receita, custo grande, custo pequeno. No domingo viu o quadro: receita R$ 1.380 na semana, custo direto R$ 580, custos pequenos R$ 320. Sobra real R$ 480. Ela imaginava R$ 800-900 'fácil'."
+    },
+    {
+      "moment": "Domingo de noite",
+      "whatHappened": "Olhou o resultado. Foto bonita no Insta, story bombando, mas o número da sobra real era 40% menor que o palpite dela. Sentiu desânimo. 'Tô trabalhando 50h por semana pra isso?'.",
+      "whatHelped": "Conversou com a mãe (contadora aposentada). A mãe não fez drama, perguntou: 'agora você sabe o número real, certo?'. Mariana: 'sim'. Mãe: 'então mês que vem você decide se aumenta preço, corta custo ou muda foco. Antes você não tinha o número, só o post bonito. Agora tem'. O número virou ponto de partida em vez de problema."
+    }
+  ],
+  "breakthrough": "No fim do domingo, Mariana entendeu que Instagram bonito sem caixa anotado vira ilusão organizada. Decidiu manter as 3 notificações pra sempre, adicionar 1 hora por semana de revisão financeira (domingo cedo, antes do post da semana), e revisar preço da linha 'pote pequeno' em 30 dias.",
+  "outcome": "No mês seguinte, Mariana subiu preço do pote pequeno em 15% (de R$ 12 pra R$ 14), cortou contrato com 1 motoboy que cobrava acima da média e contratou outro, e começou a oferecer pacote de 4 potes por R$ 50 (margem maior, embalagem proporcionalmente menor). Sobra mensal subiu de ~R$ 1.900 pra R$ 3.100. Continuou postando bonito. Mas agora sabia o número antes de cada post.",
+  "whenToAskForHelp": "Se você tem presença digital boa (perfil com seguidor real, conteúdo regular) e nunca anotou entrada e saída por 7 dias seguidos, peça ajuda pra começar. O Instagram organizado esconde a real, e a real é o que sustenta o negócio. Sem o número, qualquer post bonito vira otimismo sem base.",
+  "relatedCases": ["case_digital_antes_da_base"],
+  "relatedResources": ["res_caixa_basico", "res_precificacao_simples"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_mapear_proximo_gargalo_bia",
+  "taskTemplateId": "task_mapear_proximo_gargalo",
+  "archetypeId": "negocio_consolidado",
+  "personaName": "Bia",
+  "region": "Brasil, Belo Horizonte (MG)",
+  "personaContext": "Doceria de bolos de pote e brigadeiros em Belo Horizonte há 4 anos. MEI, faturamento médio R$ 18 mil/mês, margem 35%. Tudo organizado: finanças anotadas, Instagram com 6 mil seguidores, 2 cafés que revendem. Sabe que tá travada em R$ 18 mil. Decidiu mapear o próximo gargalo antes de fazer qualquer movimento grande.",
+  "stumbles": [
+    {
+      "moment": "Lista de possíveis gargalos",
+      "whatHappened": "Em 5 minutos listou 7 'gargalos possíveis': capacidade de produção, divulgação fraca, falta de cliente novo, custo da matéria-prima alto, perfil pequeno no Insta, falta de funcionário, preço baixo. Travou. 'São todos. Como escolher um?'",
+      "whatHelped": "Releu cada um e perguntou: 'se eu resolvesse esse hoje, quanto faturamento subiria nos próximos 90 dias?'. Capacidade de produção: subiria muito (recusa pedido toda semana). Cliente novo: subiria pouco (já tem demanda reprimida, problema não é demanda). Preço baixo: subiria médio (cliente fiel topa, novos talvez não). Lista de 7 virou ranking de 3."
+    },
+    {
+      "moment": "Validar com dado",
+      "whatHappened": "Quase decidiu por intuição: 'capacidade é o gargalo'. Mas como ela sempre faz, queria 1 número que confirmasse antes de decidir.",
+      "whatHelped": "Foi no caderno de pedidos e contou: nos últimos 60 dias ela recusou 14 pedidos por falta de mão. Cada pedido recusado tinha valor médio R$ 140. R$ 14 x 140 = R$ 1.960 perdidos. Em 6 meses isso é quase R$ 12 mil. O número confirmou: capacidade é o gargalo principal. Não é 'achismo de Bia cansada'."
+    },
+    {
+      "moment": "Diferenciar gargalo de problema crônico",
+      "whatHappened": "Resolver capacidade de produção significava contratar ou compartilhar produção. Pensar nisso trouxe outros problemas (registro, custo fixo, perda de controle de receita). Quase abandonou a tarefa porque cada solução abre 3 problemas novos.",
+      "whatHelped": "Filha (advogada) ajudou a separar: 'mãe, o gargalo é capacidade. As consequências de resolver não são o gargalo. Anota o gargalo, deixa as soluções pra semana 2 da trilha'. Bia separou: GARGALO = capacidade de produção. SOLUÇÕES PRA TESTAR = (a) diarista 2x semana, (b) parceria com confeitaria amiga, (c) MEI parceiro produtor. Decidiu não escolher solução ainda. Só nomear o gargalo."
+    }
+  ],
+  "breakthrough": "Bia entendeu que o gargalo não é 'falta de dinheiro' (margem é boa) nem 'falta de cliente' (demanda existe). É a capacidade física dela. Nomear isso por escrito eliminou as 6 outras 'preocupações' que disputavam atenção dela há 4 meses. Decidiu que a semana 2 (5 movimentos estratégicos) ia mapear as 5 maneiras possíveis de aumentar capacidade.",
+  "outcome": "Bia colou a folha 'Gargalo principal: capacidade de produção' na geladeira. Cada vez que se pegava pensando em 'mexer no Instagram' ou 'baixar preço pra fechar mais venda', voltava pra folha. Filtrou foco. Na semana 2 chegou com clareza pra explorar 5 alternativas sem se dispersar.",
+  "whenToAskForHelp": "Se você tem negócio organizado (margem boa, finanças anotadas, demanda existe) mas tá travada(o) em 'tudo é gargalo, não sei o que mexer', peça ajuda pra ranquear. Costuma ter 1 gargalo principal que, quando você nomeia, faz o resto perder importância.",
+  "relatedCases": ["case_bia_doceria_primeira_contratacao"],
+  "relatedResources": ["res_capital_inteligente", "res_pescadoras_rede"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_5_movimentos_estrategicos_bia",
+  "taskTemplateId": "task_5_movimentos_estrategicos",
+  "archetypeId": "negocio_consolidado",
+  "personaName": "Bia",
+  "region": "Brasil, Belo Horizonte (MG)",
+  "personaContext": "Mesma Bia da semana 1. Já nomeou o gargalo (capacidade de produção). Agora precisa listar 5 movimentos estratégicos possíveis pra resolver, com estimativa de custo, ganho e tempo.",
+  "stumbles": [
+    {
+      "moment": "Sair de 'me ajuda mais alguém' pros 5 movimentos",
+      "whatHappened": "Os primeiros 3 movimentos saíram fácil: (1) contratar diarista 2x semana, (2) parceria com confeitaria amiga, (3) MEI parceiro produtor. Pra completar 5, ficou em branco.",
+      "whatHelped": "Refraseou a pergunta: 'em vez de produzir mais, posso vender o mesmo com margem maior?'. Aí veio: (4) reduzir SKU (focar em só 5 produtos campeões e cortar os 8 marginais), (5) subir preço médio em 10% nos itens com demanda represada. Não eram 'aumentar produção' literal, eram 'destravar capacidade efetiva'."
+    },
+    {
+      "moment": "Estimar números sem precisão",
+      "whatHappened": "Pra cada movimento, queria número exato. Travou em 'não tenho como saber'.",
+      "whatHelped": "Permitiu estimativa por faixa. Pra (1) diarista 2x semana: custo R$ 1.000/mês, ganho estimado R$ 3.500/mês (libera 30% da capacidade), prazo 30-60 dias pra estabilizar. Pra (4) reduzir SKU: custo zero, ganho estimado +15% margem (produz quantidade maior dos itens campeões), prazo 30 dias. Cada uma virou linha com 3 colunas: custo, ganho, prazo. Imperfeito, mas decisão-ready."
+    }
+  ],
+  "breakthrough": "Os 5 movimentos viraram uma tabela. Bia percebeu que (1) diarista + (4) reduzir SKU eram complementares e tinham o maior retorno combinado. (5) subir preço entrou junto com baixo risco. (2) parceria com confeitaria amiga e (3) MEI parceiro produtor ficaram pra plano B (se o A não rolar em 90 dias).",
+  "outcome": "Bia chegou na semana 3 com 3 movimentos priorizados. Conversou com 3 negócios pares (semana 3 da trilha) e validou a sequência: começa por (4) reduzir SKU porque é grátis, depois (5) reajustar preço, e quando o caixa aguentar, (1) diarista. Plano B fica documentado.",
+  "whenToAskForHelp": "Se você consegue listar 5 movimentos possíveis mas trava em estimar números pra cada um, peça ajuda. Conversar com um par destrava — estimativa imperfeita é melhor que nenhuma.",
+  "relatedCases": ["case_bia_doceria_primeira_contratacao"],
+  "relatedResources": ["res_capital_inteligente"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_conversar_negocios_pares_bia",
+  "taskTemplateId": "task_conversar_negocios_pares",
+  "archetypeId": "negocio_consolidado",
+  "personaName": "Bia",
+  "region": "Brasil, Belo Horizonte (MG)",
+  "personaContext": "Bia continua. Tem 5 movimentos estratégicos priorizados. Pra validar antes de executar, precisa conversar com 3 negócios pares (similares em porte e estágio) sobre o que cada um tentou.",
+  "stumbles": [
+    {
+      "moment": "Achar 3 pares",
+      "whatHappened": "Bia pensou em 2 colegas de profissão e travou. 'A terceira teria que ser de outra cidade ou setor diferente?'. Ficou em dúvida se valia conversar com alguém que não faz bolo.",
+      "whatHelped": "Reformou a pergunta: 'par' não é setor igual, é estágio + tamanho. Tem uma colega de academia que tem boutique de roupa MEI, faturamento parecido, mesma faixa de tempo de negócio. Topou ser a 3ª par. Setor diferente, mas mesmo dilema."
+    },
+    {
+      "moment": "Pergunta certa",
+      "whatHappened": "Mandou mensagem 'tem 30 minutinhos pra conversar?'. Travou na hora de explicar o que perguntar.",
+      "whatHelped": "Escreveu 3 perguntas curtas antes de cada conversa: (1) como você resolveu o salto de R$ 15 mil pra R$ 25 mil? (2) você contratou alguém antes ou depois de aumentar venda? (3) o que você fez que se arrependeu? Perguntas concretas, sem rodeio. Cada conversa durou 30-45 minutos, todas geraram pelo menos 1 insight prático."
+    }
+  ],
+  "breakthrough": "As 3 conversas convergiram em um padrão: TODAS as 3 colegas tinham primeiro reduzido linha de produto antes de contratar (Bia tinha planejado o oposto). E 2 das 3 se arrependeram de ter contratado CLT direto sem testar formato intermediário (validou a estratégia da Bia de começar com diarista).",
+  "outcome": "Bia ajustou a sequência. Em vez de (1) reduzir SKU e (4) diarista em paralelo, decidiu fazer (1) reduzir SKU sozinho por 45 dias e medir. Se o ganho de margem cobrir R$ 1.500/mês (custo da diarista + reserva), executa (4). Sequência ajustada por dado real de 3 colegas, não palpite.",
+  "whenToAskForHelp": "Se você tem dificuldade pra achar 3 pares (porte similar, mesmo estágio) na sua rede atual, peça ajuda pra ampliar. Conversar com 1 par só vira eco. 3 pares começa a virar padrão.",
+  "relatedCases": ["case_bia_doceria_primeira_contratacao"],
+  "relatedResources": ["res_pescadoras_rede"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_decidir_1_aposta_6m_bia",
+  "taskTemplateId": "task_decidir_1_aposta_6m",
+  "archetypeId": "negocio_consolidado",
+  "personaName": "Bia",
+  "region": "Brasil, Belo Horizonte (MG)",
+  "personaContext": "Última semana da trilha. Bia tem gargalo nomeado, 5 movimentos priorizados, padrão de 3 pares ouvido. Hora de decidir 1 aposta de 6 meses por escrito.",
+  "stumbles": [
+    {
+      "moment": "Resistência de fechar a porta dos outros",
+      "whatHappened": "Decidir 1 aposta significava NÃO fazer as outras 4. Bia teve vontade de manter as 5 simultâneas. 'Pequenininho cada uma'.",
+      "whatHelped": "Lembrou do erro do negócio que ela tinha visto colegas cometerem (alta dispersão). 'Aposta' significa concentrar energia. Decidiu: primeiro reduzir SKU em 45 dias. Se atingir +R$ 1.500/mês de margem, contrata diarista. Se não atingir, revê depois de mais 30 dias. As outras 3 ficam congeladas até essa decisão (não é 'nunca', é 'agora não')."
+    },
+    {
+      "moment": "Mensurar progresso",
+      "whatHappened": "Decidiu, mas se pegou ansiosa: 'em 6 meses, como saber se foi acerto?'.",
+      "whatHelped": "Definiu 3 marcos: (M1, 30 dias) margem média/produto +10%, (M2, 90 dias) faturamento +R$ 2.000/mês com mesma carga horária dela, (M3, 180 dias) decisão tomada de contratar CLT OU manter diarista 2x. Cada marco com data e número, escrito na mesma folha. Não pra estressar, pra revisar com objetividade."
+    }
+  ],
+  "breakthrough": "Bia escreveu uma folha de 1 página: 'Aposta de 6 meses: reduzir SKU + ajustar preço, depois (se M1 OK) contratar diarista. Marcos: M1 30d, M2 90d, M3 180d.' Colou na geladeira ao lado da folha do gargalo. As 2 folhas viraram o sistema de decisão dela.",
+  "outcome": "30 dias depois: M1 atingido (margem +13%). 90 dias: M2 atingido (+R$ 2.400 de faturamento, com 5 produtos em vez de 13). 180 dias: decidiu contratar diarista 2x semana com 60 dias de teste. Bia revisou os 3 marcos a cada 30 dias, ajustou pequenos detalhes, mas manteve o foco da aposta principal. Em vez de 'tô trabalhando bastante e não sei se tá indo pra algum lugar', ela passou a 'tô na aposta, mês X de 6'.",
+  "whenToAskForHelp": "Se você fez todo o roteiro de 4 semanas mas trava em escolher 1 aposta (quer manter as 5 simultâneas), peça ajuda. Não fechar a porta das outras 4 é a forma mais comum de neutralizar uma boa decisão.",
+  "relatedCases": ["case_bia_doceria_primeira_contratacao", "case_tiago_marceneiro_pedido_grande"],
+  "relatedResources": ["res_pescadoras_rede"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_decidir_mesmo_ou_diferente_renata",
+  "taskTemplateId": "task_decidir_mesmo_ou_diferente",
+  "archetypeId": "recomecou_apos_falir",
+  "personaName": "Renata",
+  "region": "Brasil, Manaus (AM)",
+  "personaContext": "Manicure de Manaus que fechou estúdio em 2022 por reajuste de R$ 80 sem reserva. Atende em casa há 2 anos. Já fez o inventário na semana 1 (3 acertos: especialização em gel, clientela fiel, espaço próprio em casa; 3 erros: aluguel sozinha sem reserva, dependia 100% do estúdio físico, sem diversificação de canal). Agora precisa decidir: MESMO estúdio igual antes, DIFERENTE (continuar em casa pra sempre), ou SOCIEDADE (cabine compartilhada).",
+  "stumbles": [
+    {
+      "moment": "Atração do 'voltar igual'",
+      "whatHappened": "Sentiu vontade de voltar pra galeria popular do centro, mesma cabine, mesmo modelo. 'É o que eu sei fazer'. Dois dias defendendo essa ideia pra si mesma.",
+      "whatHelped": "Releu o inventário (W1). Os 3 erros (aluguel sozinha, dependência total, sem diversificação) NÃO sumiram. Voltar igual = repetir os 3 erros. Não é experiência nova, é mesma armadilha. Cortou opção MESMO."
+    },
+    {
+      "moment": "Tentação do 'continuar em casa pra sempre'",
+      "whatHappened": "Pensou em ficar em casa. Sem aluguel, sem risco, clientela atual cobre conta. 'Por que mexer no que tá funcionando?'.",
+      "whatHelped": "Olhou o caderno: faturamento R$ 4.500/mês há 18 meses. Não sobe há 6 meses. Os 60 clientes do bairro saturaram (cada uma só faz unha de 3 em 3 semanas, agenda dela já tá cheia). Teto bateu. Ficar em casa pra sempre = estagnar sem perspectiva. Não é segurança, é desistência."
+    },
+    {
+      "moment": "Sociedade com 2 colegas — medo do conflito",
+      "whatHappened": "Cabine compartilhada com 2 colegas (cada uma usa em horários diferentes) saía por R$ 350/cabeça. Resolvia o aluguel sozinha. Mas Renata travou em 'e se uma das duas atrasar pagamento? E se a gente brigar por horário?'.",
+      "whatHelped": "Conversou com 1 das colegas (Patrícia, que conhece há 5 anos). Combinaram regra escrita: (1) cada uma paga sua parte direto pra dona da cabine, sem intermediário (sem 'a Renata cobre a Patrícia'), (2) agenda dividida por dia da semana fixo, sem trocas de cima da hora, (3) se uma quiser sair, avisa 30 dias antes e cabine procura quem entra. Regras escritas, assinadas no WhatsApp."
+    }
+  ],
+  "breakthrough": "Renata escolheu SOCIEDADE (cabine compartilhada) com 2 regras adicionais às do W4: (a) acumular R$ 2.400 de reserva antes de assinar, (b) começar com horário fixo de 2 dias/semana na cabine (deixando 3 dias em casa), testando 90 dias antes de fechar agenda integral.",
+  "outcome": "A decisão foi escrita em 1 folha: 'caminho SOCIEDADE, com Patrícia e Lúcia, cabine X, R$ 350/mês, regras 1-2-3. Reserva R$ 2.400 acumulada antes de assinar (estimativa 4 meses). Início com 2 dias/semana, expansão por dado.' Folha foi pra pasta. Renata entrou na semana 3 com a hipótese definida pra testar com 5 clientes do antigo.",
+  "whenToAskForHelp": "Se você tá há mais de 1 mês oscilando entre os 3 caminhos sem conseguir escolher, peça ajuda. Adiar a decisão é a versão silenciosa de não voltar. Conversar com alguém de fora destrava sem custo.",
+  "relatedCases": ["case_manicure_renata_voltou"],
+  "relatedResources": ["res_capital_inteligente"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_testar_com_5_clientes_antigos_isabel",
+  "taskTemplateId": "task_testar_com_5_clientes_antigos",
+  "archetypeId": "recomecou_apos_falir",
+  "personaName": "Dona Isabel",
+  "region": "Brasil, Diadema (SP)",
+  "personaContext": "Padaria de Diadema fechou em 2021 por dependência do almoço corporativo + sem reserva + corte tardio de custo. Dona Isabel decidiu na W2 voltar em SOCIEDADE com o sobrinho, modelo café+pão+salgado+delivery via Instagram. Agora precisa testar a hipótese com 5 clientes do antigo antes de assinar contrato de ponto.",
+  "stumbles": [
+    {
+      "moment": "Escolher quem perguntar",
+      "whatHappened": "Lista inicial de 5: as 5 vizinhas mais próximas que sempre compravam pão. Olhou pra lista e ficou desconfortável: 'essas 5 vão me dizer que sim de qualquer jeito, gostam de mim'.",
+      "whatHelped": "Refez a lista com critério: 2 clientes fiéis que ela sabia que falavam direto (a dona Vilma que sempre reclamou de algo e voltou; a Cida do CRAS que cobrava qualidade); 1 cliente que tinha sumido nos últimos 2 anos da padaria (Sandra, que ela soube depois que mudou de bairro); 2 colegas de trabalho do escritório vizinho que compravam almoço (descobriu pelo Instagram que ainda moravam na região). Lista de 5 com diversidade real."
+    },
+    {
+      "moment": "Redigir mensagem sem parecer desesperada",
+      "whatHappened": "Travou na hora de escrever. Versão 1 começava 'oi, faz tempo, espero que esteja bem, queria pedir uma coisa'. Sentiu que parecia pedido, não pesquisa.",
+      "whatHelped": "Sobrinho ajudou a reescrever: 'Oi, [nome]! Tô pensando em voltar com um café + pão + delivery aqui no bairro em parceria com meu sobrinho. Posso te perguntar 3 coisas rapidinho? (1) Você voltaria a comprar? (2) Em que condição (preço, prazo, delivery)? (3) O que mudaria pra ficar melhor que da última vez?'. Mensagem virou pesquisa, não súplica. Curta, com 3 perguntas claras."
+    },
+    {
+      "moment": "Responder às respostas reais",
+      "whatHappened": "Das 5: 3 disseram que voltariam, 1 disse 'depende do preço', 1 não respondeu. A dona Vilma respondeu: 'volto se você tiver salgado fresco às 17h igual antes E delivery'. A Cida disse: 'volto se for cardápio menor, antes era confuso'. A Sandra (a que mudou de bairro): 'volto se delivery for confiável, faço pedido grande pro escritório'.",
+      "whatHelped": "Anotou as 3 respostas literais. Sandra abriu um canal que Isabel não tinha pensado: encomenda grande pra escritório que já não compra almoço diário, mas faz lanche em reunião. Possível +R$ 1.500-2.000/mês desse canal. Cida confirmou a estratégia de cardápio reduzido (já tinha decidido na W2). Vilma confirmou salgado fresco às 17h + delivery."
+    }
+  ],
+  "breakthrough": "As 5 conversas validaram 2 das 3 fontes de receita planejadas (manhã pão+salgado, tarde café+delivery) e abriram 1 canal novo não previsto (encomenda corporativa pra reunião, via Sandra). O 'não respondeu' Isabel deixou na lista pra retomar depois de abrir, sem pressão.",
+  "outcome": "Isabel chegou na semana 4 (definir piso de margem) com hipótese validada, 1 canal novo no radar, e 2 clientes-âncora (Vilma e Sandra) com sinal forte de retorno. Mudou da posição 'será que abre?' pra 'abre, com modelo X validado por 4 dos 5'. A folha de respostas virou anexo da combinação por escrito da sociedade.",
+  "whenToAskForHelp": "Se você escolheu 5 clientes mas todos disseram sim sem fazer ressalva nenhuma, peça ajuda pra revisar a lista. Cliente bom dá sim com condição. Se ninguém colocou condição, a lista pode estar enviesada (só amigo, só quem quer agradar).",
+  "relatedCases": ["case_padaria_dona_isabel_voltou"],
+  "relatedResources": ["res_capital_inteligente"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]
