@@ -45,7 +45,7 @@ function loadJson(rel) {
 
 function loadMiniTrilhas() {
   const out = {};
-  const slugs = ['precificacao', 'capital', 'canais', 'projecao'];
+  const slugs = ['precificacao', 'capital', 'canais', 'projecao', 'socio_familia'];
   for (const slug of slugs) {
     const data = loadJson(`miniTrilhas/${slug}.json`);
     if (data) out[slug] = data;

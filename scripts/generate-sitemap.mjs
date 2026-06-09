@@ -29,6 +29,7 @@ const STATIC_ROUTES = [
   { path: '/mini/capital', priority: '0.7', changefreq: 'monthly' },
   { path: '/mini/canais', priority: '0.7', changefreq: 'monthly' },
   { path: '/mini/projecao', priority: '0.7', changefreq: 'monthly' },
+  { path: '/mini/socio_familia', priority: '0.7', changefreq: 'monthly' },
   { path: '/posso-ajudar', priority: '0.5', changefreq: 'monthly' },
   { path: '/biblioteca/tarefas', priority: '0.7', changefreq: 'monthly' },
   { path: '/perfis', priority: '0.8', changefreq: 'monthly' },

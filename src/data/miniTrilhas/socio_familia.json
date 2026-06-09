@@ -1,0 +1,128 @@
+{
+  "slug": "socio_familia",
+  "accent": "Mini-trilha rápida",
+  "title": "Tem sócio, esposo(a) ou família no negócio?",
+  "subtitle": "Cinco perguntas pra ver se a relação tá ajudando ou minando o negócio.",
+  "introBody": "Em mais ou menos 2 minutos. Sem cadastro.",
+  "warning": {
+    "title": "Por que isso importa",
+    "body": "Conflito de papéis com sócio ou família é uma das principais causas de quebra de microempreendimento no Brasil. E quase sempre começa pequeno. Identificar cedo evita ruptura tardia."
+  },
+  "tieBreakOrder": ["socio_combinado", "socio_zona_cinza", "socio_conflito"],
+  "tabLabels": {
+    "socio_conflito": "Já tem conflito sério",
+    "socio_zona_cinza": "Tem zona cinza",
+    "socio_combinado": "Tá combinado por escrito"
+  },
+  "questions": [
+    {
+      "id": "q1", "order": 1,
+      "text": "Tem combinado por ESCRITO quem faz o quê no negócio?",
+      "helpText": "Mensagem de WhatsApp registrando combinado conta, mas idealmente uma folha impressa ou contrato simples.",
+      "options": [
+        { "id": "nao",      "label": "Não, é por entendimento mesmo",                "score": { "socio_conflito": 3, "socio_zona_cinza": 1, "socio_combinado": 0 } },
+        { "id": "informal", "label": "Combinado verbal, sem registro",                "score": { "socio_conflito": 1, "socio_zona_cinza": 3, "socio_combinado": 0 } },
+        { "id": "escrito",  "label": "Sim, tem registro escrito (papel ou mensagem)", "score": { "socio_conflito": 0, "socio_zona_cinza": 1, "socio_combinado": 3 } }
+      ]
+    },
+    {
+      "id": "q2", "order": 2,
+      "text": "Tem combinado COMO divide o que sobra no fim do mês?",
+      "options": [
+        { "id": "nao",       "label": "Não, vai conforme precisa",                   "score": { "socio_conflito": 3, "socio_zona_cinza": 0, "socio_combinado": 0 } },
+        { "id": "meio_meio", "label": "Divide na metade, mas tem dia que pega mais", "score": { "socio_conflito": 2, "socio_zona_cinza": 2, "socio_combinado": 0 } },
+        { "id": "regra",     "label": "Sim, tem regra fixa (proporção ou valor)",    "score": { "socio_conflito": 0, "socio_zona_cinza": 1, "socio_combinado": 3 } }
+      ]
+    },
+    {
+      "id": "q3", "order": 3,
+      "text": "Os números (entrada, saída, lucro) são acessíveis pra todo mundo do negócio?",
+      "options": [
+        { "id": "so_um",     "label": "Só uma pessoa sabe e cuida",                  "score": { "socio_conflito": 3, "socio_zona_cinza": 1, "socio_combinado": 0 } },
+        { "id": "as_vezes",  "label": "Falo dos números quando perguntam",            "score": { "socio_conflito": 1, "socio_zona_cinza": 3, "socio_combinado": 0 } },
+        { "id": "compartilho","label": "Todo mundo tem acesso (planilha, app, papel)", "score": { "socio_conflito": 0, "socio_zona_cinza": 0, "socio_combinado": 3 } }
+      ]
+    },
+    {
+      "id": "q4", "order": 4,
+      "text": "Já teve discussão séria sobre dinheiro do negócio nos últimos 6 meses?",
+      "options": [
+        { "id": "sim_recorrente", "label": "Sim, mais de 2 vezes",                          "score": { "socio_conflito": 3, "socio_zona_cinza": 0, "socio_combinado": 0 } },
+        { "id": "uma",            "label": "Sim, 1 vez",                                     "score": { "socio_conflito": 1, "socio_zona_cinza": 3, "socio_combinado": 0 } },
+        { "id": "nao",            "label": "Não, nenhuma",                                   "score": { "socio_conflito": 0, "socio_zona_cinza": 1, "socio_combinado": 3 } }
+      ]
+    },
+    {
+      "id": "q5", "order": 5,
+      "text": "Se um dos sócios quiser sair do negócio amanhã, vocês têm combinado como faz?",
+      "helpText": "Pessoa que entrou tem direito a quê? Sai com quanto? Em quanto tempo o outro paga? Etc.",
+      "options": [
+        { "id": "nao",      "label": "Não, nunca conversamos sobre isso",             "score": { "socio_conflito": 3, "socio_zona_cinza": 0, "socio_combinado": 0 } },
+        { "id": "vagamente","label": "Vagamente, vai depender da situação",            "score": { "socio_conflito": 1, "socio_zona_cinza": 3, "socio_combinado": 0 } },
+        { "id": "combinado","label": "Sim, sabemos como faz se acontecer",             "score": { "socio_conflito": 0, "socio_zona_cinza": 0, "socio_combinado": 3 } }
+      ]
+    }
+  ],
+  "guides": [
+    {
+      "id": "socio_conflito",
+      "name": "Já tem conflito sério",
+      "shortDescription": "Os sinais de ruptura aparecem antes da ruptura. Hora de tratar agora, não daqui a 6 meses.",
+      "whatItIs": "Você está em conflito frequente sobre dinheiro, sem regra clara, sem combinado escrito, sem visibilidade compartilhada dos números. É o cenário onde a maioria dos negócios familiares ou com sócio quebra. Não é o trabalho que falha. É a relação que envenena o trabalho.",
+      "whenItMakesSense": [
+        "Parar uma semana de operação se necessário pra resolver o conflito antes de virar ruptura",
+        "Buscar mediação externa (contador, alguém de confiança das duas partes, voluntário da rede)"
+      ],
+      "whenItDoesnt": [
+        "Esconder o conflito do contador, da família, da rede de apoio",
+        "Tentar resolver sozinho/sozinha sem registrar o que ficou combinado"
+      ],
+      "whatChanges": "Conflito sem combinado escrito vira ruptura em 6-12 meses na maioria dos casos. Tratar agora com mediação evita ruptura tardia que costuma sair caro pros dois lados (perde negócio + perde relação + costuma envolver advogado).",
+      "nextStep": "Marca uma conversa fora do horário de trabalho. Levanta os 5 itens deste quiz e os números reais do negócio (entrada/saída/sobra dos últimos 3 meses). Combina por escrito (mensagem, papel, qualquer registro) quem faz o quê, como divide, quem cuida dos números, e o que acontece se um sair. Se a conversa não anda, peça mediação.",
+      "relatedSources": [
+        { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" },
+        { "label": "Anotar entrada e saída por 7 dias (Trilha)",            "url": "/conteudos/res_caixa_basico" }
+      ]
+    },
+    {
+      "id": "socio_zona_cinza",
+      "name": "Tá funcionando, mas tem zona cinza",
+      "shortDescription": "Hoje tá tranquilo, mas a relação tem brechas. Pequenos atritos costumam virar problema sob pressão.",
+      "whatItIs": "Você combinou verbalmente, mas falta registro. Os números são compartilhados às vezes. Cada um tira do caixa conforme precisa, sem regra. Hoje funciona porque a relação é boa, mas zona cinza vira conflito quando aperta o caixa, quando uma das partes tem custo pessoal alto, quando alguém quer puxar pra direção diferente.",
+      "whenItMakesSense": [
+        "Aproveitar momento de relação boa pra registrar o que já tá combinado verbalmente — sem mudar nada, só escrever",
+        "Criar planilha simples compartilhada (entrada/saída/divisão) que os dois enxergam"
+      ],
+      "whenItDoesnt": [
+        "Adiar a conversa porque 'tá funcionando, não precisa'",
+        "Aumentar volume ou complexidade do negócio sem combinar regras novas"
+      ],
+      "whatChanges": "Registrar quando tá bom é fácil. Registrar depois de já ter conflito vira queda de braço. Combinar agora preserva a relação e blinda o negócio quando vier pressão.",
+      "nextStep": "Combina com a outra parte uma reunião de 1h. Em folha (ou WhatsApp pra registro): papel de cada um, divisão do que sobra, quem cuida dos números, prazo do que acontece se alguém sair. Salva. Volta a olhar daqui 6 meses pra ajustar.",
+      "relatedSources": [
+        { "label": "Anotar entrada e saída por 7 dias (Trilha)",            "url": "/conteudos/res_caixa_basico" },
+        { "label": "Sebrae: sociedade empresarial",                          "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/sociedade-empresarial-saiba-tudo,7798d7e6e1456710VgnVCM1000003b74010aRCRD" }
+      ]
+    },
+    {
+      "id": "socio_combinado",
+      "name": "Tá combinado por escrito",
+      "shortDescription": "Boa base. Aproveita pra revisar uma vez por ano e ajustar conforme o negócio cresce.",
+      "whatItIs": "Você tem papel/registro de quem faz o quê, regra de divisão, números compartilhados, e combinado do que acontece se alguém sair. Esse é o solo onde negócio com sócio ou família cresce sem se quebrar. Mantém a relação humana protegida do negócio e o negócio protegido da relação humana.",
+      "whenItMakesSense": [
+        "Revisar o combinado uma vez por ano (fim de ano costuma ser bom momento)",
+        "Ajustar conforme o negócio cresce: o que servia pro faturamento de R$ 5 mil/mês pode não servir pra R$ 30 mil/mês"
+      ],
+      "whenItDoesnt": [
+        "Confundir 'tá combinado' com 'não precisa mais conversar' — combinado é vivo",
+        "Esconder problema novo (custo pessoal alto, vontade de mudar) pra não 'estragar o que tá funcionando'"
+      ],
+      "whatChanges": "Combinado por escrito + revisão anual é o que separa negócio sócio/família que dura 10+ anos do que quebra no terceiro. Não é burocracia. É proteção mútua.",
+      "nextStep": "Marca uma data fixa anual (aniversário do negócio, fim de ano) pra revisar o combinado. Leva os números do ano (entrada, saída, sobra, divisão real) e compara com o que tava combinado. Ajusta o que precisar. Salva versão nova com data.",
+      "relatedSources": [
+        { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" },
+        { "label": "Sebrae: sociedade empresarial",                          "url": "https://sebrae.com.br/sites/PortalSebrae/artigos/sociedade-empresarial-saiba-tudo,7798d7e6e1456710VgnVCM1000003b74010aRCRD" }
+      ]
+    }
+  ]
+}

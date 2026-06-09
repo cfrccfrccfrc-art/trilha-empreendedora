@@ -603,5 +603,101 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "case_celia_croche_canais",
+  "title": "Dona Célia, o crochê que esbarrou na vizinhança e parou",
+  "region": "Brasil, São José dos Campos (SP)",
+  "sector": "geral",
+  "archetypes": ["vende_comunidade_nao_online", "produto_bom_vitrine_fraca"],
+  "readingTime": "4 min",
+  "dilemma": "Faz crochê e macramê desde aposentou. Vende pras 30 conhecidas e parou. Estoque encheu, não sabe pra onde ir, e tem medo de Instagram porque acha 'coisa de jovem'.",
+  "situation": "Dona Célia tem 64 anos, mora em São José dos Campos. Aposentada há 6 anos do INSS, faz crochê e macramê pra ocupar e complementar a renda. Vende tapete, mandala, suporte de panela, jogo americano. Os 30 contatos que já compraram (vizinhas, ex-colegas, parentes) cobriam a produção dos primeiros 2 anos. Agora cada uma já tem 3-4 peças e não compra mais. Estoque com 40 peças paradas no quarto da filha. Filha (28 anos, comissária de bordo) ofereceu criar Instagram pra ela, mas Dona Célia diz 'não vou ficar mostrando minha vida pra estranho'.",
+  "options": [
+    "Continuar com a rede atual e baixar o preço pra desencalhar — vira loss, e clientes já têm.",
+    "Aceitar a oferta da filha e criar Instagram do zero, postar todo dia esperando alcance.",
+    "Pedir pras 30 atuais indicarem 2 conhecidas cada uma. Levar amostra em 2 brechós/lojas de artesanato da região (Vale do Paraíba tem várias). Participar de 1 feira de artesanato em 30 dias. Instagram só com catálogo (foto das 5 peças mais bonitas), sem postagem pessoal."
+  ],
+  "tradeoffs": "Baixar preço resolve estoque mas mata margem e ensina cliente atual a esperar promoção. Instagram do zero sem rotina presencial leva 6+ meses pra começar a render — Dona Célia desanima antes. Indicação + brechó local + feira ativa rede física que já existe e gera venda em semanas. Catálogo no Instagram é vitrine estática, não exposição pessoal, e Dona Célia banca.",
+  "lessonLearned": "Vender artesanato não exige Instagram primeiro. Indicação ativa, presença em brechó/feira local e catálogo estático rendem mais pra quem já tem rede pequena estabelecida do que postar todo dia esperando descobrirem.",
+  "tropicalizedLesson": "No Brasil, o artesão de bairro tem rede que outras pessoas pagariam fortuna pra construir: confiança real, indicação que funciona, vizinhança que conhece a qualidade. O movimento certo é amplificar essa rede em vez de tentar substituir por Instagram. Brechó, bazar de igreja, feira de artesanato municipal (quase toda cidade do interior tem mensal ou trimestral) e ponto fixo em loja parceira (consignação) abrem mercado novo sem exigir aprendizado de algoritmo. Instagram entra depois, como vitrine pra quem foi indicado e quer ver mais.",
+  "practicalTask": "task_lista_zap_50_pessoas",
+  "relatedResources": ["res_artesanato_canais", "res_feira_bazar_basico"],
+  "helpTrigger": "Se você tem mais de 30 peças paradas no estoque há 3+ meses e a rede atual não absorve mais, peça ajuda. Costuma ser canal errado, não produto ruim.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "case_carmen_costura_ajustes",
+  "title": "Dona Carmen, R$ 15 por ajuste há 5 anos e o medo de subir",
+  "region": "Brasil, Belford Roxo (RJ)",
+  "sector": "servicos",
+  "archetypes": ["talento_sem_postura_comercial", "vende_sem_lucro"],
+  "readingTime": "4 min",
+  "dilemma": "Costura desde os 15 anos. Faz ajuste de roupa em casa pra clientela do bairro. Cobra R$ 15 por bainha de calça, R$ 20 por ajuste de cintura. Sabe que tá ganhando menos, mas cliente que ela conhece há 10 anos dirá 'tá caro'.",
+  "situation": "Dona Carmen tem 52 anos, costura em casa em Belford Roxo (Baixada Fluminense) há mais de 30 anos. Atende 25-30 ajustes por semana. Bainha de calça R$ 15 (mercado da região: R$ 25-35). Ajuste cintura R$ 20 (mercado: R$ 35-50). Vestido completo R$ 80 (mercado: R$ 150-180). Linha, agulha, energia da máquina e iluminação custam mais a cada ano. Ela diz 'mas dona Vilma é cliente desde antes da minha filha nascer, vou subir agora?'. Filha mais velha (32 anos) tentou convencer 3 vezes, ela desconversa.",
+  "options": [
+    "Continuar como tá. Cliente fiel, renda travada, custo subindo.",
+    "Subir tudo de uma vez pro preço de mercado completo e arriscar perder cliente em massa.",
+    "Tabela escrita simples (1 folha A4): novos preços listados, valida com a filha. Avisa cliente atual com 45 dias de antecedência: 'a partir de [data], minha tabela atualiza pra: bainha R$ 22, cintura R$ 30, vestido R$ 120'. Cliente novo já recebe o preço novo. Reajuste de 30-50%, não 100%."
+  ],
+  "tradeoffs": "Continuar igual mantém volume mas come a saúde e a margem. Subir 100% de uma vez (R$ 15 → R$ 30) assusta o cliente fiel e ela perde antes de ganhar. Subir 50% (R$ 15 → R$ 22) avisado com 45 dias dá tempo de cliente se acostumar, ainda fica abaixo do mercado mas devolve respeito ao trabalho. Tabela escrita comunica profissionalismo e elimina conversa caso a caso.",
+  "lessonLearned": "Lealdade não justifica preço congelado. Cliente que valoriza o trabalho aceita reajuste anual avisado. Cliente que vai embora por R$ 7 a mais não estava sustentando o negócio mesmo.",
+  "tropicalizedLesson": "No Brasil, costureira de bairro, manicure, cabeleireira e qualquer prestadora de serviço pessoal que atende a mesma rede há anos enfrenta o mesmo travamento: 'subir agora é trair'. Mas o cliente já trai indireto quando paga em outra mais cara só porque a mais cara parece 'profissional'. Tabela escrita com 45 dias de antecedência muda a relação: vira regra, não vira pessoal. E a Carmen que cobra R$ 22 daqui 6 meses descobre que dona Vilma continua trazendo as filhas e netas — porque a confiança que ela construiu vale R$ 22, vale R$ 30, vale o quanto ela pedir dentro do mercado.",
+  "practicalTask": "task_lista_servicos_precos",
+  "relatedResources": ["res_precificacao_simples", "res_sebrae_precificacao"],
+  "helpTrigger": "Se você cobra abaixo do mercado há 2+ anos e o medo de subir é maior que a vontade de subir, peça ajuda. Conversar com alguém da rede destrava antes de perder mais 1 ano.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "case_jorge_conserto_celular_clientes_somem",
+  "title": "Jorge, a prateleira cheia de celular que ninguém vem buscar",
+  "region": "Brasil, Aparecida de Goiânia (GO)",
+  "sector": "servicos",
+  "archetypes": ["operacao_travada", "vende_sem_lucro"],
+  "readingTime": "4 min",
+  "dilemma": "Conserta celular há 7 anos. Tem 23 aparelhos na prateleira: 11 prontos pra serem retirados, 7 esperando peça, 5 com cliente que sumiu há mais de 30 dias. Capital travado, espaço ocupado, e não consegue cobrar adiantado porque 'concorrente não cobra'.",
+  "situation": "Jorge tem assistência técnica de celular num quiosque alugado em galeria popular em Aparecida de Goiânia. Cobra R$ 120 troca de tela básica, R$ 200 troca placa, R$ 80 troca bateria. Cliente deixa aparelho, ele orça via WhatsApp, conserta, avisa pronto. 40% dos clientes buscam em 7 dias. 35% em 8-30 dias. 25% somem. Os 5 aparelhos da prateleira somam R$ 720 de serviço executado, R$ 280 em peça já comprada e instalada. Já mandou mensagem 3-4 vezes. Não tem política escrita. Não cobra antecipado porque 'cliente vai pro vizinho que não cobra'.",
+  "options": [
+    "Continuar sem política. Perder R$ 1.000 a cada trimestre é parte do jogo.",
+    "Mudar pra 100% antecipado. Vai perder cliente, mas resolve o problema.",
+    "Política nova com prazo: 50% antecipado no momento de aprovar orçamento, 50% na retirada. Aparelho não retirado em 60 dias após pronto vira propriedade do estabelecimento pra cobrir custo (regra escrita, comunicada por WhatsApp, foto da política no balcão). Cliente fiel notificado primeiro: 'fulano, mudou minha política, daqui pra frente é assim'."
+  ],
+  "tradeoffs": "Continuar sem política normaliza prejuízo recorrente e ocupa espaço útil. 100% antecipado espanta cliente novo (concorrente local realmente não cobra). 50/50 + prazo equilibra: cliente já pagou metade, tem interesse em buscar; quem some perde o que pagou, Jorge cobre a peça. Política escrita no balcão (lei autoriza pelo Código Civil art. 644-647 — penhor sobre obra) protege juridicamente.",
+  "lessonLearned": "Cliente que some é responsabilidade compartilhada: parte é cliente desorganizado, parte é falta de política do prestador. Pagamento parcial + prazo escrito de retirada resolve sem espantar cliente fiel.",
+  "tropicalizedLesson": "No Brasil, assistência técnica de celular, ourivesaria, sapataria, conserto de eletrodoméstico e qualquer reparo que envolve cliente deixando bem na loja sofre do mesmo padrão: 25-30% de clientes que somem. O caminho que funciona é hibrido: 50% antecipado (cliente investiu, tem incentivo de buscar) + prazo escrito de 60 dias (após isso, aparelho cobre custo). Política comunicada por WhatsApp + cartaz no balcão tira a conversa caso a caso. Cliente fiel notificado pessoalmente preserva relação.",
+  "practicalTask": "task_planilha_pedidos_basica",
+  "relatedResources": ["res_organizacao_pedidos", "res_caixa_basico"],
+  "helpTrigger": "Se você tem mais de 10 itens parados na prateleira há mais de 30 dias representando 5%+ do faturamento mensal, peça ajuda. Política nova exige bom jeito pra anunciar sem espantar cliente fiel.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "case_silvia_cabeleireira_domicilio",
+  "title": "Sílvia, 8 atendimentos em casa por dia e o caixa que não fecha",
+  "region": "Brasil, Porto Alegre (RS)",
+  "sector": "beleza",
+  "archetypes": ["empreendedora_sobrecarregada", "vende_sem_lucro"],
+  "readingTime": "5 min",
+  "dilemma": "Cabeleireira em domicílio há 9 anos. Atende 8 clientes por dia em casas diferentes. Faturamento parece bom (R$ 4.800/semana), mas gasta R$ 1.200 só em Uber e gasolina. Sem espaço pra cancelamento, sem horário pra emergência, e o joelho dela tá começando a doer.",
+  "situation": "Sílvia tem 38 anos, mora em Porto Alegre, atende cabelo e maquiagem em domicílio há 9 anos. Cobra R$ 120 escova, R$ 80 lavagem+cauterização, R$ 200 progressiva, R$ 300 maquiagem evento. Atende 8 clientes/dia, 6 dias/semana. Carrega 12kg de equipamento entre Uber. Sem carro próprio. Gasolina e Uber comem R$ 1.200/semana. Quando cliente cancela em cima da hora, perde a viagem (R$ 30-40) e o horário (R$ 120-200). Joelho começou a doer há 3 meses. Não cobra taxa de deslocamento porque 'concorrente não cobra'.",
+  "options": [
+    "Continuar como tá. Renda alta, mas saúde e margem comendo poupado.",
+    "Parar de atender em domicílio e alugar uma cadeira em salão (custo R$ 600/mês). Perde flexibilidade.",
+    "Tabela nova com 3 mudanças: (1) taxa fixa de deslocamento por bairro (R$ 15-40), (2) pagamento de 50% via Pix no momento do agendamento, sem reembolso se cancelar com menos de 6h, (3) janela fixa de 1 dia/semana atendendo de casa (próprio espaço, sem deslocamento). Comunicado por WhatsApp como 'estou ajustando minha política a partir de [data]'."
+  ],
+  "tradeoffs": "Continuar como tá quebra o joelho em 1-2 anos. Salão tira flexibilidade que muitas clientes valorizam (cliente PJ ocupada). Tabela nova mantém o modelo, recupera margem (taxa deslocamento cobre Uber + sobra), elimina cancelamento de última hora (Pix antecipado), e cria 1 dia/semana de menor desgaste físico. Comunicação como ajuste de política despessoaliza e protege relação com cliente fiel.",
+  "lessonLearned": "Atendimento em domicílio sem taxa de deslocamento e sem garantia de cancelamento é trabalho dobrado pra metade da receita. Tabela escrita com 3 ajustes recupera margem sem mudar o modelo nem assustar cliente fiel.",
+  "tropicalizedLesson": "No Brasil, profissional de beleza em domicílio costuma cobrar 'preço do salão' sem cobrar deslocamento, perdendo o que ganhou em Uber e gasolina. O que funciona é: (1) tabela escrita de deslocamento por região da cidade (cliente entende, é tabela de mercado), (2) Pix antecipado é norma em maquiagem de noiva há anos, virou aceito em qualquer serviço pessoal, (3) 1 dia/semana de atendimento no próprio espaço (sala convertida, garagem, varanda) reduz custo e libera o corpo. Cliente fiel topa porque sabe que continua tendo prioridade.",
+  "practicalTask": "task_listar_tarefas_so_eu",
+  "relatedResources": ["res_beleza_agendamento", "res_organizacao_pedidos"],
+  "helpTrigger": "Se você atende em domicílio há 2+ anos e o custo de deslocamento já passa de 20% do faturamento, peça ajuda. Modelo cobra ajuste, não substituição.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

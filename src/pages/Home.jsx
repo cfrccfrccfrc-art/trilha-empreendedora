@@ -244,6 +244,12 @@ export default function Home() {
             body="Sobre projeção: vai no feeling, anota o passado, ou projeta 3 meses pra frente."
             onClick={() => navigate('/mini/projecao')}
           />
+          <MiniTrilhaCard
+            sketch={<Pin className="w-14 h-14 shrink-0" />}
+            title="Tem sócio, esposo(a) ou família no negócio?"
+            body="Sobre sociedade: já tem conflito, tem zona cinza, ou tá combinado por escrito."
+            onClick={() => navigate('/mini/socio_familia')}
+          />
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import precificacao from '../data/miniTrilhas/precificacao.json';
 import capital from '../data/miniTrilhas/capital.json';
 import canais from '../data/miniTrilhas/canais.json';
 import projecao from '../data/miniTrilhas/projecao.json';
+import socioFamilia from '../data/miniTrilhas/socio_familia.json';
 import MiniTrilha from '../components/MiniTrilha';
 import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
@@ -12,6 +13,7 @@ const DATA_BY_SLUG = {
   capital,
   canais,
   projecao,
+  socio_familia: socioFamilia,
 };
 
 export default function MiniTrilhaPage() {
@@ -23,7 +25,7 @@ export default function MiniTrilhaPage() {
         <PageHeader title="Mini-trilha não encontrada" />
         <Card>
           <p className="text-secondary text-sm">
-            Mini-trilhas disponíveis: precificação, capital, canais, projeção.
+            Mini-trilhas disponíveis: precificação, capital, canais, projeção, sócio/família.
           </p>
         </Card>
       </div>
