@@ -5,6 +5,12 @@
       "has": [{ "type": "host", "value": "www.trilhaempreendedora.com.br" }],
       "destination": "https://trilhaempreendedora.com.br/$1",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "trilha-empreendedora.vercel.app" }],
+      "destination": "https://trilhaempreendedora.com.br/$1",
+      "permanent": true
     }
   ],
   "rewrites": [
