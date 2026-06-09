@@ -342,7 +342,12 @@ function validateResources() {
     if (!r.title) E(file, ctx, 'missing title');
     if (!r.description) E(file, ctx, 'missing description');
     if (!r.source) E(file, ctx, 'missing source');
-    if (!r.sourceLink) E(file, ctx, 'missing sourceLink');
+    // sourceLink obrigatório só pra fontes externas (Sebrae, BCB, etc.).
+    // Recursos da própria Trilha são consumidos via /conteudos/<id> e o
+    // conteúdo vive em `body` — não precisam apontar pra fora.
+    if (!r.sourceLink && r.source !== 'Trilha Empreendedora') {
+      E(file, ctx, 'missing sourceLink');
+    }
     if (!r.topic) E(file, ctx, 'missing topic');
 
     checkEnum(file, ctx, 'type', r.type, RESOURCE_TYPE, true);
