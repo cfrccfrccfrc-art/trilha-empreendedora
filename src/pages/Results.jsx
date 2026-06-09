@@ -77,10 +77,33 @@ export default function Results() {
   const hasFullContent = archetype.status === 'active';
 
   const isConsolidated = archetype.id === 'negocio_consolidado';
+  const isSelfSelected = Array.isArray(result.flags) && result.flags.includes('self_selected');
 
   return (
     <div className="space-y-5">
-      <PageHeader accent="Seu perfil" title={archetype.name} />
+      <PageHeader
+        accent={isSelfSelected ? 'Perfil escolhido' : 'Seu perfil'}
+        title={archetype.name}
+      />
+
+      {isSelfSelected && (
+        <Card tone="soft">
+          <div className="flex gap-3 items-start">
+            <Sparkle className="w-5 h-5 mt-0.5 shrink-0" />
+            <div>
+              <p className="font-hand text-secondary text-base leading-tight mb-1">
+                Você escolheu esse perfil sem fazer o diagnóstico
+              </p>
+              <p className="text-secondary text-sm leading-relaxed">
+                Tudo bem. Se quiser confirmar com mais nuance (dor principal,
+                arquétipo secundário, sinais cruzados), dá pra fazer o
+                diagnóstico de 5 minutos depois e a trilha se ajusta. Você
+                não perde o que já marcou.
+              </p>
+            </div>
+          </div>
+        </Card>
+      )}
 
       {isConsolidated && (
         <Card className="border-primary bg-primaryLight/30">

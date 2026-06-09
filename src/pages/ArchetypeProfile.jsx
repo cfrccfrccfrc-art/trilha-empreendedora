@@ -9,6 +9,9 @@ import Button from '../components/Button';
 import DisclaimerNote from '../components/DisclaimerNote';
 import JsonLd from '../components/JsonLd';
 import { Lightbulb, Sparkle } from '../components/Sketches';
+import { track } from '../services/telemetry';
+
+const RESULT_KEY = 'trilha_diagnostic_result';
 
 // Página pública e indexável de cada arquétipo. Objetivo: SEO/AEO. Cada perfil
 // vira uma URL própria com Schema.org Article, otimizada pra busca tipo
@@ -30,6 +33,33 @@ export default function ArchetypeProfile() {
     if (!archetype?.firstTaskId) return null;
     return taskTemplates.find((t) => t.id === archetype.firstTaskId);
   }, [archetype]);
+
+  // Atalho: monta result sintético, salva no sessionStorage e manda pro
+  // /resultado direto. Usado por quem já se identifica com o perfil (cliente
+  // que voltou ao site, ou pessoa orientada por consultor Pescadores).
+  // Flag `self_selected` marca pro Results mostrar nota lembrando que dá
+  // pra refazer o diagnóstico se quiser confirmar.
+  const skipDiagnostic = () => {
+    if (!archetype) return;
+    track('archetype_profile_skip_diagnostic', { archetypeId: archetype.id });
+    const syntheticResult = {
+      archetypeId: archetype.id,
+      archetypeScores: { [archetype.id]: 100 },
+      archetypeMaxes: { [archetype.id]: 100 },
+      archetypeRatios: { [archetype.id]: 1 },
+      mainPain: null,
+      secondaryPain: null,
+      painScores: {},
+      flags: ['self_selected'],
+      recommendedTaskId: archetype.firstTaskId || null,
+    };
+    try {
+      sessionStorage.setItem(RESULT_KEY, JSON.stringify(syntheticResult));
+    } catch (e) {
+      console.error('skipDiagnostic storage failed:', e);
+    }
+    navigate('/resultado');
+  };
 
   const relatedCases = useMemo(() => {
     if (!archetype) return [];
@@ -207,26 +237,40 @@ export default function ArchetypeProfile() {
           Esse perfil bate com você?
         </h3>
         <p className="text-paper/70 text-sm leading-relaxed mb-4">
-          Reconheceu o cenário? Faz o diagnóstico de 5 minutos pra confirmar
-          ou descobrir o seu perfil real entre os 15 caminhos.
+          Três caminhos a partir daqui:
         </p>
         <Button
-          onClick={() => navigate('/diagnostico')}
-          className="w-full bg-highlight text-ink hover:bg-highlight/90 shadow-lg"
+          onClick={() => {
+            track('archetype_profile_to_diagnostic', { archetypeId: archetype.id });
+            navigate('/diagnostico');
+          }}
+          className="w-full bg-highlight text-ink hover:bg-highlight/90 shadow-lg mb-3"
         >
-          Começar diagnóstico
+          Fazer o diagnóstico pra conferir
         </Button>
+        <button
+          type="button"
+          onClick={skipDiagnostic}
+          className="w-full min-h-12 px-5 rounded-xl font-sans font-semibold text-base bg-paper/10 border border-paper/30 text-paper hover:bg-paper/20 transition-colors mb-3"
+        >
+          Já me identifico, começar a trilha
+        </button>
+        <button
+          type="button"
+          onClick={() => navigate('/perfis')}
+          className="w-full text-paper/70 text-sm font-semibold hover:text-paper underline underline-offset-4 py-2"
+        >
+          Conhecer outros perfis
+        </button>
       </Card>
 
-      <DisclaimerNote variant="compact" />
+      <p className="text-xs text-secondary leading-relaxed text-center px-2">
+        Se já conhece bem seu perfil (ou se um consultor te orientou pra cá),
+        dá pra começar a trilha direto. O diagnóstico ajuda a confirmar com
+        nuance — mas não é obrigatório.
+      </p>
 
-      <Button
-        variant="ghost"
-        onClick={() => navigate('/perfis')}
-        className="w-full"
-      >
-        ← Ver os 15 perfis
-      </Button>
+      <DisclaimerNote variant="compact" />
     </div>
   );
 }
