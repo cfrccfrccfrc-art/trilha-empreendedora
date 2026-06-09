@@ -38,17 +38,17 @@ const COPY = {
     shareText:
       'Conheça a Trilha Empreendedora — diagnóstico em 5 minutos, trilha prática de 30 dias, gratuita. Pra quem está começando ou tentando organizar o negócio.',
 
-    heroEyebrow: 'Apresentação',
-    heroLine1: 'Pra quem empreende',
+    heroEyebrow: 'O pitch',
+    heroLine1: 'Empreender',
     heroLine2: 'no escuro.',
     heroBody:
-      'A Trilha Empreendedora é um diagnóstico gratuito de 5 minutos que entrega uma trilha de 30 dias com missões práticas, casos reais e companheiros de jornada — pra microempreendedor que quer próximo passo claro, não outra biblioteca de PDF.',
+      '5 minutos de diagnóstico. 30 dias de trilha prática. Próximo passo claro. Sem cadastro, sem mensalidade, sem operador atendendo zap.',
 
     s1Eyebrow: 'A dor',
-    s1Line1: '30 milhões de empreendedores brasileiros.',
-    s1Line2: 'A maioria sozinha no escuro.',
+    s1Line1: '30 milhões.',
+    s1Line2: 'Quase todos no escuro.',
     s1Body:
-      'Vendem todo dia, mas no fim do mês não sobra. Não sabem se lucram. Não sabem onde começar a organizar. Conteúdo existe — Sebrae, BCB, YouTube têm bibliotecas inteiras. Falta TRILHA. Falta saber qual o próximo passo PRA CADA UM.',
+      'Vendem todo dia. Não sobra. Não sabem por quê. Sebrae tem 800 artigos. BCB tem cartilha. YouTube tem 14 mil vídeos. Falta TRILHA. Falta saber o próximo passo PRA ELES.',
     s1Quotes: [
       'Vendo todo dia, mas no fim do mês não sobra',
       'Tenho uma ideia, mas nunca testei com cliente',
@@ -59,9 +59,9 @@ const COPY = {
 
     s2Eyebrow: 'O que falta',
     s2Line1: 'Catálogo é fácil.',
-    s2Line2: 'Mapa personalizado é raro.',
+    s2Line2: 'Mapa é raro.',
     s2Body:
-      'Quem empreende não precisa de biblioteca. Precisa do próximo passo. Conteúdo solto não converte em ação. O que converte é diagnóstico + trilha curta + companheiro ou companheira que já passou.',
+      'Quem empreende não precisa de biblioteca. Precisa do próximo passo. O que converte: diagnóstico + trilha curta + alguém que já passou.',
     s2BeforeLabel: 'Hoje:',
     s2BeforeQuote:
       '"Tem 800 artigos no Sebrae. Por onde eu começo?"',
@@ -70,11 +70,11 @@ const COPY = {
       '"Você é o perfil X. Sua primeira missão é Y. Em 7 dias volta que tem a próxima."',
 
     s3Eyebrow: 'A inspiração',
-    s3Line1: 'E se Khan Academy fosse um',
-    s3Line2: 'plano de 30 dias pro seu negócio?',
+    s3Line1: 'Khan Academy.',
+    s3Line2: 'Pra empreender.',
     s3Body:
-      'Khan provou: educação prática, gratuita e estruturada escala. Self-service entrega qualidade sem call center. A Trilha aplica esse princípio a quem empreende no Brasil — sem mensalidade, sem cadastro pra começar, sem operadora.',
-    khanEyebrow: 'De onde vem a ideia',
+      'Khan provou que educação prática, gratuita e estruturada escala. Sem call center. Sem mensalidade. A Trilha aplica esse princípio ao microempreendedor brasileiro.',
+    khanEyebrow: 'De onde vem',
     khanTitle: 'Khan Academy',
     khanBody:
       'Educação prática, gratuita, no ritmo de quem precisa. Provou que self-service estruturado escala alcance educacional sem perder qualidade.',
@@ -86,7 +86,7 @@ const COPY = {
     s4Line2: '15 perfis.',
     s4Line3: '30 dias.',
     s4Body:
-      'Diagnóstico curto identifica seu perfil entre 15 caminhos possíveis. Recebe trilha de 4 missões práticas (uma por semana), com companheiros reais que já viveram a mesma fase — e casos curtos que mostram como a coisa joga no Brasil.',
+      '35 perguntas curtas identificam seu perfil. 4 missões práticas, uma por semana. Companheiros reais que viveram a mesma fase. Casos que mostram como joga no Brasil.',
     mock1Progress: 'Pergunta 4 de 35',
     mock1Question:
       'Você sabe quanto entrou e saiu do negócio no último mês?',
@@ -106,20 +106,20 @@ const COPY = {
       "Somou tudo: sobrou R$ 260, e ela jurava ter 'uns R$ 800'.",
 
     s5Eyebrow: 'Como escala',
-    s5Line1: 'Self-service.',
-    s5Line2: 'Sem fricção.',
+    s5Line1: 'Sem operador.',
+    s5Line2: 'Sem mensalidade.',
     s5Body:
-      'Tudo entregue por código. Nenhuma operadora atendendo zap, nenhuma mensalidade, nenhum cadastro obrigatório. Conteúdo curado pra alta densidade. Mantida por doação Pix voluntária.',
+      'Tudo por código. Ninguém atendendo zap. Sem cadastro pra começar. Conteúdo curado pra alta densidade. Mantida por doação Pix voluntária.',
     scaleMainLabel: 'itens de conteúdo curado, no ar',
     scaleProfilesLabel: 'perfis cobertos',
     scaleCompanionsLabel: 'companheiros',
     scaleOperatorsLabel: 'atendentes',
 
     s6Eyebrow: 'O pulo do gato',
-    s6Line1: 'Trilha é o topo do funil.',
+    s6Line1: 'Trilha educa.',
     s6Line2: 'Pescadores fecha.',
     s6Body:
-      'Quando ler conteúdo não basta, quem está fazendo a trilha é encaminhada(o) pra apoio humano direto do Projeto Pescadores — parceiro que atende casos individualmente, gratuito. A Trilha educa, qualifica e direciona quem precisa de gente. Pescadores recebe casos com base já trabalhada.',
+      'Quando ler conteúdo não basta, a pessoa é encaminhada pro apoio humano direto do Projeto Pescadores — parceiro que atende caso a caso, gratuito. A Trilha qualifica. Pescadores recebe pronto.',
     funnelTopLabel: 'milhares de visitas',
     funnelMidLabel: 'diagnóstico em 5 min',
     funnelMid2Label: 'trilha de 30 dias',
@@ -127,10 +127,10 @@ const COPY = {
     funnelOutLabel: 'Projeto Pescadores',
 
     s7Eyebrow: 'A visão',
-    s7TitlePre: 'Cada empreendedor ou empreendedora que termina os 30 dias é',
+    s7TitlePre: 'Cada trilha terminada é',
     s7TitleHighlight: 'um negócio menos no escuro.',
     s7Body:
-      'Conhece quem precisa? Compartilha. Tem parceria possível (Sebrae regional, igreja de bairro, CRAS, programa social)? Manda mensagem. A app é gratuita e cresce com quem espalha.',
+      'Conhece quem precisa? Compartilha. Tem parceria possível (Sebrae regional, CRAS, igreja de bairro)? Manda mensagem. A Trilha é gratuita e cresce com quem espalha.',
     s7CtaPrimary: 'Compartilhar a Trilha →',
     s7CtaSecondary: 'Falar com o Pescadores',
     s7Footer: 'Trilha Empreendedora · gratuita · sem fins lucrativos · ',
@@ -142,16 +142,16 @@ const COPY = {
       'Check out Trilha Empreendedora — a 5-minute free diagnostic and a practical 30-day journey for micro-entrepreneurs. For people just starting or trying to organize their business.',
 
     heroEyebrow: 'The pitch',
-    heroLine1: 'For those who run a business',
+    heroLine1: 'Running a business',
     heroLine2: 'in the dark.',
     heroBody:
-      'Trilha Empreendedora ("Entrepreneur Trail") is a free 5-minute diagnostic that delivers a 30-day journey with practical missions, real cases, and peer companions — for the Brazilian micro-entrepreneur who wants a clear next step, not yet another PDF library.',
+      '5-minute diagnostic. 30-day practical journey. Clear next step. No signup, no subscription, no operator on WhatsApp.',
 
     s1Eyebrow: 'The pain',
-    s1Line1: '30 million Brazilian entrepreneurs.',
-    s1Line2: 'Most of them alone in the dark.',
+    s1Line1: '30 million.',
+    s1Line2: 'Almost all in the dark.',
     s1Body:
-      "They sell every day, but nothing's left at month-end. They don't know if they're profitable. They don't know where to start. Content exists — Sebrae, the Central Bank, YouTube are full libraries. What's missing is a JOURNEY. Knowing what the next step is FOR THEM.",
+      "They sell every day. Nothing's left. They don't know why. Sebrae has 800 articles. The Central Bank has manuals. YouTube has 14,000 videos. What's missing is a JOURNEY. Knowing the next step FOR THEM.",
     s1Quotes: [
       "I sell every day, but nothing's left at month-end",
       'I have an idea, but never tested it with a customer',
@@ -162,9 +162,9 @@ const COPY = {
 
     s2Eyebrow: "What's missing",
     s2Line1: 'A catalog is easy.',
-    s2Line2: 'A personalized map is rare.',
+    s2Line2: 'A map is rare.',
     s2Body:
-      "Entrepreneurs don't need a library. They need the next step. Loose content doesn't convert to action. What converts is diagnostic + short journey + a companion who's been there.",
+      "Entrepreneurs don't need a library. They need the next step. What converts: diagnostic + short journey + someone who's been there.",
     s2BeforeLabel: 'Today:',
     s2BeforeQuote:
       "\"There are 800 articles on Sebrae. Where do I even start?\"",
@@ -173,10 +173,10 @@ const COPY = {
       "\"You're profile X. Your first mission is Y. Come back in 7 days for the next.\"",
 
     s3Eyebrow: 'The inspiration',
-    s3Line1: 'What if Khan Academy were a',
-    s3Line2: '30-day plan for your business?',
+    s3Line1: 'Khan Academy.',
+    s3Line2: 'For entrepreneurs.',
     s3Body:
-      'Khan proved it: practical, free, structured education scales. Self-service delivers quality without a call center. Trilha applies that principle to the Brazilian micro-entrepreneur — no subscription, no signup to begin, no operator.',
+      'Khan proved that practical, free, structured education scales. No call center. No subscription. Trilha applies that principle to the Brazilian micro-entrepreneur.',
     khanEyebrow: 'Where the idea comes from',
     khanTitle: 'Khan Academy',
     khanBody:
@@ -189,7 +189,7 @@ const COPY = {
     s4Line2: '15 profiles.',
     s4Line3: '30 days.',
     s4Body:
-      "A short diagnostic identifies your profile among 15 possible paths. You get a journey of 4 practical missions (one per week), with real companions who've lived the same stage — and short cases that show how things play out in Brazil.",
+      "35 short questions identify your profile. 4 practical missions, one per week. Real companions who've lived the same stage. Cases that show how things play out in Brazil.",
     mock1Progress: 'Question 4 of 35',
     mock1Question:
       'Do you know how much came in and went out of the business last month?',
@@ -209,20 +209,20 @@ const COPY = {
       "Added it all up: R$ 260 left over — and she swore she had 'about R$ 800'.",
 
     s5Eyebrow: 'How it scales',
-    s5Line1: 'Self-service.',
-    s5Line2: 'No friction.',
+    s5Line1: 'No operators.',
+    s5Line2: 'No subscription.',
     s5Body:
-      'Everything delivered by code. No operators answering WhatsApp, no subscription, no required signup. Curated content for high density. Supported by voluntary Pix donations.',
+      'Everything by code. No one on WhatsApp. No signup to begin. Curated content for high density. Sustained by voluntary Pix donations.',
     scaleMainLabel: 'curated content items, live',
     scaleProfilesLabel: 'profiles covered',
     scaleCompanionsLabel: 'companions',
     scaleOperatorsLabel: 'operators',
 
     s6Eyebrow: 'The twist',
-    s6Line1: 'Trilha is the top of the funnel.',
-    s6Line2: 'Pescadores closes it.',
+    s6Line1: 'Trilha educates.',
+    s6Line2: 'Pescadores closes.',
     s6Body:
-      "When reading content isn't enough, the entrepreneur is referred to direct human support from Projeto Pescadores — a partner that handles cases individually, free of charge. Trilha educates, qualifies, and routes those who need human help. Pescadores receives cases with the foundations already in place.",
+      "When reading isn't enough, the person is referred to direct human support from Projeto Pescadores — case-by-case, free of charge. Trilha qualifies. Pescadores receives the case prepared.",
     funnelTopLabel: 'thousands of visits',
     funnelMidLabel: '5-minute diagnostic',
     funnelMid2Label: '30-day journey',
@@ -230,15 +230,104 @@ const COPY = {
     funnelOutLabel: 'Projeto Pescadores',
 
     s7Eyebrow: 'The vision',
-    s7TitlePre: 'Every entrepreneur who completes the 30 days is',
+    s7TitlePre: 'Every completed journey is',
     s7TitleHighlight: 'one less business in the dark.',
     s7Body:
-      'Know someone who needs this? Share it. See a possible partnership (a regional business support agency, a local church, a community center, a social program)? Reach out. The app is free and grows with the people who spread the word.',
+      'Know someone who needs this? Share it. Possible partnership (regional business agency, community center, local church)? Reach out. The app is free and grows with people who spread the word.',
     s7CtaPrimary: 'Share Trilha →',
     s7CtaSecondary: 'Talk to Pescadores',
     s7Footer: 'Trilha Empreendedora · free · non-profit · ',
   },
 };
+
+// ---------- Animation helpers ----------
+
+// Reveal: fade-in + slide-up quando o elemento entra em viewport. Roda 1x.
+// Honra prefers-reduced-motion (mostra imediato sem animação).
+function Reveal({ children, delay = 0, className = '' }) {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const reduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) {
+      setVisible(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          const id = setTimeout(() => setVisible(true), delay);
+          observer.disconnect();
+          return () => clearTimeout(id);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [delay]);
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-[900ms] ease-out ${
+        visible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-8'
+      } ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+// CounterUp: conta 0 → to em duration ms quando entra em viewport, easing
+// ease-out cubic. Pra números grandes, formata com separador de milhar pt-BR.
+function CounterUp({ to, duration = 1600, className = '', format = (n) => n }) {
+  const [val, setVal] = useState(0);
+  const ref = useRef(null);
+  const startedRef = useRef(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const reduced =
+      typeof window !== 'undefined' &&
+      window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) {
+      setVal(to);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !startedRef.current) {
+          startedRef.current = true;
+          const start = performance.now();
+          const tick = (now) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setVal(Math.round(to * eased));
+            if (progress < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        }
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [to, duration]);
+  return (
+    <span ref={ref} className={className}>
+      {format(val)}
+    </span>
+  );
+}
 
 // ---------- Layout primitive ----------
 function Section({ children, bgClass = 'bg-paper', idx }) {
@@ -254,30 +343,42 @@ function Section({ children, bgClass = 'bg-paper', idx }) {
   );
 }
 
-function TextBlock({ eyebrow, titleLines, body, align = 'left' }) {
+function TextBlock({ eyebrow, titleLines, body, align = 'left', dark = false }) {
+  const subColor = dark ? 'text-paper/60' : 'text-secondary';
+  const titleColor = dark ? 'text-paper' : 'text-ink';
   return (
-    <div className={`space-y-5 ${align === 'right' ? 'lg:order-2' : ''}`}>
+    <div className={`space-y-6 ${align === 'right' ? 'lg:order-2' : ''}`}>
       {eyebrow && (
-        <p className="font-hand text-secondary text-xl leading-tight">
-          {eyebrow}
-        </p>
+        <Reveal>
+          <p className={`font-hand ${subColor} text-xl sm:text-2xl leading-tight`}>
+            {eyebrow}
+          </p>
+        </Reveal>
       )}
-      <h2 className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
-        {titleLines.map((line, i) => (
-          <span key={i}>
-            {line.highlight ? (
-              <span className="text-primary">{line.text}</span>
-            ) : (
-              line.text
-            )}
-            {i < titleLines.length - 1 && <br />}
-          </span>
-        ))}
-      </h2>
+      <Reveal delay={150}>
+        <h2
+          className={`font-sans font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl ${titleColor} leading-[1.02] tracking-tight`}
+        >
+          {titleLines.map((line, i) => (
+            <span key={i}>
+              {line.highlight ? (
+                <span className={dark ? 'text-highlight' : 'text-primary'}>
+                  {line.text}
+                </span>
+              ) : (
+                line.text
+              )}
+              {i < titleLines.length - 1 && <br />}
+            </span>
+          ))}
+        </h2>
+      </Reveal>
       {body && (
-        <p className="text-secondary text-lg sm:text-xl leading-relaxed max-w-xl">
-          {body}
-        </p>
+        <Reveal delay={350}>
+          <p className={`${subColor} text-lg sm:text-xl lg:text-2xl leading-relaxed max-w-xl`}>
+            {body}
+          </p>
+        </Reveal>
       )}
     </div>
   );
@@ -453,21 +554,22 @@ function PainQuotes({ quotes }) {
   return (
     <div className="space-y-3 max-w-md mx-auto">
       {quotes.map((q, i) => (
-        <div
-          key={q}
-          className="bg-paper border border-line rounded-2xl p-4 shadow-sm"
-          style={{
-            transform: `rotate(${i % 2 === 0 ? -0.8 : 0.8}deg) translateX(${
-              i * 4
-            }px)`,
-          }}
-        >
-          <p className="text-ink text-lg leading-snug">
-            <span className="font-hand text-secondary mr-2">"</span>
-            {q}
-            <span className="font-hand text-secondary ml-1">"</span>
-          </p>
-        </div>
+        <Reveal key={q} delay={i * 180}>
+          <div
+            className="bg-paper border border-line rounded-2xl p-4 sm:p-5 shadow-md hover:shadow-lg transition-shadow"
+            style={{
+              transform: `rotate(${i % 2 === 0 ? -1.2 : 1.2}deg) translateX(${
+                i * 6
+              }px)`,
+            }}
+          >
+            <p className="text-ink text-lg sm:text-xl leading-snug">
+              <span className="font-hand text-secondary mr-2">"</span>
+              {q}
+              <span className="font-hand text-secondary ml-1">"</span>
+            </p>
+          </div>
+        </Reveal>
       ))}
     </div>
   );
@@ -578,27 +680,45 @@ function ProductMocks({ t }) {
 
 function ScaleNumbers({ t }) {
   return (
-    <div className="space-y-8 max-w-md mx-auto text-center">
+    <div className="space-y-10 max-w-md mx-auto text-center">
       <div>
-        <p className="font-sans font-bold text-[8rem] sm:text-[9rem] text-primary leading-none">
-          184
-        </p>
-        <p className="text-secondary text-lg mt-2">{t.scaleMainLabel}</p>
+        <Reveal>
+          <p className="font-sans font-bold text-[9rem] sm:text-[11rem] lg:text-[13rem] text-primary leading-none tracking-tight">
+            <CounterUp to={163} duration={2200} />
+          </p>
+        </Reveal>
+        <Reveal delay={250}>
+          <p className="text-secondary text-lg sm:text-xl mt-3">{t.scaleMainLabel}</p>
+        </Reveal>
       </div>
-      <div className="grid grid-cols-3 gap-4 pt-4">
-        <div>
-          <p className="font-sans font-bold text-3xl text-ink">13</p>
-          <p className="text-xs text-secondary">{t.scaleProfilesLabel}</p>
+      <Reveal delay={500}>
+        <div className="grid grid-cols-3 gap-4 pt-4">
+          <div>
+            <p className="font-sans font-bold text-4xl sm:text-5xl text-ink">
+              <CounterUp to={15} duration={1500} />
+            </p>
+            <p className="text-xs sm:text-sm text-secondary mt-1">
+              {t.scaleProfilesLabel}
+            </p>
+          </div>
+          <div>
+            <p className="font-sans font-bold text-4xl sm:text-5xl text-ink">
+              <CounterUp to={42} duration={1700} />
+            </p>
+            <p className="text-xs sm:text-sm text-secondary mt-1">
+              {t.scaleCompanionsLabel}
+            </p>
+          </div>
+          <div>
+            <p className="font-sans font-bold text-4xl sm:text-5xl text-ink">
+              <CounterUp to={0} duration={800} />
+            </p>
+            <p className="text-xs sm:text-sm text-secondary mt-1">
+              {t.scaleOperatorsLabel}
+            </p>
+          </div>
         </div>
-        <div>
-          <p className="font-sans font-bold text-3xl text-ink">28</p>
-          <p className="text-xs text-secondary">{t.scaleCompanionsLabel}</p>
-        </div>
-        <div>
-          <p className="font-sans font-bold text-3xl text-ink">0</p>
-          <p className="text-xs text-secondary">{t.scaleOperatorsLabel}</p>
-        </div>
-      </div>
+      </Reveal>
     </div>
   );
 }
@@ -966,21 +1086,33 @@ export default function Apresentacao() {
       {/* HERO */}
       <section
         data-tour-section="0"
-        className="min-h-screen flex items-center px-6 sm:px-10 py-24 sm:py-32"
+        className="relative min-h-screen flex items-center px-6 sm:px-10 py-24 sm:py-32 overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto w-full">
-          <p className="font-hand text-secondary text-xl mb-6">
-            {t.heroEyebrow}
-          </p>
-          <h1 className="font-sans font-bold text-5xl sm:text-7xl lg:text-[6.5rem] text-ink leading-[0.95] mb-8">
-            {t.heroLine1}
-            <br />
-            {t.heroLine2}
-          </h1>
-          <WavyUnderline className="w-64 h-4 mb-8" />
-          <p className="text-secondary text-xl sm:text-2xl leading-relaxed max-w-3xl">
-            {t.heroBody}
-          </p>
+        {/* Blobs decorativos no fundo */}
+        <div className="absolute -top-20 -left-32 w-[28rem] h-[28rem] rounded-full bg-highlight/30 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 -right-32 w-[32rem] h-[32rem] rounded-full bg-primaryLight/60 blur-3xl pointer-events-none" />
+
+        <div className="relative max-w-6xl mx-auto w-full">
+          <Reveal>
+            <p className="font-hand text-secondary text-xl sm:text-2xl mb-6">
+              {t.heroEyebrow}
+            </p>
+          </Reveal>
+          <Reveal delay={150}>
+            <h1 className="font-sans font-bold text-6xl sm:text-8xl lg:text-[9rem] xl:text-[11rem] text-ink leading-[0.92] mb-6 tracking-tight">
+              {t.heroLine1}
+              <br />
+              <span className="text-primary">{t.heroLine2}</span>
+            </h1>
+          </Reveal>
+          <Reveal delay={400}>
+            <WavyUnderline className="w-64 sm:w-80 h-4 mb-8" />
+          </Reveal>
+          <Reveal delay={550}>
+            <p className="text-secondary text-xl sm:text-2xl lg:text-3xl leading-relaxed max-w-3xl">
+              {t.heroBody}
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -1044,7 +1176,9 @@ export default function Apresentacao() {
           titleLines={[
             { text: t.s4Line1, highlight: false },
             {
-              text: `${activeCount}${t.s4Line2.replace('13', '')}`,
+              // Substitui qualquer dígito inicial pelo activeCount dinâmico,
+              // garantindo coerência se o número de arquétipos mudar.
+              text: t.s4Line2.replace(/^\d+/, String(activeCount)),
               highlight: false,
             },
             { text: t.s4Line3, highlight: true },
@@ -1073,65 +1207,84 @@ export default function Apresentacao() {
       </Section>
 
       {/* 6 — PESCADORES FUNIL */}
-      <Section idx={6}>
-        <TextBlock
-          eyebrow={t.s6Eyebrow}
-          titleLines={[
-            { text: t.s6Line1, highlight: false },
-            { text: t.s6Line2, highlight: true },
-          ]}
-          body={t.s6Body}
-          align="right"
-        />
-        <VisualBlock align="right">
-          <FunnelVisual t={t} />
-        </VisualBlock>
-      </Section>
+      <section
+        data-tour-section={6}
+        className="relative bg-ink text-paper min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24 overflow-hidden"
+      >
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] rounded-full bg-primary/30 blur-3xl pointer-events-none" />
+        <div className="relative max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <TextBlock
+            eyebrow={t.s6Eyebrow}
+            titleLines={[
+              { text: t.s6Line1, highlight: false },
+              { text: t.s6Line2, highlight: true },
+            ]}
+            body={t.s6Body}
+            align="right"
+            dark
+          />
+          <VisualBlock align="right">
+            <FunnelVisual t={t} />
+          </VisualBlock>
+        </div>
+      </section>
 
       {/* 7 — VISÃO + CTA */}
       <section
         data-tour-section="7"
-        className="bg-ink text-paper min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24"
+        className="relative bg-ink text-paper min-h-screen flex items-center px-6 sm:px-10 py-20 sm:py-24 overflow-hidden"
       >
-        <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        {/* Blobs decorativos sutis no fundo escuro */}
+        <div className="absolute -top-32 -left-32 w-[36rem] h-[36rem] rounded-full bg-highlight/15 blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '8s' }} />
+        <div className="absolute -bottom-32 -right-32 w-[40rem] h-[40rem] rounded-full bg-primary/25 blur-3xl pointer-events-none animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+
+        <div className="relative max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-6">
-            <p className="font-hand text-paper/70 text-xl">{t.s7Eyebrow}</p>
-            <h2 className="font-sans font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.05]">
-              {t.s7TitlePre}{' '}
-              <span className="text-highlight">{t.s7TitleHighlight}</span>
-            </h2>
-            <p className="text-paper/80 text-lg sm:text-xl leading-relaxed">
-              {t.s7Body}
-            </p>
-            <div className="flex flex-wrap gap-3 pt-4">
-              <button
-                type="button"
-                onClick={() => {
-                  track('apresentacao_share_clicked', {
-                    placement: 'final',
-                    lang,
-                  });
-                  setShareOpen(true);
-                }}
-                className="bg-highlight text-ink font-bold px-6 py-3 rounded-2xl hover:bg-highlight/90 transition-colors"
-              >
-                {t.s7CtaPrimary}
-              </button>
-              <a
-                href="https://projetopescadores.com.br/contato"
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() =>
-                  track('apresentacao_pescadores_clicked', {
-                    placement: 'final',
-                    lang,
-                  })
-                }
-                className="border border-paper/40 text-paper px-6 py-3 rounded-2xl hover:bg-paper/10 transition-colors"
-              >
-                {t.s7CtaSecondary}
-              </a>
-            </div>
+            <Reveal>
+              <p className="font-hand text-paper/70 text-xl sm:text-2xl">{t.s7Eyebrow}</p>
+            </Reveal>
+            <Reveal delay={150}>
+              <h2 className="font-sans font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[1.02] tracking-tight">
+                {t.s7TitlePre}{' '}
+                <span className="text-highlight">{t.s7TitleHighlight}</span>
+              </h2>
+            </Reveal>
+            <Reveal delay={350}>
+              <p className="text-paper/80 text-lg sm:text-xl lg:text-2xl leading-relaxed">
+                {t.s7Body}
+              </p>
+            </Reveal>
+            <Reveal delay={500}>
+              <div className="flex flex-wrap gap-3 pt-4">
+                <button
+                  type="button"
+                  onClick={() => {
+                    track('apresentacao_share_clicked', {
+                      placement: 'final',
+                      lang,
+                    });
+                    setShareOpen(true);
+                  }}
+                  className="bg-highlight text-ink font-bold text-lg px-8 py-4 rounded-2xl hover:bg-highlight/90 hover:-translate-y-0.5 shadow-lg hover:shadow-xl transition-all"
+                >
+                  {t.s7CtaPrimary}
+                </button>
+                <a
+                  href="https://projetopescadores.com.br/contato"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    track('apresentacao_pescadores_clicked', {
+                      placement: 'final',
+                      lang,
+                    })
+                  }
+                  className="border border-paper/40 text-paper text-lg px-8 py-4 rounded-2xl hover:bg-paper/10 transition-colors"
+                >
+                  {t.s7CtaSecondary}
+                </a>
+              </div>
+            </Reveal>
             <p className="text-paper/50 text-sm pt-4">
               {t.s7Footer}
               <button
