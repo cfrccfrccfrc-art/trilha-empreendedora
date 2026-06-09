@@ -134,3 +134,72 @@ Decisão: fluxo principal (`/diagnostico`, `/resultado`, `/salvar`, `/minha-tril
 - Fluxo do empreendedor permanece mobile-only mesmo em desktop (foco)
 - Bibliotecas (`/biblioteca/*` e similares) ganham layout aberto em md+
 - Páginas internas do admin ainda usam `getAuthClient` direto; migrar pra `getAuthedClient(token)` só se o bug do init voltar
+
+---
+
+## Sessão 29-30/05/2026 — visual + scoring + SEO + cases + cleanup
+
+### O quê
+
+Sprint visual longa que virou também: auditoria de scoring (bug do consolidado), SEO/AEO Fase 1+2, disclaimer, 10 cases novos, 2 mini-trilhas novas, e cleanup técnico.
+
+### Sprint visual (look & feel)
+
+7 blocos pra tirar o "pobre":
+- PageHeader maior (text-3xl md:text-4xl) com eyebrow Patrick Hand
+- Card com props tone (default/soft/primary/highlight/coral/green/ink) e interactive (hover lift)
+- Button com sombra crescente no hover
+- Hero da Home com blobs decorativos, HeroNotebook maior com glow, text-4xl md:text-5xl
+- Final CTA da Home virou card tone="ink" com Sparkle amarelo
+- Cards de STEPS/FEATURES/METODOLOGIA com tones alternados
+- MyPlan: tarefas coloridas por status (green/coral/primary)
+- PathTrail entre seções da Home
+- PersonaAvatar novo com iniciais coloridas por hash do nome
+- Layout 2-col em md+ nas telas de detalhe (CaseDetailPage, TaskLibraryDetail) com sidebar sticky
+
+### Bug do scoring (auditoria → fix → testes)
+
+Sintoma reportado: "preciso de mais clientes" caía em negocio_consolidado.
+
+Causa: pessoa com 1+ ano + MEI + finanças OK + dedicação 30h+ pontuava ~10/13 em consolidado (ratio 0.77), enquanto produto_bom_vitrine_fraca pontuava 2-3 pts (ratio 0.40). Mesmo dor explícita "no_clients" (+2 pra produto_bom) não revertia o ratio. E em empate, consolidado ganhava porque estava em primeiro no tieBreakOrder ("segurança").
+
+Fix:
+- Mover negocio_consolidado pra penúltimo no tieBreakOrder
+- Adicionar minScorePerArchetype.negocio_consolidado = 11 (acima do que pessoa "1 ano + organização básica" pontua)
+- Engine itera o ranking pegando o primeiro arquétipo que atende seu próprio threshold (per-archetype overrides global)
+- 2 testes novos: cenário "1+ano organizado + falta clientes" → produto_bom_vitrine_fraca; cenário "consolidado de verdade" → negocio_consolidado
+
+### Disclaimer
+
+Componente DisclaimerNote em 2 variantes. Texto reconhece que a Trilha pode errar e aponta pro Projeto Pescadores. Aparece em Results (default), TaskDetail (compact) e MyPlan (compact).
+
+### SEO/AEO Fase 1 + 2
+
+- Schema.org Organization + WebSite no index.html
+- Componente JsonLd injeta Schema dinâmico no head por rota
+- CaseDetailPage → Article. TaskLibraryDetail → HowTo. ResourceDetail → Article.
+- Title/description 12 → 13 perfis
+- Novas páginas /perfis (CollectionPage) + /perfis/:id (13 Article evergreen) — pega busca tipo "como sair do bico", "o que é negócio consolidado"
+- TopNav wide ganha link "Perfis" em primeiro
+- Sitemap inclui /perfis e cada perfil
+
+### Conteúdo ampliado
+
+6 cases primeira leva (Bia, Roberto, Eduarda, Andréia, Luana, Tiago) + 4 cases segunda leva (Célia/artesanato, Carmen/costura, Jorge/conserto, Sílvia/beleza-móvel). Total: 29 cases ativos (era 19).
+
+2 mini-trilhas novas:
+- /mini/projecao: prever caixa do mês que vem (5 perguntas, 3 destinos)
+- /mini/socio_familia: sócio/esposo(a)/família no negócio (5 perguntas, 3 destinos)
+
+### Cleanup técnico
+
+- 15 sourceLinks fantasmas removidos dos recursos da Trilha (apontavam pra slugs que não existiam). Validador atualizado.
+- 5 páginas admin migradas pro getAuthedClient(token) preventivo (SupervisorDashboard, SupervisorReview, AdminUserStories, SourceRefresh, AdminMetrics) — se o bug do init voltar, não travam.
+
+### Decisões registradas
+
+- negocio_consolidado precisa de score absoluto alto (≥11) pra ganhar — não basta ratio
+- SEO Fase 1+2 prioriza Article + HowTo + páginas evergreen de arquétipos. Fase 3 (FAQPage, BreadcrumbList) fica em standby.
+- SMTP custom no Supabase foi descartado: magic-link foi descontinuado, não há fluxo público que dispara email
+- Trilha audita conteúdo periodicamente e adiciona cases/mini-trilhas conforme dores são identificadas
+- Layout 2-col em desktop é só pra telas de detalhe das bibliotecas; fluxo principal continua mobile-only mesmo em desktop

@@ -600,19 +600,56 @@ Time de consultores do Projeto Pescadores usa a Trilha como referência no atend
 
 Fluxo principal (`/`, `/diagnostico`, `/resultado`, `/salvar`, `/minha-trilha`, `/tarefa/:id`) continua mobile-style em qualquer largura por decisão de foco. Bibliotecas ganham layout aberto:
 
-- `Layout.jsx` detecta rotas wide (`/conteudos`, `/casos`, `/oportunidades`, `/preciso-de-ajuda`, `/posso-ajudar`, `/biblioteca/*`) e libera `max-w-5xl` em md+.
-- `TopNav` ganha sub-nav horizontal em md+ com links pra Conteúdos, Casos, Oportunidades, Tarefas.
+- `Layout.jsx` detecta rotas wide (`/conteudos`, `/casos`, `/oportunidades`, `/preciso-de-ajuda`, `/posso-ajudar`, `/biblioteca/*`, `/perfis/*`) e libera `max-w-5xl` em md+.
+- `TopNav` ganha sub-nav horizontal em md+ com links pra Perfis, Conteúdos, Casos, Oportunidades, Tarefas.
 - `BottomNav` se esconde em md+ nessas rotas (TopNav cobre); fica em mobile.
 - Listas (`Resources`, `CaseLibrary`, `Opportunities`, `TaskLibrary`) viram grid 1/2/3 cols em mobile/md/lg.
 - Telas de detalhe (`CaseDetailPage`, `TaskLibraryDetail`, `ResourceDetail`) usam `max-w-3xl` em md+ pra leitura confortável.
+
+### Visual upgrade (sessão 29/05/2026)
+
+Sprint 3 dedicado a tirar o "pobre" do look & feel. 7 blocos:
+
+- **PageHeader** com `text-3xl md:text-4xl`, eyebrow em Patrick Hand maior, subtitle `text-base md:text-lg`.
+- **Card** ganha props `tone` (default, soft, primary, highlight, coral, green, ink) e `interactive` (hover lift + shadow + cursor-pointer).
+- **Button** primary com sombra que cresce no hover + `hover:-translate-y-0.5`.
+- **Hero da Home** com blobs decorativos (highlight + primaryLight blur), `HeroNotebook` maior com glow, title `text-4xl md:text-5xl`, CTA `text-lg`.
+- **Final CTA da Home** vira card `tone="ink"` (escuro) com Sparkle amarelo e botão highlight pra contraste forte.
+- **Cards de STEPS/FEATURES/METODOLOGIA** com tones alternados (highlight, primary, soft, green).
+- **MyPlan** com cards de tarefa coloridos por status (green/coral/primary).
+- **PathTrail** entre seções principais da Home.
+- **PersonaAvatar** novo: círculo com iniciais em Patrick Hand, cor determinística por nome (hash). Usado em `TaskCompanion` e em `TaskLibraryDetail`.
+- **Layout 2-col em md+** nas telas de detalhe (`CaseDetailPage`, `TaskLibraryDetail`): conteúdo principal à esquerda, sidebar sticky à direita com tarefa prática, recursos, copy text, voltar.
+
+### Auditoria + ajustes (sessão 29-30/05/2026)
+
+**Scoring fixado:** `negocio_consolidado` cobrindo falsos positivos. Movido pra penúltimo no `tieBreakOrder` e ganhou threshold próprio (`minScorePerArchetype.negocio_consolidado = 11`). Engine itera o ranking pegando o primeiro arquétipo que atende seu próprio threshold. 14 testes passando (incluindo 2 novos).
+
+**Disclaimer** (`DisclaimerNote`): aparece em Results, TaskDetail e MyPlan. Reconhece que a Trilha pode errar e aponta pro Projeto Pescadores como apoio humano.
+
+**SEO/AEO Fase 1+2 deployada:**
+- `index.html`: Schema.org `Organization` + `WebSite` estáticos. Title/description 12→13 perfis.
+- Componente `JsonLd` injeta JSON-LD dinâmico no head.
+- `CaseDetailPage` → `Article`. `TaskLibraryDetail` → `HowTo`. `ResourceDetail` → `Article`.
+- **Novas páginas `/perfis` + `/perfis/:id`** (14 URLs evergreen indexáveis dos 13 arquétipos). Cada perfil é uma landing com `Article` em Schema.org. Pega busca tipo "como sair do bico", "o que é negócio consolidado".
+- `sitemap.xml`: hoje 78 URLs (estáticas + 21 conteúdos + 29 cases + 31 tarefas + 1 índice perfis + 13 perfis + 5 mini-trilhas).
+
+**Conteúdo ampliado:**
+- 10 cases novos cobrindo gaps (consolidado, sazonalidade, inadimplência, primeira contratação, catálogo digital, projeção, artesanato, costura, conserto, beleza-móvel). Total: **29 cases ativos** (era 19).
+- 2 mini-trilhas novas: `/mini/projecao` (prever caixa do mês que vem) e `/mini/socio_familia` (sócio/esposo(a)/família no negócio). Total: **5 mini-trilhas** (era 3).
+
+**Cleanups técnicos:**
+- 15 `sourceLink` fantasmas removidos dos recursos da Trilha original (apontavam pra slugs que não existiam). Validador atualizado pra exigir `sourceLink` só de fontes externas.
+- 5 páginas admin migradas pro `getAuthedClient(token)` preventivo: `SupervisorDashboard`, `SupervisorReview`, `AdminUserStories`, `SourceRefresh`, `AdminMetrics`. Se o bug do init voltar, elas não travam.
 
 ### Pendências conhecidas
 
 1. **FortiGuard** ainda bloqueia o domínio em algumas redes corporativas. Resolve em 24-72h naturalmente.
 2. **Supabase Auth URL** — pendente trocar Site URL pro domínio próprio.
-3. **Press kit + página `/imprensa` + QR code + `MEDIA_KIT.md`** — proposto, não executado.
-4. **Schema.org markup** — proposto, não executado (SEO Fase 3).
-5. **Páginas internas do admin** (`AdminUserStories`, `AdminMetrics`, `SourceRefresh`, `SupervisorReview`, `SupervisorDashboard`) ainda usam `getAuthClient()` direto pra queries. Funcionaram no teste, mas se o bug do init voltar, travam. Plano: migrar pra `getAuthedClient(token)` se ressurgir.
+3. **Press kit + página `/imprensa` + QR code + `MEDIA_KIT.md`** — proposto, não executado. Fica como próxima frente quando for ativar imprensa/parceria.
+4. **Google Search Console** — submeter `sitemap.xml`. Ação do dono (sem código), guia em ADMIN_GUIDE ou na próxima sessão.
+5. **SEO Fase 3** (Schema.org `FAQPage` em `/ajuda`, `BreadcrumbList` nos detalhes) — proposto, não executado.
+6. **SMTP custom no Supabase Auth** — **descartado** depois do magic-link ser descontinuado. Hoje não há fluxo que dispara email pro usuário comum. Reset de senha de supervisor é feito direto pelo dashboard do Supabase. Se algum dia houver fluxo público de reset, reavaliar.
 
 ### Arquivos importantes adicionados desde v1
 
@@ -624,6 +661,9 @@ scripts/generate-sitemap.mjs             (auto-gera sitemap no build)
 src/services/telemetry.js                (track()+batch)
 src/components/PescadoresHandoff.jsx
 src/components/CopyTextButton.jsx        (copy pra clipboard com feedback)
+src/components/DisclaimerNote.jsx        (disclaimer reutilizável)
+src/components/JsonLd.jsx                (injetor de Schema.org dinâmico)
+src/components/PersonaAvatar.jsx         (avatar com iniciais coloridas)
 src/utils/exports.js                     (Markdown formatters pra cases + tarefas)
 src/pages/Apresentacao.jsx               (rota web-only pitch)
 src/pages/AdminMetrics.jsx
@@ -631,6 +671,10 @@ src/pages/AdminUserStories.jsx
 src/pages/MyStory.jsx
 src/pages/TaskLibrary.jsx                (catálogo /biblioteca/tarefas)
 src/pages/TaskLibraryDetail.jsx          (detalhe da tarefa avulsa B2B)
+src/pages/ArchetypesIndex.jsx            (índice público /perfis)
+src/pages/ArchetypeProfile.jsx           (perfil público /perfis/:id)
+src/data/miniTrilhas/projecao.json       (mini-trilha projeção financeira)
+src/data/miniTrilhas/socio_familia.json  (mini-trilha sócio/família)
 public/pescadores-logo.jpg               (logo do parceiro)
 public/bailey.mp3                        (trilha sonora do /apresentacao, 3.2MB)
 public/icon.svg                          (ícone PWA)
