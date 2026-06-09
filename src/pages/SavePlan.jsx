@@ -45,8 +45,8 @@ function validate(form) {
   if (!digits) errors.whatsapp = 'Coloque seu WhatsApp.';
   else if (digits.length < 10 || digits.length > 13)
     errors.whatsapp = 'Confira se o número está completo (com DDD).';
-  if (!form.city.trim()) errors.city = 'Em qual cidade você está?';
-  if (!form.neighborhood.trim()) errors.neighborhood = 'E o bairro?';
+  // Cidade, bairro, nome do negócio e tipo são opcionais — quem preenche
+  // ganha acesso a oportunidades locais e atendimento da rede regional.
   return errors;
 }
 
@@ -58,6 +58,7 @@ export default function SavePlan() {
   const [submitError, setSubmitError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [showOptional, setShowOptional] = useState(false);
 
   useEffect(() => {
     if (getPlanToken()) {
@@ -207,10 +208,11 @@ export default function SavePlan() {
         subtitle="Para você poder voltar e continuar de onde parou."
       />
 
-      <Card>
+      <Card tone="soft">
         <p className="text-secondary text-sm leading-relaxed">
-          Não pedimos CPF, senha ou documentos. Só o básico para te
-          reconhecer quando você voltar.
+          Só nome e WhatsApp são obrigatórios. O resto é opcional — quem
+          preenche ajuda a rede de voluntários a encontrar você com
+          oportunidades locais. Sem CPF, sem senha, sem documento.
         </p>
       </Card>
 
@@ -249,67 +251,91 @@ export default function SavePlan() {
           )}
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-sm font-semibold text-ink mb-1">
-              Cidade
-            </label>
-            <input
-              type="text"
-              value={form.city}
-              onChange={(e) => update('city', e.target.value)}
-              className={fieldClass('city')}
-              autoComplete="address-level2"
-            />
-            {errors.city && (
-              <p className="text-coral text-xs mt-1">{errors.city}</p>
-            )}
-          </div>
-          <div>
-            <label className="block text-sm font-semibold text-ink mb-1">
-              Bairro
-            </label>
-            <input
-              type="text"
-              value={form.neighborhood}
-              onChange={(e) => update('neighborhood', e.target.value)}
-              className={fieldClass('neighborhood')}
-              autoComplete="address-level3"
-            />
-            {errors.neighborhood && (
-              <p className="text-coral text-xs mt-1">{errors.neighborhood}</p>
-            )}
-          </div>
-        </div>
-
-        <div>
-          <label className="block text-sm font-semibold text-ink mb-1">
-            Nome do negócio <span className="text-secondary font-normal">(opcional)</span>
-          </label>
-          <input
-            type="text"
-            value={form.businessName}
-            onChange={(e) => update('businessName', e.target.value)}
-            className={fieldClass('businessName')}
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-semibold text-ink mb-1">
-            Tipo de negócio <span className="text-secondary font-normal">(opcional)</span>
-          </label>
-          <select
-            value={form.businessType}
-            onChange={(e) => update('businessType', e.target.value)}
-            className={fieldClass('businessType')}
+        {!showOptional && (
+          <button
+            type="button"
+            onClick={() => setShowOptional(true)}
+            className="w-full text-sm text-primary font-semibold underline underline-offset-4 py-2"
           >
-            {BUSINESS_TYPES.map((opt) => (
-              <option key={opt.value} value={opt.value}>
-                {opt.label}
-              </option>
-            ))}
-          </select>
-        </div>
+            Adicionar mais detalhes (cidade, bairro, negócio) →
+          </button>
+        )}
+
+        {showOptional && (
+          <>
+            <p className="text-xs text-secondary leading-relaxed px-1 -mb-2">
+              Tudo abaixo é opcional. Pode pular e salvar com só o básico.
+            </p>
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block text-sm font-semibold text-ink mb-1">
+                  Cidade{' '}
+                  <span className="text-secondary font-normal">(opcional)</span>
+                </label>
+                <input
+                  type="text"
+                  value={form.city}
+                  onChange={(e) => update('city', e.target.value)}
+                  className={fieldClass('city')}
+                  autoComplete="address-level2"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold text-ink mb-1">
+                  Bairro{' '}
+                  <span className="text-secondary font-normal">(opcional)</span>
+                </label>
+                <input
+                  type="text"
+                  value={form.neighborhood}
+                  onChange={(e) => update('neighborhood', e.target.value)}
+                  className={fieldClass('neighborhood')}
+                  autoComplete="address-level3"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-ink mb-1">
+                Nome do negócio{' '}
+                <span className="text-secondary font-normal">(opcional)</span>
+              </label>
+              <input
+                type="text"
+                value={form.businessName}
+                onChange={(e) => update('businessName', e.target.value)}
+                className={fieldClass('businessName')}
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold text-ink mb-1">
+                Tipo de negócio{' '}
+                <span className="text-secondary font-normal">(opcional)</span>
+              </label>
+              <select
+                value={form.businessType}
+                onChange={(e) => update('businessType', e.target.value)}
+                className={fieldClass('businessType')}
+              >
+                {BUSINESS_TYPES.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setShowOptional(false)}
+              className="w-full text-xs text-secondary underline underline-offset-4 py-1"
+            >
+              Esconder estes campos
+            </button>
+          </>
+        )}
 
         <label className="flex items-start gap-3 cursor-pointer pt-2">
           <input
