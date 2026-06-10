@@ -485,7 +485,7 @@ export default function Home() {
             {overview.typicalMistakes?.length > 0 && (
               <div className="bg-paper border border-line rounded-2xl p-3 mb-4">
                 <p className="font-bold text-ink text-sm mb-2">
-                  Sinais típicos desse perfil
+                  Deslizes mais comuns desse perfil
                 </p>
                 <ul className="list-disc pl-5 space-y-1 text-secondary text-sm leading-snug">
                   {overview.typicalMistakes.map((m) => (

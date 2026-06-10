@@ -144,7 +144,7 @@ export default function ArchetypeProfile() {
         archetype.typicalMistakes.length > 0 && (
           <Card>
             <h3 className="font-bold text-ink mb-2">
-              Sinais típicos desse perfil
+              Deslizes mais comuns desse perfil
             </h3>
             <ul className="list-disc pl-5 space-y-1 text-secondary text-sm leading-relaxed">
               {archetype.typicalMistakes.map((m) => (
