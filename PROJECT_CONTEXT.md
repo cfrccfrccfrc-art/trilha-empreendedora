@@ -505,7 +505,7 @@ Os 13 `name` foram trocados de rótulos descritivos pra **quotes em 1ª pessoa e
 - `task_conversar_negocios_pares` (W3)
 - `task_decidir_1_aposta_6m` (W4)
 
-Total geral (após sessões de 09/06/2026): **39 task templates ativos, 42 companions, 15 archetypes ativos, 33 cases, 21 resources, 11 opportunities, 36 perguntas no diagnóstico**.
+Total geral (após sessões de 09-10/06/2026): **39 task templates ativos, 42 companions, 15 archetypes ativos, 35 cases, 21 resources, 11 opportunities — 163 itens curados, 36 perguntas no diagnóstico**.
 
 ### Personas dos cases ficaram brasileiras
 
@@ -650,6 +650,62 @@ Scoring:
 - 19 testes passando
 
 Decisão sobre #3 (pivot necessário, "tô há anos no mesmo e tá morrendo"): **não vai entrar agora**. Diferenciá-lo do `negocio_consolidado` exigiria 1-2 perguntas novas (e o questionário já chegou a 36). Reavaliar se GSC mostrar busca real por keywords tipo "negócio antigo perdendo cliente", "pivot pequeno empreendedor".
+
+### 15º arquétipo + atalho de skip + cadastro reduzido + tour refeito (sessão 09/06/2026, parte 2)
+
+**15º arquétipo: `cuidador_empreendedor`** ("Cuido de alguém em casa, preciso fazer o negócio caber nesse espaço")
+- Cobre mãe solo de criança pequena, cuidadora de pai idoso, esposa de pessoa adoecida
+- Distinto de `empreendedora_sobrecarregada` (gatilho: cuidado externo não delegável) e de `renda_complementar` (sem trabalho fixo paralelo)
+- Roadmap próprio (4 task templates novas) + 2 cases novos + 2 companions
+- **1 pergunta nova** adicionada ao diagnóstico (`q_home_motive`) com 5 opções pra capturar contexto de cuidador
+- Tieabreak + threshold ajustado pra evitar falsos positivos
+
+**Atalho de skip do diagnóstico** (Pacote ergonômico):
+- Em `/perfis/:id` e no modal de overview da Home, agora aparecem **3 caminhos** em vez de 2:
+  1. "Fazer o diagnóstico pra conferir" (caminho principal)
+  2. "Já me identifico, começar a trilha" (atalho — para cliente do Pescadores orientado por consultor, ou pessoa que voltou ao site e já sabe seu perfil)
+  3. "Conhecer outros perfis" (ghost)
+- Atalho monta `result` sintético com `archetypeId` + `firstTaskId` + flag `self_selected`, salva no sessionStorage e navega pra `/resultado`
+- Results detecta `self_selected` e mostra card com header "Perfil escolhido" lembrando que dá pra refazer o diagnóstico depois se quiser confirmar nuance
+- Telemetria: `archetype_profile_skip_diagnostic`, `archetype_overview_skip_diagnostic` (para medir adoção em 2-3 semanas)
+
+**Cadastro simplificado em `/salvar`** (4 obrigatórios → 2 obrigatórios + progressive disclosure):
+- Antes: nome + WhatsApp + cidade + bairro obrigatórios
+- Agora: só nome + WhatsApp. Cidade, bairro, nome do negócio, tipo: todos opcionais
+- Progressive disclosure: campos opcionais ficam escondidos atrás de "Adicionar mais detalhes (cidade, bairro, negócio) →". Quem quer fluxo rápido nem vê.
+- Microcopy do topo: "Só nome e WhatsApp são obrigatórios. O resto é opcional — quem preenche ajuda a rede de voluntários a encontrar você com oportunidades locais."
+
+**Auditoria + Pacote A+B de conteúdo**:
+- Gaps identificados: 3 arquétipos com 0 companions, 2 arquétipos com 1 case só, 6 tasks órfãs sem companion
+- Adicionado: 8 companions novos (Dona Carmen W1 talento_sem_postura_comercial · Mariana W1 digital_antes_da_base · Bia W1-W4 negocio_consolidado · Renata W2 + Dona Isabel W3 recomecou_apos_falir) + 2 cases novos (case_diego_barbeiro_reels_lucro e case_eduardo_hamburgueria_validacao)
+- `res_alimentacao_higiene_basica`: `needs_review` → `active` (era flag antiga de quando dependia de URL externa)
+
+**Tour `/apresentacao` refeito (Pacotes A+B)**:
+- Copy reescrito (PT+EN) com punch Steve Jobs-style: frases curtas, pausa dramática
+  - Hero: "Empreender no escuro." (era "Pra quem empreende no escuro")
+  - S1: "30 milhões. Quase todos no escuro." + cita Sebrae 800/BCB/YouTube 14k
+  - S3: "Khan Academy. Pra empreender." (era pergunta longa)
+  - S6: "Trilha educa. Pescadores fecha."
+  - S7: "Cada trilha terminada é um negócio menos no escuro."
+- Componentes novos no `Apresentacao.jsx`:
+  - `<Reveal>` — fade + slide-up por viewport, honra prefers-reduced-motion
+  - `<CounterUp>` — anima 0→N com easing ease-out cubic
+- Tipografia 2x maior: `text-5xl sm:6xl lg:7xl xl:8xl` com `tracking-tight`. Hero chega a `text-[11rem]` em XL.
+- ScaleNumbers atualizado pra contagens reais: **163 itens, 15 perfis, 42 companions, 0 atendentes** (era 184/13/28/0)
+- S1 quotes em stagger sequence (180ms entre cada) em vez de grid simultâneo
+- S6 (Pescadores) e S7 (Visão) viraram dark theme com blobs animados atrás
+- Dot pattern sutil de fundo (papel pautado) nas seções claras
+- PhoneFrames + Khan card + Funnel envolvidos em Reveal, shadow reforçado
+- FunnelVisual recolorido pra alto contraste contra `bg-ink`: gradient paper→highlight, textos ink-800, seta amarela com linecap round
+- Bug corrigido em S4: `s4Line2.replace('13','')` que gerava `"1515 perfis."` → agora regex `/^\d+/` substitui número pelo `activeCount` dinâmico
+
+**Saga DNS/SSL (custom domains)**:
+- Vercel mudou IP recomendado de `76.76.21.21` → `216.198.79.1` (apex) + CNAME `395f249898a0eb52.vercel-dns-017.com.` pro `www`
+- Migração de DNS feita no Registro.br
+- Cert SSL provisionou OK (Vercel chat confirmou via suporte)
+- **Mas o ISP fixo local bloqueia o IP novo do Vercel** — site fica fora do ar pra usuários nesse ISP, normal pra quem está em 4G/5G ou outro ISP
+- Workaround `commit 17a8d50` (removia redirect `.vercel.app → apex`) já revertido por `commit 08f70a1`
+- Para resolver no Wi-Fi do dono: trocar DNS local pra `1.1.1.1` (Cloudflare)
 
 ### 14º arquétipo: recomeço pós-falha (sessão 09/06/2026)
 

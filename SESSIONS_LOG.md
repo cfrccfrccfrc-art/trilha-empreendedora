@@ -334,3 +334,75 @@ Referências 14→15 atualizadas em: index.html, Home, ArchetypesIndex, Archetyp
 - Pergunta nova é trade-off justo (1 pergunta a mais pra cobrir público real de cuidadoras)
 - Pivot necessário fica fora do escopo atual (custo > benefício sem dado de busca real)
 - Pergunta q_home_business_reason desenhada pra não enviesar quem não é cuidador (3 das 4 opções não pontuam)
+
+
+---
+
+## Sessão 09-10/06/2026 (parte 2) — atalho skip + cadastro reduzido + tour refeito + saga DNS/SSL
+
+### O quê
+
+Sessão longa e híbrida com 4 frentes:
+1. UX (atalho de skip do diagnóstico, cadastro reduzido)
+2. Conteúdo (Pacote A+B de companions e cases)
+3. Visual (tour `/apresentacao` refeito com punch Steve Jobs)
+4. Operação (saga DNS/SSL com IP novo do Vercel + ISP bloqueando)
+
+### Atalho de skip do diagnóstico
+
+Em `/perfis/:id` e no modal de overview da Home: 2 → 3 caminhos.
+
+- Botão novo "Já me identifico, começar a trilha" pra quem foi orientado por consultor (Pescadores) ou já voltou ao site sabendo o perfil
+- Cria result sintético com `archetypeId` + `firstTaskId` + flag `self_selected` no sessionStorage
+- Results detecta flag e mostra "Perfil escolhido" lembrando que dá pra refazer com nuance depois
+- Telemetria nova: `archetype_profile_skip_diagnostic`, `archetype_overview_skip_diagnostic`
+
+### Cadastro reduzido
+
+`/salvar` foi de 4 obrigatórios → 2 obrigatórios + progressive disclosure.
+
+- Só nome + WhatsApp obrigatórios
+- Cidade, bairro, nome do negócio, tipo: opcionais
+- Campos opcionais escondidos atrás de "Adicionar mais detalhes →" — quem quer fluxo rápido nem vê
+- Microcopy explica que opcionais ajudam a rede de voluntários a encontrar a pessoa com oportunidades locais
+
+### Pacote A+B de conteúdo
+
+Gaps cobertos na auditoria:
+- 3 arquétipos passaram de 0 → 1+ companion (talento_sem_postura_comercial, digital_antes_da_base, negocio_consolidado)
+- 2 arquétipos passaram de 1 → 2 cases (digital_antes_da_base, ainda_e_ideia)
+- 6 tasks órfãs ganharam companion
+
+Total: 8 companions novos + 2 cases novos + fix do `res_alimentacao_higiene_basica` (sourceStatus `needs_review` → `active`).
+
+### Tour `/apresentacao` refeito (Pacotes A+B)
+
+Punch Steve Jobs-style:
+- Copy reescrito (PT+EN): frases curtas, pausa dramática, ex.: "Empreender no escuro." / "Khan Academy. Pra empreender." / "Trilha educa. Pescadores fecha."
+- Tipografia 2x maior: `text-5xl→8xl xl tracking-tight`. Hero chega `text-[11rem]`
+- Componentes novos: `<Reveal>` (fade + slide-up por viewport) + `<CounterUp>` (anima 0→N com easing)
+- Stagger nas linhas: eyebrow → title → body (150/350/500ms delay)
+- ScaleNumbers com números reais (163/15/42/0)
+- Quotes da S1 em stagger (180ms entre cada)
+- S6 (Pescadores) e S7 (Visão) viraram dark theme com blobs animados atrás
+- Dot pattern sutil de fundo nas seções claras (papel pautado)
+- FunnelVisual recolorido pra alto contraste em fundo dark: gradient paper→highlight, textos ink-800, seta amarela
+
+Bug do `s4Line2.replace('13','')` corrigido (gerava "1515 perfis." na S4).
+
+### Saga DNS/SSL (operacional, não código)
+
+- Vercel mudou IP recomendado: `76.76.21.21` → `216.198.79.1` (apex) + CNAME `395f249898a0eb52.vercel-dns-017.com.` (www)
+- Migração DNS feita no Registro.br ao longo de várias iterações
+- Cert SSL provisionou (Vercel chat confirmou). Mas o ISP fixo local do dono bloqueia o IP novo do Vercel
+- Workaround temporário no `vercel.json` (removia redirect `.vercel.app → apex` pra dono testar) foi commitado e revertido — `commit 17a8d50` + `commit 08f70a1`
+- Pra dono ver pelo Wi-Fi: trocar DNS local pra `1.1.1.1` (Cloudflare)
+- Site funciona normal pra quem está em 4G/5G ou outros ISPs
+
+### Decisões registradas
+
+- Cuidador é arquétipo próprio (não variante)
+- Atalho de skip é caminho válido e medível por telemetria; se 40%+ usarem, vale repensar tamanho do diagnóstico (36 perguntas)
+- Cadastro mínimo é nome+WhatsApp; outros campos opcionais com microcopy explicando benefício de preencher
+- Apresentação tem 7 seções + Hero; padrão é seção clara com pattern + S6/S7 dark com blob
+- Funnel sempre com contraste alto em qualquer fundo (gradient paper→highlight, textos ink-800)
