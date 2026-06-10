@@ -423,12 +423,13 @@ function FunnelVisual({ t }) {
   return (
     <Reveal>
     <div className="relative mx-auto max-w-md">
-      <div className="absolute inset-0 -m-8 rounded-full bg-highlight/15 blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 -m-8 rounded-full bg-highlight/25 blur-3xl pointer-events-none" />
       <svg viewBox="0 0 400 360" className="relative w-full drop-shadow-2xl">
         <defs>
+          {/* Gradient luminoso (paper → highlight) pra contrastar com bg-ink */}
           <linearGradient id="funnelGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#FFF4D6" />
-            <stop offset="1" stopColor="#4F7CAC" stopOpacity="0.18" />
+            <stop offset="0" stopColor="#FFFDF7" />
+            <stop offset="1" stopColor="#F7E27C" />
           </linearGradient>
           <clipPath id="pescadoresLogoClip">
             <circle cx="115" cy="333" r="18" />
@@ -440,13 +441,14 @@ function FunnelVisual({ t }) {
           stroke="#2B2A28"
           strokeWidth="3"
         />
+        {/* Todos os textos do funil em ink escuro sobre o gradient claro */}
         <text
           x="200"
-          y="80"
+          y="78"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="20"
-          fontWeight="700"
+          fontSize="22"
+          fontWeight="800"
           fill="#2B2A28"
         >
           {t.funnelTopLabel}
@@ -456,19 +458,20 @@ function FunnelVisual({ t }) {
           y="135"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="17"
-          fontWeight="600"
-          fill="#5A574F"
+          fontSize="18"
+          fontWeight="700"
+          fill="#2B2A28"
         >
           {t.funnelMidLabel}
         </text>
         <text
           x="200"
-          y="180"
+          y="178"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="15"
-          fill="#5A574F"
+          fontSize="16"
+          fontWeight="700"
+          fill="#2B2A28"
         >
           {t.funnelMid2Label}
         </text>
@@ -477,33 +480,39 @@ function FunnelVisual({ t }) {
           y="215"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="13"
-          fill="#5A574F"
+          fontSize="14"
+          fontWeight="600"
+          fill="#2B2A28"
         >
           {t.funnelBottomLabel}
         </text>
+        {/* Seta entre funil e Pescadores: amarelo highlight pra brilhar no fundo dark */}
         <path
           d="M 200 240 L 200 290"
-          stroke="#2B2A28"
-          strokeWidth="3"
-          strokeDasharray="4 4"
+          stroke="#F7E27C"
+          strokeWidth="3.5"
+          strokeDasharray="5 4"
+          strokeLinecap="round"
           fill="none"
         />
-        <polygon points="200,300 195,290 205,290" fill="#2B2A28" />
+        <polygon points="200,302 193,290 207,290" fill="#F7E27C" />
+        {/* Retângulo final do Pescadores com fundo bem escuro e texto claro */}
         <rect
-          x="95"
+          x="80"
           y="305"
-          width="210"
+          width="240"
           height="55"
           rx="12"
           fill="#0B1F3A"
+          stroke="#F7E27C"
+          strokeWidth="1.5"
         />
         <circle
           cx="115"
           cy="333"
           r="19"
           fill="#FFFDF7"
-          stroke="#D8EEF5"
+          stroke="#F7E27C"
           strokeWidth="1.5"
         />
         <image
@@ -520,9 +529,9 @@ function FunnelVisual({ t }) {
           y="338"
           textAnchor="middle"
           fontFamily="Nunito, sans-serif"
-          fontSize="16"
-          fontWeight="700"
-          fill="#D8EEF5"
+          fontSize="17"
+          fontWeight="800"
+          fill="#FFFDF7"
         >
           {t.funnelOutLabel}
         </text>
