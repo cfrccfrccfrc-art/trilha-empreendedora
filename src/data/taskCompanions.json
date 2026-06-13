@@ -4,18 +4,18 @@
     "taskTemplateId": "task_anotar_7_dias",
     "archetypeId": "vende_sem_lucro",
     "personaName": "Dona Marlene",
-    "region": "Brasil — Olinda (PE)",
+    "region": "Brasil - Olinda (PE)",
     "personaContext": "Tem uma quitanda no bairro há 6 anos. Vende verduras, frutas e ovos. Decidiu anotar entrada e saída por 7 dias depois de perceber que vendia muito mas o caixa nunca fechava no fim do mês.",
     "stumbles": [
       {
         "moment": "Dia 1",
-        "whatHappened": "Começou o dia confiante. Anotou todas as vendas até o almoço. Mas só lembrou de anotar o que pagou na padaria do bairro pra revender pão quando ia dormir — e não tinha mais o valor exato. Anotou 'mais ou menos R$ 12'.",
+        "whatHappened": "Começou o dia confiante. Anotou todas as vendas até o almoço. Mas só lembrou de anotar o que pagou na padaria do bairro pra revender pão quando ia dormir - e não tinha mais o valor exato. Anotou 'mais ou menos R$ 12'.",
         "whatHelped": "Colocou um caderninho ao lado da maquininha, com uma caneta presa por barbante. Combinou com ela mesma uma regra: só anota quando o dinheiro entra ou sai, na hora. Nunca depois."
       },
       {
         "moment": "Dia 3",
         "whatHappened": "Achou que estava bem. Mas no relatório da maquininha viu que recebeu R$ 14 a menos do que tinha somado. Era a taxa do cartão que ela não estava considerando.",
-        "whatHelped": "Passou a anotar o valor que entrou na conta dela, e não o valor que aparecia na maquininha. A diferença é a taxa — e ela faz parte do custo, não some."
+        "whatHelped": "Passou a anotar o valor que entrou na conta dela, e não o valor que aparecia na maquininha. A diferença é a taxa - e ela faz parte do custo, não some."
       },
       {
         "moment": "Dia 5",
@@ -23,7 +23,7 @@
         "whatHelped": "Criou duas colunas no caderno: 'já recebi' e 'vão me pagar'. Só a primeira conta no fechamento da semana."
       }
     ],
-    "breakthrough": "No domingo de noite, somou tudo: entraram R$ 1.480, saíram R$ 1.220. Sobrou R$ 260 — e ela jurava que tinha 'uns R$ 800' no fim de cada semana. A diferença não estava na venda. Estava em pequenos custos que ela não enxergava: embalagem, sacolas, gelo pro peixe, taxa de cartão, passagem do filho que ajuda, reposição do que quebra e o pão da padaria que ela come no almoço mas saía do caixa.",
+    "breakthrough": "No domingo de noite, somou tudo: entraram R$ 1.480, saíram R$ 1.220. Sobrou R$ 260 - e ela jurava que tinha 'uns R$ 800' no fim de cada semana. A diferença não estava na venda. Estava em pequenos custos que ela não enxergava: embalagem, sacolas, gelo pro peixe, taxa de cartão, passagem do filho que ajuda, reposição do que quebra e o pão da padaria que ela come no almoço mas saía do caixa.",
     "outcome": "Marlene não mexeu em preço ainda. Decidiu primeiro abrir uma conta separada do negócio, antes de qualquer outra coisa. Disse pra filha: 'agora eu vejo o dinheiro'.",
     "whenToAskForHelp": "Se depois de 7 dias você ainda confundir 'já recebi' com 'vão me pagar' ou achar que tem custos importantes que escapam, peça ajuda. Um voluntário da rede pode revisar suas anotações com você em uma sessão de 30 minutos.",
     "relatedCases": ["case_dona_marlene_quitanda"],
@@ -38,7 +38,7 @@
     "taskTemplateId": "task_custo_3_produtos",
     "archetypeId": "vende_sem_lucro",
     "personaName": "Dona Marlene",
-    "region": "Brasil — Olinda (PE)",
+    "region": "Brasil - Olinda (PE)",
     "personaContext": "Já fez os 7 dias de anotação. Agora vai calcular o custo real de 3 produtos que mais vende: banana, ovo caipira e peixe.",
     "stumbles": [
       {
@@ -57,7 +57,7 @@
         "whatHelped": "Dividiu o gelo da semana (R$ 210) pelo peixe vendido na semana (15 kg). Deu R$ 14 de gelo por kg. O peixe que ela 'achava que dava 30% de lucro' na verdade dava só 8%."
       }
     ],
-    "breakthrough": "O peixe, que ela achava que era o produto mais lucrativo, era o que menos sobrava. A banana, que ela achava 'pouca coisa', era o melhor. O custo escondido decide tudo — e quase sempre é o que ela paga em dinheiro vivo todo dia (gelo, sacola, taxa) e nunca anota.",
+    "breakthrough": "O peixe, que ela achava que era o produto mais lucrativo, era o que menos sobrava. A banana, que ela achava 'pouca coisa', era o melhor. O custo escondido decide tudo - e quase sempre é o que ela paga em dinheiro vivo todo dia (gelo, sacola, taxa) e nunca anota.",
     "outcome": "Decidiu que antes de mexer em preço, ia conversar com 2 fornecedores: o do gelo (achar mais barato no atacado) e o do peixe (testar comprar 20% menos por semana, pra reduzir sobra).",
     "whenToAskForHelp": "Se algum produto deu margem abaixo de 10%, peça ajuda antes de aumentar preço. Pode ser que o problema seja custo escondido grande (gelo, frete, perda) e não preço baixo.",
     "relatedCases": ["case_dona_marlene_quitanda"],
@@ -72,7 +72,7 @@
     "taskTemplateId": "task_revisar_precos",
     "archetypeId": "vende_sem_lucro",
     "personaName": "Dona Marlene",
-    "region": "Brasil — Olinda (PE)",
+    "region": "Brasil - Olinda (PE)",
     "personaContext": "Já calculou custo dos 3 produtos. Agora vai revisar preços com base no número real, não no chute.",
     "stumbles": [
       {
@@ -92,7 +92,7 @@
       }
     ],
     "breakthrough": "Mexer em preço não é tudo de uma vez. É no produto que tem margem ruim E que o cliente não compra por preço. Quando os dois batem, dá pra ajustar sem perder cliente.",
-    "outcome": "Em 3 semanas, lucro semanal subiu R$ 130 só com ajustes em peixe e ovo. A banana ficou no mesmo preço — não fazia sentido mexer no que já tinha boa margem e era o que sustentava a freguesia.",
+    "outcome": "Em 3 semanas, lucro semanal subiu R$ 130 só com ajustes em peixe e ovo. A banana ficou no mesmo preço - não fazia sentido mexer no que já tinha boa margem e era o que sustentava a freguesia.",
     "whenToAskForHelp": "Se você ajustou preço e perdeu mais de 20% de cliente em 2 semanas, peça ajuda. Pode ser que o ajuste foi grande demais ou que o produto era mais sensível a preço do que parecia.",
     "relatedCases": ["case_dona_marlene_quitanda"],
     "relatedResources": ["res_precificacao_simples"],
@@ -106,8 +106,8 @@
     "taskTemplateId": "task_separar_contas",
     "archetypeId": "vende_sem_lucro",
     "personaName": "Dona Marlene",
-    "region": "Brasil — Olinda (PE)",
-    "personaContext": "Última missão dos 30 dias: separar dinheiro pessoal e do negócio de vez. Já anotou, calculou custo, ajustou preço — agora precisa enxergar o lucro real sem mistura.",
+    "region": "Brasil - Olinda (PE)",
+    "personaContext": "Última missão dos 30 dias: separar dinheiro pessoal e do negócio de vez. Já anotou, calculou custo, ajustou preço - agora precisa enxergar o lucro real sem mistura.",
     "stumbles": [
       {
         "moment": "Abrir a conta",
@@ -121,13 +121,13 @@
       },
       {
         "moment": "Pró-labore vs. tirar dinheiro",
-        "whatHappened": "Confundiu pró-labore com 'pegar quando precisa'. Se sobrava na conta do negócio, achava que era dela. Acabou o mês com R$ 0 sobrando — gastou tudo achando que era lucro.",
+        "whatHappened": "Confundiu pró-labore com 'pegar quando precisa'. Se sobrava na conta do negócio, achava que era dela. Acabou o mês com R$ 0 sobrando - gastou tudo achando que era lucro.",
         "whatHelped": "Aprendeu a diferença com a sobrinha que faz contabilidade: pró-labore é valor fixo combinado. Lucro é o que sobra DEPOIS do pró-labore. Os dois são da Marlene, mas precisam ser separados pra ela enxergar."
       }
     ],
     "breakthrough": "No fim do primeiro mês com conta separada e pró-labore fixo de R$ 800, sobrou R$ 480 na conta do negócio. Real, contado, sem mistura. Pela primeira vez em 6 anos, Marlene viu o LUCRO de um mês inteiro, separado do que ela usa pra viver.",
     "outcome": "Decidiu deixar a sobra na conta como reserva. 'Se quebrar a maquininha ou a geladeira, agora tem dinheiro pra resolver sem pegar empréstimo'. Pela primeira vez se sentiu dona do negócio, não dependente dele.",
-    "whenToAskForHelp": "Se você não consegue resistir de pegar dinheiro do negócio fora do pró-labore combinado, peça ajuda. Tem voluntário que ajuda a estruturar essa parte — não é falta de disciplina, é falta de método.",
+    "whenToAskForHelp": "Se você não consegue resistir de pegar dinheiro do negócio fora do pró-labore combinado, peça ajuda. Tem voluntário que ajuda a estruturar essa parte - não é falta de disciplina, é falta de método.",
     "relatedCases": ["case_dona_marlene_quitanda"],
     "relatedResources": ["res_caixa_basico"],
     "caseAuthenticityType": "fictionalized_composite_case",
@@ -151,7 +151,7 @@
       {
         "moment": "Pessoa 4",
         "whatHappened": "Abordou uma vizinha que ela mal conhecia. Perguntou 'você compraria uma peça sob medida?'. A vizinha disse não. Ficou desanimada e quase parou.",
-        "whatHelped": "No fim do dia, releu o que tinha anotado. A vizinha disse que NÃO ia comprar peça sob medida porque já tinha tudo. Mas comentou de passagem: 'eu acabei de pôr 4 calças pra ajustar na costureira do mercado, paguei caro'. Aline percebeu que o serviço de ajuste tinha demanda — só não era o que ela tinha perguntado."
+        "whatHelped": "No fim do dia, releu o que tinha anotado. A vizinha disse que NÃO ia comprar peça sob medida porque já tinha tudo. Mas comentou de passagem: 'eu acabei de pôr 4 calças pra ajustar na costureira do mercado, paguei caro'. Aline percebeu que o serviço de ajuste tinha demanda - só não era o que ela tinha perguntado."
       },
       {
         "moment": "Pessoa 7",
@@ -174,7 +174,7 @@
     "taskTemplateId": "task_capital_o_que_comprar",
     "archetypeId": "precisa_capital",
     "personaName": "José",
-    "region": "Brasil — Salvador (BA)",
+    "region": "Brasil - Salvador (BA)",
     "personaContext": "Tem uma padaria de bairro há 2 anos. Pensou em pegar microcrédito de R$ 12.000 pra trocar o forno. Antes de aceitar, decidiu listar exatamente o que precisava comprar e calcular se valia.",
     "stumbles": [
       {
@@ -193,7 +193,7 @@
         "whatHelped": "Voltou ao caderno de anotação dele. Tirou a média do sábado: vendia R$ 380 e travava na demanda às 10h. Concluiu: se conseguisse atender mais 30% do sábado, ganharia R$ 100/sábado, R$ 400/mês. Não R$ 800."
       }
     ],
-    "breakthrough": "Com R$ 400/mês de ganho extra, o forno novo de R$ 11.300 se pagaria em 28 meses. O forno usado de R$ 6.200 se pagaria em 15 meses. José percebeu que a versão usada era a decisão melhor — e que ele NÃO precisaria de microcrédito porque tinha R$ 4.000 guardados e o resto cabia em parcela do cartão.",
+    "breakthrough": "Com R$ 400/mês de ganho extra, o forno novo de R$ 11.300 se pagaria em 28 meses. O forno usado de R$ 6.200 se pagaria em 15 meses. José percebeu que a versão usada era a decisão melhor - e que ele NÃO precisaria de microcrédito porque tinha R$ 4.000 guardados e o resto cabia em parcela do cartão.",
     "outcome": "Comprou o forno usado. Não pegou empréstimo. Em 4 meses já estava atendendo o sábado todo. Disse pra esposa: 'se eu tivesse pego os R$ 12.000, agora eu pagava R$ 600 de prestação por nada'.",
     "whenToAskForHelp": "Se depois dessa lista a parcela de qualquer crédito que você está pensando passar de 25% da sobra mensal do negócio, peça ajuda antes de assinar. Tem voluntário da rede que revisa proposta de crédito de graça.",
     "relatedCases": ["case_jose_padaria_equipamento"],
@@ -228,7 +228,7 @@
       }
     ],
     "breakthrough": "Joana percebeu que NÃO precisava de planilha sofisticada nem de funcionário novo. Precisava de uma folha na parede e uma regra: pedido só existe quando está escrito ali. Tudo que não tá escrito não foi confirmado.",
-    "outcome": "Implementou na semana seguinte. Em 2 semanas, zero pedido perdido. Manteve o caderno mesmo nos dias parados — vira um hábito.",
+    "outcome": "Implementou na semana seguinte. Em 2 semanas, zero pedido perdido. Manteve o caderno mesmo nos dias parados - vira um hábito.",
     "whenToAskForHelp": "Se você desenhou o fluxo e ainda não consegue identificar onde o pedido se perde, peça ajuda. Às vezes precisa de um olhar de fora pra ver o gargalo.",
     "relatedCases": ["case_keisha_lanches_atraso"],
     "relatedResources": ["res_organizacao_pedidos"],
@@ -242,13 +242,13 @@
     "taskTemplateId": "task_listar_tarefas_so_eu",
     "archetypeId": "empreendedora_sobrecarregada",
     "personaName": "Dona Lúcia",
-    "region": "Brasil — Fortaleza (CE)",
-    "personaContext": "Faz cabelo na cozinha de casa. Cuida sozinha de 3 filhos. Decidiu listar tudo que fazia em uma semana — pra ver o que era realmente dela e o que poderia sair do prato.",
+    "region": "Brasil - Fortaleza (CE)",
+    "personaContext": "Faz cabelo na cozinha de casa. Cuida sozinha de 3 filhos. Decidiu listar tudo que fazia em uma semana - pra ver o que era realmente dela e o que poderia sair do prato.",
     "stumbles": [
       {
         "moment": "Primeiro dia da lista",
         "whatHappened": "Tentou listar de uma vez tudo que fez no dia anterior. Esqueceu metade. Ficou frustrada achando que 'minha cabeça não funciona'.",
-        "whatHelped": "Mudou de tática: durante 2 dias, anotou tarefa por tarefa NA HORA que fazia. No fim de 2 dias, tinha 47 tarefas anotadas. A memória não tinha falhado — o volume é que era maior do que ela imaginava."
+        "whatHelped": "Mudou de tática: durante 2 dias, anotou tarefa por tarefa NA HORA que fazia. No fim de 2 dias, tinha 47 tarefas anotadas. A memória não tinha falhado - o volume é que era maior do que ela imaginava."
       },
       {
         "moment": "Marcando 'só eu'",
@@ -277,21 +277,21 @@
     "archetypeId": "produto_bom_vitrine_fraca",
     "personaName": "Patrícia",
     "region": "Brasil, Florianópolis (SC)",
-    "personaContext": "Faz brincos artesanais. Vende muito em feira porque cliente vê de perto. No Instagram, posta foto na mesa da cozinha com luz amarela e fundo bagunçado — 200 seguidores, zero venda online em 6 meses.",
+    "personaContext": "Faz brincos artesanais. Vende muito em feira porque cliente vê de perto. No Instagram, posta foto na mesa da cozinha com luz amarela e fundo bagunçado - 200 seguidores, zero venda online em 6 meses.",
     "stumbles": [
       {
         "moment": "Tentativa 1: a mesa da cozinha",
-        "whatHappened": "Tirou as primeiras fotos no mesmo lugar de sempre — mesa da cozinha, lâmpada amarela, fundo com louça. Olhou as fotos e percebeu que nem ela achava bonito.",
+        "whatHappened": "Tirou as primeiras fotos no mesmo lugar de sempre - mesa da cozinha, lâmpada amarela, fundo com louça. Olhou as fotos e percebeu que nem ela achava bonito.",
         "whatHelped": "Não era questão de câmera. Era luz e fundo. Mudou de lugar: foi pra perto da janela, na sala, com a TV desligada atrás (fundo escuro neutro). Mesma câmera, fotos completamente diferentes."
       },
       {
         "moment": "Tentativa 2: a foto perfeita demais",
         "whatHappened": "Achou que precisava editar muito, baixou um app, gastou 20 minutos por foto colocando filtro, removendo fundo, ajustando cor. As fotos ficaram artificiais e o brinco perdeu a textura do crochê.",
-        "whatHelped": "Voltou pra foto original com mínima edição (só luz e contraste). Percebeu que o que vendia era a textura — e edição demais matava isso."
+        "whatHelped": "Voltou pra foto original com mínima edição (só luz e contraste). Percebeu que o que vendia era a textura - e edição demais matava isso."
       },
       {
         "moment": "Tentativa 3: foto sem contexto",
-        "whatHappened": "Tirou ótima foto do produto sozinho. Postou. Pouco engajamento. Não estava claro o tamanho do brinco — gente perguntava 'é grande ou pequeno?' no comentário.",
+        "whatHappened": "Tirou ótima foto do produto sozinho. Postou. Pouco engajamento. Não estava claro o tamanho do brinco - gente perguntava 'é grande ou pequeno?' no comentário.",
         "whatHelped": "Tirou uma segunda foto: brinco na orelha dela mesma, no espelho. Tamanho ficou óbvio. As perguntas de tamanho desapareceram, as vendas começaram."
       }
     ],
@@ -310,7 +310,7 @@
     "taskTemplateId": "task_lista_zap_50_pessoas",
     "archetypeId": "vende_comunidade_nao_online",
     "personaName": "Marina",
-    "region": "Brasil — Belo Horizonte (MG)",
+    "region": "Brasil - Belo Horizonte (MG)",
     "personaContext": "Doceira no bairro Santa Tereza. Vende muito boca a boca, mas nunca conseguiu sair do bairro. Decidiu começar pelo zap antes de tentar Instagram de novo.",
     "stumbles": [
       {
@@ -326,10 +326,10 @@
       {
         "moment": "A trava dos 50",
         "whatHappened": "Achou que precisava chegar a 50 contatos antes de começar. Travou no número 23 porque não queria 'fazer corpo mole'. Não mandou nenhuma mensagem em 2 semanas.",
-        "whatHelped": "Decidiu começar com 18 — só os que já tinham respondido o zap dela alguma vez no último mês. Mandou a primeira novidade. Vendeu 14 brigadeiros. Os 18 viraram 32 em 3 semanas porque eles próprios indicaram."
+        "whatHelped": "Decidiu começar com 18 - só os que já tinham respondido o zap dela alguma vez no último mês. Mandou a primeira novidade. Vendeu 14 brigadeiros. Os 18 viraram 32 em 3 semanas porque eles próprios indicaram."
       }
     ],
-    "breakthrough": "Lista pequena com gente engajada vale mais que lista grande de gente fria. E lista de transmissão (não grupo) protege o canal — você manda, eles respondem direto pra você, sem virar bagunça pública.",
+    "breakthrough": "Lista pequena com gente engajada vale mais que lista grande de gente fria. E lista de transmissão (não grupo) protege o canal - você manda, eles respondem direto pra você, sem virar bagunça pública.",
     "outcome": "Em 1 mês a lista cresceu pra 47 contatos. Marina mandava 1 mensagem por semana, sempre na quinta de manhã. Faturamento do bairro subiu 22%. Ainda nem tinha aberto Instagram.",
     "whenToAskForHelp": "Se 3 ou mais pessoas saírem da lista em 1 semana, peça ajuda. Provavelmente é frequência demais ou tom errado, não falta de interesse no produto.",
     "relatedCases": ["case_marina_doceira_comunidade"],
@@ -344,7 +344,7 @@
     "taskTemplateId": "task_proposta_b2b_simples",
     "archetypeId": "potencial_b2b_local",
     "personaName": "Juliana",
-    "region": "Brasil — Curitiba (PR)",
+    "region": "Brasil - Curitiba (PR)",
     "personaContext": "Faz geleia artesanal de morango, manga e pimenta. Já mapeou 10 cafés da região. Agora vai escrever a primeira proposta pra fechar o primeiro café cliente.",
     "stumbles": [
       {
@@ -355,7 +355,7 @@
       {
         "moment": "Segunda proposta com preço de varejo",
         "whatHappened": "Refez incluindo preço: R$ 22 o pote, igual ela vendia na feira. Mandou pro segundo café. O dono respondeu educadamente: 'no varejo não cabe pra mim, eu precisaria revender por R$ 35 e ninguém compra geleia artesanal por esse valor'.",
-        "whatHelped": "Entendeu o problema: o café precisa de margem. Se ela vende a R$ 22 e o café revende a R$ 28 (preço que cabe no consumidor), ele só ganha R$ 6 — não vale o trabalho dele. Refez com preço de revenda: R$ 14 o pote pra eles. Margem de 50% pro café."
+        "whatHelped": "Entendeu o problema: o café precisa de margem. Se ela vende a R$ 22 e o café revende a R$ 28 (preço que cabe no consumidor), ele só ganha R$ 6 - não vale o trabalho dele. Refez com preço de revenda: R$ 14 o pote pra eles. Margem de 50% pro café."
       },
       {
         "moment": "Terceira proposta sem prazo",
@@ -378,7 +378,7 @@
     "taskTemplateId": "task_dois_dias_fixos",
     "archetypeId": "renda_complementar",
     "personaName": "Roberta",
-    "region": "Brasil — Niterói (RJ)",
+    "region": "Brasil - Niterói (RJ)",
     "personaContext": "Professora de escola pública há 12 anos. Faz brigadeiro gourmet pra renda extra desde 2023. Trabalha de 7h às 14h e ainda corrige prova à noite. Vendia 'quando dava' e nunca crescia. Decidiu marcar 2 dias fixos por semana só pro brigadeiro.",
     "stumbles": [
       {
@@ -388,7 +388,7 @@
       },
       {
         "moment": "Segunda semana: terça à noite e domingo de manhã",
-        "whatHappened": "Trocou pra terça à noite (depois das aulas) e domingo de manhã antes de todo mundo acordar. Domingo cumpriu — produziu 80 brigadeiros. Mas terça travou: chegava cansada da escola, sentava na cadeira pra descansar '5 minutos' e dormia até a hora de jantar.",
+        "whatHappened": "Trocou pra terça à noite (depois das aulas) e domingo de manhã antes de todo mundo acordar. Domingo cumpriu - produziu 80 brigadeiros. Mas terça travou: chegava cansada da escola, sentava na cadeira pra descansar '5 minutos' e dormia até a hora de jantar.",
         "whatHelped": "Entendeu que terça à noite era contra a sua energia, não a favor. O cansaço da semana letiva não respeitava plano nenhum."
       },
       {
@@ -397,9 +397,9 @@
         "whatHelped": "Ficou claro: ela rendia mais de manhã cedo (antes do dia atropelar) do que à noite (depois do dia esgotar). Energia vinha primeiro, agenda depois."
       }
     ],
-    "breakthrough": "Dia fixo precisa caber na sua ENERGIA, não na sua agenda. Manhã antes de todo mundo > noite cansada. E precisa ser dia que não compete com responsabilidade de família — quinta cedo é dela, domingo manhã é dela. Ninguém precisa de nada nesse horário.",
+    "breakthrough": "Dia fixo precisa caber na sua ENERGIA, não na sua agenda. Manhã antes de todo mundo > noite cansada. E precisa ser dia que não compete com responsabilidade de família - quinta cedo é dela, domingo manhã é dela. Ninguém precisa de nada nesse horário.",
     "outcome": "Em 1 mês com os 2 dias fixos (quinta cedo + domingo manhã), Roberta produziu o dobro do que produzia 'quando dava'. Faturamento do brigadeiro subiu 35%. Conseguiu pagar o curso de inglês da filha sem precisar mexer no salário da escola.",
-    "whenToAskForHelp": "Se você tentou 3 horários diferentes em 3 semanas e nenhum funcionou, peça ajuda. Pode ser que o problema não seja horário — pode ser que o tipo de tarefa que você marcou pra esse dia esteja errado, ou que você precise de outro tipo de apoio antes de tentar mais.",
+    "whenToAskForHelp": "Se você tentou 3 horários diferentes em 3 semanas e nenhum funcionou, peça ajuda. Pode ser que o problema não seja horário - pode ser que o tipo de tarefa que você marcou pra esse dia esteja errado, ou que você precise de outro tipo de apoio antes de tentar mais.",
     "relatedResources": ["res_caixa_basico"],
     "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
@@ -411,7 +411,7 @@
     "taskTemplateId": "task_lista_servicos_precos",
     "archetypeId": "bico_pode_virar",
     "personaName": "Carlos",
-    "region": "Brasil — Campinas (SP)",
+    "region": "Brasil - Campinas (SP)",
     "personaContext": "Eletricista há 18 anos, sempre por bico e indicação. Cobra 'no olho' e tem cliente que volta. Mas nunca cresceu porque trava na hora de passar preço. Decidiu finalmente escrever lista de serviço com preço.",
     "stumbles": [
       {
@@ -427,12 +427,12 @@
       {
         "moment": "A negociação por simpatia",
         "whatHappened": "Cliente antigo perguntou preço e respondeu 'pô Carlos, mas a gente se conhece há tanto tempo'. Carlos baixou pra metade. Saiu chateado: o serviço deu o mesmo trabalho do habitual e ele ganhou R$ 80 a menos.",
-        "whatHelped": "Decidiu: cliente antigo recebe 10% de desconto, escrito na lista. Acima disso, não negocia mais. 'Conhecer há tempo' não muda o custo do meu trabalho — só justifica descontinho de respeito."
+        "whatHelped": "Decidiu: cliente antigo recebe 10% de desconto, escrito na lista. Acima disso, não negocia mais. 'Conhecer há tempo' não muda o custo do meu trabalho - só justifica descontinho de respeito."
       }
     ],
-    "breakthrough": "Carlos descobriu que a maior parte do prejuízo dele não estava em cobrar pouco — estava em cobrar 'depois eu vejo' e gastar horas em orçamento que não fechava. Lista escrita não é só preço, é filtro. Cliente sério aceita preço e prazo. Cliente que vai 'pensar' geralmente é cliente que não vai voltar.",
-    "outcome": "Faturamento do mesmo número de visitas aumentou 35% em 2 meses. Não porque ele cobrou mais — porque parou de fazer 'instalações simples' gratuitas que viravam horas de trabalho. E começou a fechar mais serviços grandes com a taxa de visita que filtrava só quem ia decidir.",
-    "whenToAskForHelp": "Se você fez 3 versões da lista e ainda trava na hora de passar preço pro cliente, peça ajuda. Pode não ser falta de preço escrito — pode ser postura comercial, e tem voluntário da rede que ajuda nessa parte específica.",
+    "breakthrough": "Carlos descobriu que a maior parte do prejuízo dele não estava em cobrar pouco - estava em cobrar 'depois eu vejo' e gastar horas em orçamento que não fechava. Lista escrita não é só preço, é filtro. Cliente sério aceita preço e prazo. Cliente que vai 'pensar' geralmente é cliente que não vai voltar.",
+    "outcome": "Faturamento do mesmo número de visitas aumentou 35% em 2 meses. Não porque ele cobrou mais - porque parou de fazer 'instalações simples' gratuitas que viravam horas de trabalho. E começou a fechar mais serviços grandes com a taxa de visita que filtrava só quem ia decidir.",
+    "whenToAskForHelp": "Se você fez 3 versões da lista e ainda trava na hora de passar preço pro cliente, peça ajuda. Pode não ser falta de preço escrito - pode ser postura comercial, e tem voluntário da rede que ajuda nessa parte específica.",
     "relatedResources": ["res_precificacao_simples"],
     "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
@@ -449,7 +449,7 @@
     "stumbles": [
       {
         "moment": "Primeira oferta vaga",
-        "whatHappened": "Escreveu: 'faço ajustes de roupa, qualidade e preço justo'. Mandou pra duas mães da escola. Resposta: 'que legal' — sem nenhuma pergunta, sem nenhuma venda.",
+        "whatHappened": "Escreveu: 'faço ajustes de roupa, qualidade e preço justo'. Mandou pra duas mães da escola. Resposta: 'que legal' - sem nenhuma pergunta, sem nenhuma venda.",
         "whatHelped": "Percebeu: 'qualidade' e 'preço justo' não dizem nada. Cliente não pede o que não consegue pedir. Reescreveu com itens específicos."
       },
       {
@@ -463,7 +463,7 @@
         "whatHelped": "Definiu por escrito: 'simples = barra, ajuste de cintura, troca de elástico, troca de botão. Complexo = corte de manga, ajuste profundo, troca de zíper.' Mandou junto com a oferta."
       }
     ],
-    "breakthrough": "Oferta clara não é genérica, é específica. O que cabe em três linhas: o que é cada categoria, quanto custa cada uma, em quanto tempo fica pronto. Cliente não compra promessa — compra previsibilidade.",
+    "breakthrough": "Oferta clara não é genérica, é específica. O que cabe em três linhas: o que é cada categoria, quanto custa cada uma, em quanto tempo fica pronto. Cliente não compra promessa - compra previsibilidade.",
     "outcome": "Mandou a quarta versão pra 12 contatos. Recebeu 4 pedidos na primeira semana, todos sabendo exatamente o que iam pagar e quando ia ficar pronto. Zero pergunta de preço.",
     "whenToAskForHelp": "Se cliente faz mais de 2 perguntas pra entender sua oferta, peça ajuda. Provavelmente está vaga demais ou tem categoria escondida que você não nomeou.",
     "relatedCases": ["case_amina_costureira_validacao"],
@@ -497,9 +497,9 @@
         "whatHelped": "Em cada foto, escreveu o preço da categoria correspondente. Cliente já vê na hora se cabe no bolso."
       }
     ],
-    "breakthrough": "Catálogo bom não é portfólio completo. É 6 fotos das categorias mais comuns, com preço e prazo escritos. Quem quer algo diferente, pergunta — e aí você cobra orçamento sob medida.",
+    "breakthrough": "Catálogo bom não é portfólio completo. É 6 fotos das categorias mais comuns, com preço e prazo escritos. Quem quer algo diferente, pergunta - e aí você cobra orçamento sob medida.",
     "outcome": "Catálogo virou padrão. Ela manda em 2 segundos quando alguém pergunta 'me manda fotos?'. Conversões dispararam: 60% de quem recebe vira pedido.",
-    "whenToAskForHelp": "Se você fez 3 versões do catálogo e cada cliente que recebe ainda pergunta o preço, peça ajuda — algo não está claro visualmente.",
+    "whenToAskForHelp": "Se você fez 3 versões do catálogo e cada cliente que recebe ainda pergunta o preço, peça ajuda - algo não está claro visualmente.",
     "relatedCases": ["case_amina_costureira_validacao"],
     "relatedResources": ["res_fotos_celular"],
     "caseAuthenticityType": "fictionalized_composite_case",
@@ -527,12 +527,12 @@
       },
       {
         "moment": "Primeira venda mas com prejuízo",
-        "whatHappened": "A primeira cliente pediu 3 ajustes. Aline, animada, deu 'desconto de boas-vindas' pra fechar. Trabalhou 4 horas. Calculou no fim: ganhou R$ 9 por hora — abaixo do que ganha como babá ocasional.",
+        "whatHappened": "A primeira cliente pediu 3 ajustes. Aline, animada, deu 'desconto de boas-vindas' pra fechar. Trabalhou 4 horas. Calculou no fim: ganhou R$ 9 por hora - abaixo do que ganha como babá ocasional.",
         "whatHelped": "Aceitou que a primeira venda é validação de mercado, não maximização de lucro. Mas anotou: nada de desconto na próxima. Preço da oferta é o preço."
       }
     ],
     "breakthrough": "Primeira venda real ensina mais que três meses planejando. Mesmo com 'desconto bobo de boas-vindas', Aline aprendeu: que tem mercado, que cliente paga, que prazo de 3 dias é viável, e que o preço cheio é o que tem que ser cobrado da segunda em diante.",
-    "outcome": "Em 30 dias, fechou 9 ajustes. Faturou R$ 320 — pequeno, mas real. Tomou decisão informada: vai investir nos primeiros R$ 200 numa máquina de costura básica usada (R$ 180 numa OLX) em vez de máquina nova de R$ 2.200.",
+    "outcome": "Em 30 dias, fechou 9 ajustes. Faturou R$ 320 - pequeno, mas real. Tomou decisão informada: vai investir nos primeiros R$ 200 numa máquina de costura básica usada (R$ 180 numa OLX) em vez de máquina nova de R$ 2.200.",
     "whenToAskForHelp": "Se você fez 5 abordagens personalizadas e ninguém respondeu nem com 'não', peça ajuda. Pode ser canal errado (zap vs presencial vs Instagram) ou público errado.",
     "relatedCases": ["case_amina_costureira_validacao"],
     "relatedResources": ["res_validar_ideia"],
@@ -551,13 +551,13 @@
     "stumbles": [
       {
         "moment": "Planilha grande demais",
-        "whatHappened": "Abriu Google Sheets e criou colunas pra tudo: cliente, pedido, sabor, embalagem, hora pedido, hora prometida, hora pronto, hora retirada, pago/não pago, observação, avaliação. 11 colunas. Demorava 4 minutos pra preencher cada pedido — mais que pra preparar.",
+        "whatHappened": "Abriu Google Sheets e criou colunas pra tudo: cliente, pedido, sabor, embalagem, hora pedido, hora prometida, hora pronto, hora retirada, pago/não pago, observação, avaliação. 11 colunas. Demorava 4 minutos pra preencher cada pedido - mais que pra preparar.",
         "whatHelped": "Cortou pra 5 colunas: cliente / pedido / prazo / pago / entregue. Tudo o resto vai em 'observação' se aparecer. Tempo de preenchimento: 30 segundos."
       },
       {
         "moment": "Planilha online sem celular bom no balcão",
         "whatHappened": "Tinha planilha no Drive, mas o tablet velho que ficava na cozinha travava. Voltou a anotar no caderno e a digitar no fim do dia.",
-        "whatHelped": "Decidiu: a fonte oficial é o caderno físico colado na parede. A planilha digital é só pra fechar o dia (5 minutos no fim do expediente). Não duplica trabalho — o caderno é primário, planilha é histórico."
+        "whatHelped": "Decidiu: a fonte oficial é o caderno físico colado na parede. A planilha digital é só pra fechar o dia (5 minutos no fim do expediente). Não duplica trabalho - o caderno é primário, planilha é histórico."
       },
       {
         "moment": "Filho ajuda mas com formato diferente",
@@ -567,7 +567,7 @@
     ],
     "breakthrough": "A planilha do pedido não é planilha. É sistema mínimo: caderno na parede + 5 minutos de digital pra histórico + acordo de letra. Tudo pequeno o bastante pra rodar em dia de movimento alto sem virar fardo.",
     "outcome": "Em 2 semanas, zero pedido perdido. No fim do mês, ela já tinha histórico digital pra ver: que dia da semana vendia mais, qual lanche tinha mais retorno, que horário concentrava pedido. Decidiu mover funcionário extra do meio pra noite com base nesses dados.",
-    "whenToAskForHelp": "Se você criou a planilha e em 2 semanas ainda perde pedido, peça ajuda. O problema pode não ser registro — pode ser fluxo entre quem registra e quem prepara.",
+    "whenToAskForHelp": "Se você criou a planilha e em 2 semanas ainda perde pedido, peça ajuda. O problema pode não ser registro - pode ser fluxo entre quem registra e quem prepara.",
     "relatedCases": ["case_keisha_lanches_atraso"],
     "relatedResources": ["res_organizacao_pedidos"],
     "caseAuthenticityType": "fictionalized_composite_case",
@@ -579,13 +579,13 @@
   "taskTemplateId": "task_automatizar_resposta_padrao",
   "archetypeId": "empreendedora_sobrecarregada",
   "personaName": "Dona Lúcia",
-  "region": "Brasil — Fortaleza (CE)",
+  "region": "Brasil - Fortaleza (CE)",
   "personaContext": "Já listou as tarefas que só ela fazia e tirou 5 do prato. Mas continuava respondendo cliente das 7h da manhã às 22h, todos os dias. Decidiu configurar o WhatsApp Business antes que o esgotamento voltasse.",
   "stumbles": [
     {
       "moment": "Mensagem automática fria demais",
       "whatHappened": "Configurou na pressa: 'Olá, no momento não posso atender. Retornarei assim que possível'. Cliente antiga reclamou: 'Lúcia, ficou estranho, parece que você não quer mais falar comigo'. Lúcia ficou sem graça e quase desligou tudo.",
-      "whatHelped": "Reescreveu com a voz dela: 'Oi! Aqui é a Lúcia. Estou com cliente agora, mas te respondo até às 18h de hoje, combinado? 🙏'. Cliente respondeu: 'ah, agora sim, parece você'. Mensagem automática não precisa ser corporativa — precisa ser ela."
+      "whatHelped": "Reescreveu com a voz dela: 'Oi! Aqui é a Lúcia. Estou com cliente agora, mas te respondo até às 18h de hoje, combinado? 🙏'. Cliente respondeu: 'ah, agora sim, parece você'. Mensagem automática não precisa ser corporativa - precisa ser ela."
     },
     {
       "moment": "Horário de atendimento sem coragem de cumprir",
@@ -594,13 +594,13 @@
     },
     {
       "moment": "Respostas rápidas que não cobriam o caso",
-      "whatHappened": "Configurou 5 respostas rápidas (preço, prazo, localização, formas de pagamento, tipos de serviço). Funcionou bem por 3 dias. No quarto, uma cliente perguntou 'você faz progressiva em cabelo cacheado?' — pergunta específica que não cabia em nenhuma resposta pronta. Lúcia ficou tentada a fingir que era simples e só responder 'faço sim'.",
-      "whatHelped": "Aceitou que resposta rápida cobre 80%, não 100%. Pros 20% que sobram, ela responde do jeito dela quando estiver disponível. Não tentou criar resposta automática pra TUDO — isso vira robô e perde cliente."
+      "whatHappened": "Configurou 5 respostas rápidas (preço, prazo, localização, formas de pagamento, tipos de serviço). Funcionou bem por 3 dias. No quarto, uma cliente perguntou 'você faz progressiva em cabelo cacheado?' - pergunta específica que não cabia em nenhuma resposta pronta. Lúcia ficou tentada a fingir que era simples e só responder 'faço sim'.",
+      "whatHelped": "Aceitou que resposta rápida cobre 80%, não 100%. Pros 20% que sobram, ela responde do jeito dela quando estiver disponível. Não tentou criar resposta automática pra TUDO - isso vira robô e perde cliente."
     }
   ],
-  "breakthrough": "Mensagem automática não é frieza. É cuidado com você primeiro pra poder cuidar dos outros depois. E não precisa cobrir 100% das perguntas — cobre as repetidas, libera energia pras importantes.",
-  "outcome": "Em 2 semanas, Lúcia respondia 70% dos contatos sem digitar nada — só usando as respostas rápidas. Ganhou 1h por dia. Dormiu mais. Cliente nenhum reclamou da resposta automática depois que ela personalizou.",
-  "whenToAskForHelp": "Se você configurou as mensagens e ainda assim continua respondendo cliente fora do horário 'só essa vez', peça ajuda. O problema não é a ferramenta — é a dificuldade de proteger o seu tempo, e isso a gente trabalha junto.",
+  "breakthrough": "Mensagem automática não é frieza. É cuidado com você primeiro pra poder cuidar dos outros depois. E não precisa cobrir 100% das perguntas - cobre as repetidas, libera energia pras importantes.",
+  "outcome": "Em 2 semanas, Lúcia respondia 70% dos contatos sem digitar nada - só usando as respostas rápidas. Ganhou 1h por dia. Dormiu mais. Cliente nenhum reclamou da resposta automática depois que ela personalizou.",
+  "whenToAskForHelp": "Se você configurou as mensagens e ainda assim continua respondendo cliente fora do horário 'só essa vez', peça ajuda. O problema não é a ferramenta - é a dificuldade de proteger o seu tempo, e isso a gente trabalha junto.",
   "relatedCases": ["case_dona_lucia_sobrecarga"],
   "relatedResources": ["res_whatsapp_business_basico", "res_pescadoras_rede"],
   "caseAuthenticityType": "fictionalized_composite_case",
@@ -613,13 +613,13 @@
   "taskTemplateId": "task_marcar_pausa_semanal",
   "archetypeId": "empreendedora_sobrecarregada",
   "personaName": "Dona Lúcia",
-  "region": "Brasil — Fortaleza (CE)",
-  "personaContext": "Última tarefa do mês. Já tinha listado tarefas, marcado dois dias fixos, configurado mensagem automática. Mas ainda não tinha um tempo só pra ela. Decidiu marcar uma pausa semanal — e descobriu que era a parte mais difícil de todas.",
+  "region": "Brasil - Fortaleza (CE)",
+  "personaContext": "Última tarefa do mês. Já tinha listado tarefas, marcado dois dias fixos, configurado mensagem automática. Mas ainda não tinha um tempo só pra ela. Decidiu marcar uma pausa semanal - e descobriu que era a parte mais difícil de todas.",
   "stumbles": [
     {
       "moment": "Pausa de domingo à tarde que virou trabalho doméstico",
       "whatHappened": "Marcou domingo à tarde como pausa. Quando chegou o domingo, lavou roupa, fez almoço pros filhos, arrumou a casa pra semana. No fim do dia disse pra prima: 'descansei, tirei a tarde'. Mas tinha trabalhado 5 horas seguidas em casa.",
-      "whatHelped": "Aprendeu a diferença: pausa não é 'não trabalhar pra cliente'. É não trabalhar pra ninguém — nem pra família, nem pra casa, nem pra negócio. Marcou de novo: sábado das 14h às 17h, e dessa vez avisou os filhos: 'a mãe não está disponível pra nada nesse horário, nem comida, nem brinquedo, nem briga'."
+      "whatHelped": "Aprendeu a diferença: pausa não é 'não trabalhar pra cliente'. É não trabalhar pra ninguém - nem pra família, nem pra casa, nem pra negócio. Marcou de novo: sábado das 14h às 17h, e dessa vez avisou os filhos: 'a mãe não está disponível pra nada nesse horário, nem comida, nem brinquedo, nem briga'."
     },
     {
       "moment": "A culpa de descansar",
@@ -632,7 +632,7 @@
       "whatHelped": "Disse: 'filha, agora é o tempo da mãe. Volta às 17h que eu te ajudo'. A filha torceu a cara, mas voltou. Lúcia descobriu que proteger a pausa também ensina os filhos que ela é gente, não só mãe."
     }
   ],
-  "breakthrough": "Pausa não é tempo que sobra. É tempo que você protege. E quem não protege com regra é invadido — não por má vontade dos outros, mas porque o vazio convida tarefa.",
+  "breakthrough": "Pausa não é tempo que sobra. É tempo que você protege. E quem não protege com regra é invadido - não por má vontade dos outros, mas porque o vazio convida tarefa.",
   "outcome": "Depois de 4 sábados, a pausa virou inegociável. Lúcia começou a dormir melhor durante a semana porque sabia que sábado tinha um respiro garantido. Disse pra prima: 'eu não sabia o quanto eu estava cansada até parar de verdade'.",
   "whenToAskForHelp": "Se você marcou a pausa por 3 semanas seguidas e em todas algum membro da família invadiu, peça ajuda. Pode ser que a conversa com a família precise ser feita de outro jeito, e tem mulheres da rede que já passaram por isso e podem te orientar.",
   "relatedCases": ["case_dona_lucia_sobrecarga", "case_mentoria_pares_efeito"],
@@ -653,7 +653,7 @@
     {
       "moment": "Bio genérica que não dizia nada",
       "whatHappened": "Escreveu na bio: 'amante de arte, criadora, sonhadora ✨'. Releu três dias depois e percebeu: ninguém entendia o que ela vendia, onde estava, nem como comprar. Tinha bio bonita e perfil inútil.",
-      "whatHelped": "Reescreveu em 3 linhas: 'Brincos artesanais com pedras e crochê / Belo Horizonte — entrega pelo Brasil / Pedidos no zap (link na descrição)'. Funcional vence poético quando o objetivo é vender."
+      "whatHelped": "Reescreveu em 3 linhas: 'Brincos artesanais com pedras e crochê / Belo Horizonte - entrega pelo Brasil / Pedidos no zap (link na descrição)'. Funcional vence poético quando o objetivo é vender."
     },
     {
       "moment": "Link pro nada",
@@ -667,8 +667,8 @@
     }
   ],
   "breakthrough": "Perfil organizado não é perfil bonito. É perfil onde, em 10 segundos, qualquer pessoa entende: o que você vende, onde você está, e como comprar. Sem isso, foto boa não vira venda.",
-  "outcome": "Em 1 semana com perfil reorganizado e link do zap funcionando, Patrícia recebeu 8 mensagens de novo cliente — mais que nos 6 meses anteriores juntos. Nenhuma delas precisou perguntar 'como compro?'.",
-  "whenToAskForHelp": "Se você organizou o perfil e ainda assim ninguém clica nem manda mensagem, peça ajuda. Pode ser que o problema esteja no link, no contato visível ou no que aparece nos primeiros segundos — e tem voluntário da rede que olha o perfil em 10 minutos e aponta o que travar.",
+  "outcome": "Em 1 semana com perfil reorganizado e link do zap funcionando, Patrícia recebeu 8 mensagens de novo cliente - mais que nos 6 meses anteriores juntos. Nenhuma delas precisou perguntar 'como compro?'.",
+  "whenToAskForHelp": "Se você organizou o perfil e ainda assim ninguém clica nem manda mensagem, peça ajuda. Pode ser que o problema esteja no link, no contato visível ou no que aparece nos primeiros segundos - e tem voluntário da rede que olha o perfil em 10 minutos e aponta o que travar.",
   "relatedCases": ["case_priya_acessorios_vitrine"],
   "relatedResources": ["res_fotos_celular", "res_whatsapp_business_basico"],
   "caseAuthenticityType": "fictionalized_composite_case",
@@ -680,13 +680,13 @@
   "taskTemplateId": "task_primeiro_post_pedido",
   "archetypeId": "vende_comunidade_nao_online",
   "personaName": "Marina",
-  "region": "Brasil — Belo Horizonte (MG)",
-  "personaContext": "Última missão. Já tinha lista de transmissão com 47 contatos engajados, faturamento subindo no bairro. Decidiu finalmente fazer o primeiro post pedindo indicação — abrindo a porta pra ir além do Santa Tereza.",
+  "region": "Brasil - Belo Horizonte (MG)",
+  "personaContext": "Última missão. Já tinha lista de transmissão com 47 contatos engajados, faturamento subindo no bairro. Decidiu finalmente fazer o primeiro post pedindo indicação - abrindo a porta pra ir além do Santa Tereza.",
   "stumbles": [
     {
       "moment": "Post genérico que ninguém compartilhou",
       "whatHappened": "Postou no status do zap: 'Pessoal, estou começando a vender online também. Quem puder compartilhar, ajuda muito! 🙏'. Esperou. Em 24h, 3 pessoas viram, ninguém compartilhou. Marina ficou triste e começou a achar que indicação 'não funciona'.",
-      "whatHelped": "Conversou com a Amanda do grupo do bairro, que disse: 'você não contou nada. Pediu compartilhamento de quê?'. Marina releu e viu — não tinha nem foto, nem produto, nem história. Era pedido no escuro."
+      "whatHelped": "Conversou com a Amanda do grupo do bairro, que disse: 'você não contou nada. Pediu compartilhamento de quê?'. Marina releu e viu - não tinha nem foto, nem produto, nem história. Era pedido no escuro."
     },
     {
       "moment": "Post longo demais",
@@ -700,7 +700,7 @@
     }
   ],
   "breakthrough": "Pedir indicação não é fraqueza, é convite. Mas convite precisa ser específico (peça uma ação clara, não 'compartilhem'), curto (cabe na tela do zap), e dar uma razão pro outro topar.",
-  "outcome": "Em 2 semanas, 14 clientes novos chegaram por indicação — 9 do post, 5 boca a boca natural depois. Pela primeira vez, Marina vendeu pra um bairro que nunca tinha pisado (Floresta). Sem pagar 1 real em anúncio.",
+  "outcome": "Em 2 semanas, 14 clientes novos chegaram por indicação - 9 do post, 5 boca a boca natural depois. Pela primeira vez, Marina vendeu pra um bairro que nunca tinha pisado (Floresta). Sem pagar 1 real em anúncio.",
   "whenToAskForHelp": "Se você fez o post 2 vezes ajustando, e não chegou indicação nenhuma em 2 semanas, peça ajuda. Pode ser que o pedido ainda não esteja claro, ou que você esteja pedindo pra base errada.",
   "relatedCases": ["case_marina_doceira_comunidade"],
   "relatedResources": ["res_whatsapp_business_basico"],
@@ -714,12 +714,12 @@
   "taskTemplateId": "task_mapear_10_lugares",
   "archetypeId": "potencial_b2b_local",
   "personaName": "Seu Sebastião",
-  "region": "Brasil — Diamantina (MG)",
-  "personaContext": "Apicultor há 22 anos no Vale do Jequitinhonha. Produz mel silvestre e mel de eucalipto, vende em feira aos sábados em Diamantina. Quer começar a vender pra comércios da cidade — cafeterias, mercadinhos, padarias — mas nunca tentou. Decidiu mapear os 10 lugares onde o mel dele caberia.",
+  "region": "Brasil - Diamantina (MG)",
+  "personaContext": "Apicultor há 22 anos no Vale do Jequitinhonha. Produz mel silvestre e mel de eucalipto, vende em feira aos sábados em Diamantina. Quer começar a vender pra comércios da cidade - cafeterias, mercadinhos, padarias - mas nunca tentou. Decidiu mapear os 10 lugares onde o mel dele caberia.",
   "stumbles": [
     {
       "moment": "Lista só com os famosos",
-      "whatHappened": "Sentou na varanda com a esposa e listou: o mercado grande do centro, a rede de farmácia natural, a padaria mais conhecida. Em 5 lugares ela travou — só citava os mais óbvios, todos do centro.",
+      "whatHappened": "Sentou na varanda com a esposa e listou: o mercado grande do centro, a rede de farmácia natural, a padaria mais conhecida. Em 5 lugares ela travou - só citava os mais óbvios, todos do centro.",
       "whatHelped": "A esposa lembrou: 'e aquele café da pousada do Caraça? E a lojinha de produtos da terra que abriu no garimpo?'. Sebastião percebeu: tinha esquecido lugares menores que provavelmente compram MAIS fácil que os famosos, porque dependem menos de fornecedor grande. Refez a lista incluindo: 2 cafés de pousada, 1 mercadinho de bairro, 1 loja de produtos regionais, 1 restaurante familiar. A lista chegou a 14 lugares."
     },
     {
@@ -729,13 +729,13 @@
     },
     {
       "moment": "Não anotou o nome do dono",
-      "whatHappened": "Em 8 dos 14 lugares ele observou tudo, menos o nome de quem decide. Quando foi voltar pra abordagem, percebeu que ia chegar genericamente — 'olá, posso falar com o responsável?' — e perder a conexão de bairro.",
+      "whatHappened": "Em 8 dos 14 lugares ele observou tudo, menos o nome de quem decide. Quando foi voltar pra abordagem, percebeu que ia chegar genericamente - 'olá, posso falar com o responsável?' - e perder a conexão de bairro.",
       "whatHelped": "Voltou aos 8 lugares só pra perguntar pro funcionário: 'qual o nome do dono daqui? quando ele costuma estar?'. Em pequena cidade, todo mundo responde. Anotou tudo. Na semana da abordagem, Sebastião chegava dizendo 'oi, é a dona Cleide? sou o Sebastião do mel'. Fechou 4 conversas no primeiro dia."
     }
   ],
   "breakthrough": "B2B local começa pelo chão da rua, não pela lista no caderno. Quem mapeia físico vê o que mapeia mental não vê: horário, prateleira, dono, ritmo. E em cidade pequena, conhecer o nome de quem decide vale mais que proposta bonita.",
   "outcome": "Dos 14 lugares, Sebastião escolheu os 6 mais promissores pra abordar. Em 3 semanas, fechou venda recorrente com 2 cafés de pousada e 1 mercadinho. Faturamento mensal subiu 40% sem mexer na feira de sábado.",
-  "whenToAskForHelp": "Se você listou 10 lugares e em todos eles seu produto já tem concorrente direto na prateleira, peça ajuda antes de continuar. Pode ser que o caminho seja outro mercado ou outro tipo de comércio — e tem voluntário da rede que ajuda a repensar antes de gastar tempo abordando.",
+  "whenToAskForHelp": "Se você listou 10 lugares e em todos eles seu produto já tem concorrente direto na prateleira, peça ajuda antes de continuar. Pode ser que o caminho seja outro mercado ou outro tipo de comércio - e tem voluntário da rede que ajuda a repensar antes de gastar tempo abordando.",
   "relatedCases": ["case_juliana_geleias_b2b"],
   "relatedResources": ["res_proposta_b2b"],
   "caseAuthenticityType": "fictionalized_composite_case",
@@ -748,13 +748,13 @@
   "taskTemplateId": "task_listar_compradores_locais",
   "archetypeId": "potencial_b2b_local",
   "personaName": "Seu Sebastião",
-  "region": "Brasil — Diamantina (MG)",
+  "region": "Brasil - Diamantina (MG)",
   "personaContext": "Já mapeou os 14 lugares e selecionou os 6 mais promissores. Agora vai descobrir, pra cada um, quem realmente decide a compra e qual o melhor horário pra falar.",
   "stumbles": [
     {
       "moment": "Falou com quem não decide",
-      "whatHappened": "No primeiro café que tentou, falou com a atendente — uma jovem simpática que prometeu 'falar com o chefe'. Esperou 2 semanas. Nada. Quando voltou, descobriu que a atendente nem tinha lembrado, e o dono passava ali só de manhã cedo.",
-      "whatHelped": "Aprendeu: atendente prestativo não substitui decisor. Sebastião passou a perguntar direto — 'quem aqui faz a compra dos produtos? em que horário ela costuma estar?'. Resposta vinha em 30 segundos. Em pequena cidade, ninguém esconde isso."
+      "whatHappened": "No primeiro café que tentou, falou com a atendente - uma jovem simpática que prometeu 'falar com o chefe'. Esperou 2 semanas. Nada. Quando voltou, descobriu que a atendente nem tinha lembrado, e o dono passava ali só de manhã cedo.",
+      "whatHelped": "Aprendeu: atendente prestativo não substitui decisor. Sebastião passou a perguntar direto - 'quem aqui faz a compra dos produtos? em que horário ela costuma estar?'. Resposta vinha em 30 segundos. Em pequena cidade, ninguém esconde isso."
     },
     {
       "moment": "Foi em hora errada",
@@ -769,7 +769,7 @@
   ],
   "breakthrough": "Descobrir o decisor é metade do trabalho. A outra metade é chegar no horário certo, com algo concreto pra deixar. Conversa boa sem cartão se perde no fim do dia. Cartão sem conversa se joga fora. Os dois juntos abrem porta.",
   "outcome": "Em 2 semanas, Sebastião tinha conversado com os 6 decisores. 3 fecharam compra de teste imediata, 2 pediram amostra, 1 disse não. Taxa de conversão alta porque ele chegou preparado: nome certo, horário certo, cartão na mão.",
-  "whenToAskForHelp": "Se você descobriu o decisor mas em 3 tentativas não consegue conversa real (sempre ocupado, sempre 'volta outro dia'), peça ajuda. Pode ser que o produto não caiba ali, ou que precise de outra abordagem — e melhor descobrir antes de gastar mais tempo.",
+  "whenToAskForHelp": "Se você descobriu o decisor mas em 3 tentativas não consegue conversa real (sempre ocupado, sempre 'volta outro dia'), peça ajuda. Pode ser que o produto não caiba ali, ou que precise de outra abordagem - e melhor descobrir antes de gastar mais tempo.",
   "relatedCases": ["case_juliana_geleias_b2b"],
   "relatedResources": ["res_proposta_b2b"],
   "caseAuthenticityType": "fictionalized_composite_case",
@@ -827,7 +827,7 @@
     {
       "moment": "Justificativa entre etapas",
       "whatHappened": "Coloquei batedeira industrial na etapa 2 'porque vai facilitar'. Mas não soube responder a pergunta 'qual sinal de mercado vai me dizer que vale comprar?'. Era só preferência, não retorno.",
-      "whatHelped": "Definiu critério explícito pra passar de etapa: 'só compro batedeira industrial quando vender mais de 60 potes por semana 3 semanas seguidas'. Quando vender menos, mantém a doméstica. Esse critério tirou a ansiedade — não precisa decidir agora, decide quando o número aparecer."
+      "whatHelped": "Definiu critério explícito pra passar de etapa: 'só compro batedeira industrial quando vender mais de 60 potes por semana 3 semanas seguidas'. Quando vender menos, mantém a doméstica. Esse critério tirou a ansiedade - não precisa decidir agora, decide quando o número aparecer."
     }
   ],
   "breakthrough": "Etapa 1 final: R$ 280 (kit de potes). Etapa 2 (em 30-60 dias, condicional): R$ 2.000 (geladeira maior, se vender mais de 40 potes por semana). Etapa 3 (90 dias, condicional): R$ 9.600 (forno, batedeira, panfletos), se as etapas anteriores baterem meta. Em vez de empréstimo de R$ 12.400, José viu que dava pra começar com R$ 280 do próprio caixa e ainda esperar os dados antes de captar.",
@@ -952,17 +952,17 @@
     {
       "moment": "3 coisas que funcionaram",
       "whatHappened": "Começou com 'as pessoas gostavam' e 'eu sabia tudo da padaria'. Travou. Achou que tudo que funcionou tinha morrido junto com o fechamento. 'Se funcionasse de verdade, por que fechou?'",
-      "whatHelped": "Reformulou a pergunta com ajuda da filha (24 anos, agora trabalha em farmácia): 'mãe, durante 12 anos o que dava certo até começar a pandemia?'. Aí veio: (1) salgado fresco no fim da tarde era diferencial, fila virava a esquina às 17h; (2) crédito na caderneta pros 30 clientes mais antigos não atrasava mais que 15 dias; (3) o sabor do bolo simples (sem cobertura) era reconhecido — gente do bairro vizinho vinha comprar. 3 ativos. Concretos."
+      "whatHelped": "Reformulou a pergunta com ajuda da filha (24 anos, agora trabalha em farmácia): 'mãe, durante 12 anos o que dava certo até começar a pandemia?'. Aí veio: (1) salgado fresco no fim da tarde era diferencial, fila virava a esquina às 17h; (2) crédito na caderneta pros 30 clientes mais antigos não atrasava mais que 15 dias; (3) o sabor do bolo simples (sem cobertura) era reconhecido - gente do bairro vizinho vinha comprar. 3 ativos. Concretos."
     },
     {
       "moment": "3 coisas que falharam",
       "whatHappened": "Quase só escreveu 'a pandemia'. Sentiu que era injusto consigo, mas também difícil olhar pro que de fato falhou na gestão dela.",
-      "whatHelped": "Repensou em duas linhas: 'o que o mundo trouxe' e 'como eu reagi'. Pandemia foi mundo. Mas: (1) ela dependia 60% do almoço do escritório do bairro — concentração que ela sabia mas adiou diversificar; (2) ela nunca tinha reserva de 2 meses guardada — sempre repunha estoque com o que entrava; (3) ela demorou 6 meses pra cortar custo quando o movimento caiu, esperando 'voltar ao normal'. Não escolheu a pandemia, mas escolheu não diversificar, não guardar, e adiar a decisão de cortar."
+      "whatHelped": "Repensou em duas linhas: 'o que o mundo trouxe' e 'como eu reagi'. Pandemia foi mundo. Mas: (1) ela dependia 60% do almoço do escritório do bairro - concentração que ela sabia mas adiou diversificar; (2) ela nunca tinha reserva de 2 meses guardada - sempre repunha estoque com o que entrava; (3) ela demorou 6 meses pra cortar custo quando o movimento caiu, esperando 'voltar ao normal'. Não escolheu a pandemia, mas escolheu não diversificar, não guardar, e adiar a decisão de cortar."
     },
     {
       "moment": "3 sinais que ela não viu",
       "whatHappened": "Mais difícil. Sentiu que se ela tinha visto algum sinal, teria reagido. 'Tinha sinal mesmo?'",
-      "whatHelped": "Conversou com o sobrinho. Ele lembrou de detalhes que ela não tinha registrado como sinal: (1) o escritório do bairro tinha demitido 30% da equipe em 2019 — almoço já tava caindo antes da pandemia; (2) o filho da gerente de um escritório grande pediu pra comprar bolo congelado em 2019 ('a gente queria oferecer almoço em casa') — sinal de mudança de hábito; (3) o aluguel ia reajustar em janeiro de 2020 e ela já tava pensando em renegociar. Os sinais tavam lá, espalhados em conversas que ela não registrou como dado."
+      "whatHelped": "Conversou com o sobrinho. Ele lembrou de detalhes que ela não tinha registrado como sinal: (1) o escritório do bairro tinha demitido 30% da equipe em 2019 - almoço já tava caindo antes da pandemia; (2) o filho da gerente de um escritório grande pediu pra comprar bolo congelado em 2019 ('a gente queria oferecer almoço em casa') - sinal de mudança de hábito; (3) o aluguel ia reajustar em janeiro de 2020 e ela já tava pensando em renegociar. Os sinais tavam lá, espalhados em conversas que ela não registrou como dado."
     }
   ],
   "breakthrough": "No fim do exercício, tinha 9 itens escritos numa folha pautada. Quando releu, percebeu duas coisas: o ativo principal (salgado fresco + bolo simples + crédito a clientes antigos) sobrevive ao que fechou. E o problema principal não foi a pandemia em si, foi a dependência sem diversificação. Decidiu que o novo modelo, qualquer que seja, tem que ter no mínimo 3 fontes de receita e reserva de 2 meses antes de assinar contrato.",
@@ -989,7 +989,7 @@
     },
     {
       "moment": "Reserva mínima",
-      "whatHappened": "Quis colocar 1 mês de aluguel como reserva ('R$ 880 é o que me derrubou antes, 1 mês resolve'). Mas a realidade é que o que derrubou foi não conseguir absorver UM reajuste — então 1 mês cobre uma vez, não cobre uma sequência.",
+      "whatHappened": "Quis colocar 1 mês de aluguel como reserva ('R$ 880 é o que me derrubou antes, 1 mês resolve'). Mas a realidade é que o que derrubou foi não conseguir absorver UM reajuste - então 1 mês cobre uma vez, não cobre uma sequência.",
       "whatHelped": "Conversou com uma colega que tem estúdio há 8 anos. A colega: 'se eu tenho 3 aluguéis guardados, consigo negociar prazo, pagar atrasado sem prejuízo, e não preciso aceitar cliente ruim por desespero'. Renata anotou: reserva mínima de R$ 2.400 (3 aluguéis no formato de cabine compartilhada) guardada antes de assinar qualquer contrato. Se cair abaixo disso por mais de 2 meses, ela revê o modelo."
     },
     {
@@ -1054,7 +1054,7 @@
       "whatHelped": "Trocou caderno por planilha simples no celular (Google Sheets). Configurou notificação às 11h, 15h e 20h: 'anota o que entrou e saiu nas últimas horas'. 3 toques por dia. Resolveu o problema da memória."
     },
     {
-      "moment": "Dias 3-4 — o invisível apareceu",
+      "moment": "Dias 3-4 - o invisível apareceu",
       "whatHappened": "Foi anotando entrada (vendas) e saída (matéria-prima). Achou que ia sobrar bonito. Na quinta-feira começou a notar: motoboy R$ 28 por entrega, embalagem R$ 4 por pote, fita decorativa R$ 0,80, gás cozinha (cota), energia (cota), Internet (cota), iFood comissão 23% em 4 vendas grandes. Cada item parecia pequeno. Somados começavam a comer.",
       "whatHelped": "Adicionou uma coluna 'custos pequenos' na planilha. Cada notificação ela completava 3 colunas: receita, custo grande, custo pequeno. No domingo viu o quadro: receita R$ 1.380 na semana, custo direto R$ 580, custos pequenos R$ 320. Sobra real R$ 480. Ela imaginava R$ 800-900 'fácil'."
     },
@@ -1127,7 +1127,7 @@
   ],
   "breakthrough": "Os 5 movimentos viraram uma tabela. Bia percebeu que (1) diarista + (4) reduzir SKU eram complementares e tinham o maior retorno combinado. (5) subir preço entrou junto com baixo risco. (2) parceria com confeitaria amiga e (3) MEI parceiro produtor ficaram pra plano B (se o A não rolar em 90 dias).",
   "outcome": "Bia chegou na semana 3 com 3 movimentos priorizados. Conversou com 3 negócios pares (semana 3 da trilha) e validou a sequência: começa por (4) reduzir SKU porque é grátis, depois (5) reajustar preço, e quando o caixa aguentar, (1) diarista. Plano B fica documentado.",
-  "whenToAskForHelp": "Se você consegue listar 5 movimentos possíveis mas trava em estimar números pra cada um, peça ajuda. Conversar com um par destrava — estimativa imperfeita é melhor que nenhuma.",
+  "whenToAskForHelp": "Se você consegue listar 5 movimentos possíveis mas trava em estimar números pra cada um, peça ajuda. Conversar com um par destrava - estimativa imperfeita é melhor que nenhuma.",
   "relatedCases": ["case_bia_doceria_primeira_contratacao"],
   "relatedResources": ["res_capital_inteligente"],
   "caseAuthenticityType": "fictionalized_composite_case",
@@ -1209,7 +1209,7 @@
       "whatHelped": "Olhou o caderno: faturamento R$ 4.500/mês há 18 meses. Não sobe há 6 meses. Os 60 clientes do bairro saturaram (cada uma só faz unha de 3 em 3 semanas, agenda dela já tá cheia). Teto bateu. Ficar em casa pra sempre = estagnar sem perspectiva. Não é segurança, é desistência."
     },
     {
-      "moment": "Sociedade com 2 colegas — medo do conflito",
+      "moment": "Sociedade com 2 colegas - medo do conflito",
       "whatHappened": "Cabine compartilhada com 2 colegas (cada uma usa em horários diferentes) saía por R$ 350/cabeça. Resolvia o aluguel sozinha. Mas Renata travou em 'e se uma das duas atrasar pagamento? E se a gente brigar por horário?'.",
       "whatHelped": "Conversou com 1 das colegas (Patrícia, que conhece há 5 anos). Combinaram regra escrita: (1) cada uma paga sua parte direto pra dona da cabine, sem intermediário (sem 'a Renata cobre a Patrícia'), (2) agenda dividida por dia da semana fixo, sem trocas de cima da hora, (3) se uma quiser sair, avisa 30 dias antes e cabine procura quem entra. Regras escritas, assinadas no WhatsApp."
     }
@@ -1265,18 +1265,18 @@
   "personaContext": "Mãe solo de Tarcísio (3 anos). Faz lembrancinha de festa infantil há 2 anos. Tarcísio vai meio-período pra creche, mãe dela ajuda 3 tardes/semana. Joelma decidiu mapear janelas reais antes de aceitar mais qualquer pedido apertado.",
   "stumbles": [
     {
-      "moment": "Dia 1 — fantasia x realidade",
+      "moment": "Dia 1 - fantasia x realidade",
       "whatHappened": "Começou pensando 'tenho 4-5h por dia útil'. Quando foi anotar hora por hora, descobriu que da creche das 7h30 às 12h, perde 30min levando Tarcísio + 30min pra organizar a casa + 15min de café. Janela real útil é 7h30 às 11h, com 1 ou 2 interrupções de WhatsApp do cliente. Não 5h. 3h.",
       "whatHelped": "Parou de chutar e começou a cronometrar. Colocou alarme no celular: cada vez que sentava pra trabalhar, marcava hora. Cada interrupção, marcava também. No fim do dia, tinha número real, não palpite."
     },
     {
-      "moment": "Dias 3-4 — descobre a janela invisível",
-      "whatHappened": "Achou que produção dela acontecia só na manhã. Mas notou que 13h30-15h, quando Tarcísio dorme, ela conseguia mais 60-90 minutos focados. Nunca tinha contado isso como tempo de trabalho — só usava pra 'descansar' (rede social).",
+      "moment": "Dias 3-4 - descobre a janela invisível",
+      "whatHappened": "Achou que produção dela acontecia só na manhã. Mas notou que 13h30-15h, quando Tarcísio dorme, ela conseguia mais 60-90 minutos focados. Nunca tinha contado isso como tempo de trabalho - só usava pra 'descansar' (rede social).",
       "whatHelped": "Adicionou essa janela ao mapa. Decidiu testar 7 dias usando 60 minutos dessa janela pra produção. Se o cochilo durar menos, ela para. Se durar mais, ganha. Janela 'invisível' virou janela tracked."
     },
     {
-      "moment": "Fim da semana — total e média",
-      "whatHappened": "Somou tudo: 14h efetivas na semana (não 28h que ela imaginava). Sentiu desânimo no primeiro momento — 'metade do que pensei'.",
+      "moment": "Fim da semana - total e média",
+      "whatHappened": "Somou tudo: 14h efetivas na semana (não 28h que ela imaginava). Sentiu desânimo no primeiro momento - 'metade do que pensei'.",
       "whatHelped": "Mãe dela (que ajuda 3 tardes) disse: 'querida, é com essas 14h que você sustentou o aluguel e a creche por 2 anos. Saber que são 14 não te tira nada. Te dá realidade pra planejar'. Joelma anotou: janela média 75 minutos, total semanal 14h. A média deu nome ao tempo que ela tinha. Não é pouco. É o que existe."
     }
   ],
@@ -1300,12 +1300,12 @@
     {
       "moment": "Lista das 8 ofertas e janela exigida",
       "whatHappened": "Listou: (1) kit padrão 30 unidades, (2) kit customizado com nome do aniversariante, (3) caixinha sob medida com tema escolhido, (4) cone de pipoca decorado, (5) sacolinha personalizada, (6) lembrancinha de mesversário, (7) lembrancinha de chá de bebê, (8) topo de bolo. Pra cada uma estimou o tempo. Travou: 'todas dão pra fazer em pedaços'.",
-      "whatHelped": "Refraseou: cabe em janela de 75min sem interrupção? Kit padrão: cabe (já vinha pronto, só montagem). Kit customizado: 2h30 — não cabe sem queimar uma janela inteira em personalização. Caixinha sob medida: 4h+ — só dá em fim de semana inteiro. Cone, sacolinha, mesversário, chá de bebê: ~90min cada — quase cabe, queima às vezes. Topo de bolo: 45min — cabe de boa."
+      "whatHelped": "Refraseou: cabe em janela de 75min sem interrupção? Kit padrão: cabe (já vinha pronto, só montagem). Kit customizado: 2h30 - não cabe sem queimar uma janela inteira em personalização. Caixinha sob medida: 4h+ - só dá em fim de semana inteiro. Cone, sacolinha, mesversário, chá de bebê: ~90min cada - quase cabe, queima às vezes. Topo de bolo: 45min - cabe de boa."
     },
     {
       "moment": "Decidir cortar",
       "whatHappened": "A oferta que dava mais lucro unitário (kit customizado, R$ 180 vs R$ 90 do padrão) era justamente a que não cabia. Joelma travou: 'cortar isso é cortar 40% do faturamento'.",
-      "whatHelped": "Conversou com a mãe e a vizinha (que faz bolo de pote). A vizinha sugeriu: 'em vez de cortar, oferece só pra semana com agenda fechada antes — quem quer customizado entra na fila e espera 12 dias úteis'. Joelma aceitou: customizado continua na lista, mas com prazo 12 dias úteis (em vez de 7) e só 2 por semana. Caixinha sob medida foi pra 'só sob consulta' (1 por mês). Cone, sacolinha, mesversário, chá de bebê viraram um pacote 'lembrancinhas variadas' com mesmo prazo do kit padrão."
+      "whatHelped": "Conversou com a mãe e a vizinha (que faz bolo de pote). A vizinha sugeriu: 'em vez de cortar, oferece só pra semana com agenda fechada antes - quem quer customizado entra na fila e espera 12 dias úteis'. Joelma aceitou: customizado continua na lista, mas com prazo 12 dias úteis (em vez de 7) e só 2 por semana. Caixinha sob medida foi pra 'só sob consulta' (1 por mês). Cone, sacolinha, mesversário, chá de bebê viraram um pacote 'lembrancinhas variadas' com mesmo prazo do kit padrão."
     },
     {
       "moment": "Oferta principal definida",
@@ -1314,7 +1314,7 @@
     }
   ],
   "breakthrough": "Joelma escreveu 1 folha: 'OFERTA PRINCIPAL: kit padrão 30 unidades, R$ 90, prazo 5 dias úteis. Pacote variado (cone/sacolinha/mesversário): R$ 110, mesmo prazo. Customizado: R$ 180, prazo 12 dias, 2 por semana. Sob medida: sob consulta, prazo 20 dias.' Folha foi parar na geladeira.",
-  "outcome": "No primeiro mês com o cardápio reduzido, Joelma vendeu 7 kits padrão + 3 pacotes variados + 2 customizados = R$ 1.470. Faturamento mais baixo que mês anterior — mas ela trabalhou 14h/semana, sem queimar madrugada. Dormiu. Tarcísio dormiu. Mês 2 com a tabela rodando: 10 kits + 4 pacotes + 2 customizados = R$ 1.880. Mês 3 já em R$ 2.450 (acima do anterior) com 14h saudáveis.",
+  "outcome": "No primeiro mês com o cardápio reduzido, Joelma vendeu 7 kits padrão + 3 pacotes variados + 2 customizados = R$ 1.470. Faturamento mais baixo que mês anterior - mas ela trabalhou 14h/semana, sem queimar madrugada. Dormiu. Tarcísio dormiu. Mês 2 com a tabela rodando: 10 kits + 4 pacotes + 2 customizados = R$ 1.880. Mês 3 já em R$ 2.450 (acima do anterior) com 14h saudáveis.",
   "whenToAskForHelp": "Se você mapeou janelas mas não consegue cortar nenhuma oferta porque 'cliente vai sumir', peça ajuda. Quase sempre as ofertas que pareciam essenciais estavam queimando margem por exigir janela que não existe.",
   "relatedCases": ["case_joelma_lembrancinhas_janela"],
   "relatedResources": ["res_organizacao_pedidos", "res_precificacao_simples"],
@@ -1333,7 +1333,7 @@
     {
       "moment": "Sentir que a tabela é 'desculpa antecipada'",
       "whatHappened": "Resistiu a escrever a tabela. 'Não é meio que avisar antes que vou atrasar? Cliente vai achar que sou desorganizada'.",
-      "whatHelped": "Olhou tabela de outras prestadoras (oficina mecânica, marceneiro, costureira do bairro). Todas tinham prazo escrito (5 dias, 15 dias, 30 dias). Ninguém escondia, ninguém pedia desculpa. Era padrão. Tabela não é desculpa antecipada — é política de prazo, igual qualquer profissional faz."
+      "whatHelped": "Olhou tabela de outras prestadoras (oficina mecânica, marceneiro, costureira do bairro). Todas tinham prazo escrito (5 dias, 15 dias, 30 dias). Ninguém escondia, ninguém pedia desculpa. Era padrão. Tabela não é desculpa antecipada - é política de prazo, igual qualquer profissional faz."
     },
     {
       "moment": "Decidir prazo apertado vs prazo confortável",
@@ -1346,9 +1346,9 @@
       "whatHelped": "Releu e percebeu que 'cuidado familiar' invadia a privacidade do contexto E pedia compreensão antecipada. Sobrinha (24 anos, trabalha em marketing) ajudou a reescrever: 'Olá! Obrigada pelo interesse. Trabalho com tricô artesanal feito à mão. Prazos: manta simples 15 dias úteis, peça sob medida 25 dias úteis, do dia do pagamento de 50%. Pedido confirmado entra na fila com data prevista. Em caso de atraso (raro), aviso com 5 dias de antecedência.' Direta. Profissional. Sem desculpa."
     }
   ],
-  "breakthrough": "Tereza configurou a mensagem no WhatsApp Business como resposta automática pra 'tabela de prazos'. Cliente que perguntava 'quanto tempo?' recebia automático. Tabela impressa também ficou colada na porta do armário onde guarda lã. A versão final eliminou 'cuidado familiar' — virou política de prazo, não confissão.",
-  "outcome": "Em 30 dias, Tereza recebeu 14 pedidos. 11 aceitaram o prazo de 15 dias direto. 2 disseram 'tem como antes? Festa em 8 dias' — Tereza respondeu 'não consigo neste prazo, te aviso quando outra vaga abrir'. Ambos sumiram. O cliente perdido em maio voltou em junho, viu a tabela, comentou 'amei que ficou organizado'. Faturamento estabilizou. Pai piorou em outubro: ela acionou o protocolo, avisou os 3 pedidos em produção com 5 dias de antecedência, todos toparam. Cliente que importava ficou.",
-  "whenToAskForHelp": "Se você tem cuidado em casa e ainda não tem tabela escrita de prazos publicada pro cliente, peça ajuda. Você vai descobrir que o cliente que importa aceita prazo claro — e o que exige prazo apertado quase nunca era cliente bom mesmo.",
+  "breakthrough": "Tereza configurou a mensagem no WhatsApp Business como resposta automática pra 'tabela de prazos'. Cliente que perguntava 'quanto tempo?' recebia automático. Tabela impressa também ficou colada na porta do armário onde guarda lã. A versão final eliminou 'cuidado familiar' - virou política de prazo, não confissão.",
+  "outcome": "Em 30 dias, Tereza recebeu 14 pedidos. 11 aceitaram o prazo de 15 dias direto. 2 disseram 'tem como antes? Festa em 8 dias' - Tereza respondeu 'não consigo neste prazo, te aviso quando outra vaga abrir'. Ambos sumiram. O cliente perdido em maio voltou em junho, viu a tabela, comentou 'amei que ficou organizado'. Faturamento estabilizou. Pai piorou em outubro: ela acionou o protocolo, avisou os 3 pedidos em produção com 5 dias de antecedência, todos toparam. Cliente que importava ficou.",
+  "whenToAskForHelp": "Se você tem cuidado em casa e ainda não tem tabela escrita de prazos publicada pro cliente, peça ajuda. Você vai descobrir que o cliente que importa aceita prazo claro - e o que exige prazo apertado quase nunca era cliente bom mesmo.",
   "relatedCases": ["case_tereza_trico_cuidado_pai"],
   "relatedResources": ["res_whatsapp_business_basico", "res_organizacao_pedidos"],
   "caseAuthenticityType": "fictionalized_composite_case",
@@ -1376,16 +1376,16 @@
     {
       "moment": "Mensagem pré-escrita de adiamento",
       "whatHappened": "Texto inicial: 'Olá, infelizmente preciso adiar seu pedido por motivos pessoais imprevistos. Peço desculpas...'.",
-      "whatHelped": "Refez: 'Olá [nome]! Preciso adiar a entrega do seu pedido em 5 dias úteis por situação familiar. Novo prazo: [data]. Mantenho qualidade e te aviso quando estiver na fase final. Se preferir cancelar com reembolso, tudo bem também — me avisa.' Mais curta, mais objetiva, dá opção pro cliente. Sem 'desculpa', sem 'imprevistos' (que soa vago). Comunicação adulta."
+      "whatHelped": "Refez: 'Olá [nome]! Preciso adiar a entrega do seu pedido em 5 dias úteis por situação familiar. Novo prazo: [data]. Mantenho qualidade e te aviso quando estiver na fase final. Se preferir cancelar com reembolso, tudo bem também - me avisa.' Mais curta, mais objetiva, dá opção pro cliente. Sem 'desculpa', sem 'imprevistos' (que soa vago). Comunicação adulta."
     },
     {
       "moment": "Backup humano",
       "whatHappened": "Pra 'quem chamar pra ajuda pontual' tinha dificuldade. Mora longe de família, vizinha pouco próxima.",
-      "whatHelped": "Listou 3 pessoas pra coisas diferentes: (1) prima Vânia (Curitiba) — pra ouvir e dar conselho quando ela tá no limite, mesmo de longe; (2) vizinha do prédio (Dona Eulália) — pode ficar 30min com o pai se Tereza precisar sair urgente comprar algo; (3) cuidadora atual da manhã (Marlene) — topa fazer hora extra paga 1-2 dias por mês em emergência. Cada uma com sua função. Sem sobrecarregar uma só."
+      "whatHelped": "Listou 3 pessoas pra coisas diferentes: (1) prima Vânia (Curitiba) - pra ouvir e dar conselho quando ela tá no limite, mesmo de longe; (2) vizinha do prédio (Dona Eulália) - pode ficar 30min com o pai se Tereza precisar sair urgente comprar algo; (3) cuidadora atual da manhã (Marlene) - topa fazer hora extra paga 1-2 dias por mês em emergência. Cada uma com sua função. Sem sobrecarregar uma só."
     }
   ],
   "breakthrough": "Plano em 1 folha: lista de 14 clientes ativos separados (8 flexíveis, 6 apertados), mensagem pré-escrita salva no WhatsApp, 3 backups humanos com função clara. Folha foi pra mesma pasta da tabela de prazos. Em caso de dia ruim: ela abre a pasta, identifica quais pedidos avisar (os apertados primeiro), copia/cola a mensagem, troca o nome e a data.",
-  "outcome": "Em outubro, pai teve nova piora (10 dias de noite ruim). Tereza acionou o protocolo no dia 2: identificou 3 pedidos apertados em produção, mandou mensagem pra cada um com novo prazo +5 dias. 2 toparam, 1 perguntou se podia cancelar com reembolso parcial — Tereza aceitou. Acionou a Dona Eulália 1 manhã pra ficar 40min com o pai enquanto entregava 1 pedido. Chamou a Marlene pra hora extra 1 dia. Saiu da crise com 0 cliente perdido (1 cancelamento amigável). Pai melhorou no dia 9. Tereza voltou ao ritmo. Sem dano à reputação.",
+  "outcome": "Em outubro, pai teve nova piora (10 dias de noite ruim). Tereza acionou o protocolo no dia 2: identificou 3 pedidos apertados em produção, mandou mensagem pra cada um com novo prazo +5 dias. 2 toparam, 1 perguntou se podia cancelar com reembolso parcial - Tereza aceitou. Acionou a Dona Eulália 1 manhã pra ficar 40min com o pai enquanto entregava 1 pedido. Chamou a Marlene pra hora extra 1 dia. Saiu da crise com 0 cliente perdido (1 cancelamento amigável). Pai melhorou no dia 9. Tereza voltou ao ritmo. Sem dano à reputação.",
   "whenToAskForHelp": "Se você cuida de alguém em casa e ainda não tem plano escrito pra dia ruim, peça ajuda. O plano nunca é luxo. O custo de não ter é descobrir que precisava no exato momento em que você não tem cabeça pra montar.",
   "relatedCases": ["case_tereza_trico_cuidado_pai"],
   "relatedResources": ["res_organizacao_pedidos", "res_whatsapp_business_basico"],

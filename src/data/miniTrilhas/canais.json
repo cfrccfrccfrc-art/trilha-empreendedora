@@ -6,7 +6,7 @@
   "introBody": "Em mais ou menos 2 minutos. Sem cadastro.",
   "warning": {
     "title": "Sobre o resultado",
-    "body": "Não tem caminho 'certo' — tem caminho mais provável de funcionar pra onde você está agora."
+    "body": "Não tem caminho 'certo' - tem caminho mais provável de funcionar pra onde você está agora."
   },
   "tieBreakOrder": ["online_pronto", "hibrido", "foco_presencial"],
   "tabLabels": {
@@ -69,7 +69,7 @@
       "whatItIs": "Você ainda não tem regularidade, custo calculado, ou capacidade de atender pedido extra. Investir em online agora amplia o problema antes de gerar venda.",
       "whenItMakesSense": [
         "Validar produto/serviço com a comunidade local primeiro",
-        "Atender feira, vizinho, indicação — onde dá pra ajustar rápido"
+        "Atender feira, vizinho, indicação - onde dá pra ajustar rápido"
       ],
       "whenItDoesnt": [
         "Pagar anúncios pagos",
@@ -86,7 +86,7 @@
     {
       "id": "hibrido",
       "name": "Híbrido pequeno",
-      "shortDescription": "Vale começar online em escala pequena e controlada — sem largar o presencial.",
+      "shortDescription": "Vale começar online em escala pequena e controlada - sem largar o presencial.",
       "whatItIs": "Você já vende com alguma regularidade e tem alguns dos elementos no lugar (foto, custo, capacidade). Online aqui complementa o presencial, não substitui.",
       "whenItMakesSense": [
         "Lista de transmissão no zap pra clientes que já compraram (até 50 contatos)",
@@ -108,7 +108,7 @@
     {
       "id": "online_pronto",
       "name": "Pronta(o) pra crescer online",
-      "shortDescription": "Você tem base — dá pra investir online com critério.",
+      "shortDescription": "Você tem base - dá pra investir online com critério.",
       "whatItIs": "Vendendo regularmente, com fotos, custo calculado, capacidade pra atender mais e base local organizada. Online aqui vira alavanca, não risco.",
       "whenItMakesSense": [
         "Investir em vitrine forte (perfil cuidado, catálogo organizado)",
@@ -117,10 +117,10 @@
         "Pensar em vender pra outros comércios (B2B local)"
       ],
       "whenItDoesnt": [
-        "Largar o presencial achando que online substitui — ele complementa",
+        "Largar o presencial achando que online substitui - ele complementa",
         "Gastar grande em tráfego sem testar pequeno antes"
       ],
-      "whatChanges": "Online passa a render — porque a base sustenta. Cliente que vier pelo digital vai ter experiência consistente com quem comprou pessoalmente.",
+      "whatChanges": "Online passa a render - porque a base sustenta. Cliente que vier pelo digital vai ter experiência consistente com quem comprou pessoalmente.",
       "nextStep": "Antes de investir alto: faça um teste de R$ 100 em anúncios por 1 semana e meça quantas vendas vieram dele. Se pagar com sobra, escale aos poucos. Se não, ajusta o anúncio antes de gastar mais.",
       "relatedSources": [
         { "label": "Fotos boas só com o celular (Trilha)",  "url": "/conteudos/res_fotos_celular" },

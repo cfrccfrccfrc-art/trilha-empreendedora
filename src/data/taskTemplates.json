@@ -107,7 +107,7 @@
     "archetypeId": "ainda_e_ideia",
     "action": "Escreva em uma frase: o que você vende, por quanto, como entrega e qual o prazo. Tem que caber em uma mensagem de zap.",
     "purpose": "Sair da ideia genérica para uma oferta clara que dá pra mandar pra alguém agora.",
-    "expectedLearning": "Quem não consegue resumir a oferta em uma mensagem ainda não tem oferta — tem ideia.",
+    "expectedLearning": "Quem não consegue resumir a oferta em uma mensagem ainda não tem oferta - tem ideia.",
     "reflectionQuestions": [
       "A oferta cabe em 3 linhas?",
       "O preço cobre seu custo + algum lucro?",
@@ -187,7 +187,7 @@
     "week": 3,
     "archetypeId": "precisa_capital",
     "action": "Divida sua lista em 3 etapas: o que comprar agora (mais urgente), o que comprar em 30 dias, o que pode esperar 90 dias. Justifique a ordem.",
-    "purpose": "Comprar por etapas reduz risco — você testa o retorno antes de arriscar tudo.",
+    "purpose": "Comprar por etapas reduz risco - você testa o retorno antes de arriscar tudo.",
     "expectedLearning": "Comprar tudo de uma vez é a forma mais cara de aprender que algo não era necessário.",
     "reflectionQuestions": [
       "A etapa 1 já começa a pagar antes da etapa 2?",
@@ -209,7 +209,7 @@
     "archetypeId": "operacao_travada",
     "action": "Desenhe (em papel mesmo, ou foto) o caminho de um pedido típico: do momento que o cliente fala até a entrega. Marque onde demora, onde se perde informação, onde você esquece.",
     "purpose": "Ver onde o problema está antes de tentar resolver.",
-    "expectedLearning": "A maioria dos atrasos não é falta de tempo — é falta de organização em um ponto específico.",
+    "expectedLearning": "A maioria dos atrasos não é falta de tempo - é falta de organização em um ponto específico.",
     "reflectionQuestions": [
       "Em qual etapa o pedido mais atrasa?",
       "Você anota em algum lugar fixo ou só na cabeça?",
@@ -330,7 +330,7 @@
     "archetypeId": "empreendedora_sobrecarregada",
     "action": "Escolha um período fixo por semana (meio dia que seja) onde você não responde negócio nenhum. Marque na agenda como compromisso.",
     "purpose": "Tirar a culpa de descansar.",
-    "expectedLearning": "Negócio que só funciona quando você está esgotada não é negócio — é segunda jornada.",
+    "expectedLearning": "Negócio que só funciona quando você está esgotada não é negócio - é segunda jornada.",
     "reflectionQuestions": [
       "Que horário consegue proteger?",
       "O que você faz nesse tempo?",
@@ -412,7 +412,7 @@
     "archetypeId": "vende_comunidade_nao_online",
     "action": "Faça uma lista no zap (lista de transmissão, não grupo) com 50 contatos: clientes, vizinhos, conhecidos que poderiam virar cliente. Avise primeiro que vai mandar uma novidade.",
     "purpose": "Ter um canal direto pra falar com sua base sem depender de algoritmo.",
-    "expectedLearning": "Sua lista vale mais que seu seguidor — porque você fala direto, sem filtro.",
+    "expectedLearning": "Sua lista vale mais que seu seguidor - porque você fala direto, sem filtro.",
     "reflectionQuestions": [
       "Você avisou antes de incluir?",
       "Quantos responderam que querem receber?",
@@ -663,7 +663,7 @@
     "commonMistakes": [
       "Botar a culpa só em fatores externos (pandemia, fornecedor, governo) sem nomear o que você poderia ter feito diferente",
       "Botar a culpa só em você (auto-flagelo) sem reconhecer o que de fato fugiu do seu controle",
-      "Pular a tarefa porque 'lembrar dói demais' — anotar dói menos do que repetir o erro"
+      "Pular a tarefa porque 'lembrar dói demais' - anotar dói menos do que repetir o erro"
     ],
     "evidenceType": "optional_text_or_image",
     "evidenceRequired": false,
@@ -678,7 +678,7 @@
     "archetypeId": "recomecou_apos_falir",
     "action": "Com o inventário da semana 1 na mão, escolha um dos 3 caminhos por escrito: (A) MESMO negócio ajustado nos 3 pontos que falharam, (B) negócio DIFERENTE que aproveita 1-2 coisas que funcionaram antes, ou (C) SOCIEDADE com alguém que cobre o que você tem dificuldade. Escreva 2-3 frases justificando.",
     "purpose": "Forçar uma decisão em vez de deixar o medo decidir por adiamento. Cada um dos 3 caminhos é válido, mas escolher fechar a porta pros outros dois libera energia pra começar.",
-    "expectedLearning": "A indecisão entre voltar igual, mudar tudo ou se associar é a principal armadilha de quem fechou negócio anterior. Decidir um caminho não é apostar a vida — é começar a testar de verdade em vez de só ruminar.",
+    "expectedLearning": "A indecisão entre voltar igual, mudar tudo ou se associar é a principal armadilha de quem fechou negócio anterior. Decidir um caminho não é apostar a vida - é começar a testar de verdade em vez de só ruminar.",
     "reflectionQuestions": [
       "Qual caminho parece mais seguro? Qual parece mais animador? São o mesmo?",
       "Se você escolher MESMO ajustado, o ajuste é grande o suficiente pra mudar o resultado?",
@@ -687,7 +687,7 @@
     ],
     "commonMistakes": [
       "Escolher 'MESMO ajustado' por inércia, sem identificar de fato o que ajustar",
-      "Escolher 'DIFERENTE' empolgada(o) sem aproveitar nenhum ativo do anterior — começa do zero sem precisar",
+      "Escolher 'DIFERENTE' empolgada(o) sem aproveitar nenhum ativo do anterior - começa do zero sem precisar",
       "Escolher 'SOCIEDADE' sem combinar regras por escrito (ver mini-trilha sócio/família)"
     ],
     "evidenceType": "optional_text_or_image",
@@ -711,9 +711,9 @@
       "Se menos de 2 dos 5 disseram que voltariam, vale repensar a escolha da semana 2?"
     ],
     "commonMistakes": [
-      "Escolher só clientes que você sabe que vão dizer sim — não dá informação útil",
-      "Escolher 5 sem conexão real (você não falava com eles há 3+ anos) — resposta vaga",
-      "Não anotar as respostas e seguir só com a impressão geral — perde detalhe que vale ouro"
+      "Escolher só clientes que você sabe que vão dizer sim - não dá informação útil",
+      "Escolher 5 sem conexão real (você não falava com eles há 3+ anos) - resposta vaga",
+      "Não anotar as respostas e seguir só com a impressão geral - perde detalhe que vale ouro"
     ],
     "evidenceType": "optional_text_or_image",
     "evidenceRequired": false,
@@ -753,7 +753,7 @@
     "archetypeId": "cuidador_empreendedor",
     "action": "Em uma folha (ou no celular), monte uma tabela com 7 dias da semana e marque, hora por hora, quais blocos de tempo você consegue trabalhar SEM interrupção real (mais de 15 minutos seguidos). Considere a rotina de cuidado de quem você cuida, não a rotina ideal. Some o total semanal e identifique a duração média das suas janelas (em minutos).",
     "purpose": "Trocar a fantasia de '40 horas por semana' pela realidade do tempo de trabalho efetivo. Quem cuida não tem semana de 40h. Tem 8, 12, 18, 22h em pedaços. Saber o número real é o ponto de partida pra tudo (oferta, prazo, plano).",
-    "expectedLearning": "Suas janelas reais são menores e mais fragmentadas do que parece. E é OK. O negócio não tem que caber numa semana imaginária — tem que caber nas janelas que existem. Quando você sabe o número, decide pelo dado.",
+    "expectedLearning": "Suas janelas reais são menores e mais fragmentadas do que parece. E é OK. O negócio não tem que caber numa semana imaginária - tem que caber nas janelas que existem. Quando você sabe o número, decide pelo dado.",
     "reflectionQuestions": [
       "Qual o total de minutos semanais que você consegue trabalhar sem interrupção?",
       "Qual a duração média das suas janelas? 30 minutos? 60? 90?",
@@ -762,7 +762,7 @@
     ],
     "commonMistakes": [
       "Marcar tempo IDEAL ('se tudo der certo eu trabalho 4h de manhã') em vez de tempo REAL dos últimos 7 dias",
-      "Esconder o tempo de cuidado pra parecer que tem mais tempo disponível — engana só você",
+      "Esconder o tempo de cuidado pra parecer que tem mais tempo disponível - engana só você",
       "Esquecer das micro-interrupções de 5-10 minutos que cortam janela em pedaços inúteis pra produção"
     ],
     "evidenceType": "optional_text_or_image",
@@ -778,7 +778,7 @@
     "archetypeId": "cuidador_empreendedor",
     "action": "Olhe o mapa da semana 1 e identifique a duração da janela mais frequente (ex: 60 minutos). Liste todos os produtos/serviços que você oferece hoje. Pra cada um, marque: cabe em 60 minutos sem interrupção? Se cabe, fica. Se não cabe, decide: (a) cortar do cardápio, (b) decompor em etapas que cabem em janela menor, ou (c) reservar pra dia/janela maior específica. Termine com 1 oferta principal que SEMPRE cabe.",
     "purpose": "Alinhar produto à realidade do tempo. Produto que exige 3h contínuas pra produzir não cabe em janela de 60min. Insistir vira erro repetido (atraso, qualidade caindo, queima de noite). Decompor ou cortar protege qualidade.",
-    "expectedLearning": "Uma oferta principal que sempre cabe é mais rentável do que 8 ofertas que às vezes cabem e às vezes te queimam. Foco em quem cuida não é restrição — é o que sustenta consistência.",
+    "expectedLearning": "Uma oferta principal que sempre cabe é mais rentável do que 8 ofertas que às vezes cabem e às vezes te queimam. Foco em quem cuida não é restrição - é o que sustenta consistência.",
     "reflectionQuestions": [
       "Qual a oferta principal que você definiu? Cabe na sua janela média sem stress?",
       "Tem alguma oferta que você corta e sente que perde cliente? Cliente real ou cliente esperado?",
@@ -786,9 +786,9 @@
       "O que muda no faturamento se você focar nessa 1 oferta principal por 30 dias?"
     ],
     "commonMistakes": [
-      "Manter todas as ofertas 'pra não perder venda' e continuar atrasando — perde cliente fiel, ganha cliente novo desorganizado",
-      "Definir oferta principal que cabe na janela boa mas não na janela ruim (dia de cuidado pesado) — vira armadilha",
-      "Decompor produto em etapas confusas que cliente não entende — vira 'meio pronto' que ninguém valoriza"
+      "Manter todas as ofertas 'pra não perder venda' e continuar atrasando - perde cliente fiel, ganha cliente novo desorganizado",
+      "Definir oferta principal que cabe na janela boa mas não na janela ruim (dia de cuidado pesado) - vira armadilha",
+      "Decompor produto em etapas confusas que cliente não entende - vira 'meio pronto' que ninguém valoriza"
     ],
     "evidenceType": "optional_text_or_image",
     "evidenceRequired": false,
@@ -802,7 +802,7 @@
     "week": 3,
     "archetypeId": "cuidador_empreendedor",
     "action": "Crie uma tabela escrita de prazos por tipo de pedido, baseada na sua oferta principal da semana 2 e nas suas janelas reais da semana 1. Inclua sempre 30-50% de folga em cima do prazo apertado (ex: se cabe em 3 dias no cenário bom, comunica 5). Configure resposta automática no WhatsApp Business com essa tabela. Quando cliente pedir 'pra ontem', responde com a tabela, não improvisa.",
-    "purpose": "Tirar do improviso a comunicação de prazo. Cliente paga quem cumpre, não quem promete rápido. Tabela escrita protege você do impulso de aceitar prazo impossível pra fechar venda — e protege o cliente da decepção do atraso.",
+    "purpose": "Tirar do improviso a comunicação de prazo. Cliente paga quem cumpre, não quem promete rápido. Tabela escrita protege você do impulso de aceitar prazo impossível pra fechar venda - e protege o cliente da decepção do atraso.",
     "expectedLearning": "Quem cuida e empreende tem direito de comunicar prazo realista. Cliente bom topa quando o prazo é claro. Cliente que exige 'pra ontem' geralmente é cliente caro (vai reclamar, vai cancelar, vai exigir desconto). Tabela filtra.",
     "reflectionQuestions": [
       "Qual o prazo apertado da sua oferta principal? E o prazo confortável (com folga)?",
@@ -813,7 +813,7 @@
     "commonMistakes": [
       "Comunicar prazo só quando cliente pergunta, deixando expectativa fora de controle até a pergunta",
       "Pedir desculpas pelo prazo ('desculpa, é que eu cuido...') em vez de comunicar profissionalmente ('prazo padrão é 5 dias úteis')",
-      "Criar tabela mas continuar improvisando quando cliente insistir — tabela escrita só funciona se você seguir"
+      "Criar tabela mas continuar improvisando quando cliente insistir - tabela escrita só funciona se você seguir"
     ],
     "evidenceType": "optional_text_or_image",
     "evidenceRequired": false,
@@ -827,7 +827,7 @@
     "week": 4,
     "archetypeId": "cuidador_empreendedor",
     "action": "Em uma folha, escreva o plano pra quando o cuidado consumir mais tempo que o normal (criança doente, idoso piora, hospital, dia ruim). Liste: (1) quais clientes têm prazo de tolerância maior e podem esperar 2-3 dias sem problema, (2) quais pedidos podem ser postergados sem custo, (3) qual mensagem pré-escrita você manda no WhatsApp Business quando precisar adiar, (4) quem da sua rede você pode chamar como backup (amigo, vizinha, primo) pra coisas pontuais.",
-    "purpose": "Transformar emergência de cuidado em situação prevista, não em pânico. Quem cuida sabe que dia ruim vem — não saber quando, sabe que vem. Plano escrito antes elimina decisão emocional no momento da urgência.",
+    "purpose": "Transformar emergência de cuidado em situação prevista, não em pânico. Quem cuida sabe que dia ruim vem - não saber quando, sabe que vem. Plano escrito antes elimina decisão emocional no momento da urgência.",
     "expectedLearning": "Cliente bom topa adiamento comunicado a tempo, sem drama nem desculpa exagerada. Mensagem objetiva ('preciso adiar 2 dias por motivo pessoal, novo prazo: [data]') resolve melhor que silêncio + improvisação no fim. Plano é cuidado consigo, não fraqueza.",
     "reflectionQuestions": [
       "Quantos dos seus clientes atuais aceitariam adiamento de 48-72h se você avisasse com antecedência?",
@@ -836,9 +836,9 @@
       "Tem algum sinal recorrente que precede dia ruim de cuidado e te dá 12-24h de aviso?"
     ],
     "commonMistakes": [
-      "Não fazer o plano porque 'até agora deu tudo certo' — vira problema sério quando o primeiro dia ruim chega",
-      "Plano só na cabeça, sem escrever — emergência embaralha memória",
-      "Adiar comunicação até o último momento, achando que dá tempo — cliente nervoso é cliente perdido"
+      "Não fazer o plano porque 'até agora deu tudo certo' - vira problema sério quando o primeiro dia ruim chega",
+      "Plano só na cabeça, sem escrever - emergência embaralha memória",
+      "Adiar comunicação até o último momento, achando que dá tempo - cliente nervoso é cliente perdido"
     ],
     "evidenceType": "optional_text_or_image",
     "evidenceRequired": false,

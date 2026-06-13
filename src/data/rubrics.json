@@ -55,7 +55,7 @@
       }
     ],
     "passThreshold": 5,
-    "notes": "Atenção: se o preço novo está abaixo do custo, NÃO aprovar — pedir ajuste."
+    "notes": "Atenção: se o preço novo está abaixo do custo, NÃO aprovar - pedir ajuste."
   },
   {
     "id": "rubric_capital_initial",
@@ -84,6 +84,6 @@
       }
     ],
     "passThreshold": 7,
-    "notes": "Tarefa de revisão obrigatória (review_level: elevated). Não aprovar se não houver retorno calculado — capital sem retorno claro = risco alto."
+    "notes": "Tarefa de revisão obrigatória (review_level: elevated). Não aprovar se não houver retorno calculado - capital sem retorno claro = risco alto."
   }
 ]

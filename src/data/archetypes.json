@@ -31,7 +31,7 @@
     "id": "ainda_e_ideia",
     "name": "\"Tenho uma ideia, mas nunca testei com cliente\"",
     "shortDescription": "Você tem uma ideia, mas ainda não testou se alguém compraria de verdade.",
-    "commonPain": "Fica meses ajustando o produto, o nome, a logo — sem ouvir o cliente que vai pagar por isso.",
+    "commonPain": "Fica meses ajustando o produto, o nome, a logo - sem ouvir o cliente que vai pagar por isso.",
     "typicalMistakes": [
       "Tentar deixar tudo perfeito antes de mostrar pra alguém",
       "Não decidir um preço básico antes de oferecer",
@@ -58,7 +58,7 @@
   {
     "id": "precisa_capital",
     "name": "\"Sei o que quero comprar, mas falta dinheiro\"",
-    "shortDescription": "Você sente que só vai crescer com mais dinheiro pra investir — equipamento, estoque ou material.",
+    "shortDescription": "Você sente que só vai crescer com mais dinheiro pra investir - equipamento, estoque ou material.",
     "commonPain": "Acha que o problema é só falta de capital, mas ainda não sabe quanto custa o que precisa nem o que esse dinheiro vai gerar.",
     "typicalMistakes": [
       "Pegar empréstimo antes de calcular se o negócio paga",
@@ -86,7 +86,7 @@
   {
     "id": "operacao_travada",
     "name": "\"Aceito todo pedido, mas perco metade no caminho\"",
-    "shortDescription": "Você vende, mas o pedido demora, atrasa ou se perde — e isso já está custando cliente.",
+    "shortDescription": "Você vende, mas o pedido demora, atrasa ou se perde - e isso já está custando cliente.",
     "commonPain": "O dia parece curto, sempre tem um pedido atrasado ou uma promessa que não foi cumprida.",
     "typicalMistakes": [
       "Aceitar todo pedido sem olhar capacidade real",
@@ -95,7 +95,7 @@
     ],
     "firstTaskId": "task_mapear_fluxo_pedido",
     "avoidNow": "Evite contratar gente, abrir um segundo canal de venda ou aceitar pedido grande antes de organizar o fluxo atual.",
-    "expectedLearning": "Quando o pedido tem um caminho claro do começo ao fim, o atraso some — e o cliente volta.",
+    "expectedLearning": "Quando o pedido tem um caminho claro do começo ao fim, o atraso some - e o cliente volta.",
     "roadmap30d": [
       { "week": 1, "title": "Mapear como o pedido anda hoje", "tasks": ["task_mapear_fluxo_pedido"] },
       { "week": 2, "title": "Planilha simples de pedidos",    "tasks": ["task_planilha_pedidos_basica"] },
@@ -114,7 +114,7 @@
   {
     "id": "empreendedora_sobrecarregada",
     "name": "\"Faço tudo sozinha e o dia nunca acaba\"",
-    "shortDescription": "Você cuida do negócio, da casa e das pessoas — e está fazendo tudo sozinha.",
+    "shortDescription": "Você cuida do negócio, da casa e das pessoas - e está fazendo tudo sozinha.",
     "commonPain": "O dia acaba e você fez muito, mas não conseguiu o que mais importava. O cansaço virou rotina.",
     "typicalMistakes": [
       "Achar que pedir ajuda é fraqueza",
@@ -123,7 +123,7 @@
     ],
     "firstTaskId": "task_listar_tarefas_so_eu",
     "avoidNow": "Evite assumir mais um canal de venda, mais um cliente grande ou mais uma responsabilidade nova nesta semana.",
-    "expectedLearning": "Não é falta de tempo — é falta de critério. Quando você decide o que NÃO vai fazer, sobra tempo pro que importa.",
+    "expectedLearning": "Não é falta de tempo - é falta de critério. Quando você decide o que NÃO vai fazer, sobra tempo pro que importa.",
     "roadmap30d": [
       { "week": 1, "title": "Listar o que só você faz",        "tasks": ["task_listar_tarefas_so_eu"] },
       { "week": 2, "title": "Dois dias fixos pra negócio",     "tasks": ["task_dois_dias_fixos"] },
@@ -143,7 +143,7 @@
     "id": "produto_bom_vitrine_fraca",
     "name": "\"Quem vê de perto adora, mas pouca gente chega\"",
     "shortDescription": "Quem prova ou vê de perto adora o que você faz, mas pouca gente chega até você.",
-    "commonPain": "Você sabe que o produto é bom — só não sabe como mostrar isso pra mais gente.",
+    "commonPain": "Você sabe que o produto é bom - só não sabe como mostrar isso pra mais gente.",
     "typicalMistakes": [
       "Tirar foto na pressa, com fundo bagunçado",
       "Não ter perfil ou catálogo onde mandar quem pergunta",
@@ -179,7 +179,7 @@
     ],
     "firstTaskId": "task_lista_zap_50_pessoas",
     "avoidNow": "Evite anúncios pagos antes de organizar a base de clientes que você já tem na comunidade.",
-    "expectedLearning": "Sua comunidade já é seu canal — só falta organizar o contato e mostrar o produto pra outras comunidades parecidas.",
+    "expectedLearning": "Sua comunidade já é seu canal - só falta organizar o contato e mostrar o produto pra outras comunidades parecidas.",
     "roadmap30d": [
       { "week": 1, "title": "Lista de zap de 50 clientes", "tasks": ["task_lista_zap_50_pessoas"] },
       { "week": 2, "title": "Catálogo simples no zap",     "tasks": ["task_catalogo_simples"] },
@@ -207,7 +207,7 @@
     ],
     "firstTaskId": "task_dois_dias_fixos",
     "avoidNow": "Evite largar o trabalho fixo antes de ter pelo menos 3 meses de lucro consistente do negócio.",
-    "expectedLearning": "Renda complementar funciona quando tem horário, preço e processo — não quando é improviso.",
+    "expectedLearning": "Renda complementar funciona quando tem horário, preço e processo - não quando é improviso.",
     "roadmap30d": [
       { "week": 1, "title": "Dois dias fixos pra negócio",  "tasks": ["task_dois_dias_fixos"] },
       { "week": 2, "title": "Lista de serviços e preços",   "tasks": ["task_lista_servicos_precos"] },
@@ -226,7 +226,7 @@
   {
     "id": "bico_pode_virar",
     "name": "\"Faço bico que dá certo, mas ainda cobro por simpatia\"",
-    "shortDescription": "Você faz bicos pra clientes que voltam e indicam — pode virar negócio se você decidir.",
+    "shortDescription": "Você faz bicos pra clientes que voltam e indicam - pode virar negócio se você decidir.",
     "commonPain": "A demanda existe, mas você ainda não cobra direito, não tem horário e perde pedido por falta de organização.",
     "typicalMistakes": [
       "Fazer preço por simpatia, não por conta",
@@ -262,7 +262,7 @@
       "Não cobrar atraso por vergonha"
     ],
     "firstTaskId": "task_lista_servicos_precos",
-    "avoidNow": "Evite reduzir preço pra fechar venda essa semana — aprenda a sustentar o preço primeiro.",
+    "avoidNow": "Evite reduzir preço pra fechar venda essa semana - aprenda a sustentar o preço primeiro.",
     "expectedLearning": "Cobrar bem é parte do trabalho. Quem entrega valor precisa pedir o valor.",
     "roadmap30d": [
       { "week": 1, "title": "Lista de serviços e preços",  "tasks": ["task_lista_servicos_precos"] },
@@ -282,7 +282,7 @@
   {
     "id": "potencial_b2b_local",
     "name": "\"Vendo bem pra pessoa, mas nunca tentei comércio\"",
-    "shortDescription": "Seu produto/serviço cabe em outros comércios da região — mas você ainda só vende pra pessoa física.",
+    "shortDescription": "Seu produto/serviço cabe em outros comércios da região - mas você ainda só vende pra pessoa física.",
     "commonPain": "Vender de um em um cansa. Vender pra um comércio que revende é volume, mas exige outra postura.",
     "typicalMistakes": [
       "Oferecer o mesmo preço de varejo pro comércio",
@@ -290,7 +290,7 @@
       "Não conhecer pessoalmente os comércios da região"
     ],
     "firstTaskId": "task_mapear_10_lugares",
-    "avoidNow": "Evite oferecer condições especiais sem antes calcular margem para volume — pode virar prejuízo.",
+    "avoidNow": "Evite oferecer condições especiais sem antes calcular margem para volume - pode virar prejuízo.",
     "expectedLearning": "Vender pra comércio é negócio diferente: precisa de margem, prazo e proposta clara.",
     "roadmap30d": [
       { "week": 1, "title": "Mapear 10 lugares possíveis",   "tasks": ["task_mapear_10_lugares"] },
@@ -394,12 +394,12 @@
   {
     "id": "cuidador_empreendedor",
     "name": "\"Cuido de alguém em casa, preciso fazer o negócio caber nesse espaço\"",
-    "shortDescription": "Você empreende porque cuida de alguém que mora com você (filho pequeno, idoso, pessoa que precisa de companhia ou cuidado contínuo). Negócio existe pra caber na rotina de cuidado — não o contrário.",
+    "shortDescription": "Você empreende porque cuida de alguém que mora com você (filho pequeno, idoso, pessoa que precisa de companhia ou cuidado contínuo). Negócio existe pra caber na rotina de cuidado - não o contrário.",
     "commonPain": "O tempo é interrompido em janelas pequenas. Cliente quer prazo curto, mas seu prazo depende do dia da pessoa que você cuida. Você aceita prazo impossível pra não perder venda, queima a noite, atrasa, fica mal vista. Sem perder o cuidado nem o trabalho, parece impossível.",
     "typicalMistakes": [
       "Prometer prazo curto pra fechar venda e queimar madrugada quando o cuidado consome o dia",
       "Esconder do cliente que você cuida de alguém, achando que isso te desqualifica como profissional",
-      "Não ter plano pra dia ruim de cuidado (criança doente, idoso piora) — qualquer imprevisto vira atraso e cliente perdido"
+      "Não ter plano pra dia ruim de cuidado (criança doente, idoso piora) - qualquer imprevisto vira atraso e cliente perdido"
     ],
     "firstTaskId": "task_mapear_janelas_reais",
     "avoidNow": "Evite aceitar pedido com prazo curto antes de mapear suas janelas reais de trabalho. Evite produto que exige produção contínua de mais de 90 minutos sem interrupção. Evite crescer em volume antes de ter plano de continuidade pra emergência.",

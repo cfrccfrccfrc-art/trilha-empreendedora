@@ -69,17 +69,17 @@
       "id": "projecao_chute",
       "name": "Você vai no feeling",
       "shortDescription": "Você toca o negócio reagindo ao que aparece. Sem visibilidade do futuro, o caixa surpreende.",
-      "whatItIs": "Você não projeta entrada nem saída. Quando o mês vira, descobre se sobrou ou faltou. Quase sempre, descobre tarde — quando já era pra ter ajustado.",
+      "whatItIs": "Você não projeta entrada nem saída. Quando o mês vira, descobre se sobrou ou faltou. Quase sempre, descobre tarde - quando já era pra ter ajustado.",
       "whenItMakesSense": [
         "Negócio muito recente (menos de 3 meses), em que ainda não dá pra projetar com base em histórico"
       ],
       "whenItDoesnt": [
         "Negócio com mais de 6 meses operando",
         "Quando tem custo fixo relevante (aluguel, taxa de cartão recorrente, fornecedor recorrente)",
-        "Quando depende de poucos clientes — sumir um vira problema grande"
+        "Quando depende de poucos clientes - sumir um vira problema grande"
       ],
       "whatChanges": "Sem projetar, você descobre o problema só quando ele já estourou. Cliente que some, mês fraco de feira, alta no fornecedor: tudo vira surpresa em vez de cenário esperado.",
-      "nextStep": "Começa pelo básico: anota entrada e saída por 7 dias (tarefa task_anotar_7_dias). Depois projeta o próximo mês com base nisso. Não precisa ser exato — precisa existir.",
+      "nextStep": "Começa pelo básico: anota entrada e saída por 7 dias (tarefa task_anotar_7_dias). Depois projeta o próximo mês com base nisso. Não precisa ser exato - precisa existir.",
       "relatedSources": [
         { "label": "Anotar entrada e saída por 7 dias (Trilha)",           "url": "/conteudos/res_caixa_diario" },
         { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" }
@@ -95,8 +95,8 @@
         "Negócio em sazonalidade forte (feira, festa), em que projetar é mais difícil"
       ],
       "whenItDoesnt": [
-        "Quando tem custo fixo + clientes recorrentes — dá pra projetar com bastante confiança",
-        "Quando o caixa está apertado — precisa antecipar pra evitar furo"
+        "Quando tem custo fixo + clientes recorrentes - dá pra projetar com bastante confiança",
+        "Quando o caixa está apertado - precisa antecipar pra evitar furo"
       ],
       "whatChanges": "Anotar o passado te dá realidade. Projetar o futuro te dá tempo. Tempo pra ajustar preço, cortar custo, segurar gasto antes do mês ficar feio.",
       "nextStep": "No fim do mês atual, anota a previsão pro próximo mês em 3 números só: faturamento esperado, custo fixo esperado, sobra esperada. No fim do mês seguinte, compara com o real. Repete 2 meses. Sua intuição vai calibrar.",
@@ -117,7 +117,7 @@
       ],
       "whenItDoesnt": [
         "Tomar decisão grande com base só em cenário otimista (revisa o pessimista antes)",
-        "Travar nos números e parar de testar — projeção serve pra decidir, não pra adiar"
+        "Travar nos números e parar de testar - projeção serve pra decidir, não pra adiar"
       ],
       "whatChanges": "Você decide com tempo. Cliente que some não vira pânico, vira plano B já pensado. Mês ruim já estava previsto. Aposta nova começa só quando o caixa aguenta.",
       "nextStep": "Faz uma revisão trimestral: pega seus 3 últimos meses, compara projetado com realizado, identifica onde sua estimativa erra mais (entrada? custo variável? sazonalidade?). Ajusta seu modelo. Esse ciclo melhora a cada trimestre.",
