@@ -468,3 +468,10 @@ Auditoria do `opportunities.json`: 2 fontes Sebrae estavam em `needs_review` e 4
 - `opp_microcredito_orientacao`: link `/oportunidades/microcredito-orientacao` (inexistente) → `/conteudos/res_microcredito_orientacao` (já estava `active`).
 
 Não existe rota `/oportunidades/:slug` no app, só o índice `/oportunidades` - por isso todos os links internos de detalhe estavam 404. Validação: 227 itens OK. Build: OK.
+
+**Smoke-test ao vivo (após deploy):** confirmados os 6 fixes no ar e renderizando (microcrédito, feira, /formalizacao com conteúdo; Sebrae/Pescadores externos). O teste revelou **mais 4 links quebrados** com o mesmo defeito `/oportunidades/:slug` (renderizam tela em branco, não 404): oficina de fotos, mentoria B2B, curso de precificação e compra coletiva. 3 tinham destino existente e foram corrigidos no mesmo padrão:
+- `opp_oficina_fotos_celular` → `/conteudos/res_fotos_celular`
+- `opp_mentoria_b2b` → `/conteudos/res_proposta_b2b`
+- `opp_curso_precificacao` → `/conteudos/res_precificacao_simples`
+
+Pendência: `opp_compra_coletiva_insumos` (`/oportunidades/compra-coletiva`) segue quebrado - não há conteúdo dedicado sobre compra coletiva. Decisão em aberto (criar conteúdo novo / apontar pra conteúdo próximo / tirar o botão).
