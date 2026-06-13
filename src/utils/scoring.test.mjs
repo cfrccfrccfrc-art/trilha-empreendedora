@@ -258,5 +258,49 @@ assert(
   `got ${r11.archetypeId}`
 );
 
+console.log(
+  '\n--- Test 12: digital na frente + base fraca → digital_antes_da_base ---'
+);
+// Divulga muito na internet, mas não sabe lucro nem custo. É o perfil do
+// arquétipo: digital desenvolvido, base comercial/financeira atrasada.
+const digitalAheadWeakBase = {
+  q_channels_online: 'frequent',          // digital +3, negocio +2
+  q_finances_profit: 'never_calculated',  // digital +1, vsl +2
+  q_finances_costs: 'never_calculated',   // digital +1, vsl +1
+};
+const r12 = scoreAnswers(digitalAheadWeakBase, questions, archetypes, rules);
+console.log('  archetypeId:', r12.archetypeId);
+console.log(
+  '  scores nonzero:',
+  Object.fromEntries(Object.entries(r12.archetypeScores).filter(([, v]) => v))
+);
+assert(
+  'digital forte + base fraca → digital_antes_da_base',
+  r12.archetypeId === 'digital_antes_da_base',
+  `got ${r12.archetypeId}, score=${r12.archetypeScores.digital_antes_da_base}`
+);
+
+console.log(
+  '\n--- Test 13: divulga muito MAS base no lugar → NÃO é digital_antes_da_base ---'
+);
+// Posta com frequência (digital +3) mas sabe lucro e custo. Sem buraco de base,
+// não bate o piso 4 do arquétipo. Protege contra falso-positivo.
+const digitalButSolid = {
+  q_channels_online: 'frequent',     // digital +3, negocio +2
+  q_finances_profit: 'yes_monthly',  // negocio +2
+  q_finances_costs: 'yes_per_item',  // negocio +2
+};
+const r13 = scoreAnswers(digitalButSolid, questions, archetypes, rules);
+console.log('  archetypeId:', r13.archetypeId);
+console.log(
+  '  digital score:',
+  r13.archetypeScores.digital_antes_da_base
+);
+assert(
+  'digital forte mas base ok NÃO cai em digital_antes_da_base (piso 4)',
+  r13.archetypeId !== 'digital_antes_da_base',
+  `got ${r13.archetypeId}, digital score=${r13.archetypeScores.digital_antes_da_base}`
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

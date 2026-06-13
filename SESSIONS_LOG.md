@@ -440,3 +440,18 @@ Pedido: auditar dicas, tarefas e cases de novo, comprehensively, pra garantir qu
 
 - IDs de companion (amina/keisha/priya vs Aline/Joana/Patrícia) têm mismatch interno, mas **não renomeados**: case IDs aparecem em `/casos/:id` e no sitemap (risco de SEO) e o personaName já está correto.
 - Sobreposições de scoring entre arquétipos foram julgadas em geral intencionais (robustez a erro de diagnóstico é feature). Único gap real era o roadmap do talento não treinar a dor central — corrigido acima.
+
+### Reformulação do arquétipo digital_antes_da_base (scoringRules 1.3)
+
+Diagnóstico: o arquétipo (a pessoa que só desenvolveu o digital, mas a base comercial/operacional/financeira não acompanhou) **quase nunca vencia**. Ganhava no máximo +1 em 4 perguntas (teto 4, piso global 3), em toda opção um concorrente ganhava +2, e 2 das 4 pistas estavam fora da tese ("pensando em empréstimo", "quero aparecer mais" — esta última é o oposto: quem quer aparecer ainda não aparece).
+
+Correção (motor aditivo não faz "E" lógico, então usamos o piso por-arquétipo pra simular a conjunção):
+- `q_channels_online` / "Sim, com frequência": digital +1 → **+3**.
+- `q_finances_costs` / "Não, nunca calculei": **+digital 1** (sinal de base fraca).
+- `q_finances_profit` / "Não, nunca calculei": mantém digital +1.
+- Removido digital de `q_capital_credit`/"pensando em pegar" e de `q_goals`/"Aparecer mais (divulgação)".
+- `minScorePerArchetype.digital_antes_da_base = 4`: posta-muito sozinho (3) não basta; precisa ter pelo menos um buraco de base junto. Teto novo = 5.
+- Nome: "Posto bonito todo dia, mas não sei se sobra lucro" → **"Já apareço na internet, mas preciso de ajuda com o resto"**. **id mantido** (`digital_antes_da_base`) porque aparece em `/perfis/:id`, sitemap e cross-refs.
+- Tests 12 (digital forte + base fraca → cai no arquétipo) e 13 (digital forte mas base ok → NÃO cai, piso protege) adicionados. test-scoring: 21/21.
+
+Decisão registrada: preferimos rebalancear os sinais existentes a adicionar pergunta nova, pra não alongar o diagnóstico (já tem 36 perguntas + atalho de skip).

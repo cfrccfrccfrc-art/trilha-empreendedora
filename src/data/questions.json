@@ -525,7 +525,7 @@
         "label": "Sim, com frequência",
         "scoring": {
           "archetypes": {
-            "digital_antes_da_base": 1,
+            "digital_antes_da_base": 3,
             "negocio_consolidado": 2
           },
           "pains": {},
@@ -851,7 +851,8 @@
         "label": "Não, nunca calculei",
         "scoring": {
           "archetypes": {
-            "vende_sem_lucro": 1
+            "vende_sem_lucro": 1,
+            "digital_antes_da_base": 1
           },
           "pains": {
             "preco": 2
@@ -1382,8 +1383,7 @@
         "label": "Estou pensando em pegar",
         "scoring": {
           "archetypes": {
-            "precisa_capital": 1,
-            "digital_antes_da_base": 1
+            "precisa_capital": 1
           },
           "pains": {
             "capital": 1
@@ -1812,8 +1812,7 @@
         "label": "Aparecer mais (divulgação)",
         "scoring": {
           "archetypes": {
-            "produto_bom_vitrine_fraca": 1,
-            "digital_antes_da_base": 1
+            "produto_bom_vitrine_fraca": 1
           },
           "pains": {
             "divulgacao": 1

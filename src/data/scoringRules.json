@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
+  "version": "1.3",
   "tieBreakOrder": [
     "talento_sem_postura_comercial",
     "bico_pode_virar",
@@ -19,7 +19,8 @@
   ],
   "minScoreForArchetype": 3,
   "minScorePerArchetype": {
-    "negocio_consolidado": 11
+    "negocio_consolidado": 11,
+    "digital_antes_da_base": 4
   },
   "fallbackArchetype": "ainda_e_ideia",
   "painThreshold": 2
