@@ -232,10 +232,10 @@
     ],
     "tradeoffs": "Continuar PF mantém simples mas trava o crescimento. MEI tem custo fixo (R$ 900/ano) mas abre portas pra venda B2B local. Empurrar a escola desgasta a relação e a maioria não topa.",
     "lessonLearned": "Quando um único cliente pede nota e o faturamento já passa de R$ 2.000/mês recorrente, MEI quase sempre se paga em 1-2 contratos novos.",
-    "tropicalizedLesson": "No Brasil, abrir MEI é gratuito e online (gov.br/empresas-e-negocios). O DAS-MEI inclui INSS — pra Sandra, que é professora pública, isso não substitui o INSS dela como servidora, mas vira segurança extra. A declaração anual é um formulário simples de 10 minutos.",
+    "tropicalizedLesson": "No Brasil, abrir MEI é gratuito e online (gov.br/empresas-e-negocios). Atenção antes de tudo: servidor público precisa checar o próprio estatuto, porque muitos proíbem o servidor de ser titular de MEI. Resolvido isso, o DAS-MEI inclui INSS. Pra Sandra, que é professora pública, essa contribuição não substitui o INSS dela como servidora, mas vira segurança extra. A declaração anual é um formulário simples de 10 minutos.",
     "practicalTask": "task_lista_servicos_precos",
     "relatedResources": ["res_sebrae_mei_o_que_e"],
-    "helpTrigger": "Se você tem dúvida específica sobre regras tributárias da sua atividade (alimentação tem regras de vigilância sanitária, por exemplo), peça ajuda antes de abrir MEI.",
+    "helpTrigger": "Se você é servidor público, cheque o seu estatuto antes: muitos proíbem o servidor de ser titular de MEI. E se você tem dúvida sobre regras da sua atividade (alimentação tem regras de vigilância sanitária, por exemplo), peça ajuda antes de abrir MEI.",
     "caseAuthenticityType": "fictionalized_composite_case",
     "status": "active",
     "version": "1.0"
@@ -664,11 +664,11 @@
   "options": [
     "Continuar sem política. Perder R$ 1.000 a cada trimestre é parte do jogo.",
     "Mudar pra 100% antecipado. Vai perder cliente, mas resolve o problema.",
-    "Política nova com prazo: 50% antecipado no momento de aprovar orçamento, 50% na retirada. Aparelho não retirado em 60 dias após pronto vira propriedade do estabelecimento pra cobrir custo (regra escrita, comunicada por WhatsApp, foto da política no balcão). Cliente fiel notificado primeiro: 'fulano, mudou minha política, daqui pra frente é assim'."
+    "Política nova com prazo: 50% antecipado no momento de aprovar orçamento, 50% na retirada. Quem some depois de 60 dias perde o sinal já pago, que cobre a peça (regra escrita, comunicada por WhatsApp, foto da política no balcão). Cliente fiel notificado primeiro: 'fulano, mudou minha política, daqui pra frente é assim'."
   ],
-  "tradeoffs": "Continuar sem política normaliza prejuízo recorrente e ocupa espaço útil. 100% antecipado espanta cliente novo (concorrente local realmente não cobra). 50/50 + prazo equilibra: cliente já pagou metade, tem interesse em buscar; quem some perde o que pagou, Jorge cobre a peça. Política escrita no balcão (lei autoriza pelo Código Civil art. 644-647 — penhor sobre obra) protege juridicamente.",
+  "tradeoffs": "Continuar sem política normaliza prejuízo recorrente e ocupa espaço útil. 100% antecipado espanta cliente novo (concorrente local realmente não cobra). 50/50 + prazo equilibra: cliente já pagou metade, tem interesse em buscar; quem some perde o que pagou, Jorge cobre a peça. Política escrita e avisada antes do serviço evita briga caso a caso. Se for dar outro destino a um aparelho que ficou parado, ele combina por escrito e procura orientação antes, porque tomar o bem do cliente por conta própria pode virar dor de cabeça.",
   "lessonLearned": "Cliente que some é responsabilidade compartilhada: parte é cliente desorganizado, parte é falta de política do prestador. Pagamento parcial + prazo escrito de retirada resolve sem espantar cliente fiel.",
-  "tropicalizedLesson": "No Brasil, assistência técnica de celular, ourivesaria, sapataria, conserto de eletrodoméstico e qualquer reparo que envolve cliente deixando bem na loja sofre do mesmo padrão: 25-30% de clientes que somem. O caminho que funciona é hibrido: 50% antecipado (cliente investiu, tem incentivo de buscar) + prazo escrito de 60 dias (após isso, aparelho cobre custo). Política comunicada por WhatsApp + cartaz no balcão tira a conversa caso a caso. Cliente fiel notificado pessoalmente preserva relação.",
+  "tropicalizedLesson": "No Brasil, assistência técnica de celular, ourivesaria, sapataria, conserto de eletrodoméstico e qualquer reparo que envolve cliente deixando bem na loja sofre do mesmo padrão: 25-30% de clientes que somem. O caminho que funciona é hibrido: 50% antecipado (cliente investiu, tem incentivo de buscar) + prazo escrito de 60 dias (depois disso, o sinal já cobre a peça). Política comunicada por WhatsApp + cartaz no balcão tira a conversa caso a caso. Cliente fiel notificado pessoalmente preserva relação.",
   "practicalTask": "task_planilha_pedidos_basica",
   "relatedResources": ["res_organizacao_pedidos", "res_caixa_basico"],
   "helpTrigger": "Se você tem mais de 10 itens parados na prateleira há mais de 30 dias representando 5%+ do faturamento mensal, peça ajuda. Política nova exige bom jeito pra anunciar sem espantar cliente fiel.",
