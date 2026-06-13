@@ -455,3 +455,16 @@ Correção (motor aditivo não faz "E" lógico, então usamos o piso por-arquét
 - Tests 12 (digital forte + base fraca → cai no arquétipo) e 13 (digital forte mas base ok → NÃO cai, piso protege) adicionados. test-scoring: 21/21.
 
 Decisão registrada: preferimos rebalancear os sinais existentes a adicionar pergunta nova, pra não alongar o diagnóstico (já tem 36 perguntas + atalho de skip).
+
+### Oportunidades: URLs e links internos quebrados (commit pendente)
+
+Auditoria do `opportunities.json`: 2 fontes Sebrae estavam em `needs_review` e 4 oportunidades apontavam o botão "Saber mais" pra páginas internas que não existem (404). `sourceStatus` não afeta o render público (só alimenta a lista de revisão em `/admin/fontes`), mas o `sourceLink` quebrado afeta. Correções (Opção A: apontar cada uma pra um destino que existe de verdade):
+
+- `opp_sebrae_curso_inicial`: link `https://sebrae.com.br/` → `https://loja.sebrae.com.br/cursos/cursos-online`; `needs_review` → `active`.
+- `opp_sebrae_atendimento_presencial`: link mantido (`https://sebrae.com.br/`); `needs_review` → `active`.
+- `opp_rede_pescadoras`: link `/oportunidades/rede-pescadoras` (inexistente) → `https://projetopescadores.com.br/contato`; `needs_review` → `active`.
+- `opp_feira_bazar_local`: link `/oportunidades/feiras-bazares` (inexistente) → `/conteudos/res_feira_bazar_basico`; `needs_review` → `active`.
+- `opp_apoio_juridico_mei`: link `/oportunidades/apoio-mei` (inexistente) → `/formalizacao`; `needs_review` → `active`.
+- `opp_microcredito_orientacao`: link `/oportunidades/microcredito-orientacao` (inexistente) → `/conteudos/res_microcredito_orientacao` (já estava `active`).
+
+Não existe rota `/oportunidades/:slug` no app, só o índice `/oportunidades` - por isso todos os links internos de detalhe estavam 404. Validação: 227 itens OK. Build: OK.
