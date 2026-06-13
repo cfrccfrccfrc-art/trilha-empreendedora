@@ -218,6 +218,7 @@
   },
   {
     "id": "case_formalizacao_mei_decisao",
+    "legalSensitive": true,
     "title": "Sandra, dois anos vendendo bolo, e a hora de virar MEI",
     "region": "Brasil - Goiânia (GO)",
     "sector": "alimentacao",
@@ -654,6 +655,7 @@
 },
 {
   "id": "case_jorge_conserto_celular_clientes_somem",
+  "legalSensitive": true,
   "title": "Jorge, a prateleira cheia de celular que ninguém vem buscar",
   "region": "Brasil, Aparecida de Goiânia (GO)",
   "sector": "servicos",

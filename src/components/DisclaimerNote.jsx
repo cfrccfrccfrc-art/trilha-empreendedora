@@ -1,4 +1,4 @@
-import { Lightbulb } from './Sketches';
+import { Lightbulb, DocumentStamp } from './Sketches';
 
 // Disclaimer leve. A Trilha dá orientação geral baseada em situações comuns.
 // Não substitui consultoria de quem conhece o caso específico do empreendedor.
@@ -8,10 +8,37 @@ import { Lightbulb } from './Sketches';
 // - TaskDetail (na hora de fazer a tarefa)
 // - MyPlan (rodapé da trilha)
 // - Mini-trilhas (depois do resultado)
+//
+// variant='legal' é específico pra conteúdo com risco jurídico/tributário
+// (reter bem de cliente, cobrança, contrato, formalização). Deixa claro que
+// não é parecer e aponta pra apoio gratuito.
 export default function DisclaimerNote({
   variant = 'default',
   className = '',
 }) {
+  if (variant === 'legal') {
+    return (
+      <div
+        className={`flex gap-3 items-start bg-coral/10 border border-coral rounded-2xl p-4 ${className}`}
+      >
+        <DocumentStamp className="w-8 h-8 shrink-0" />
+        <div>
+          <p className="text-xs font-bold text-ink leading-tight mb-1">
+            Isso aqui não é parecer jurídico
+          </p>
+          <p className="text-xs text-secondary leading-relaxed">
+            A Trilha explica o caminho geral, mas regra de cobrança, contrato e
+            o que você pode ou não fazer com bem de cliente dependem do seu caso
+            e da lei vigente. Antes de agir numa situação que envolve dinheiro
+            de terceiro, bem retido ou contrato, confirme com quem é da área.
+            Você pode procurar a Defensoria Pública, o balcão gratuito da OAB,
+            o Procon ou o atendimento do Sebrae - todos sem custo.
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   if (variant === 'compact') {
     return (
       <p

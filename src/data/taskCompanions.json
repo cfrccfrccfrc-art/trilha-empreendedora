@@ -1041,6 +1041,39 @@
   "version": "1.0"
 },
 {
+  "id": "companion_dizer_o_preco_sem_dobrar_carmen",
+  "taskTemplateId": "task_dizer_o_preco_sem_dobrar",
+  "archetypeId": "talento_sem_postura_comercial",
+  "personaName": "Dona Carmen",
+  "region": "Brasil, Belford Roxo (RJ)",
+  "personaContext": "Mesma Carmen da tabela na parede. Agora a tabela existe, mas na hora da conversa cara a cara ela ainda amolecia: dizia o preço com a voz baixa, emendava 'mas pra você eu vejo', e quando a cliente fazia cara feia já oferecia desconto antes mesmo de ouvir reclamação. Tinha também três clientes antigas devendo ajuste de mais de 30 dias que ela não tinha coragem de cobrar.",
+  "stumbles": [
+    {
+      "moment": "Passar o preço sem pedir desculpa",
+      "whatHappened": "Cliente perguntou quanto era o ajuste do vestido. Carmen, mesmo com a tabela na parede atrás dela, respondeu: 'olha, fica uns R$ 40, mas se ficar pesado pra você a gente conversa'. Já abriu a porta do desconto sozinha.",
+      "whatHelped": "A filha pediu pra ela treinar a fala em voz alta, na frente do espelho, antes de atender. Três vezes: 'O ajuste do vestido fica R$ 40, pronto na quinta.' Ponto. Sem 'mas', sem 'uns'. Carmen percebeu que o 'uns R$ 40' já soava como pedido de desculpa. Na semana seguinte passou o preço seco em 4 atendimentos. Ninguém saiu. Duas pagaram sem pestanejar."
+    },
+    {
+      "moment": "Ouvir 'tá caro' sem derrubar o preço",
+      "whatHappened": "Uma cliente nova ouviu R$ 40 e disse 'nossa, tá caro'. Carmen quase respondeu 'então faço por 30'. A mão já estava no desconto.",
+      "whatHelped": "Lembrou da segunda fala treinada: 'Entendo. Esse preço cobre linha boa, acabamento à mão e a garantia de refazer se não ficar bom. Se quiser, dá pra fazer o ajuste mais simples, sem o acabamento à mão, aí fica R$ 30.' A cliente pensou e escolheu o de R$ 40 mesmo. Carmen entendeu: ela não baixou o preço, ofereceu uma entrega menor por um preço menor. O cliente é quem escolhe."
+    },
+    {
+      "moment": "Cobrar as três clientes atrasadas",
+      "whatHappened": "Três ajustes entregues, pagamento combinado, mais de 30 dias sem acertar. Carmen tinha vergonha de mandar mensagem. 'Vai parecer que eu tô desesperada por dinheiro.'",
+      "whatHelped": "Usou a terceira fala, igual pras três: 'Oi, tudo bem? Passando pra lembrar do ajuste que ficou pronto, o pagamento de R$ 35 tá em aberto desde o mês passado. Consegue acertar até sexta?' Mandou, fechou o celular, não ficou olhando. Duas responderam no mesmo dia e pagaram. A terceira pediu pra dividir, e Carmen aceitou - mas agora era um combinado, não um sumiço."
+    }
+  ],
+  "breakthrough": "Carmen entendeu que a tabela na parede era metade do trabalho. A outra metade era a boca: dizer o número sem amaciar, segurar quando ouve 'tá caro', e cobrar quem some sem virar inimiga. Ela passou a ensaiar as três falas em voz alta toda segunda de manhã, antes de abrir pra atender.",
+  "outcome": "Em um mês, Carmen parou de dar desconto automático: das 12 vezes que alguém esticou pra negociar, ela segurou o preço em 9 e ofereceu entrega menor em 3. Recuperou R$ 105 das três clientes atrasadas. O que mudou não foi a tabela, foi a postura na hora de falar. Ela disse pra filha: 'eu sabia o preço, só não sabia dizer'.",
+  "whenToAskForHelp": "Se você treina a fala e mesmo assim trava na frente do cliente toda vez, ou se tem cliente devendo há mais de 60 dias e a conversa direta não resolveu, peça apoio. Travar pra cobrar é comum e tem jeito, mas dívida velha que não anda pode precisar de orientação de quem entende de cobrança.",
+  "relatedCases": ["case_carmen_costura_ajustes"],
+  "relatedResources": ["res_precificacao_simples"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
   "id": "companion_anotar_7_dias_mariana",
   "taskTemplateId": "task_anotar_7_dias",
   "archetypeId": "digital_antes_da_base",

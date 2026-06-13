@@ -7,6 +7,7 @@ import PageHeader from '../components/PageHeader';
 import Card from '../components/Card';
 import Button from '../components/Button';
 import CopyTextButton from '../components/CopyTextButton';
+import DisclaimerNote from '../components/DisclaimerNote';
 import JsonLd from '../components/JsonLd';
 import { Lightbulb, OpenBook } from '../components/Sketches';
 import { formatCaseAsMarkdown } from '../utils/exports';
@@ -166,6 +167,10 @@ export default function CaseDetailPage() {
               {caseItem.tradeoffs}
             </p>
           </Card>
+
+          {caseItem.legalSensitive && (
+            <DisclaimerNote variant="legal" />
+          )}
         </div>
 
         {/* Sidebar: ações + relacionados (sticky em desktop) */}

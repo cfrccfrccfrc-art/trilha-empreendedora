@@ -467,6 +467,26 @@
     "version": "1.0"
   },
   {
+    "id": "task_dizer_o_preco_sem_dobrar",
+    "title": "Dizer o preço sem dobrar",
+    "week": 3,
+    "archetypeId": "talento_sem_postura_comercial",
+    "action": "Treine três falas em voz alta, do jeito que você diria pro cliente. 1) Passar o orçamento sem pedir desculpa: 'O serviço fica R$ X, com isso e aquilo inclusos, pronto em tal prazo.' Ponto final, sem 'mas' e sem 'eu sei que tá meio caro'. 2) Responder o 'tá caro' sem baixar na hora: 'Entendo. Esse preço cobre material bom, garantia e o meu tempo. Se quiser, dá pra ajustar tirando tal coisa, aí fica R$ Y.' Você mexe no que entrega, não simplesmente no preço. 3) Cobrar atraso com firmeza e educação: 'Oi, tudo bem? Passando pra lembrar do pagamento do dia tal, que tá em aberto. Consegue acertar até sexta?' Manda, espera a resposta, não some.",
+    "purpose": "Parar de perder dinheiro na hora de falar preço, no 'tá caro' e na cobrança.",
+    "expectedLearning": "Fala treinada antes sai firme. Quem não ensaia, gagueja e cede.",
+    "reflectionQuestions": [
+      "Em qual das três situações você mais trava?",
+      "Você baixou preço essa semana sem tirar nada da entrega?",
+      "Tem cliente devendo que você está com vergonha de cobrar?"
+    ],
+    "commonMistakes": ["Pedir desculpa antes de dizer o preço", "Baixar o valor no primeiro 'tá caro', sem tirar nada da entrega", "Deixar o atraso correr por vergonha de cobrar"],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
     "id": "task_listar_20_clientes",
     "title": "Listar 20 clientes possíveis",
     "week": 3,

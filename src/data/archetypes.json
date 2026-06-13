@@ -179,7 +179,7 @@
     ],
     "firstTaskId": "task_lista_zap_50_pessoas",
     "avoidNow": "Evite anúncios pagos antes de organizar a base de clientes que você já tem na comunidade.",
-    "expectedLearning": "Sua comunidade já é seu canal - só falta organizar o contato e mostrar o produto pra outras comunidades parecidas.",
+    "expectedLearning": "Sua comunidade já é seu canal - só falta organizar o contato e montar uma presença online simples pra alcançar além de quem passa na sua frente.",
     "roadmap30d": [
       { "week": 1, "title": "Lista de zap de 50 clientes", "tasks": ["task_lista_zap_50_pessoas"] },
       { "week": 2, "title": "Catálogo simples no zap",     "tasks": ["task_catalogo_simples"] },
@@ -267,7 +267,7 @@
     "roadmap30d": [
       { "week": 1, "title": "Lista de serviços e preços",  "tasks": ["task_lista_servicos_precos"] },
       { "week": 2, "title": "Listar 20 clientes possíveis","tasks": ["task_listar_20_clientes"] },
-      { "week": 3, "title": "Conversar com 10 clientes",   "tasks": ["task_falar_com_10_clientes"] },
+      { "week": 3, "title": "Dizer o preço sem dobrar",    "tasks": ["task_dizer_o_preco_sem_dobrar"] },
       { "week": 4, "title": "Definir oferta, preço, entrega","tasks": ["task_definir_oferta_preco_entrega"] }
     ],
     "recommendedResources": ["res_precificacao_simples", "res_feira_bazar_basico"],

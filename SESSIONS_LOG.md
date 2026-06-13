@@ -406,3 +406,37 @@ Bug do `s4Line2.replace('13','')` corrigido (gerava "1515 perfis." na S4).
 - Cadastro mínimo é nome+WhatsApp; outros campos opcionais com microcopy explicando benefício de preencher
 - Apresentação tem 7 seções + Hero; padrão é seção clara com pattern + S6/S7 dark com blob
 - Funnel sempre com contraste alto em qualquer fundo (gradient paper→highlight, textos ink-800)
+
+## Sessão 13/06/2026 — auditoria de conteúdo (utilidade + realismo) + disclaimer jurídico
+
+Pedido: auditar dicas, tarefas e cases de novo, comprehensively, pra garantir que sejam úteis e realistas. Saiu um relatório em 4 tiers; tiers 1 e 2 + correções mecânicas de tom aplicados e em produção.
+
+### Tier 1 — risco legal/tributário (commit 7b57525)
+
+- **Case Jorge (conserto de celular):** removida citação jurídica falsa ("Código Civil art. 644-647 — penhor sobre obra"). Trocada por orientação de combinar por escrito antes do serviço e procurar apoio antes de dar outro destino a aparelho parado. Opção 3 e tropicalizedLesson reescritas em torno de "sinal já pago cobre a peça", sem afirmar que o aparelho "vira propriedade do estabelecimento".
+- **Case Sandra (MEI):** helpTrigger e tropicalizedLesson ganharam o alerta de que servidor público deve checar o estatuto antes (muitos proíbem ser titular de MEI).
+
+### Tier 2 — credibilidade/números (commit 5a9ee5b)
+
+- **Case Diego (barbeiro):** volume ajustado de "8-10 clientes/dia" pra "5-6 clientes/dia (cada corte 45-60 min)" pra bater com o faturamento declarado de R$ 9.800.
+- **resources.json:** BNDES não é credor direto de microcrédito. `res_capital_inteligente` e `res_microcredito_orientacao` reescritos: quem atende é banco/cooperativa/agente credenciado; comparar 3 ofertas; microcrédito orientado costuma ficar até ~4% a.m.
+- **precificacao.json:** guia `cobertura_basica` parou de sugerir baixar preço com margem >40%; agora orienta que margem boa protege e só baixar se confirmar perda de venda por preço.
+- **Tom mecânico:** "tráfego pago" → "anúncios pagos" (4x em cases); 2ª "Dona Marlene" (carrinho de Ceilândia) renomeada pra "Dona Marluce" pra não colidir com a quitandeira de Olinda; varredura de em-dash em todos os JSON (305 → 0).
+
+### Tier 3 — execução desta sessão (commit pendente)
+
+- **Nova task `task_dizer_o_preco_sem_dobrar`** (talento_sem_postura_comercial, semana 3) com 3 falas pra treinar: passar orçamento sem pedir desculpa, responder "tá caro" mexendo na entrega e não no preço, cobrar atraso com firmeza. Entrou no `roadmap30d` na semana 3 (saiu `task_falar_com_10_clientes`, que não treinava a dor central do arquétipo: cobrar).
+- **Novo companion `companion_dizer_o_preco_sem_dobrar_carmen`** (Dona Carmen, Belford Roxo) — continuação do arco dela: agora segura o preço na conversa cara a cara.
+- **`vende_comunidade_nao_online`:** `expectedLearning` deixou de prometer alcançar "outras comunidades parecidas" (o roadmap não entrega isso); agora fala em montar presença online simples pra alcançar além de quem passa na frente.
+- **Disclaimer jurídico (sticker):** novo `variant='legal'` em `DisclaimerNote.jsx` (ícone DocumentStamp, borda coral) deixando claro que não é parecer jurídico e apontando Defensoria/OAB/Procon/Sebrae. Renderizado em `CaseDetailPage` quando o case tem `"legalSensitive": true` (marcados: Jorge e Sandra/MEI). Formalização já tinha o aviso de contador, mantido.
+
+### Verificações
+
+- `npm run validate-content`: 227 itens, tudo válido (era 225; +1 task +1 companion).
+- `npm run test-scoring`: 19/19.
+- `npm run build`: OK.
+
+### Decisões / não-mudanças
+
+- IDs de companion (amina/keisha/priya vs Aline/Joana/Patrícia) têm mismatch interno, mas **não renomeados**: case IDs aparecem em `/casos/:id` e no sitemap (risco de SEO) e o personaName já está correto.
+- Sobreposições de scoring entre arquétipos foram julgadas em geral intencionais (robustez a erro de diagnóstico é feature). Único gap real era o roadmap do talento não treinar a dor central — corrigido acima.
