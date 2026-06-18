@@ -302,5 +302,44 @@ assert(
   `got ${r13.archetypeId}, digital score=${r13.archetypeScores.digital_antes_da_base}`
 );
 
+console.log(
+  '\n--- Test 14: ideia preliminar + emprego fixo → ainda_e_ideia (não renda_complementar) ---'
+);
+// Regressão: ter emprego fixo é sinal de tempo, não de já tirar renda de um
+// negócio. "Só a ideia" + "trabalho fixo" não pode virar renda_complementar.
+const ideaWithJob = {
+  q_stage_selling: 'just_idea',
+  q_stage_time: 'never_sold',
+  q_about_motivation: 'support_family',
+  q_time_other_job: 'fixed_job',
+  q_goals_main: 'not_started',
+};
+const r14 = scoreAnswers(ideaWithJob, questions, archetypes, rules);
+console.log('  archetypeId:', r14.archetypeId);
+assert(
+  'ideia + emprego fixo NÃO cai em renda_complementar',
+  r14.archetypeId !== 'renda_complementar',
+  `got ${r14.archetypeId}`
+);
+assert('ideia + emprego fixo → ainda_e_ideia', r14.archetypeId === 'ainda_e_ideia');
+
+console.log(
+  '\n--- Test 15: renda complementar legítima ainda funciona ---'
+);
+// Vende de vez em quando, tem emprego, pouco tempo, sustenta família.
+const genuineSideIncome = {
+  q_stage_selling: 'sells_sometimes',
+  q_about_motivation: 'support_family',
+  q_time_dedication: 'lt_5h',
+  q_time_other_job: 'fixed_job',
+};
+const r15 = scoreAnswers(genuineSideIncome, questions, archetypes, rules);
+console.log('  archetypeId:', r15.archetypeId);
+assert(
+  'vende às vezes + emprego + pouco tempo → renda_complementar',
+  r15.archetypeId === 'renda_complementar',
+  `got ${r15.archetypeId}`
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

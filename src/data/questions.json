@@ -395,7 +395,7 @@
         "label": "Sim, trabalho fixo",
         "scoring": {
           "archetypes": {
-            "renda_complementar": 3,
+            "renda_complementar": 1,
             "empreendedora_sobrecarregada": 1
           },
           "pains": {

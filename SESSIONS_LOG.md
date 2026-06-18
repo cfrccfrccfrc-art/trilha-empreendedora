@@ -485,3 +485,11 @@ Contexto: ninguém chega ao app ainda; objetivo é ativação/distribuição. An
 - Uso: link de anúncio com `?utm_source=instagram&utm_campaign=...` faz toda a jornada da pessoa carregar a origem, dá pra ver o funil por fonte e calcular custo por usuária real. Validação 227 OK, build OK.
 
 Decisão de produto registrada: priorizar multiplicador + WhatsApp (custo ~zero, mais confiança) sobre anúncio frio; se for testar pago, começar com R$200-300 só pra medir o funil por origem antes de escalar.
+
+### Auditoria de scoring: emprego fixo classificava ideia como renda_complementar
+
+Bug relatado: testou um perfil "só uma ideia bem preliminar", mas o diagnóstico deu `renda_complementar` só porque marcou que tinha emprego fixo. Raiz: `q_time_other_job` / "Sim, trabalho fixo" dava **+3 renda_complementar** - fazia "ter emprego" ser o sinal mais forte do arquétipo. Como o teto de renda_complementar é baixo (~6) e o de ainda_e_ideia é alto (~11), esse +3 sozinho vencia no ratio mesmo com "tenho só a ideia / nunca vendi".
+
+Conceito: emprego fixo é sinal de **tempo/disponibilidade**, não de já tirar renda de um negócio. O que define renda complementar é **já vender de vez em quando** pra complementar, não só ter emprego.
+
+Correção (1 linha): `fixed_job` → renda_complementar **3 → 1** (mantidos empreendedora_sobrecarregada +1 e dor tempo +1). O piso global de 3 pontos faz emprego sozinho não cruzar o mínimo; renda_complementar passa a exigir a combinação (vende às vezes + emprego + pouco tempo). Validado com o motor real e 2 testes de regressão (Test 14: ideia + emprego → ainda_e_ideia; Test 15: caso legítimo segue renda_complementar). test-scoring: 24/24.
