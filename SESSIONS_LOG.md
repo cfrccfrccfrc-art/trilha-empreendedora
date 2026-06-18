@@ -475,3 +475,13 @@ Não existe rota `/oportunidades/:slug` no app, só o índice `/oportunidades` -
 - `opp_curso_precificacao` → `/conteudos/res_precificacao_simples`
 
 Pendência: `opp_compra_coletiva_insumos` (`/oportunidades/compra-coletiva`) segue quebrado - não há conteúdo dedicado sobre compra coletiva. Decisão em aberto (criar conteúdo novo / apontar pra conteúdo próximo / tirar o botão).
+
+### Atribuição de origem na telemetria (pré-campanha)
+
+Contexto: ninguém chega ao app ainda; objetivo é ativação/distribuição. Antes de gastar em anúncio, instrumentamos a origem do tráfego pra qualquer real gasto virar aprendizado. Diagnóstico: o funil já estava todo instrumentado (`home_view` → `diagnostic_started` → `diagnostic_completed` → `plan_saved` → `task_submitted`) e o painel `/admin/metricas` já calcula taxas. Faltavam só 2 coisas pra medir campanha: origem do tráfego e id de visitante/sessão anônimo. Ambas couberam no `meta` (JSONB) - **sem migration**.
+
+- `telemetry.js`: todo evento passa a carregar `meta.vid` (visitante, localStorage), `meta.sid` (sessão, sessionStorage) e `meta.src` (first-touch: `utm_source/medium/campaign` da URL + domínio do referrer). Ids aleatórios, sem dado pessoal; falha de storage não quebra o fluxo.
+- `AdminMetrics.jsx`: novo cartão "Origem do tráfego" (visitantes únicos + sessões distintas por origem). Select passou a puxar `meta`.
+- Uso: link de anúncio com `?utm_source=instagram&utm_campaign=...` faz toda a jornada da pessoa carregar a origem, dá pra ver o funil por fonte e calcular custo por usuária real. Validação 227 OK, build OK.
+
+Decisão de produto registrada: priorizar multiplicador + WhatsApp (custo ~zero, mais confiança) sobre anúncio frio; se for testar pago, começar com R$200-300 só pra medir o funil por origem antes de escalar.

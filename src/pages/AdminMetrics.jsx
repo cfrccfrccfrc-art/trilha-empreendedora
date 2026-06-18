@@ -55,8 +55,8 @@ export default function AdminMetrics() {
       const client = getAuthedClient(session.access_token);
       const queries = [];
 
-      // client_events: agrupar por event_type
-      let evQ = client.from('client_events').select('event_type');
+      // client_events: agrupar por event_type (+ meta pra origem/visitante)
+      let evQ = client.from('client_events').select('event_type, meta');
       if (since) evQ = evQ.gte('created_at', since);
       queries.push(evQ);
 
@@ -79,18 +79,32 @@ export default function AdminMetrics() {
       const [eventsRes, ...counts] = results;
       if (eventsRes.error) throw eventsRes.error;
 
-      // Agrega event_type
+      // Agrega event_type + origem (sessões distintas por fonte) + visitantes
       const byType = {};
+      const visitors = new Set();
+      const sessionsBySource = {}; // label -> Set(sid)
       for (const row of eventsRes.data || []) {
         byType[row.event_type] = (byType[row.event_type] || 0) + 1;
+        const m = row.meta || {};
+        if (m.vid) visitors.add(m.vid);
+        const src = m.src || {};
+        const label = src.utm_source || src.referrer || 'direto';
+        if (m.sid) {
+          (sessionsBySource[label] = sessionsBySource[label] || new Set()).add(
+            m.sid
+          );
+        }
       }
+      const bySource = Object.fromEntries(
+        Object.entries(sessionsBySource).map(([k, set]) => [k, set.size])
+      );
 
       const opCounts = {};
       opTables.forEach((t, i) => {
         opCounts[t.key] = counts[i].count ?? 0;
       });
 
-      setData({ byType, opCounts });
+      setData({ byType, opCounts, uniqueVisitors: visitors.size, bySource });
     } catch (err) {
       console.error(err);
       setError(err?.message || 'Erro ao carregar.');
@@ -122,6 +136,8 @@ export default function AdminMetrics() {
 
   const ev = data?.byType || {};
   const op = data?.opCounts || {};
+  const bySource = data?.bySource || {};
+  const sourceRows = Object.entries(bySource).sort(([, a], [, b]) => b - a);
 
   return (
     <div className="space-y-4">
@@ -184,6 +200,30 @@ export default function AdminMetrics() {
               label="Pedidos de ajuda"
               value={op.help_requests || 0}
             />
+          </Card>
+
+          <Card>
+            <h3 className="font-bold text-ink mb-2">Origem do tráfego</h3>
+            <Row
+              label="Visitantes únicos"
+              value={data?.uniqueVisitors || 0}
+              hint="ids anônimos distintos no período"
+            />
+            {sourceRows.length === 0 ? (
+              <p className="text-secondary text-sm mt-2">
+                Sem origem registrada ainda. Marque o link do anúncio com
+                ?utm_source=instagram pra aparecer aqui.
+              </p>
+            ) : (
+              sourceRows.map(([label, n]) => (
+                <Row
+                  key={label}
+                  label={label === 'direto' ? 'Direto / sem origem' : label}
+                  value={n}
+                  hint="sessões distintas"
+                />
+              ))
+            )}
           </Card>
 
           <Card>
