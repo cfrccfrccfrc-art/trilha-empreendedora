@@ -91,8 +91,8 @@ const COPY = {
     s4Line2: '16 perfis.',
     s4Line3: '30 dias.',
     s4Body:
-      '35 perguntas curtas identificam seu perfil. 4 missões práticas, uma por semana. Companheiros reais que viveram a mesma fase. Casos que mostram como joga no Brasil.',
-    mock1Progress: 'Pergunta 4 de 35',
+      '36 perguntas curtas identificam seu perfil. 4 missões práticas, uma por semana. Companheiros reais que viveram a mesma fase. Casos que mostram como joga no Brasil.',
+    mock1Progress: 'Pergunta 4 de 36',
     mock1Question:
       'Você sabe quanto entrou e saiu do negócio no último mês?',
     mock1Options: ['Sim, com detalhes', 'Sim, mais ou menos', 'Não', 'Não sei'],
@@ -194,8 +194,8 @@ const COPY = {
     s4Line2: '16 profiles.',
     s4Line3: '30 days.',
     s4Body:
-      "35 short questions identify your profile. 4 practical missions, one per week. Real companions who've lived the same stage. Cases that show how things play out in Brazil.",
-    mock1Progress: 'Question 4 of 35',
+      "36 short questions identify your profile. 4 practical missions, one per week. Real companions who've lived the same stage. Cases that show how things play out in Brazil.",
+    mock1Progress: 'Question 4 of 36',
     mock1Question:
       'Do you know how much came in and went out of the business last month?',
     mock1Options: ['Yes, in detail', 'Yes, roughly', 'No', "Don't know"],

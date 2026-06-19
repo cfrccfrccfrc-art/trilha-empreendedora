@@ -23,7 +23,7 @@ import {
 
 const STEPS = [
   {
-    title: 'Você responde 35 perguntas curtas',
+    title: 'Você responde 36 perguntas curtas',
     body: 'Em mais ou menos 5 minutos. Sem cadastro, sem cobrança.',
     Icon: StepOne,
   },

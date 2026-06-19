@@ -141,7 +141,8 @@ Depois do primeiro deploy, atualize o redirect do Supabase Auth:
 ## Status
 
 - 16 arquétipos ativos
-- 44 task templates ativos
+- 48 task templates ativos
+- 51 companheiros de tarefa ativos
 - 22 conteúdos (mistura de Trilha original, Sebrae, BCB, Pescadoras, setoriais)
 - 37 casos ativos
 - 11 oportunidades

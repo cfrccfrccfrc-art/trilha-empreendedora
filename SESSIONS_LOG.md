@@ -493,3 +493,31 @@ Bug relatado: testou um perfil "só uma ideia bem preliminar", mas o diagnóstic
 Conceito: emprego fixo é sinal de **tempo/disponibilidade**, não de já tirar renda de um negócio. O que define renda complementar é **já vender de vez em quando** pra complementar, não só ter emprego.
 
 Correção (1 linha): `fixed_job` → renda_complementar **3 → 1** (mantidos empreendedora_sobrecarregada +1 e dor tempo +1). O piso global de 3 pontos faz emprego sozinho não cruzar o mínimo; renda_complementar passa a exigir a combinação (vende às vezes + emprego + pouco tempo). Validado com o motor real e 2 testes de regressão (Test 14: ideia + emprego → ainda_e_ideia; Test 15: caso legítimo segue renda_complementar). test-scoring: 24/24.
+
+---
+
+## Sessão 19/06/2026 — Fix B (pré-receita) + auditoria das 16 trilhas
+
+Três frentes, cada uma validada (`scoring.test.mjs` + `npm run validate-content`) e commitada/pushada separadamente. Regra de ouro reforçada: **nunca engenheirar respostas de persona pra bater num arquétipo-alvo** — divergência entre realidade vivida e saída do motor é finding, não bug.
+
+### Fix B: dor `financas` em perfil pré-receita (commit `d742c71`)
+
+Bug: personas em estágio de ideia / pré-venda (P14 Rita, P19 Fernanda) recebiam `mainPain=financas` e uma primeira missão de "anotar o caixa por 7 dias" — sem caixa pra anotar. Responder "não sei / nunca calculei" nas perguntas de dinheiro é a resposta **honesta** de quem ainda não vende, não deveria virar a dor principal.
+
+Correção data-driven: nova config `preRevenuePainSuppression` em `scoringRules.json` (`signals`: `q_stage_selling` em just_idea/just_started **ou** `q_stage_time` never_sold; `pains`: `financas`). Em `scoring.js`, após o loop de respostas e antes de ordenar as dores, se algum sinal pré-receita estiver presente, as dores suprimidas são removidas de `painScores`. Test 21 novo + guard-rail no Test 1 (perfil financeBlind real **continua** com `financas`). Suíte 37/37, validação 243 itens.
+
+### Auditoria das 16 trilhas via browser interno (Claude Preview MCP)
+
+Criado um caminho de teste que pula o questionário (`skipDiagnostic()` em ArchetypeProfile injeta resultado sintético no sessionStorage) e percorre as 4 semanas dos 16 arquétipos sem cadastro. Estrutura limpa (4 semanas, 0 refs quebradas/dupes/semanas vazias, firstTask sempre na semana 1). **4 findings de conteúdo:** o título da semana em `/resultado` e `/perfis` (a *promessa*) divergia do título do template em MyPlan (a *entrega*), porque 4 arquétipos reusavam template de outro contexto.
+
+### Correção das 4 trilhas + companions (commits `5c42336`, `e79fd31`)
+
+4 templates novos cumprindo cada promessa, roadmap repontado: `task_pedir_indicacao_ativa` (produto_bom_vitrine_fraca S4), `task_calcular_retorno_compra` (precisa_capital S2), `task_apresentar_primeiros_comercios` (potencial_b2b_local S4), `task_padronizar_fluxo` (operacao_travada S4). 44 → 48 templates.
+
+As 4 tasks novas entraram sem companheira (regressão detectada pelo dono: "as novas tarefas ficaram sem companheiros?"). Criadas 4 companions — Cláudia/Caruaru, Vera/Duque de Caxias, Eunice/Lavras, Marta/Campinas — cada uma ancorada nos `recommendedCases`/`recommendedResources` validados do arquétipo, schema completo, tipo `fictionalized_composite_case`. 47 → 51 companions.
+
+### Atualização de docs
+
+README (status), PROJECT_CONTEXT (intro 12→16 arquétipos / 35→36 perguntas + nova subseção na seção 14 com total atualizado) e este log sincronizados.
+
+**Total geral pós-sessão: 48 task templates, 51 companions, 16 archetypes, 37 cases, 22 resources, 11 opportunities, 3 rubricas — 247 itens validados, 36 perguntas.**

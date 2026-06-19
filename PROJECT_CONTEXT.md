@@ -4,7 +4,7 @@ Briefing pra Claude Code que está abrindo esse repositório pela primeira vez. 
 
 ## 1. Visão do produto
 
-**Trilha Empreendedora** é uma plataforma mobile-first em português brasileiro que ajuda microempreendedores brasileiros a descobrirem o próximo passo concreto do negócio. Inspirada na metodologia do Projeto Pescadores. Princípio central: ninguém empreende em geral, empreende numa situação específica. O usuário responde 35 perguntas curtas em 5 minutos, recebe um arquétipo (1 entre 12) que descreve a situação dele, e ganha uma trilha de 30 dias com 4 missões práticas (uma por semana). É gratuito, não vende crédito, não busca lucro. Mantido por doação voluntária via Pix.
+**Trilha Empreendedora** é uma plataforma mobile-first em português brasileiro que ajuda microempreendedores brasileiros a descobrirem o próximo passo concreto do negócio. Inspirada na metodologia do Projeto Pescadores. Princípio central: ninguém empreende em geral, empreende numa situação específica. O usuário responde 36 perguntas curtas em 5 minutos, recebe um arquétipo (1 entre 16) que descreve a situação dele, e ganha uma trilha de 30 dias com 4 missões práticas (uma por semana). É gratuito, não vende crédito, não busca lucro. Mantido por doação voluntária via Pix.
 
 Público: empreendedora ou empreendedor com baixa renda, geralmente entre R$ 500 e R$ 7.000 de faturamento mensal, com celular Android simples e franquia de dados limitada. Provavelmente vende comida, beleza, costura, artesanato, serviços de bairro. Pode estar começando do zero ou tentando profissionalizar bico antigo.
 
@@ -751,6 +751,25 @@ Total: **14 arquétipos ativos**, 35 task templates, 31 companions, 29 cases.
 **Cleanups técnicos:**
 - 15 `sourceLink` fantasmas removidos dos recursos da Trilha original (apontavam pra slugs que não existiam). Validador atualizado pra exigir `sourceLink` só de fontes externas.
 - 5 páginas admin migradas pro `getAuthedClient(token)` preventivo: `SupervisorDashboard`, `SupervisorReview`, `AdminUserStories`, `SourceRefresh`, `AdminMetrics`. Se o bug do init voltar, elas não travam.
+
+### Fix B (pré-receita) + auditoria das 16 trilhas (sessão 19/06/2026)
+
+Três frentes nesta janela, todas validadas (`scoring.test.mjs` + `validate-content`) e commitadas:
+
+1. **Fix B — supressão de dor pré-receita** (`scoring.js` + `scoringRules.json`). Personas em estágio de ideia/pré-venda (ex.: P14 Rita, P19 Fernanda) recebiam `mainPain=financas` e uma primeira missão de "anotar o caixa por 7 dias" — sem sentido pra quem ainda não vende. Nova config `preRevenuePainSuppression` (data-driven): se houver sinal pré-receita (`q_stage_selling` em just_idea/just_started **ou** `q_stage_time` never_sold), as dores listadas (`financas`) são removidas de `painScores` antes da ordenação. Test 21 + guard-rail do Test 1 (financeBlind real continua com `financas`). Commit `d742c71`.
+
+2. **Promessa × entrega nas trilhas** (`taskTemplates.json` + `archetypes.json`). Auditoria das 16 trilhas via browser interno revelou 4 arquétipos onde o **título da semana** (mostrado em `/resultado` e `/perfis` — a promessa) divergia do **título do template** (mostrado em MyPlan — a entrega), porque reusavam um template de outro contexto. Criados 4 templates novos cumprindo cada promessa e o roadmap foi repontado:
+   - `task_pedir_indicacao_ativa` (produto_bom_vitrine_fraca, S4)
+   - `task_calcular_retorno_compra` (precisa_capital, S2)
+   - `task_apresentar_primeiros_comercios` (potencial_b2b_local, S4)
+   - `task_padronizar_fluxo` (operacao_travada, S4)
+   Commit `5c42336`.
+
+3. **Companions das 4 tarefas novas** (`taskCompanions.json`). As 4 tasks novas tinham entrado sem companheira, deixando essas semanas descobertas. Criadas 4 companions (Cláudia/Caruaru, Vera/Duque de Caxias, Eunice/Lavras, Marta/Campinas), cada uma ancorada nos `recommendedCases`/`recommendedResources` já validados do arquétipo, schema completo (3 stumbles, breakthrough, outcome, whenToAskForHelp), tipo `fictionalized_composite_case`. Commit `e79fd31`.
+
+Regra de ouro mantida: nunca engenheirar respostas de persona pra bater num arquétipo-alvo; divergência entre realidade vivida e saída do motor é **finding**, não bug pra contornar.
+
+**Total geral (após 19/06/2026): 48 task templates ativos, 51 companions, 16 archetypes ativos, 37 cases, 22 resources, 11 opportunities, 3 rubricas — 247 itens validados, 36 perguntas no diagnóstico.** (Supersede o total da seção "Novas tasks estratégicas".)
 
 ### Pendências conhecidas
 
