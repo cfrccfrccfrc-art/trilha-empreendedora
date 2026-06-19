@@ -46,6 +46,24 @@ export default function Results() {
     if (archetype?.id) track('results_view', { archetypeId: archetype.id });
   }, [archetype?.id]);
 
+  // Runner-up archetype when the diagnosis landed in a "border zone" (the two
+  // top profiles were nearly tied). Only surfaced if it has full content to
+  // point to — we never link to a stub profile.
+  const borderArch = useMemo(() => {
+    if (!result?.borderArchetypeId) return null;
+    const a = archetypesData.find((x) => x.id === result.borderArchetypeId);
+    return a && a.status === 'active' ? a : null;
+  }, [result]);
+
+  useEffect(() => {
+    if (archetype?.id && borderArch?.id) {
+      track('results_border', {
+        primary: archetype.id,
+        secondary: borderArch.id,
+      });
+    }
+  }, [archetype?.id, borderArch?.id]);
+
   const firstTask = useMemo(() => {
     if (!result?.recommendedTaskId) return null;
     return taskTemplates.find((t) => t.id === result.recommendedTaskId);
@@ -223,6 +241,33 @@ export default function Results() {
                     {taskOpen
                       ? 'Esconder detalhes'
                       : 'Ver detalhes da missão →'}
+                  </button>
+                </div>
+              </div>
+            </Card>
+          )}
+
+          {borderArch && (
+            <Card tone="soft">
+              <div className="flex gap-3 items-start">
+                <Sparkle className="w-5 h-5 mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-hand text-secondary text-base leading-tight mb-1">
+                    Você ficou numa zona de fronteira
+                  </p>
+                  <p className="text-secondary text-sm leading-relaxed mb-2">
+                    Suas respostas ficaram quase empatadas entre este perfil e{' '}
+                    <strong className="text-ink">{borderArch.name}</strong>.
+                    Ficamos com este porque foi o sinal um pouco mais forte —
+                    siga esta trilha primeiro, sem se dividir. Mas se você se
+                    reconhece mais no outro, dá uma olhada com calma e decida:
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => navigate(`/perfis/${borderArch.id}`)}
+                    className="text-primary text-sm font-semibold text-left"
+                  >
+                    Ver o perfil {borderArch.name} →
                   </button>
                 </div>
               </div>

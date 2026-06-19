@@ -26,6 +26,10 @@
   },
   "fallbackArchetype": "ainda_e_ideia",
   "painThreshold": 2,
+  "borderZone": {
+    "enabled": true,
+    "maxRatioGap": 0.1
+  },
   "preRevenuePainSuppression": {
     "signals": {
       "q_stage_selling": ["just_idea", "just_started"],

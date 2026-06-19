@@ -514,5 +514,98 @@ assert(
   `got ${sellingFinanceBlind.mainPain}`
 );
 
+console.log(
+  '\n--- Test 22 (border): integração — empate cuidador/sobrecarregada aponta o 2º perfil ---'
+);
+// Reusa a persona do Test 19 (empate de ratio 1.0 entre cuidador e
+// sobrecarregada, primeiras tarefas DIFERENTES). A trilha principal continua
+// cuidador, mas o resultado deve sinalizar a fronteira apontando o 2º perfil.
+const r22 = scoreAnswers(caregiverOverloaded, questions, archetypes, rules);
+assert(
+  'empate com 1ª tarefa diferente → borderArchetypeId = empreendedora_sobrecarregada',
+  r22.borderArchetypeId === 'empreendedora_sobrecarregada',
+  `got ${r22.borderArchetypeId}`
+);
+
+console.log(
+  '\n--- Test 23 (border): vencedor isolado NÃO marca fronteira ---'
+);
+// had_closed sozinho (Test 9): recomecou domina e ninguém mais bate o piso.
+const r23 = scoreAnswers(hadClosed, questions, archetypes, rules);
+assert(
+  'vencedor isolado → borderArchetypeId = null',
+  r23.borderArchetypeId === null,
+  `got ${r23.borderArchetypeId}`
+);
+
+console.log(
+  '\n--- Test 24 (border): lógica isolada (fixture sintético) ---'
+);
+// Fixture mínimo pra exercitar os 3 caminhos da zona de fronteira sem depender
+// do conteúdo real (que pode mudar). A e C compartilham a mesma 1ª tarefa; B
+// tem tarefa própria.
+const synthArchetypes = [
+  { id: 'A', firstTaskId: 'taskA' },
+  { id: 'B', firstTaskId: 'taskB' },
+  { id: 'C', firstTaskId: 'taskA' },
+];
+const synthQuestions = [
+  {
+    id: 'qA',
+    type: 'single_choice',
+    options: [
+      { id: 'a', scoring: { archetypes: { A: 5 } } },
+      { id: 'na', scoring: {} },
+    ],
+  },
+  {
+    id: 'qB',
+    type: 'single_choice',
+    options: [
+      { id: 'b', scoring: { archetypes: { B: 5 } } },
+      { id: 'b3', scoring: { archetypes: { B: 3 } } },
+      { id: 'nb', scoring: {} },
+    ],
+  },
+  {
+    id: 'qC',
+    type: 'single_choice',
+    options: [
+      { id: 'c', scoring: { archetypes: { C: 5 } } },
+      { id: 'nc', scoring: {} },
+    ],
+  },
+];
+const synthRules = {
+  tieBreakOrder: ['A', 'B', 'C'],
+  minScoreForArchetype: 3,
+  fallbackArchetype: 'A',
+  borderZone: { enabled: true, maxRatioGap: 0.1 },
+};
+
+// 24a: empate A/B (ratios 1.0), 1ª tarefa diferente → fronteira = B
+const s1 = scoreAnswers({ qA: 'a', qB: 'b' }, synthQuestions, synthArchetypes, synthRules);
+assert(
+  '24a empate 1ª-tarefa-diferente → border = B',
+  s1.archetypeId === 'A' && s1.borderArchetypeId === 'B',
+  `got winner=${s1.archetypeId}, border=${s1.borderArchetypeId}`
+);
+
+// 24b: empate A/C (ratios 1.0), MESMA 1ª tarefa → suprimido
+const s2 = scoreAnswers({ qA: 'a', qC: 'c' }, synthQuestions, synthArchetypes, synthRules);
+assert(
+  '24b empate mesma-1ª-tarefa → border suprimido (null)',
+  s2.archetypeId === 'A' && s2.borderArchetypeId === null,
+  `got winner=${s2.archetypeId}, border=${s2.borderArchetypeId}`
+);
+
+// 24c: gap grande (A=1.0, B=0.6) → não é fronteira mesmo batendo o piso
+const s3 = scoreAnswers({ qA: 'a', qB: 'b3' }, synthQuestions, synthArchetypes, synthRules);
+assert(
+  '24c gap > maxRatioGap → border = null',
+  s3.archetypeId === 'A' && s3.borderArchetypeId === null,
+  `got winner=${s3.archetypeId}, border=${s3.borderArchetypeId}, ratios=${JSON.stringify(s3.archetypeRatios)}`
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

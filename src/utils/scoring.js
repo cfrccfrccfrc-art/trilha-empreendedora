@@ -134,6 +134,39 @@ export function scoreAnswers(answers, questions, archetypes, rules) {
   const archetype = archetypes.find((a) => a.id === archetypeId);
   const recommendedTaskId = archetype?.firstTaskId ?? null;
 
+  // --- Border zone -------------------------------------------------------
+  // When the runner-up is nearly as strong as the chosen archetype, the
+  // reading is genuinely "between two". We surface that honestly as a light
+  // pointer to the second profile — NOT a second 30-day trail, which would
+  // fight the product's whole premise of focus. Guardrails:
+  //   1. Both must clear their own score threshold (so a near-zero ratio tie
+  //      between two low-signal archetypes never counts as a border).
+  //   2. The normalized (ratio) gap must be within borderZone.maxRatioGap.
+  //   3. Suppressed when both share the same first task — there is no
+  //      practical fork to communicate; the next step is identical either way.
+  let borderArchetypeId = null;
+  const borderCfg = rules?.borderZone;
+  if (borderCfg?.enabled && archetypeId) {
+    const winnerEntry = ranked.find((e) => e.id === archetypeId);
+    // `ranked` is sorted and `archetypeId` is the first entry that cleared its
+    // threshold, so the next entry that also clears its threshold is the
+    // runner-up.
+    const runnerUp = ranked.find(
+      (e) => e.id !== archetypeId && e.score >= (perArchetype[e.id] ?? minScore)
+    );
+    if (winnerEntry && runnerUp) {
+      const gap = winnerEntry.ratio - runnerUp.ratio;
+      const firstTaskOf = (id) =>
+        archetypes.find((a) => a.id === id)?.firstTaskId ?? null;
+      const sameFirstTask =
+        firstTaskOf(archetypeId) &&
+        firstTaskOf(archetypeId) === firstTaskOf(runnerUp.id);
+      if (gap <= (borderCfg.maxRatioGap ?? 0.1) && !sameFirstTask) {
+        borderArchetypeId = runnerUp.id;
+      }
+    }
+  }
+
   return {
     archetypeId,
     archetypeScores,
@@ -143,6 +176,7 @@ export function scoreAnswers(answers, questions, archetypes, rules) {
     ),
     mainPain,
     secondaryPain,
+    borderArchetypeId,
     painScores,
     flags: Array.from(flagSet),
     recommendedTaskId,
