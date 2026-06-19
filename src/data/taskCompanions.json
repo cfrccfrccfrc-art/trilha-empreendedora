@@ -1542,5 +1542,137 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "companion_pedir_indicacao_ativa_claudia",
+  "taskTemplateId": "task_pedir_indicacao_ativa",
+  "archetypeId": "produto_bom_vitrine_fraca",
+  "personaName": "Cláudia",
+  "region": "Brasil, Caruaru (PE)",
+  "personaContext": "Faz bijuteria e crochê há 3 anos. Quem vê de perto adora e quase sempre compra - o problema é que pouca gente chega até ela. Já tem foto boa, perfil e catálogo organizados, postou 7 dias seguidos. Agora vai pedir indicação ativa pra quem já comprou, em vez de esperar o boca a boca acontecer sozinho.",
+  "stumbles": [
+    {
+      "moment": "Escrever a primeira mensagem",
+      "whatHappened": "Travou no medo de parecer interesseira. 'Vão achar que só quero vender'. Quase desistiu de mandar.",
+      "whatHelped": "Separou a mensagem em duas partes: primeiro o agradecimento sincero (lembrar o que a pessoa comprou e que ficou feliz que ela gostou), depois o pedido claro e pequeno. Pedir 1 ou 2 indicações é leve - quem gostou costuma querer ajudar."
+    },
+    {
+      "moment": "Escolher quem chamar",
+      "whatHappened": "Ia mandar pra lista inteira de contatos, inclusive quem nunca comprou. Acabaria parecendo spam.",
+      "whatHelped": "Filtrou pra 5 clientes que compraram E elogiaram. Indicação só tem força quando vem de quem viveu o produto. Os 5 certos valem mais que 50 disparos."
+    },
+    {
+      "moment": "O pedido vago",
+      "whatHappened": "Na primeira versão escreveu 'me indica aí pra quem precisar'. Ninguém respondeu nos primeiros dois dias.",
+      "whatHelped": "Trocou por um pedido concreto: 'você conhece 1 ou 2 pessoas que iam gostar das minhas peças? Posso te mandar o catálogo pra você repassar?'. Pedido específico é fácil de atender - e ela já entregava o material pronto pra repassar."
+    }
+  ],
+  "breakthrough": "Das 5 clientes, 4 responderam e 3 repassaram o catálogo pra alguém. Cláudia percebeu que o trabalho não era 'aparecer mais' - era ativar quem já gostava. Decidiu transformar isso em hábito: a cada venda nova, um agradecimento e, depois de uns dias, um pedido leve de indicação.",
+  "outcome": "Em 3 semanas, 2 das indicações viraram venda e uma virou cliente recorrente. Não foi explosão de pedidos - foi um canal novo e barato que ela não estava usando. Importante: ela não pagou nada pra impulsionar nem se espalhou em mil redes. Só pediu, com clareza, pra quem já confiava nela.",
+  "whenToAskForHelp": "Se você pediu indicação pra 5 clientes felizes e ninguém repassou, pode ser que o produto agrade mas não seja fácil de explicar pra terceiros. Peça ajuda pra deixar o catálogo mais simples de repassar - uma foto e um preço claro que a pessoa manda sem precisar explicar nada.",
+  "relatedCases": ["case_priya_acessorios_vitrine", "case_dona_andreia_bonecas_vitrine"],
+  "relatedResources": ["res_fotos_celular"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_calcular_retorno_compra_vera",
+  "taskTemplateId": "task_calcular_retorno_compra",
+  "archetypeId": "precisa_capital",
+  "personaName": "Vera",
+  "region": "Brasil, Duque de Caxias (RJ)",
+  "personaContext": "Faz salgados de festa por encomenda. Recusa pedidos grandes porque o freezer pequeno não dá conta de estocar. Quer comprar um freezer maior e uma fritadeira industrial, mas falta dinheiro e ela está pensando em microcrédito. Antes de captar, vai calcular o retorno de cada compra - quanto cada item gera a mais e em quanto tempo se paga.",
+  "stumbles": [
+    {
+      "moment": "Só olhava o preço",
+      "whatHappened": "Tinha na cabeça só os números do custo: freezer R$ 2.400, fritadeira R$ 1.800. Olhava o total (R$ 4.200) e travava de medo da dívida.",
+      "whatHelped": "Virou a conta do avesso: pra cada item, escreveu quanto a mais ele deixa ela produzir e vender. O freezer libera estocar pra 3 festas grandes por mês que hoje ela recusa - cada uma deixa cerca de R$ 350 de lucro. O número que importa não é o preço, é o retorno."
+    },
+    {
+      "moment": "Estimar quanto vende a mais",
+      "whatHappened": "Chutou alto: 'com o freezer eu pego 8 festas grandes por mês'. Otimismo que não batia com a agenda real dela.",
+      "whatHelped": "Puxou os últimos 3 meses: quantas festas grandes ela REALMENTE teve que recusar? Foram 3 a 4 por mês. Refez a conta com o número real, não o sonhado. Retorno honesto evita a dívida que não cabe no caixa."
+    },
+    {
+      "moment": "O prazo de payback",
+      "whatHappened": "Não sabia em quanto tempo a compra se pagava, então não conseguia decidir se valia o risco.",
+      "whatHelped": "Dividiu: freezer R$ 2.400 ÷ ~R$ 1.000 de lucro extra por mês = se paga em uns 2,5 meses. A fritadeira, pelo uso atual, levaria 7+ meses. Ficou claro: começar só pelo freezer (retorno rápido) e deixar a fritadeira pra depois."
+    }
+  ],
+  "breakthrough": "Vera descobriu que não precisava captar os R$ 4.200 de uma vez. O freezer se pagava rápido e resolvia o gargalo principal; a fritadeira podia esperar o caixa do próprio freezer. Decidiu pegar um valor menor de microcrédito, com retorno claro e prazo curto - bem menos arriscado.",
+  "outcome": "Pegou crédito só pro freezer. Nos 2 primeiros meses aceitou 3 festas grandes que antes recusaria e o lucro extra cobriu boa parte da parcela. A fritadeira ficou pra quando o volume justificasse. Comprar em etapas, pelo retorno, transformou um medo de dívida numa decisão com conta na mão.",
+  "whenToAskForHelp": "Se a conta mostrar que nenhuma das compras se paga em menos de 6 meses, ou se o lucro extra não cobre a parcela do crédito, pare e peça orientação antes de captar. Microcrédito sem retorno claro vira dívida que aperta o caixa. Procure o atendimento de orientação antes de assinar.",
+  "relatedCases": ["case_jose_padaria_equipamento"],
+  "relatedResources": ["res_capital_inteligente", "res_microcredito_orientacao"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_apresentar_primeiros_comercios_eunice",
+  "taskTemplateId": "task_apresentar_primeiros_comercios",
+  "archetypeId": "potencial_b2b_local",
+  "personaName": "Eunice",
+  "region": "Brasil, Lavras (MG)",
+  "personaContext": "Faz geleias artesanais que vendem muito bem pra pessoa física na feira e no zap. Nunca tentou comércio. Já mapeou 10 lugares, listou compradores locais e montou uma proposta simples. Agora vai apresentar pros 5 primeiros comércios - mercadinhos, padarias e uma loja de produtos naturais.",
+  "stumbles": [
+    {
+      "moment": "Falar com a pessoa errada",
+      "whatHappened": "No primeiro mercadinho, explicou tudo pro atendente do caixa, animada. No fim ele disse: 'ah, isso quem decide é o dono, ele só vem de tarde'. Perdeu a conversa.",
+      "whatHelped": "Antes de apresentar, passou a perguntar uma coisa só: 'quem decide as compras aqui?'. Nos 4 lugares seguintes já chegou falando com quem podia dizer sim. Vender pra comércio é falar com quem compra pra revender, não com quem está na frente."
+    },
+    {
+      "moment": "Proposta sem preço fechado",
+      "whatHappened": "Numa padaria, o dono gostou e perguntou 'qual o preço no atacado?'. Ela não tinha definido - vendia só no varejo. Gaguejou e prometeu 'mandar depois'.",
+      "whatHelped": "Parou e definiu antes das próximas visitas: preço de revenda (com margem pro comércio), quantidade mínima e prazo de entrega. Chegar com o preço na mão é o que separa uma conversa de uma venda."
+    },
+    {
+      "moment": "O primeiro não",
+      "whatHappened": "A loja de naturais disse não - já tinha um fornecedor de geleia. Eunice ficou desanimada e quase não foi nos últimos dois.",
+      "whatHelped": "Anotou o motivo do não (já tem fornecedor) em vez de levar pro pessoal. Não é rejeição dela, é uma objeção concreta - e dela ela aprendeu a perguntar, nos próximos, 'você já trabalha com geleia artesanal?' logo no começo."
+    }
+  ],
+  "breakthrough": "Dos 5, 2 toparam fazer um pedido de teste, 1 pediu pra voltar depois e 2 disseram não. Eunice viu que o jogo do comércio é de volume e de 'não': não precisa de todo mundo, precisa de alguns lojistas certos. A proposta com preço fechado e a pergunta sobre quem decide mudaram tudo.",
+  "outcome": "Os 2 pedidos de teste viraram reposição mensal em 6 semanas. Não substituiu a feira - virou um canal a mais, com volume maior e previsível. Ela manteve a régua: só fecha com comércio se a margem de revenda ainda deixa lucro pra ela. Sem vender no atacado por preço que não paga.",
+  "whenToAskForHelp": "Se os comércios topam mas só com um preço que zera sua margem, pare e peça ajuda antes de fechar. Vender no atacado abaixo do custo pra 'entrar na loja' é uma armadilha comum. A conta da margem de revenda precisa fechar - se não fecha, é não.",
+  "relatedCases": ["case_juliana_geleias_b2b", "case_vinicius_websites_b2b"],
+  "relatedResources": ["res_proposta_b2b"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_padronizar_fluxo_marta",
+  "taskTemplateId": "task_padronizar_fluxo",
+  "archetypeId": "operacao_travada",
+  "personaName": "Marta",
+  "region": "Brasil, Campinas (SP)",
+  "personaContext": "Faz marmitas congeladas e aceita todo pedido que aparece, mas perde a metade no caminho - esquece encomenda, troca entrega, promete prazo que não cumpre. Já mapeou o fluxo do pedido, montou uma planilha simples e ajustou capacidade e prazos. Agora vai travar o novo jeito de trabalhar pra não voltar a atrapalhar tudo no primeiro dia corrido.",
+  "stumbles": [
+    {
+      "moment": "Processo só na cabeça",
+      "whatHappened": "Achava que não precisava escrever - 'eu já sei como faço'. Mas bastava um dia cheio pra ela voltar a anotar pedido em papelzinho solto e esquecer.",
+      "whatHelped": "Escreveu o passo a passo numa folha só: como o pedido entra, onde anota, quando confirma, quando produz, quando entrega. Ver tudo escrito mostrou os dois pontos onde sempre perdia pedido. Processo na cabeça some no dia corrido; no papel, fica."
+    },
+    {
+      "moment": "Checklist longo demais",
+      "whatHappened": "Primeira versão da lista de conferência tinha 14 itens. Ela mesma não seguia - dava preguiça e ela voltava ao improviso.",
+      "whatHelped": "Cortou pro essencial: 5 itens que, se falhar, perde pedido ou cliente. Lista curta a gente segue todo dia; lista longa vira enfeite na parede."
+    },
+    {
+      "moment": "Deixar à vista",
+      "whatHappened": "Guardou a folha numa gaveta 'pra não sujar'. Em uma semana tinha esquecido que existia.",
+      "whatHelped": "Colou a lista do lado da bancada onde ela monta as marmitas - o lugar onde os erros aconteciam. Processo que não está à vista, no ponto do trabalho, não pega."
+    }
+  ],
+  "breakthrough": "Com o passo a passo escrito e um checklist de 5 itens colado na bancada, Marta parou de perder pedido por esquecimento. O ganho não veio de trabalhar mais - veio de não deixar a melhoria das semanas anteriores escorrer no primeiro dia cheio.",
+  "outcome": "Em um mês, os atrasos caíram bastante e ela parou de prometer prazo que não cumpria. Um cliente que tinha sumido por causa de uma entrega trocada voltou. Marta revisou o checklist depois de 2 semanas rodando e ajustou um passo que não fazia sentido. O processo virou dela, não uma regra de fora.",
+  "whenToAskForHelp": "Se você escreveu o fluxo e a lista mas ainda perde pedido no mesmo ponto, pode ser que o gargalo seja capacidade, não organização - você está aceitando mais do que consegue entregar. Peça ajuda pra rever quantos pedidos por semana cabem de verdade antes de aceitar mais.",
+  "relatedCases": ["case_keisha_lanches_atraso", "case_inventory_padaria_dia_perdido", "case_petshop_belem_agendamento"],
+  "relatedResources": ["res_organizacao_pedidos"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]
