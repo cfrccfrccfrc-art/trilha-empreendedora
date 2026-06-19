@@ -961,5 +961,101 @@
     "reviewLevel": "light",
     "active": true,
     "version": "1.0"
+  },
+  {
+    "id": "task_pedir_indicacao_ativa",
+    "title": "Pedir indicação pra quem já comprou",
+    "week": 4,
+    "archetypeId": "produto_bom_vitrine_fraca",
+    "action": "Escolha 5 clientes que já compraram e gostaram. Mande uma mensagem agradecendo e peça, com clareza, que indiquem você pra 1 ou 2 pessoas - ou que repassem seu catálogo pra alguém que possa gostar.",
+    "purpose": "Transformar quem já adora seu produto na sua melhor vitrine: indicação de cliente satisfeito chega mais longe que post.",
+    "expectedLearning": "Quem vê de perto adora - o que falta é alcance. Cliente feliz é o seu canal mais forte, e ele costuma indicar só quando você pede.",
+    "reflectionQuestions": [
+      "Quantas das 5 pessoas responderam?",
+      "Alguém indicou ou repassou seu catálogo pra outra pessoa?",
+      "Foi mais fácil pedir pessoalmente ou por mensagem?"
+    ],
+    "commonMistakes": [
+      "Esperar a indicação acontecer sozinha, sem pedir",
+      "Pedir de forma vaga, tipo 'me indica aí'",
+      "Pedir indicação pra quem ainda não comprou"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_calcular_retorno_compra",
+    "title": "Calcular o retorno do que vai comprar",
+    "week": 2,
+    "archetypeId": "precisa_capital",
+    "action": "Pra cada item da sua lista de compra, escreva três coisas: quanto custa, quanto a mais você vai conseguir produzir ou vender com ele, e em quantas semanas esse ganho paga o que você gastou.",
+    "purpose": "Saber se o dinheiro que falta vai voltar - e em quanto tempo - antes de pegar capital ou se endividar.",
+    "expectedLearning": "Capital só vale a pena quando o retorno paga o custo num prazo que você aguenta. Comprar sem essa conta vira dinheiro parado e dor de cabeça.",
+    "reflectionQuestions": [
+      "Qual item se paga mais rápido?",
+      "Tem algum que não se paga nem em 3 meses?",
+      "Dá pra começar só pelo que tem o retorno mais rápido?"
+    ],
+    "commonMistakes": [
+      "Olhar só o preço, sem pensar no retorno",
+      "Superestimar quanto vai vender a mais",
+      "Esquecer de contar o tempo até o ganho aparecer"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_apresentar_primeiros_comercios",
+    "title": "Apresentar pros 5 primeiros comércios",
+    "week": 4,
+    "archetypeId": "potencial_b2b_local",
+    "action": "Pegue sua proposta e leve pra 5 comércios da sua lista. Vá pessoalmente ou mande mensagem pra quem decide a compra. Anote a resposta de cada um: topou, pediu pra voltar depois, ou disse não.",
+    "purpose": "Sair do mapeamento e colocar a proposta na frente de quem realmente decide a compra no comércio.",
+    "expectedLearning": "Vender pra comércio é outro jogo: você fala com quem compra pra revender, não com o consumidor final. O 'não' faz parte e mostra o que ajustar.",
+    "reflectionQuestions": [
+      "Quantos dos 5 deram alguma abertura?",
+      "Que objeção apareceu mais de uma vez?",
+      "Você falou com a pessoa certa, quem decide a compra?"
+    ],
+    "commonMistakes": [
+      "Falar com quem não decide a compra",
+      "Levar a proposta sem o preço fechado",
+      "Desistir no primeiro não"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_padronizar_fluxo",
+    "title": "Travar o novo jeito de trabalhar",
+    "week": 4,
+    "archetypeId": "operacao_travada",
+    "action": "Escreva numa folha (ou no celular) o passo a passo do seu novo fluxo de pedido, do jeito que você ajustou. Faça uma lista curta de conferência pra seguir todo dia, mesmo nos dias corridos, e deixe num lugar visível.",
+    "purpose": "Garantir que a melhoria que você fez não se perca quando a semana apertar.",
+    "expectedLearning": "Processo que mora só na cabeça volta a travar no primeiro dia corrido. Escrever e deixar à vista é o que faz a mudança durar.",
+    "reflectionQuestions": [
+      "Seu passo a passo cabe em meia folha?",
+      "Outra pessoa conseguiria seguir só lendo?",
+      "Qual passo some primeiro nos dias corridos?"
+    ],
+    "commonMistakes": [
+      "Deixar o processo só na memória",
+      "Fazer uma lista longa demais pra seguir",
+      "Não revisar depois de uma semana rodando"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
   }
 ]
