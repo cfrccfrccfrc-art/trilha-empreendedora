@@ -22,7 +22,7 @@ Conteúdo vive em `src/data/` como JSON. Você não precisa editar JSON na mão 
 npm run validate-content
 ```
 
-Checa, em todos os 15 arquivos de conteúdo:
+Checa, em todos os 17 arquivos de conteúdo:
 - Sintaxe JSON válida
 - Campos obrigatórios presentes (varia por tipo)
 - Enums com valores permitidos (status, type, sourceStatus, evidenceType, etc.)

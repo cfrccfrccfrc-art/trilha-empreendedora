@@ -145,6 +145,6 @@ Depois do primeiro deploy, atualize o redirect do Supabase Auth:
 - 51 companheiros de tarefa ativos
 - 22 conteúdos (mistura de Trilha original, Sebrae, BCB, Pescadoras, setoriais)
 - 37 casos ativos
-- 11 oportunidades
+- 10 oportunidades
 - 15 modelos de feedback
 - 3 rubricas (caixa, preço, capital inicial)

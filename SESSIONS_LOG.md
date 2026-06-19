@@ -520,4 +520,26 @@ As 4 tasks novas entraram sem companheira (regressão detectada pelo dono: "as n
 
 README (status), PROJECT_CONTEXT (intro 12→16 arquétipos / 35→36 perguntas + nova subseção na seção 14 com total atualizado) e este log sincronizados.
 
-**Total geral pós-sessão: 48 task templates, 51 companions, 16 archetypes, 37 cases, 22 resources, 11 opportunities, 3 rubricas — 247 itens validados, 36 perguntas.**
+**Total geral pós-sessão: 48 task templates, 51 companions, 16 archetypes, 37 cases, 22 resources, 11 opportunities, 3 rubricas — 247 itens validados, 36 perguntas.** *(Nota: na sessão seguinte, 1 oportunidade foi removida → 10 opportunities / 246 itens. Ver entrada abaixo.)*
+
+## Sessão 19/06/2026 (parte 2) — auditoria de links + raízes estáveis do Sebrae + zona de fronteira
+
+Continuação. Auditoria de atalhos no browser interno, depois teste de **todos os links externos de conteúdo**, depois um recurso novo no resultado. Cada frente validada (`scoring.test.mjs` + `validate-content`) e commitada/pushada.
+
+### Links quebrados de mini-trilha e oportunidade (commit `2e9172f`)
+
+Personas nas 6 mini-trilhas + atalhos do landing → 3 findings. **F1:** `opp_compra_coletiva_insumos` apontava pra `/oportunidades/compra-coletiva` (rota inexistente, página em branco); sem conteúdo compatível, **removida** + tirada de 3 arquétipos (11 → 10 oportunidades). **F2:** `relatedSources` de `projecao.json` apontavam pra `res_caixa_diario` (não existe) → repontado pra `res_caixa_basico`. **F3:** label "Caixa básico" padronizada pra "Anotar entrada e saída por 7 dias" em canais/precificação. Validador estendido pra checar resolução de `relatedSources.url` e `sourceLink` de oportunidades (anti-regressão). 247 → 246 itens.
+
+### Deep-links do Sebrae expirados → raízes estáveis (commit `3d64a9e`)
+
+Teste HTTP de 10 URLs externas (curl com UA de navegador, seguindo redirect + verificando título final). Pescadores (`projetopescadores.com.br`) deu erro de SSL/403 — **falso alarme: era firewall do dono** (passa no 5G), mantido. Os deep-links de artigo do Sebrae no formato legado (`,VgnVCM...` e `/sites/PortalSebrae/`) **não resolvem mais** o artigo específico: o Sebrae os redireciona pra um hub genérico. Repontados pras categorias estáveis de caminho limpo (confirmado que o servidor devolve 404 real pra caminhos inexistentes, então não é catch-all de SPA): capital de giro + precificação → `/empreendedores/conteudos/gerenciar`; sociedade empresarial → `/empreendedores/conteudos/comecar`; formalização/MEI (3 links, incl. 2 extras achados em `formalizationGuides.json` que o scan original não cobria) → `/subsites/mei`. Todas retornam 200 direto. Links `cursosonline` (F3) mantidos: funcionam.
+
+### Zona de fronteira no resultado (commit `8598e8d`)
+
+Pergunta de produto: faz sentido sugerir **trilha dupla** quando alguém cai entre dois arquétipos? Decisão: **não** (briga com o foco, com a conclusão em 30 dias e sobrecarrega justamente quem já está sobrecarregada; além disso vizinhos costumam convergir na mesma 1ª tarefa, e os dois topos podem estar em eixos diferentes — identidade vs. operacional — não competindo). Em vez disso, **reconhecimento honesto de fronteira**: mantém UMA trilha e sinaliza a proximidade com um ponteiro leve pro 2º perfil. `scoring.js` ganha `borderArchetypeId` com 3 guarda-corpos (ambos batem o piso; gap de ratio ≤ `borderZone.maxRatioGap`=0.1; suprimido quando compartilham a 1ª tarefa). `Results.jsx` mostra o bloco entre a 1ª missão e a trilha de 30 dias, com link `/perfis/:id` e telemetria `results_border`. +5 testes (T22-24, com fixture sintético isolado de conteúdo). 37 → 42 testes. `scoringRules.json` 1.3 → 1.4.
+
+### Housekeeping de docs
+
+Contagens corrigidas: "11 oportunidades" → 10 e "247 itens" → 246 (README, PROJECT_CONTEXT, este log); "15 arquivos de conteúdo" → 17 (ADMIN_GUIDE, CONTENT_GUIDE, PROJECT_CONTEXT — o validador checa 17 dos 19 JSON, ignorando `config.json`/`roadmaps.json`).
+
+**Total geral pós-sessão: 48 task templates, 51 companions, 16 archetypes, 37 cases, 22 resources, 10 opportunities, 3 rubricas — 246 itens validados, 36 perguntas. Suíte 42/42.**

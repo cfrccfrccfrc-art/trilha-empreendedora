@@ -45,7 +45,7 @@ trilha-empreendedora/
 │   │   ├── Formalization, MiniTrilhaPage                        Mini-trilhas
 │   │   ├── SupervisorLogin, SupervisorDashboard, SupervisorReview   Painel supervisor
 │   │   └── AdminDashboard, AdminPreview, AdminDonations, SourceRefresh  Painel admin
-│   ├── data/                      CONTEÚDO. 15 arquivos JSON. Editáveis sem mexer em código.
+│   ├── data/                      CONTEÚDO. 17 arquivos JSON. Editáveis sem mexer em código.
 │   │   ├── archetypes.json, cases.json, taskTemplates.json, taskCompanions.json
 │   │   ├── resources.json, opportunities.json, feedbackTemplates.json, rubrics.json
 │   │   ├── formalizationGuides.json, formalizationQuestions.json
@@ -136,7 +136,7 @@ Vite + React + Tailwind + paleta custom + tokens de design + 16 placeholders de 
 
 ## 5. Modelo de conteúdo
 
-15 arquivos JSON. Validador percorre todos com `npm run validate-content`. Dois arquivos vestigiais (`config.json`, `roadmaps.json`) são ignorados.
+17 arquivos JSON. Validador percorre todos com `npm run validate-content`. Dois arquivos vestigiais (`config.json`, `roadmaps.json`) são ignorados.
 
 | Arquivo | Itens | O que é |
 |---|---|---|
@@ -769,7 +769,7 @@ Três frentes nesta janela, todas validadas (`scoring.test.mjs` + `validate-cont
 
 Regra de ouro mantida: nunca engenheirar respostas de persona pra bater num arquétipo-alvo; divergência entre realidade vivida e saída do motor é **finding**, não bug pra contornar.
 
-**Total geral (após 19/06/2026): 48 task templates ativos, 51 companions, 16 archetypes ativos, 37 cases, 22 resources, 11 opportunities, 3 rubricas — 247 itens validados, 36 perguntas no diagnóstico.** (Supersede o total da seção "Novas tasks estratégicas".)
+**Total geral (após 19/06/2026): 48 task templates ativos, 51 companions, 16 archetypes ativos, 37 cases, 22 resources, 10 opportunities, 3 rubricas — 246 itens validados, 36 perguntas no diagnóstico.** (Supersede o total da seção "Novas tasks estratégicas".)
 
 ### Pendências conhecidas
 

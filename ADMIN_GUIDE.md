@@ -41,7 +41,7 @@ código, tem versão (git) e nunca quebra inesperadamente.
 npm run validate-content
 ```
 
-Roda em ~1 segundo. Checa todos os 15 arquivos de conteúdo (`src/data/`) por: sintaxe JSON, campos obrigatórios, enums válidos, IDs únicos, referências cruzadas, formato de datas. Use sempre antes de commitar/deployar mudança de conteúdo.
+Roda em ~1 segundo. Checa todos os 17 arquivos de conteúdo (`src/data/`) por: sintaxe JSON, campos obrigatórios, enums válidos, IDs únicos, referências cruzadas, formato de datas. Use sempre antes de commitar/deployar mudança de conteúdo.
 
 Detalhes do que ele checa estão em [`CONTENT_GUIDE.md`](CONTENT_GUIDE.md).
 
