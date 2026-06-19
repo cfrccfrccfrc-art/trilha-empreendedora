@@ -341,5 +341,87 @@ assert(
   `got ${r15.archetypeId}`
 );
 
+console.log(
+  '\n--- Test 16: sobrecarga por excesso de horas → empreendedora_sobrecarregada ---'
+);
+// Regressão (persona Rosângela): trabalha 30h+ sozinha, vende no bairro/
+// comunidade e quer resolver a sobrecarga de tempo. Antes do ajuste em
+// q_time_dedication[gt_30h], o excesso de horas dava ZERO para sobrecarregada
+// e o sinal local vazava para vende_comunidade_nao_online (teto menor, ratio
+// maior). O peso +1 em gt_30h corrige isso sem mexer no max do arquétipo.
+const overloadedByHours = {
+  q_stage_selling: 'sells_regularly',
+  q_time_dedication: 'gt_30h',
+  q_ops_help: 'all_alone',
+  q_goals_main: 'time_overload',
+  q_sector_audience: 'neighborhood',
+  q_channels_clients: ['community'],
+  q_community_neighborhood: 'all_know',
+};
+const r16 = scoreAnswers(overloadedByHours, questions, archetypes, rules);
+console.log('  archetypeId:', r16.archetypeId);
+assert(
+  '30h+ sozinha + sobrecarga → empreendedora_sobrecarregada',
+  r16.archetypeId === 'empreendedora_sobrecarregada',
+  `got ${r16.archetypeId}, ratios=${JSON.stringify(r16.archetypeRatios)}`
+);
+assert(
+  'NÃO cai em vende_comunidade_nao_online',
+  r16.archetypeId !== 'vende_comunidade_nao_online',
+  `got ${r16.archetypeId}`
+);
+
+console.log(
+  '\n--- Test 17: ideia digital validada por sinais → negocio_digital_inicio ---'
+);
+// Persona Márcia/Tiago: ideia online (sector digital) + público da internet +
+// canal redes sociais. Antes do 16º arquétipo, caía em ainda_e_ideia (trilha
+// de produto físico). Agora o sinal de setor digital + corroboração leva ao
+// arquétipo certo, com ratio alto (6/6).
+const digitalIdea = {
+  q_stage_selling: 'just_idea',
+  q_sector_what: 'digital_online',
+  q_sector_audience: 'online',
+  q_channels_clients: ['social'],
+  q_goals_main: 'not_started',
+};
+const r17 = scoreAnswers(digitalIdea, questions, archetypes, rules);
+console.log('  archetypeId:', r17.archetypeId);
+assert(
+  'ideia digital com corroboração → negocio_digital_inicio',
+  r17.archetypeId === 'negocio_digital_inicio',
+  `got ${r17.archetypeId}, ratios=${JSON.stringify(r17.archetypeRatios)}`
+);
+assert(
+  'recommendedTaskId === task_validar_dor_digital',
+  r17.recommendedTaskId === 'task_validar_dor_digital',
+  `got ${r17.recommendedTaskId}`
+);
+
+console.log(
+  '\n--- Test 18: piso protege — só "setor digital" sem corroboração NÃO dispara ---'
+);
+// Marca setor digital mas dá zero sinal adicional (público de indicação, sem
+// canal). Score 3 < piso 4 → não pode roubar de ainda_e_ideia; volta pro
+// arquétipo de ideia comum.
+const digitalNoCorrob = {
+  q_stage_selling: 'just_idea',
+  q_sector_what: 'digital_online',
+  q_sector_audience: 'referrals',
+  q_goals_main: 'not_started',
+};
+const r18 = scoreAnswers(digitalNoCorrob, questions, archetypes, rules);
+console.log('  archetypeId:', r18.archetypeId);
+assert(
+  'setor digital sem corroboração NÃO vira negocio_digital_inicio',
+  r18.archetypeId !== 'negocio_digital_inicio',
+  `got ${r18.archetypeId}, score=${r18.archetypeScores.negocio_digital_inicio}`
+);
+assert(
+  'cai em ainda_e_ideia (fallback de ideia comum)',
+  r18.archetypeId === 'ainda_e_ideia',
+  `got ${r18.archetypeId}`
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

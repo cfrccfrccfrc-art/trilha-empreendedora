@@ -4,6 +4,7 @@
     "talento_sem_postura_comercial",
     "bico_pode_virar",
     "potencial_b2b_local",
+    "negocio_digital_inicio",
     "digital_antes_da_base",
     "renda_complementar",
     "produto_bom_vitrine_fraca",
@@ -20,7 +21,8 @@
   "minScoreForArchetype": 3,
   "minScorePerArchetype": {
     "negocio_consolidado": 11,
-    "digital_antes_da_base": 4
+    "digital_antes_da_base": 4,
+    "negocio_digital_inicio": 4
   },
   "fallbackArchetype": "ainda_e_ideia",
   "painThreshold": 2

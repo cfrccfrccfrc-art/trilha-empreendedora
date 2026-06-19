@@ -1425,5 +1425,122 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "companion_validar_dor_digital_marcia",
+  "taskTemplateId": "task_validar_dor_digital",
+  "archetypeId": "negocio_digital_inicio",
+  "personaName": "Márcia",
+  "region": "Brasil - Diadema (SP)",
+  "personaContext": "Trabalhou anos no RH de uma fábrica, hoje desempregada. Vê muita gente boa da comunidade sem conseguir recolocação e teve a ideia de criar uma 'espécie de LinkedIn do bairro' pra conectar essas pessoas a vagas. Antes de procurar quem fizesse o aplicativo, decidiu conversar com 10 pessoas que viveriam o problema.",
+  "stumbles": [
+    {
+      "moment": "Pessoa 1 e 2",
+      "whatHappened": "Começou explicando a plataforma: 'vai ser um app onde você cria perfil, as empresas veem...'. As duas acharam 'muito legal' e disseram que usariam. Márcia saiu eufórica, achando que tinha validado.",
+      "whatHelped": "Releu as anotações à noite e percebeu: ela tinha vendido a ideia, não escutado a dor. Ninguém falou COMO procura emprego hoje nem se pagaria por ajuda. Mudou as perguntas pras próximas: 'como você procura vaga hoje?' e 'o que é mais difícil nisso?'."
+    },
+    {
+      "moment": "Pessoa 5",
+      "whatHappened": "Um vizinho contou que o problema não era achar a vaga - era montar o currículo e não saber se apresentar na entrevista. Já tinha até visto vagas, mas travava na hora de se candidatar. Isso não tinha nada a ver com 'plataforma'.",
+      "whatHelped": "Márcia anotou separado: a dor real apareceu em 6 das 10 conversas, e era currículo + preparo pra entrevista, não falta de vaga. Percebeu que a ideia do app resolvia um problema que quase ninguém tinha."
+    },
+    {
+      "moment": "Pessoa 9",
+      "whatHappened": "Perguntou direto: 'você pagaria pra alguém te ajudar com currículo e entrevista?'. A pessoa disse 'pagaria sim, uns R$ 30, se fosse alguém que entende e me desse atenção de verdade'.",
+      "whatHelped": "Foi a primeira vez que ouviu um valor. Márcia anotou e percebeu que o que tinha valor de pagamento era o serviço dela, a experiência de RH - não uma tecnologia."
+    }
+  ],
+  "breakthrough": "Das 10 conversas, 6 confirmaram a mesma dor (currículo e preparo, não busca de vaga) e 3 falaram um valor que pagariam. A 'plataforma' que ela ia mandar construir resolvia o problema errado. O ativo dela era a própria experiência de RH.",
+  "outcome": "Márcia guardou a ideia do app na gaveta - não pra sempre, mas pra depois. Decidiu começar oferecendo, ela mesma, ajuda paga de currículo e preparo de entrevista pra gente da comunidade. Sem construir nada.",
+  "whenToAskForHelp": "Se nas 10 conversas todo mundo elogiou a ideia mas ninguém descreveu a dor com as próprias palavras nem falou um valor, peça ajuda. Provavelmente você apresentou a solução em vez de escutar o problema.",
+  "relatedCases": ["case_rede_recolocacao_comunidade"],
+  "relatedResources": ["res_validar_ideia"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_oferta_digital_minima_marcia",
+  "taskTemplateId": "task_oferta_digital_minima",
+  "archetypeId": "negocio_digital_inicio",
+  "personaName": "Márcia",
+  "region": "Brasil - Diadema (SP)",
+  "personaContext": "Depois de validar que a dor da comunidade era currículo e preparo pra entrevista - não falta de vaga - Márcia precisava definir a versão mais simples do serviço, sem voltar pra ideia do aplicativo.",
+  "stumbles": [
+    {
+      "moment": "Primeira versão da oferta",
+      "whatHappened": "Escreveu: 'plataforma de recolocação com banco de currículos, mural de vagas, curso de entrevista e mentoria'. Olhou e travou - não conseguiria entregar nada daquilo na semana.",
+      "whatHelped": "Cortou tudo que era tecnologia e futuro. Sobrou uma frase: 'ajudo você a montar um currículo bom e treinar a entrevista, em 2 encontros pelo zap, por R$ 40'. Coube numa linha e ela conseguia fazer já."
+    },
+    {
+      "moment": "Definir o preço",
+      "whatHappened": "Pensou em cobrar R$ 15 pra 'não assustar'. Fez a conta: cada pessoa levava umas 3 horas de trabalho dela entre currículo e treino. R$ 15 era quase de graça.",
+      "whatHelped": "Lembrou que nas conversas alguém falou R$ 30 sem pestanejar. Colocou R$ 40, com a primeira pessoa pagando R$ 25 como 'preço de quem ajuda a testar'. Preço que respeita o tempo dela e ainda cabe no bolso de quem precisa."
+    }
+  ],
+  "breakthrough": "A oferta saiu de 'uma plataforma que eu não sei construir' pra 'um serviço de 2 encontros no zap que eu já sei fazer'. Sem app, sem site, sem custo pra começar.",
+  "outcome": "Oferta mínima fechada: currículo + treino de entrevista, 2 encontros por WhatsApp e chamada, R$ 40 (primeira pessoa R$ 25). Pronta pra oferecer pra uma das pessoas que tinha confirmado a dor.",
+  "whenToAskForHelp": "Se você não consegue descrever sua oferta em uma frase, ou se a primeira versão ainda depende de uma ferramenta que você não tem, peça ajuda pra cortar até sobrar só o essencial.",
+  "relatedCases": ["case_marcia_curso_concierge"],
+  "relatedResources": ["res_mvp_concierge_digital"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_entrega_concierge_marcia",
+  "taskTemplateId": "task_entrega_concierge",
+  "archetypeId": "negocio_digital_inicio",
+  "personaName": "Márcia",
+  "region": "Brasil - Diadema (SP)",
+  "personaContext": "Com a oferta mínima definida (currículo + treino de entrevista por R$ 25 na primeira), Márcia ia entregar pela primeira vez - tudo na mão, sem nenhuma ferramenta especial.",
+  "stumbles": [
+    {
+      "moment": "Vontade de montar 'sistema' antes",
+      "whatHappened": "Antes do primeiro atendimento, passou uma tarde procurando um app de currículo bonito e um modelo de site pra parecer profissional.",
+      "whatHelped": "Parou e se perguntou: o cliente precisa disso ou eu preciso me sentir segura? Fez o currículo no editor de texto do próprio celular e marcou o treino por chamada de vídeo normal. Funcionou igual."
+    },
+    {
+      "moment": "Durante a entrega",
+      "whatHappened": "No treino de entrevista percebeu que a pessoa sabia responder, mas falava olhando pra baixo e pedindo desculpa. Isso era o que mais atrapalhava - e ela não tinha previsto na 'oferta'.",
+      "whatHelped": "Anotou: o valor maior do serviço era o treino de postura e confiança, mais que o papel do currículo. Aprendeu o que de fato entregar - coisa que nenhum app teria mostrado."
+    }
+  ],
+  "breakthrough": "A primeira cliente pagou os R$ 25, conseguiu uma entrevista duas semanas depois e mandou áudio agradecendo. Fazer 'na unha' mostrou que o ouro do serviço era o preparo de confiança, não a tecnologia.",
+  "outcome": "Primeiro dinheiro entrou. Márcia ajustou a oferta pra dar mais peso ao treino de postura. Continuou sem construir nada - e agora sabia exatamente o que a segunda pessoa ia precisar.",
+  "whenToAskForHelp": "Se você está adiando o primeiro atendimento porque a ferramenta 'ainda não está pronta', peça ajuda. Quase sempre dá pra entregar a primeira vez com o que você já tem no celular.",
+  "relatedCases": ["case_marcia_curso_concierge"],
+  "relatedResources": ["res_mvp_concierge_digital"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "companion_primeiro_canal_digital_marcia",
+  "taskTemplateId": "task_primeiro_canal_digital",
+  "archetypeId": "negocio_digital_inicio",
+  "personaName": "Márcia",
+  "region": "Brasil - Diadema (SP)",
+  "personaContext": "Com uma cliente atendida e paga, Márcia queria chegar a mais pessoas. A tentação era abrir perfil em todas as redes ao mesmo tempo e impulsionar post.",
+  "stumbles": [
+    {
+      "moment": "Escolher o canal",
+      "whatHappened": "Criou perfil no Instagram, no TikTok e pensou até em LinkedIn. Em dois dias estava perdida, sem saber o que postar em cada um, e não tinha postado nada.",
+      "whatHelped": "Lembrou onde as pessoas que ela entrevistou já estavam: um grupo grande de WhatsApp de moradores do bairro e um grupo de mães da escola. Escolheu UM - o grupo de moradores - e deixou o resto pra depois."
+    },
+    {
+      "moment": "Tentação de impulsionar",
+      "whatHappened": "Viu a opção de 'impulsionar por R$ 20' e quase pagou pra 'acelerar'.",
+      "whatHelped": "Decidiu que só pagaria divulgação depois que o orgânico já trouxesse cliente. Fez uma publicação simples no grupo, contando a história da primeira cliente (com permissão) e como pedir. Sem gastar nada."
+    }
+  ],
+  "breakthrough": "Um canal só, onde o público já estava, com uma mensagem real de resultado. A publicação trouxe 4 pessoas perguntando no mesmo dia - mais que qualquer impulsionamento pago teria trazido naquele momento.",
+  "outcome": "Márcia fechou mais 2 atendimentos na semana, repetindo a entrega manual. Só agora, com demanda provada e caixa entrando, começou a pensar - sem pressa - se valeria a pena uma ferramenta pra organizar. A plataforma deixou de ser o começo e virou, talvez, um passo lá na frente.",
+  "whenToAskForHelp": "Se você está se espalhando em vários canais e não consegue manter nenhum, ou se quer pagar pra impulsionar antes de ter vendido na mão, peça ajuda pra focar em um canal só.",
+  "relatedCases": ["case_rede_recolocacao_comunidade"],
+  "relatedResources": ["res_mvp_concierge_digital"],
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]

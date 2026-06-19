@@ -865,5 +865,101 @@
     "reviewLevel": "light",
     "active": true,
     "version": "1.0"
+  },
+  {
+    "id": "task_validar_dor_digital",
+    "title": "Validar a dor com 10 pessoas",
+    "week": 1,
+    "archetypeId": "negocio_digital_inicio",
+    "action": "Liste 10 pessoas que viveriam o problema que sua ideia digital resolve. Converse com cada uma (zap, ligação ou pessoalmente) e pergunte: isso é um problema de verdade pra você? como você resolve hoje? você pagaria por uma solução? quanto?",
+    "purpose": "Provar que existe uma dor real e gente disposta a pagar - antes de construir qualquer site, app ou plataforma.",
+    "expectedLearning": "Ideia digital não se testa na internet, se testa em conversa. Se 10 pessoas não confirmam a dor, nenhuma tecnologia salva a ideia.",
+    "reflectionQuestions": [
+      "Quantas pessoas confirmaram que vivem esse problema de verdade?",
+      "Como elas resolvem isso hoje, mesmo sem a sua solução?",
+      "Alguém falou um valor que pagaria? Qual?"
+    ],
+    "commonMistakes": [
+      "Perguntar 'você usaria meu app?' em vez de 'você tem esse problema?'",
+      "Conversar só com quem já concorda com você",
+      "Tomar 'achei legal' como promessa de pagamento"
+    ],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_oferta_digital_minima",
+    "title": "Definir a oferta digital mínima e o preço",
+    "week": 2,
+    "archetypeId": "negocio_digital_inicio",
+    "action": "Escreva em uma frase o que você vai entregar, pra quem, e por quanto. Defina a versão MAIS SIMPLES possível que já resolve a dor que você validou - sem app, sem site, sem automação. Pode ser uma planilha, um grupo de zap, um PDF ou um atendimento por mensagem.",
+    "purpose": "Transformar a ideia grande numa oferta pequena que você consegue entregar essa semana, na mão.",
+    "expectedLearning": "A primeira versão de um negócio digital quase nunca tem tecnologia. Tem uma pessoa resolvendo o problema de outra e cobrando por isso.",
+    "reflectionQuestions": [
+      "Dá pra entregar a primeira versão sem programar nada?",
+      "O preço cobre seu tempo e ainda cabe no bolso de quem você entrevistou?",
+      "Você consegue explicar a oferta em uma frase?"
+    ],
+    "commonMistakes": [
+      "Colocar funcionalidade demais na primeira versão",
+      "Adiar o lançamento até ter o site 'profissional'",
+      "Cobrar tão barato que não vale o seu tempo"
+    ],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_entrega_concierge",
+    "title": "Entregar na mão pro primeiro cliente",
+    "week": 3,
+    "archetypeId": "negocio_digital_inicio",
+    "action": "Ofereça sua oferta mínima pra 1 pessoa das que confirmaram a dor. Entregue tudo manualmente, fazendo você mesma(o) o trabalho nos bastidores - mesmo que pareça 'gambiarra'. Receba o pagamento e peça um retorno honesto sobre o que ajudou e o que faltou.",
+    "purpose": "Conseguir o primeiro cliente pagante e aprender, na prática, o que a solução precisa ter - antes de investir em tecnologia.",
+    "expectedLearning": "Fazer 'na unha' pro primeiro cliente ensina o que automatizar depois. Quem automatiza antes de entender o serviço, automatiza o problema errado.",
+    "reflectionQuestions": [
+      "O que você teve que fazer manualmente que poderia ser mais simples?",
+      "O cliente percebeu que era manual? Isso atrapalhou?",
+      "O que ele disse que faltou ou sobrou na entrega?"
+    ],
+    "commonMistakes": [
+      "Esperar a ferramenta perfeita antes de atender o primeiro cliente",
+      "Entregar de graça 'pra ganhar experiência' e nunca testar se alguém paga",
+      "Desistir no primeiro 'não' em vez de ajustar a oferta"
+    ],
+    "evidenceType": "optional_text_or_image",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
+  },
+  {
+    "id": "task_primeiro_canal_digital",
+    "title": "Escolher 1 canal e fazer a primeira divulgação",
+    "week": 4,
+    "archetypeId": "negocio_digital_inicio",
+    "action": "Escolha UM canal onde as pessoas que você entrevistou já estão (um grupo de zap, um perfil, uma comunidade online). Faça uma primeira publicação simples contando a oferta e como pedir. Acompanhe quem responde - sem pagar pra impulsionar.",
+    "purpose": "Sair da entrega de 1 cliente pra os primeiros interessados orgânicos, usando só um canal por vez.",
+    "expectedLearning": "Aparecer em um canal bem feito vale mais que estar mal em cinco. Divulgação paga só faz sentido depois que o orgânico já converte.",
+    "reflectionQuestions": [
+      "O canal escolhido é onde seu público realmente está?",
+      "Quantas pessoas responderam ou perguntaram?",
+      "Você conseguiu repetir a entrega da semana passada com um novo cliente?"
+    ],
+    "commonMistakes": [
+      "Tentar estar em todas as redes ao mesmo tempo",
+      "Impulsionar post antes de ter uma oferta que já vendeu na mão",
+      "Postar uma vez e desistir quando ninguém responde no primeiro dia"
+    ],
+    "evidenceType": "optional_text",
+    "evidenceRequired": false,
+    "reviewLevel": "light",
+    "active": true,
+    "version": "1.0"
   }
 ]

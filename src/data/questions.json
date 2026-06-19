@@ -244,6 +244,17 @@
         }
       },
       {
+        "id": "digital_online",
+        "label": "Negócio digital ou online (conteúdo, curso, serviço pela internet, app, plataforma ou comunidade)",
+        "scoring": {
+          "archetypes": {
+            "negocio_digital_inicio": 3
+          },
+          "pains": {},
+          "flags": []
+        }
+      },
+      {
         "id": "other",
         "label": "Outro",
         "scoring": {
@@ -296,7 +307,9 @@
         "id": "online",
         "label": "Pessoas que me acham na internet",
         "scoring": {
-          "archetypes": {},
+          "archetypes": {
+            "negocio_digital_inicio": 2
+          },
           "pains": {},
           "flags": []
         }
@@ -375,7 +388,8 @@
         "label": "Mais de 30 horas",
         "scoring": {
           "archetypes": {
-            "negocio_consolidado": 2
+            "negocio_consolidado": 2,
+            "empreendedora_sobrecarregada": 1
           },
           "pains": {},
           "flags": []
@@ -473,7 +487,9 @@
         "id": "social",
         "label": "Redes sociais",
         "scoring": {
-          "archetypes": {},
+          "archetypes": {
+            "negocio_digital_inicio": 1
+          },
           "pains": {},
           "flags": []
         }
@@ -979,6 +995,15 @@
           "pains": {
             "operacao": 3
           },
+          "flags": []
+        }
+      },
+      {
+        "id": "not_started",
+        "label": "Ainda não comecei a vender",
+        "scoring": {
+          "archetypes": {},
+          "pains": {},
           "flags": []
         }
       }

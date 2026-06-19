@@ -417,5 +417,33 @@
     "warningFlags": ["caregiver", "time_constrained"],
     "contentVersion": "1.0",
     "status": "active"
+  },
+
+  {
+    "id": "negocio_digital_inicio",
+    "name": "\"Minha ideia é digital, mas ainda não tirou do papel\"",
+    "shortDescription": "Sua ideia é online - serviço pela internet, conteúdo, curso, app, plataforma ou comunidade - mas ainda não saiu da cabeça pro mundo real.",
+    "commonPain": "Você imagina algo digital que ajudaria muita gente, mas trava entre 'preciso de um site/app pronto' e 'não sei se alguém pagaria por isso'. Enquanto espera tudo ficar perfeito, a ideia não anda.",
+    "typicalMistakes": [
+      "Querer construir o app ou a plataforma antes de saber se alguém quer aquilo",
+      "Pagar curso caro de 'empreendedorismo digital' antes da primeira conversa com cliente real",
+      "Achar que precisa de muitos seguidores antes de oferecer pra uma pessoa só"
+    ],
+    "firstTaskId": "task_validar_dor_digital",
+    "avoidNow": "Evite contratar quem faça site ou app, pagar curso caro de marketing digital ou impulsionar post antes de provar, na mão, que existe gente disposta a pagar pelo que você quer oferecer.",
+    "expectedLearning": "Negócio digital de verdade começa simples e na mão: você entrega o serviço pessoalmente pra 1 pessoa antes de virar plataforma. A tecnologia vem depois que a demanda já está provada - nunca antes.",
+    "roadmap30d": [
+      { "week": 1, "title": "Validar a dor com 10 pessoas",                "tasks": ["task_validar_dor_digital"] },
+      { "week": 2, "title": "Definir a oferta digital mínima e o preço",    "tasks": ["task_oferta_digital_minima"] },
+      { "week": 3, "title": "Entregar na mão pro primeiro cliente",         "tasks": ["task_entrega_concierge"] },
+      { "week": 4, "title": "Escolher 1 canal e fazer a primeira divulgação","tasks": ["task_primeiro_canal_digital"] }
+    ],
+    "recommendedResources": ["res_validar_ideia", "res_mvp_concierge_digital"],
+    "recommendedCases": ["case_rede_recolocacao_comunidade", "case_marcia_curso_concierge"],
+    "recommendedOpportunities": ["opp_sebrae_curso_inicial", "opp_sebrae_marketing_digital_resultados"],
+    "supervisionLevel": "elevated",
+    "warningFlags": ["digital_idea_unvalidated", "platform_before_demand"],
+    "contentVersion": "1.0",
+    "status": "active"
   }
 ]

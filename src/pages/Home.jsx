@@ -289,7 +289,7 @@ export default function Home() {
           Encontra-se em alguma dessas situações?
         </h2>
         <p className="text-secondary text-sm leading-relaxed mb-4">
-          O diagnóstico identifica seu perfil entre os 15 caminhos abaixo.
+          O diagnóstico identifica seu perfil entre os 16 caminhos abaixo.
           Reconheceu algum?
         </p>
         <div className="grid grid-cols-2 gap-2">
@@ -321,7 +321,7 @@ export default function Home() {
           onClick={() => navigate('/perfis')}
           className="w-full text-xs text-secondary underline underline-offset-4 py-2 mt-1"
         >
-          Ler sobre os 15 perfis sem fazer o diagnóstico
+          Ler sobre os 16 perfis sem fazer o diagnóstico
         </button>
       </section>
 

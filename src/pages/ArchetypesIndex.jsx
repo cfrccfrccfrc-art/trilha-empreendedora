@@ -6,7 +6,7 @@ import Card from '../components/Card';
 import Button from '../components/Button';
 import JsonLd from '../components/JsonLd';
 
-// Índice indexável dos 15 perfis. Cada item linka pra /perfis/<id>. Boa
+// Índice indexável dos perfis ativos. Cada item linka pra /perfis/<id>. Boa
 // landing pra busca tipo "perfis de microempreendedor", "tipos de empreendedor",
 // "diagnóstico de negócio".
 export default function ArchetypesIndex() {
@@ -15,13 +15,14 @@ export default function ArchetypesIndex() {
     () => archetypesData.filter((a) => a.status === 'active'),
     []
   );
+  const count = list.length;
 
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'Os 15 perfis de microempreendedor brasileiro',
+    name: `Os ${count} perfis de microempreendedor brasileiro`,
     description:
-      'Os 15 caminhos que a Trilha Empreendedora identifica no diagnóstico de 5 minutos. Cada perfil descreve uma situação comum, sinais típicos e o que costuma destravar.',
+      `Os ${count} caminhos que a Trilha Empreendedora identifica no diagnóstico de 5 minutos. Cada perfil descreve uma situação comum, sinais típicos e o que costuma destravar.`,
     inLanguage: 'pt-BR',
     isAccessibleForFree: true,
     url: 'https://trilhaempreendedora.com.br/perfis',
@@ -43,7 +44,7 @@ export default function ArchetypesIndex() {
 
       <PageHeader
         accent="Perfis"
-        title="Os 15 caminhos do microempreendedor"
+        title={`Os ${count} caminhos do microempreendedor`}
         subtitle="O diagnóstico identifica em qual desses cenários você está hoje. Cada perfil tem uma trilha de 30 dias pensada pra ele."
       />
 
@@ -84,7 +85,7 @@ export default function ArchetypesIndex() {
           Não sabe em qual perfil você está?
         </h3>
         <p className="text-paper/70 text-sm leading-relaxed mb-4">
-          5 minutos de diagnóstico identificam seu perfil entre esses 13.
+          5 minutos de diagnóstico identificam seu perfil entre esses {count}.
         </p>
         <Button
           onClick={() => navigate('/diagnostico')}

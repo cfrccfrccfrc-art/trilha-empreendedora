@@ -680,5 +680,35 @@
       "**Repita 3 vezes antes de decidir se vale.** Primeira feira é teste de logística (você esquece troco, montagem demora, estoque erra). Segunda é teste de público (você ajusta preço e mix). Terceira é onde a venda real começa a aparecer. Se em 3 feiras você não vendeu nada, troca o tipo de feira ou aceita que o canal não combina com o seu produto.",
       "Se você gostou da feira mas o transporte ou montagem te esgota, peça ajuda. Tem como dividir barraca com outra empreendedora, alugar em coletivo, ou trocar pra feira menor com menos esforço logístico."
     ]
+  },
+  {
+    "id": "res_mvp_concierge_digital",
+    "body": [
+      "Toda ideia digital boa pode começar sem tecnologia nenhuma. O segredo é entregar o serviço na mão pra uma pessoa só, antes de construir app, site ou curso. Isso se chama 'modo concierge': você é o sistema, por enquanto.",
+      "**Por que começar na mão.** Se você manda construir um app antes de ter cliente, aposta meses e dinheiro num formato que ninguém testou. Se a dor for outra (e quase sempre é), o software vira gasto parado. Entregar na mão custa quase nada e te mostra exatamente o que a solução precisa ter.",
+      "**O que é a oferta mínima.** A versão mais simples que já resolve a dor. Em vez de 'plataforma de recolocação', um atendimento de currículo e entrevista pelo zap. Em vez de 'curso online com 40 aulas', dois encontros por chamada. Em vez de 'app de marmita fit', um cardápio no grupo de WhatsApp com pedido por mensagem. Sem automação.",
+      "**Cobre desde o primeiro cliente.** Entregar de graça 'pra ganhar experiência' não testa o que importa: se alguém paga. Cobre um valor simbólico na primeira pessoa (um preço de quem ajuda a testar) e o preço cheio nas seguintes. Receber R$ 25 de verdade vale mais que 100 elogios.",
+      "**Faça, anote, ajuste.** Enquanto entrega na mão, anote o que deu trabalho, o que o cliente mais valorizou e o que faltou. É esse caderno que, lá na frente, diz o que vale a pena automatizar - e o que não vale. Quem automatiza antes de entender o serviço, automatiza o problema errado.",
+      "**Só pense em tecnologia quando a mão não der conta.** Se você já tem clientes pagando toda semana e a entrega manual virou gargalo, aí sim faz sentido uma ferramenta - planilha, formulário, grupo organizado e, só bem depois, talvez um site ou app. A tecnologia entra pra escalar o que já funciona, nunca pra começar.",
+      "Se você está há semanas 'preparando' a ferramenta e ainda não atendeu ninguém pagando, peça ajuda. O caminho é o contrário: atende primeiro, constrói depois."
+    ],
+    "title": "Como começar um negócio digital sem construir nada (modo concierge)",
+    "description": "Por que validar e entregar o serviço na mão antes de investir em app, site ou curso - e quando a tecnologia faz sentido.",
+    "type": "guide",
+    "source": "Trilha Empreendedora",
+    "topic": "validacao",
+    "sector": "geral",
+    "recommendedArchetypes": ["negocio_digital_inicio", "ainda_e_ideia"],
+    "level": "iniciante",
+    "free": true,
+    "onlineOffline": "online",
+    "estimatedTime": "6 min",
+    "practicalUseCase": "Use antes das tarefas 'Definir a oferta digital mínima' e 'Entregar na mão pro primeiro cliente'.",
+    "qualityScore": 4,
+    "lastReviewed": "2026-06-18",
+    "nextReview": "2026-12-18",
+    "sourceStatus": "active",
+    "status": "active",
+    "version": "1.0"
   }
 ]

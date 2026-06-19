@@ -5,6 +5,11 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import archetypesData from '../data/archetypes.json';
+import taskTemplatesData from '../data/taskTemplates.json';
+import taskCompanionsData from '../data/taskCompanions.json';
+import casesData from '../data/cases.json';
+import resourcesData from '../data/resources.json';
+import opportunitiesData from '../data/opportunities.json';
 import ShareSheet from '../components/ShareSheet';
 import {
   Sparkle,
@@ -83,7 +88,7 @@ const COPY = {
 
     s4Eyebrow: 'Como funciona',
     s4Line1: '5 minutos.',
-    s4Line2: '15 perfis.',
+    s4Line2: '16 perfis.',
     s4Line3: '30 dias.',
     s4Body:
       '35 perguntas curtas identificam seu perfil. 4 missões práticas, uma por semana. Companheiros reais que viveram a mesma fase. Casos que mostram como joga no Brasil.',
@@ -186,7 +191,7 @@ const COPY = {
 
     s4Eyebrow: 'How it works',
     s4Line1: '5 minutes.',
-    s4Line2: '15 profiles.',
+    s4Line2: '16 profiles.',
     s4Line3: '30 days.',
     s4Body:
       "35 short questions identify your profile. 4 practical missions, one per week. Real companions who've lived the same stage. Cases that show how things play out in Brazil.",
@@ -715,12 +720,23 @@ function ProductMocks({ t }) {
 }
 
 function ScaleNumbers({ t }) {
+  // Contagens dinâmicas: a partir dos dados curados, pra nunca defasar quando
+  // adicionamos arquétipo/tarefa/case/etc. "Itens no ar" = soma dos 6 acervos.
+  const activeProfiles = archetypesData.filter((a) => a.status === 'active').length;
+  const activeCompanions = taskCompanionsData.length;
+  const curatedItems =
+    taskTemplatesData.filter((x) => x.active !== false).length +
+    activeCompanions +
+    activeProfiles +
+    casesData.filter((x) => x.status === 'active').length +
+    resourcesData.filter((x) => x.status !== 'draft').length +
+    opportunitiesData.filter((x) => x.status === 'active').length;
   return (
     <div className="space-y-10 max-w-md mx-auto text-center">
       <div>
         <Reveal>
           <p className="font-sans font-bold text-[9rem] sm:text-[11rem] lg:text-[13rem] text-primary leading-none tracking-tight">
-            <CounterUp to={163} duration={2200} />
+            <CounterUp to={curatedItems} duration={2200} />
           </p>
         </Reveal>
         <Reveal delay={250}>
@@ -731,7 +747,7 @@ function ScaleNumbers({ t }) {
         <div className="grid grid-cols-3 gap-4 pt-4">
           <div>
             <p className="font-sans font-bold text-4xl sm:text-5xl text-ink">
-              <CounterUp to={15} duration={1500} />
+              <CounterUp to={activeProfiles} duration={1500} />
             </p>
             <p className="text-xs sm:text-sm text-secondary mt-1">
               {t.scaleProfilesLabel}
@@ -739,7 +755,7 @@ function ScaleNumbers({ t }) {
           </div>
           <div>
             <p className="font-sans font-bold text-4xl sm:text-5xl text-ink">
-              <CounterUp to={42} duration={1700} />
+              <CounterUp to={activeCompanions} duration={1700} />
             </p>
             <p className="text-xs sm:text-sm text-secondary mt-1">
               {t.scaleCompanionsLabel}

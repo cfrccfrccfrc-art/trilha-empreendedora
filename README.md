@@ -5,8 +5,8 @@ próximo passo do negócio. Inspirado na metodologia do Projeto Pescadores.
 
 ## O que a plataforma faz
 
-1. **Diagnóstico** — 35 perguntas curtas em português para identificar o
-   perfil do empreendedor (12 arquétipos possíveis).
+1. **Diagnóstico** — 36 perguntas curtas em português para identificar o
+   perfil do empreendedor (16 arquétipos possíveis).
 2. **Resultado** — devolve um arquétipo, dores principais, missão imediata e
    trilha de 30 dias.
 3. **Salvar trilha** — sem senha; o usuário recebe um `plan_token` salvo no
@@ -140,10 +140,10 @@ Depois do primeiro deploy, atualize o redirect do Supabase Auth:
 
 ## Status
 
-- 12 arquétipos ativos
-- 27 task templates ativos
-- 20 conteúdos (mistura de Trilha original, Sebrae, BCB, Pescadoras, setoriais)
-- 8 casos ativos + 4 em rascunho
-- 10 oportunidades
+- 16 arquétipos ativos
+- 44 task templates ativos
+- 22 conteúdos (mistura de Trilha original, Sebrae, BCB, Pescadoras, setoriais)
+- 37 casos ativos
+- 11 oportunidades
 - 15 modelos de feedback
 - 3 rubricas (caixa, preço, capital inicial)

@@ -845,5 +845,53 @@
   "caseAuthenticityType": "fictionalized_composite_case",
   "status": "active",
   "version": "1.0"
+},
+{
+  "id": "case_rede_recolocacao_comunidade",
+  "title": "Márcia e o 'LinkedIn do bairro' que virou um serviço de currículo",
+  "region": "Brasil - Diadema (SP)",
+  "sector": "servicos",
+  "archetypes": ["negocio_digital_inicio"],
+  "readingTime": "5 min",
+  "dilemma": "Quer criar uma plataforma online pra ajudar gente da comunidade a se recolocar. Está prestes a procurar quem construa o app, sem ter conversado com nenhuma das pessoas que pretende ajudar.",
+  "situation": "Márcia trabalhou anos no RH de uma fábrica e hoje está desempregada. Vê muita gente boa do bairro sem conseguir emprego e sonha com uma 'espécie de LinkedIn da comunidade', onde moradores criam perfil e empresas locais encontram candidatos. Já pesquisou quanto custa mandar fazer um aplicativo (acima de R$ 8.000) e pensa em juntar dinheiro ou pegar empréstimo pra isso. Não falou com nenhum morador nem com nenhuma empresa ainda.",
+  "options": [
+    "Pegar empréstimo e mandar construir o aplicativo - a ideia é boa, é só executar.",
+    "Conversar com 10 moradores pra entender como procuram emprego hoje e o que mais trava, antes de construir qualquer coisa.",
+    "Montar um grupo de WhatsApp e, ela mesma, ajudar a organizar currículo e preparar entrevista, cobrando um valor simbólico, pra ver se tem demanda."
+  ],
+  "tradeoffs": "Construir o app primeiro é o caminho mais caro e arriscado: se a dor for outra, o dinheiro virou software parado. Conversar com 10 pessoas custa só tempo e revela a dor real. Começar como serviço manual prova, em semanas e sem dívida, se as pessoas pagam - e ensina o que uma futura plataforma precisaria ter.",
+  "lessonLearned": "Plataforma é consequência de uma demanda provada, não o ponto de partida. Quase todo negócio digital de sucesso começou com alguém entregando o serviço na mão antes de existir tecnologia.",
+  "tropicalizedLesson": "Na periferia, a recolocação trava mais no currículo, na confiança e no preparo de entrevista do que na falta de vaga em si. Um serviço humano de preparo, cobrado barato e entregue pelo zap, resolve a dor de verdade sem precisar de app - e pode crescer depois.",
+  "practicalTask": "task_validar_dor_digital",
+  "relatedResources": ["res_validar_ideia", "res_mvp_concierge_digital"],
+  "helpTrigger": "Se você está prestes a gastar mais de R$ 1.000 (ou pegar empréstimo) pra construir um site ou app sem ter recebido um único pagamento pela ideia, peça ajuda antes.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
+},
+{
+  "id": "case_marcia_curso_concierge",
+  "title": "O 'curso online' que começou com 2 encontros no WhatsApp",
+  "region": "Brasil - Diadema (SP)",
+  "sector": "servicos",
+  "archetypes": ["negocio_digital_inicio"],
+  "readingTime": "4 min",
+  "dilemma": "Validou que a comunidade precisa de ajuda com currículo e entrevista. Agora hesita entre gravar um curso online completo (caro e demorado) ou começar atendendo na mão.",
+  "situation": "Depois de conversar com 10 pessoas, Márcia confirmou a dor: currículo e preparo de entrevista. A primeira ideia foi gravar um curso online com dezenas de aulas e vender numa plataforma de cursos. Mas isso levaria meses pra ficar pronto e ela não saberia se as aulas resolvem antes de gravar tudo.",
+  "options": [
+    "Passar 3 meses gravando um curso completo e só então oferecer.",
+    "Atender 1 pessoa por R$ 25 em 2 encontros pelo zap, entregar na mão e aprender o que ela realmente precisa.",
+    "Esperar ter seguidores suficientes nas redes antes de oferecer qualquer coisa."
+  ],
+  "tradeoffs": "Gravar o curso inteiro antes é apostar meses num formato que ninguém testou. Esperar seguidores adia pra sempre. Atender 1 pessoa na mão custa quase nada, traz o primeiro dinheiro e mostra exatamente quais aulas o curso precisaria ter - se um dia virar curso.",
+  "lessonLearned": "Entregar o serviço 'na unha' pro primeiro cliente (modo concierge) é a forma mais barata de descobrir o que automatizar depois. Produto digital bom é serviço manual que deu certo e foi sendo empacotado.",
+  "tropicalizedLesson": "Cobrar barato da primeira pessoa, entregar com atenção de verdade e pedir um retorno honesto vale mais que qualquer curso gravado no escuro. O boca a boca da comunidade faz o resto.",
+  "practicalTask": "task_entrega_concierge",
+  "relatedResources": ["res_mvp_concierge_digital", "res_validar_ideia"],
+  "helpTrigger": "Se você está há mais de um mês 'preparando' o produto digital (gravando, montando, esperando ficar perfeito) sem ter atendido ninguém pagando, peça ajuda pra começar pequeno.",
+  "caseAuthenticityType": "fictionalized_composite_case",
+  "status": "active",
+  "version": "1.0"
 }
 ]
