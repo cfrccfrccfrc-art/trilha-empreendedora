@@ -95,25 +95,6 @@
     "version": "1.0"
   },
   {
-    "id": "opp_compra_coletiva_insumos",
-    "title": "Compra coletiva de insumos por bairro",
-    "description": "Iniciativa para juntar pequenos empreendedores do mesmo bairro/setor para comprar insumos em volume e baixar custo unitário.",
-    "category": "compra_coletiva",
-    "source": "Trilha Empreendedora",
-    "sourceLink": "/oportunidades/compra-coletiva",
-    "location": "ambos",
-    "city": null,
-    "state": null,
-    "online": false,
-    "free": true,
-    "estimatedTime": "varia",
-    "recommendedArchetypes": ["vende_sem_lucro", "operacao_travada", "precisa_capital"],
-    "applicationDeadline": null,
-    "sourceStatus": "active",
-    "status": "active",
-    "version": "1.0"
-  },
-  {
     "id": "opp_oficina_fotos_celular",
     "title": "Oficinas de foto de produto no celular",
     "description": "Oficinas curtas (2 h) para aprender posição de luz, fundo e composição básica usando só o celular. Lista atualizada com edições gratuitas.",

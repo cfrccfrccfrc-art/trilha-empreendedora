@@ -80,7 +80,7 @@
       "whatChanges": "Hoje qualquer aumento de custo te pega de surpresa. Você pode estar trabalhando muito e ganhando pouco sem ver.",
       "nextStep": "Próximas missões: anotar entrada e saída por 7 dias, calcular custo de 3 produtos, revisar preço com base no número real. Trilha do arquétipo 'Vende mas não sabe se lucra' faz exatamente isso.",
       "relatedSources": [
-        { "label": "Caixa básico (Trilha)",       "url": "/conteudos/res_caixa_basico" },
+        { "label": "Anotar entrada e saída por 7 dias (Trilha)",       "url": "/conteudos/res_caixa_basico" },
         { "label": "Precificação simples (Trilha)","url": "/conteudos/res_precificacao_simples" }
       ]
     },

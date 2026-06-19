@@ -401,6 +401,19 @@ function validateOpportunities() {
     for (const aid of o.recommendedArchetypes || []) {
       if (!archIds.has(aid)) E(file, ctx, `recommendedArchetypes → "${aid}" not found`);
     }
+
+    // Internal sourceLinks must resolve: /conteudos/<id> to a real resource,
+    // and /oportunidades/<slug> is always broken (there's no detail route, so
+    // it renders a blank page). External http(s) links aren't checked here.
+    const sl = o.sourceLink;
+    if (sl && !sl.startsWith('http')) {
+      const m = /^\/conteudos\/(.+)$/.exec(sl);
+      if (m) {
+        if (!resIds.has(m[1])) E(file, ctx, `sourceLink → unknown resource id "${m[1]}"`);
+      } else if (sl.startsWith('/oportunidades/')) {
+        E(file, ctx, `sourceLink "${sl}" → no such route (only the /oportunidades index exists)`);
+      }
+    }
   }
 }
 
@@ -547,6 +560,19 @@ function validateMiniTrilhas() {
       if (!g.name) E(file, ctx, 'guide missing name');
       if (!g.shortDescription) E(file, ctx, 'guide missing shortDescription');
       if (!g.nextStep) E(file, ctx, 'guide missing nextStep');
+      // relatedSources: internal /conteudos/<id> links must resolve to a real
+      // resource — otherwise the "Onde se aprofundar" button dead-ends on a
+      // "conteúdo não encontrado" page. (miniTrilhas weren't ref-checked before.)
+      for (const s of g.relatedSources || []) {
+        if (!s.label || !s.url) {
+          E(file, ctx, 'relatedSources entry missing label or url');
+          continue;
+        }
+        const m = /^\/conteudos\/(.+)$/.exec(s.url);
+        if (m && !resIds.has(m[1])) {
+          E(file, ctx, `relatedSources url "${s.url}" → unknown resource id "${m[1]}"`);
+        }
+      }
     }
   }
 }

@@ -81,7 +81,7 @@
       "whatChanges": "Sem projetar, você descobre o problema só quando ele já estourou. Cliente que some, mês fraco de feira, alta no fornecedor: tudo vira surpresa em vez de cenário esperado.",
       "nextStep": "Começa pelo básico: anota entrada e saída por 7 dias (tarefa task_anotar_7_dias). Depois projeta o próximo mês com base nisso. Não precisa ser exato - precisa existir.",
       "relatedSources": [
-        { "label": "Anotar entrada e saída por 7 dias (Trilha)",           "url": "/conteudos/res_caixa_diario" },
+        { "label": "Anotar entrada e saída por 7 dias (Trilha)",           "url": "/conteudos/res_caixa_basico" },
         { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" }
       ]
     },
@@ -101,7 +101,7 @@
       "whatChanges": "Anotar o passado te dá realidade. Projetar o futuro te dá tempo. Tempo pra ajustar preço, cortar custo, segurar gasto antes do mês ficar feio.",
       "nextStep": "No fim do mês atual, anota a previsão pro próximo mês em 3 números só: faturamento esperado, custo fixo esperado, sobra esperada. No fim do mês seguinte, compara com o real. Repete 2 meses. Sua intuição vai calibrar.",
       "relatedSources": [
-        { "label": "Anotar entrada e saída por 7 dias (Trilha)",           "url": "/conteudos/res_caixa_diario" },
+        { "label": "Anotar entrada e saída por 7 dias (Trilha)",           "url": "/conteudos/res_caixa_basico" },
         { "label": "Capital inteligente (Trilha)",                          "url": "/conteudos/res_capital_inteligente" }
       ]
     },
