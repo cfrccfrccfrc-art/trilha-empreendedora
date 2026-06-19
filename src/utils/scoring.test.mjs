@@ -477,5 +477,42 @@ assert(
 );
 assert('flag restart_after_close presente', r20.flags.includes('restart_after_close'));
 
+console.log(
+  '\n--- Test 21 (Fix B): pré-receita não recebe `financas` como dor principal ---'
+);
+// Persona P19 Fernanda: só tem a ideia (just_idea / never_sold). Ao responder as
+// perguntas de dinheiro, a resposta HONESTA de quem não vende é "não sei / nunca
+// calculei" — o que antes acumulava `financas` e fazia a dor principal ser
+// finanças, semeando a missão "anote seu caixa por 7 dias" pra um negócio que
+// não tem caixa. Fix B: com sinal de pré-receita, a dor `financas` é suprimida.
+const preRevenueFinance = {
+  q_stage_selling: 'just_idea',
+  q_stage_time: 'never_sold',
+  q_finances_track: 'no',
+  q_finances_profit: 'never_calculated',
+  q_finances_mix: 'all_together',
+};
+const r21 = scoreAnswers(preRevenueFinance, questions, archetypes, rules);
+console.log('  mainPain:', r21.mainPain, 'painScores:', JSON.stringify(r21.painScores));
+assert(
+  'pré-receita: `financas` NÃO é a dor principal',
+  r21.mainPain !== 'financas',
+  `got mainPain=${r21.mainPain}, painScores=${JSON.stringify(r21.painScores)}`
+);
+assert(
+  'pré-receita: `financas` removida de painScores',
+  !('financas' in r21.painScores),
+  `painScores=${JSON.stringify(r21.painScores)}`
+);
+
+// Guard-rail: quem VENDE regularmente e é cego pra finanças (Test 1) continua
+// recebendo `financas` — a supressão é só pra pré-receita.
+const sellingFinanceBlind = scoreAnswers(financeBlind, questions, archetypes, rules);
+assert(
+  'guard-rail: quem vende mantém `financas` como dor principal',
+  sellingFinanceBlind.mainPain === 'financas',
+  `got ${sellingFinanceBlind.mainPain}`
+);
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

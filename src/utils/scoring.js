@@ -101,6 +101,25 @@ export function scoreAnswers(answers, questions, archetypes, rules) {
     }
   }
 
+  // Fix B: someone who hasn't sold yet has no cash flow to track. Answering
+  // "não sei / nunca calculei" on the money questions is the HONEST answer for
+  // a pre-revenue idea — it shouldn't surface `financas` as their main pain,
+  // nor seed an "anote seu caixa por 7 dias" mission for a business with no
+  // caixa. When a pre-revenue signal is present, drop the suppressed pains.
+  const preRev = rules?.preRevenuePainSuppression;
+  if (preRev?.pains?.length) {
+    const isPreRevenue = Object.entries(preRev.signals || {}).some(
+      ([qid, optIds]) => {
+        const ans = answers?.[qid];
+        if (Array.isArray(ans)) return ans.some((v) => optIds.includes(v));
+        return optIds.includes(ans);
+      }
+    );
+    if (isPreRevenue) {
+      for (const p of preRev.pains) delete painScores[p];
+    }
+  }
+
   const painThreshold = rules?.painThreshold ?? 0;
   const sortedPains = Object.entries(painScores)
     .filter(([, s]) => s >= painThreshold)

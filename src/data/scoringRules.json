@@ -25,5 +25,12 @@
     "negocio_digital_inicio": 4
   },
   "fallbackArchetype": "ainda_e_ideia",
-  "painThreshold": 2
+  "painThreshold": 2,
+  "preRevenuePainSuppression": {
+    "signals": {
+      "q_stage_selling": ["just_idea", "just_started"],
+      "q_stage_time": ["never_sold"]
+    },
+    "pains": ["financas"]
+  }
 }
