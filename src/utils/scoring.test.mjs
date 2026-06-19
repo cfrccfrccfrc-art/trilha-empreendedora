@@ -423,5 +423,59 @@ assert(
   `got ${r18.archetypeId}`
 );
 
+console.log(
+  '\n--- Test 19: empate de ratio 1.0 — identidade cuidador vence a saturação de sobrecarregada ---'
+);
+// Persona P7: é cuidadora (motivo de empreender em casa = cuidar de alguém) E
+// também acumula sinais de sobrecarga (30h+, sozinha, cuida da família no lugar
+// de emprego, meta = aliviar tempo). cuidador satura em 5/5 (ratio 1.0) e
+// sobrecarregada em 7/7 (ratio 1.0). Antes do ajuste de desempate, o RAW maior
+// (7 > 5) fazia sobrecarregada roubar — reintroduzindo o viés de contagem de
+// perguntas que o ratio existe pra neutralizar. Agora o desempate é por
+// tieBreakOrder (curadoria), e a IDENTIDADE de cuidadora prevalece.
+const caregiverOverloaded = {
+  q_home_business_reason: 'caregiver',
+  q_time_dedication: 'gt_30h',
+  q_time_other_job: 'family',
+  q_ops_help: 'all_alone',
+  q_goals_main: 'time_overload',
+};
+const r19 = scoreAnswers(caregiverOverloaded, questions, archetypes, rules);
+console.log('  archetypeId:', r19.archetypeId);
+console.log('  ratios:', JSON.stringify(r19.archetypeRatios));
+assert(
+  'empate 1.0 cuidador vs sobrecarregada → cuidador_empreendedor',
+  r19.archetypeId === 'cuidador_empreendedor',
+  `got ${r19.archetypeId}`
+);
+assert('flag caregiver presente', r19.flags.includes('caregiver'));
+
+console.log(
+  '\n--- Test 20: empate de ratio 1.0 — identidade recomeço vence a saturação de precisa_capital ---'
+);
+// Persona P8: fechou um negócio antes (had_closed → recomecou 5/5, ratio 1.0) e
+// agora precisa de capital pra recomeçar — sinais de capital saturam
+// precisa_capital em 9/9 (ratio 1.0). Antes, o RAW 9 > 5 dava precisa_capital e
+// a pessoa caía numa trilha de capital, perdendo a leitura central: ela está
+// RECOMEÇANDO depois de falir. tieBreakOrder agora coloca recomecou acima de
+// precisa_capital, então a identidade do recomeço prevalece no empate.
+const restartNeedsCapital = {
+  q_stage_selling: 'had_closed',
+  q_capital_need: 'urgent',
+  q_capital_money: 'none',
+  q_capital_credit: 'considering',
+  q_goals_main: 'no_capital',
+  q_goals_30days: 'more_money',
+};
+const r20 = scoreAnswers(restartNeedsCapital, questions, archetypes, rules);
+console.log('  archetypeId:', r20.archetypeId);
+console.log('  ratios:', JSON.stringify(r20.archetypeRatios));
+assert(
+  'empate 1.0 recomecou vs precisa_capital → recomecou_apos_falir',
+  r20.archetypeId === 'recomecou_apos_falir',
+  `got ${r20.archetypeId}`
+);
+assert('flag restart_after_close presente', r20.flags.includes('restart_after_close'));
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

@@ -73,8 +73,15 @@ export function scoreAnswers(answers, questions, archetypes, rules) {
     }))
     .sort((a, b) => {
       if (b.ratio !== a.ratio) return b.ratio - a.ratio;
-      if (b.score !== a.score) return b.score - a.score;
-      return tieRank(a.id) - tieRank(b.id);
+      // On an exact ratio tie, prefer the curated priority (tieBreakOrder)
+      // over raw score. Raw score would reintroduce the question-count bias
+      // that ratio normalization exists to neutralize — letting a broad
+      // saturating archetype steal a tie from a narrow identity archetype
+      // (e.g. cuidador/recomecou at ratio 1.0). Raw is the last resort.
+      const ra = tieRank(a.id);
+      const rb = tieRank(b.id);
+      if (ra !== rb) return ra - rb;
+      return b.score - a.score;
     });
 
   const minScore = rules?.minScoreForArchetype ?? 0;
