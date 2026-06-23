@@ -424,18 +424,19 @@ assert(
 );
 
 console.log(
-  '\n--- Test 19: empate de ratio 1.0 — identidade cuidador vence a saturação de sobrecarregada ---'
+  '\n--- Test 19: cuidadora com tempo restrito — padrão de cuidado vence o empate 1.0 ---'
 );
-// Persona P7: é cuidadora (motivo de empreender em casa = cuidar de alguém) E
-// também acumula sinais de sobrecarga (30h+, sozinha, cuida da família no lugar
-// de emprego, meta = aliviar tempo). cuidador satura em 5/5 (ratio 1.0) e
-// sobrecarregada em 7/7 (ratio 1.0). Antes do ajuste de desempate, o RAW maior
-// (7 > 5) fazia sobrecarregada roubar — reintroduzindo o viés de contagem de
-// perguntas que o ratio existe pra neutralizar. Agora o desempate é por
-// tieBreakOrder (curadoria), e a IDENTIDADE de cuidadora prevalece.
+// Persona cuidadora COM o negócio espremido no cuidado: motivo de casa =
+// cuidar de alguém, pouquíssimas horas disponíveis (lt_5h), tempo tomado pela
+// família, sozinha, meta = aliviar tempo. cuidador agora pontua por PADRÃO
+// (caregiver +3, lt_5h +2, family +2 = 7/7, ratio 1.0) em vez de saturar com
+// um único checkbox. sobrecarregada também chega a 7/7 (lt_5h +1, family +2,
+// all_alone +2, time_overload +2). No empate de ratio 1.0, o tieBreakOrder
+// coloca a IDENTIDADE de cuidadora acima — e ela prevalece. (Ver Test 25 para
+// o caso oposto: cuidadora a 30h+, onde a sobrecarga real é que domina.)
 const caregiverOverloaded = {
   q_home_business_reason: 'caregiver',
-  q_time_dedication: 'gt_30h',
+  q_time_dedication: 'lt_5h',
   q_time_other_job: 'family',
   q_ops_help: 'all_alone',
   q_goals_main: 'time_overload',
@@ -444,7 +445,7 @@ const r19 = scoreAnswers(caregiverOverloaded, questions, archetypes, rules);
 console.log('  archetypeId:', r19.archetypeId);
 console.log('  ratios:', JSON.stringify(r19.archetypeRatios));
 assert(
-  'empate 1.0 cuidador vs sobrecarregada → cuidador_empreendedor',
+  'cuidadora tempo-restrito: empate 1.0 → cuidador_empreendedor',
   r19.archetypeId === 'cuidador_empreendedor',
   `got ${r19.archetypeId}`
 );
@@ -606,6 +607,39 @@ assert(
   s3.archetypeId === 'A' && s3.borderArchetypeId === null,
   `got winner=${s3.archetypeId}, border=${s3.borderArchetypeId}, ratios=${JSON.stringify(s3.archetypeRatios)}`
 );
+
+console.log(
+  '\n--- Test 25: cuidadora a 30h+ NÃO sobrescreve a sobrecarga real ---'
+);
+// Regressão do bug estrutural: cuidador tinha UM único sinal (caregiver +5) que
+// era todo o seu máximo teórico (5), então qualquer pessoa que marcasse "cuido
+// de alguém em casa" saturava em 5/5 (ratio 1.0) e atropelava a dor central —
+// mesmo trabalhando 30h+ (perfil de quem NÃO está espremendo o negócio no
+// cuidado, e sim rodando a todo vapor e sobrecarregada). Com o sinal de cuidado
+// redistribuído (caregiver +3, lt_5h +2, family +2; máx 7), a cuidadora a 30h+
+// fica em 5/7 (0.71) e a sobrecarga real (7/7) prevalece. O contexto de cuidar
+// deixa de ser um override de um clique só.
+const fullThrottleCaregiver = {
+  q_home_business_reason: 'caregiver',
+  q_time_dedication: 'gt_30h',
+  q_time_other_job: 'family',
+  q_ops_help: 'all_alone',
+  q_goals_main: 'time_overload',
+};
+const r25 = scoreAnswers(fullThrottleCaregiver, questions, archetypes, rules);
+console.log('  archetypeId:', r25.archetypeId);
+console.log('  ratios:', JSON.stringify(r25.archetypeRatios));
+assert(
+  'cuidadora 30h+ → empreendedora_sobrecarregada (não cuidador)',
+  r25.archetypeId === 'empreendedora_sobrecarregada',
+  `got ${r25.archetypeId}`
+);
+assert(
+  'cuidadora 30h+: cuidador não satura mais (ratio < 1.0)',
+  r25.archetypeRatios.cuidador_empreendedor < 1,
+  `got ratio=${r25.archetypeRatios.cuidador_empreendedor}`
+);
+assert('flag caregiver ainda presente', r25.flags.includes('caregiver'));
 
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail === 0 ? 0 : 1);

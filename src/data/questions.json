@@ -353,7 +353,8 @@
         "scoring": {
           "archetypes": {
             "empreendedora_sobrecarregada": 1,
-            "renda_complementar": 1
+            "renda_complementar": 1,
+            "cuidador_empreendedor": 2
           },
           "pains": {
             "tempo": 1
@@ -423,7 +424,8 @@
         "label": "Sim, cuido da família e da casa",
         "scoring": {
           "archetypes": {
-            "empreendedora_sobrecarregada": 2
+            "empreendedora_sobrecarregada": 2,
+            "cuidador_empreendedor": 2
           },
           "pains": {
             "tempo": 2
@@ -1528,7 +1530,7 @@
         "label": "Sim, cuido de alguém em casa e não posso sair em horário fixo",
         "scoring": {
           "archetypes": {
-            "cuidador_empreendedor": 5
+            "cuidador_empreendedor": 3
           },
           "pains": {},
           "flags": [
